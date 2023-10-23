@@ -1,0 +1,45 @@
+// Перечисление цветов
+$colors: (
+    'white': $white,
+    'black': $black,
+    'gray': $gray,
+    'second-gray': $second-gray,
+    'second-black': $second-black,
+
+    'primary': $primary,
+    'secondary': $secondary,
+    'error': $error,
+    'success': $success,
+    'disabled': $disabled,
+    'text': $text,
+    'sub-text': $sub-text,
+    'night': $night,
+    'off-white': $off-white,
+    'gradient': $gradient,
+);
+
+// Перебираем перечисление
+@each $name, $color in $colors {
+
+    // Цвет текста
+    .color-#{$name} {
+        color: $color;
+    }
+
+    // Цвет фона
+    .bg-#{$name} {
+        background-color: $color;
+    }
+    
+    // Цвет фона градиент
+    .bg-#{$name}-g {
+        background: $color;
+    }
+
+    // Заливка `svg`
+    .fill-#{$name} {
+        svg {
+            color: $color;
+        }
+    }
+}

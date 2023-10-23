@@ -1,0 +1,50 @@
+.header {
+
+    &__logo-and-basket-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__basket {
+        width: 34px;
+        height: 34px;
+
+        background-image: url("/image/shopping-bag.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        border-radius: 10px;
+    }
+
+    &__url {
+        display: flex;
+        align-items: center;
+    }
+
+    &__page-icon {
+        display: inline-block;
+
+        width: 24px;
+        height: 24px;
+
+        border-radius: 5px;
+
+        background-image: url("/image/home.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__page-name {
+        display: inline-block;
+        
+        &::after {
+            content: ".";
+            margin-left: 15px;
+        }
+
+        &:last-child::after {
+            content: unset;
+        }
+    }
+}

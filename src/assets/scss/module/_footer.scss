@@ -1,0 +1,28 @@
+.footer {
+    width: 100%;
+    display: inline-block;
+
+    &__logo {
+        text-align: center;
+
+        margin-top: 46px;
+        margin-bottom: 58px;
+    }
+
+    &__info-blocks-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 24px 0 29px;
+    }
+
+    &__copyright-rights {
+        display: flex;
+        align-items: center;
+
+        min-height: 28px;
+        padding-left: 32px;
+
+        color: #A5A3AF;
+        background-color: #48455C;
+    }
+}

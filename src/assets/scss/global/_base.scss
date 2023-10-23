@@ -1,0 +1,25 @@
+html, body {
+    color: $black;
+
+    font-family: "Gilroy", Arial, "sans-serif";
+    font-size: $xs-fs;
+    font-weight: 400;
+}
+
+input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    cursor: pointer;
+    border: unset;
+    outline: none;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 300;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
