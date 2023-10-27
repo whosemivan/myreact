@@ -1,0 +1,64 @@
+.product-card {
+
+    &__img-wrapper {
+        position: relative;
+    }
+
+    &__cost {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        padding: 5px 12px 1px 12px;
+
+        &::after {
+            content: "₽";
+            margin-left: 4px;
+            position: relative;
+        }
+    }
+
+    &__description-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        margin-top: 8px;
+        margin-left: 11px;
+    }
+
+    &__score {
+        display: flex;
+        align-items: center;
+
+        color: #999999;
+        font-size: 12px;
+        
+        &::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 14px;
+            height: 14px;
+
+            margin-left: 6px;
+
+            background: center / contain no-repeat url("/assets/image/star.svg");
+        }
+    }
+
+    &--best &__img-wrapper::after {
+        content: "";
+
+        position: absolute;
+        top: 9px;
+        right: 22px;
+
+        min-width: 52px;
+        min-height: 33px;
+
+        border-radius: 60px;
+        background: center / 21.22px no-repeat url("/assets/image/medal.svg"), #F6C9C9;
+    }
+}

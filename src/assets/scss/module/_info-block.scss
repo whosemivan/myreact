@@ -30,9 +30,7 @@
         min-width: 156px;
         min-height: 33.79px;
 
-        background-image: url("/image/payment-methods.svg");
-        background-repeat: no-repeat;
-        background-position: center;
+        background: center no-repeat url("/assets/image/payment-methods.svg");
     }
 
     &--stretched {

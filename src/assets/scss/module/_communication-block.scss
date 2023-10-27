@@ -16,7 +16,8 @@
         text-transform: uppercase;
     }
 
-    &__sub-title, &__text {
+    &__sub-title,
+    &__text {
         margin-top: 10px;
         font-weight: 500;
     }
@@ -25,7 +26,8 @@
         margin-right: 130px;
     }
 
-    &__text, &__sub-text {
+    &__text,
+    &__sub-text {
         margin-right: 40px;
     }
 
@@ -34,30 +36,22 @@
     }
 
     &__btns-wrapper {
-        display: flex;
         margin-top: 73px;
+        margin-left: -$s-spacer;
+        margin-bottom: -$s-spacer;
+
+        display: flex;
         gap: 43px;
     }
 
     &__btn {
         color: $white;
         background-color: unset;
+        text-decoration: none;
 
         font-size: $xs-fs;
         font-weight: 600;
         text-transform: uppercase;
-    }
-
-    &__img {
-        width: 128px;
-        height: 128px;
-
-        position: absolute;
-        right: 23px; bottom: 7px;
-
-        background-image: url("/image/help-support.png");
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     &__mail-input {
@@ -68,6 +62,10 @@
 
         border-radius: 40px;
         box-shadow: 0px 4px 4px 0px #0000000D;
+    }
+
+    &--with-img {
+        background: url("/assets/image/help-support.png") no-repeat right 23px bottom 7px / 128px 128px, linear-gradient(257.17deg, #3075fc 6.89%, #a230fc 97.54%);
     }
 
     &:first-of-type {

@@ -1,0 +1,75 @@
+.slider {
+    &__slide {
+        width: auto;
+        
+        margin-right: 2px;
+
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+    }
+
+    &__pagination {
+        display: flex;
+        gap: 5px;
+
+        position: absolute;
+        z-index: 1;
+
+        height: 2px;
+
+        &>&-bullet {
+            width: 10px;
+            height: 2px;
+
+            border-radius: 40px;
+            background-color: #BFBFBF;
+        }
+
+        &>&-bullet-active {
+            background-color: #48455C;
+        }
+
+        &--bottom-center {
+            justify-content: center;
+            bottom: 0;
+        }
+
+        &--top-right {
+            width: auto;
+
+            top: 21px;
+            right: 30px;
+            left: auto;
+        }
+    }
+
+    &__info-slide {
+        width: 290px;
+        min-height: 200px;
+
+        box-sizing: border-box;
+
+        margin-right: 10px;
+        padding-top: 25px;
+        padding-left: 17px;
+
+        border-radius: 10px;
+        box-shadow: 0px 10px 15px 0px #0000001A;
+
+        &-discount {
+            margin-bottom: 46px;
+
+            color: #A230FC;
+            font-size: 66px;
+            font-weight: 900;
+
+            &::after {
+                content: "%";
+            }
+        }
+
+        &--with-bg {
+            background: center / contain no-repeat url("/assets/image/slider-img/pencels.png");
+        }
+    }
+}

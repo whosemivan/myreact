@@ -18,8 +18,10 @@
 
 // Импорт страниц
 @import
+    "page/main",
+    "page/main-slider",
     "page/nav";
-
+//
 
 
 // Импорт модулей
@@ -27,7 +29,11 @@
     "module/header",
     "module/main",
     "module/footer",
+    "module/slider",
+    "module/baner",
     "module/top-block",
+    "module/product",
+    "module/faq-wrapper",
     "module/communication-block",
     "module/chat",
     "module/info-block";

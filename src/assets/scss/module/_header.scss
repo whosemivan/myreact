@@ -10,16 +10,37 @@
         width: 34px;
         height: 34px;
 
-        background-image: url("/image/shopping-bag.svg");
+        background-image: url("/assets/image/shopping-bag.svg");
         background-repeat: no-repeat;
         background-position: center;
 
         border-radius: 10px;
     }
 
-    &__url {
+    &__breadcrumbs {
         display: flex;
         align-items: center;
+
+        &>ul {
+            width: 100%;
+
+            &>li {
+                display: inline-block;
+
+                color: $gray;
+                font-size: $xxs-fs;
+                margin-left: $l-spacer;
+
+                &::after {
+                    content: ".";
+                    margin-left: 15px;
+                }
+
+                &:last-child::after {
+                    content: unset;
+                }
+            }
+        }
     }
 
     &__page-icon {
@@ -30,21 +51,8 @@
 
         border-radius: 5px;
 
-        background-image: url("/image/home.svg");
+        background-image: url("/assets/image/home.svg");
         background-repeat: no-repeat;
         background-position: center;
-    }
-
-    &__page-name {
-        display: inline-block;
-        
-        &::after {
-            content: ".";
-            margin-left: 15px;
-        }
-
-        &:last-child::after {
-            content: unset;
-        }
     }
 }

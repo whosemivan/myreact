@@ -4,15 +4,53 @@
         padding-bottom: 58px;
     }
 
+    &__faq-wrapper {
+        margin: 0 7px;
+    }
+
     &__communication-blocks-wrapper {
+        margin-top: 34px;
+
         padding-left: 12px;
         padding-right: 20px;
     }
 
     &__chat-wrapper {
+        position: fixed;
+        right: 15px;
+        bottom: 7px;
+
+        z-index: 1;
+
         display: flex;
         justify-content: flex-end;
+    }
 
-        margin-top: 31px;
+    &__slider-title {
+        display: flex;
+        justify-content: space-between;
+        
+        margin: 26px 16px 11px 16px;
+    }
+
+    &__more-link {
+        display: inline-flex;
+        align-items: center;
+
+        font-size: 12px;
+        font-weight: 800;
+
+        color: #3075FC;
+        text-decoration: none;
+
+        &::after {
+            content: "";
+            display: block;
+
+            width: 18px;
+            height: 18px;
+
+            background: center / contain no-repeat url("/assets/image/arrow2.svg");
+        }
     }
 }

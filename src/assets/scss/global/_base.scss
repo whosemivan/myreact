@@ -11,9 +11,12 @@ input, button {
     padding: 0;
     box-sizing: border-box;
 
-    cursor: pointer;
     border: unset;
     outline: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .logo {
