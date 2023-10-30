@@ -7,8 +7,23 @@
 
     <title>Главная</title>
 
-    <!-- Стили слайдера -->
+    <!-- Подключение слайдера -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/swiper.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
+
+    <!-- Подключение функционала аккордиона -->
+    <script defer src="assets/js/accordion.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение функционала фильтрующих кнопок -->
+    <script defer src="assets/js/filter-buttons.js"></script>
+    <!-- ### -->
+
+    <!-- Утилиты -->
+    <script src="assets/js/utils.js"></script>
     <!--  -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -29,15 +44,15 @@
         </div>
 
         <nav class="nav mb-m">
-            <form class="nav__search-wrapper bg-white pl-l" name="search">
+            <form class="nav__search-wrapper bg-white pl-l">
                 <label class="nav__search">
                     <div class="nav__search-icon"></div>
-                    <input class="nav__search-input ml-l" type="search" placeholder="Поиск">
+                    <input class="nav__search-input ml-l" type="search" placeholder="Поиск" name="search">
                 </label>
 
                 <div class="nav__btns-wrapper">
                     <button class="nav__search-btn bg-second-gray" type="submit"></button>
-                    <input class="nav__search-counter bg-second-gray" type="text" value="36">
+                    <input class="nav__search-counter bg-second-gray" type="text" value="36" name="count">
                 </div>
             </form>
 
@@ -58,7 +73,7 @@
 
     <main class="main">
         <!-- Слайдер -->
-        <div class="main__primary-slider swiper slider">
+        <div class="main__primary-slider swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div>
@@ -99,24 +114,24 @@
                 <h3 class="banner__title mt-l ml-xl">Оригинальные <br> Кроссовки</h3>
 
                 <div class="banner__block-wrapper">
-                    <p class="fs-xs fw-300">по лучшим ценам</p>
+                    <p class="fw-300">по лучшим ценам</p>
                     <a href="#" class="banner__btn ">каталог</a>
                 </div>
             </section>
         </div>
 
-        <div class="main__slider-title">
+        <div class="main__block-title block-title">
             <h3 class="fs-s fw-800">Новинки</h3>
-            <a href="#" class="main__more-link">все</a>
+            <a href="#" class="block-title__more-link">все</a>
         </div>
 
         <div class="main__slider swiper slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card product-card--mark-best">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -130,10 +145,10 @@
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product2.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -147,10 +162,10 @@
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -164,10 +179,10 @@
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product2.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -181,10 +196,10 @@
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -198,10 +213,10 @@
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product2.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -215,10 +230,10 @@
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -232,10 +247,10 @@
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <div class="product-card product-card--best">
+                    <div class="product-card">
                         <div class="product-card__img-wrapper">
                             <img src="assets/image/slider-img/product2.png" alt="product img">
-                            <p class="product-card__cost fs-s fw-800 bg-white">48 060</p>
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
                         </div>
 
                         <div class="product-card__description-wrapper">
@@ -268,17 +283,323 @@
             </div>
         </div>
 
+        <div class="main__block-title block-title">
+            <h3 class="fs-s fw-800">Бренды</h3>
+        </div>
+
+        <div class="main__slider main__logo-slider swiper slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <img src="/assets/image/slider-img/brand logo1.svg" alt="Brand logo">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <img src="/assets/image/slider-img/brand logo2.svg" alt="Brand logo">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <img src="/assets/image/slider-img/brand logo3.svg" alt="Brand logo">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <img src="/assets/image/slider-img/brand logo4.svg" alt="Brand logo">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <img src="/assets/image/slider-img/brand logo5.svg" alt="Brand logo">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <img src="/assets/image/slider-img/brand logo6.svg" alt="Brand logo">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <img src="/assets/image/slider-img/brand logo7.svg" alt="Brand logo">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                    <div>
+                        <a href="#" class="fs-xss fw-600 color-black">ВСЕ НАШИ БРЕНДЫ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider__pagination slider__pagination--bottom-center"></div>
+        </div>
+
+        <div class="main__block-title block-title">
+            <h3 class="fs-s fw-800">Популярные</h3>
+            <a href="#" class="block-title__more-link">все</a>
+        </div>
+
+        <div class="main__filter-buttons filter-buttons bg-dark-white">
+            <button class="filter-buttons__btn filter-buttons__btn--active">Jordan</button>
+            <button class="filter-buttons__btn">Yeezy</button>
+        </div>
+
+        <div class="main__slider swiper slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card product-card--mark-discount">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product2.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">
+                                <span class="product-card__price-old">57 060</span>
+                                48 060
+                            </p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product2.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product2.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="assets/image/slider-img/product2.png" alt="product img">
+                            <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        </div>
+
+                        <div class="product-card__description-wrapper">
+                            <div>
+                                <h3 class="fw-800">Nike</h3>
+                                <p>Air Max SC</p>
+                            </div>
+
+                            <p class="product-card__score">4.6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="main__about-payment about-payment">
+            <h3 class="about-payment__title">Oплата долями</h3>
+
+            <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в течение 8
+                недель. Без комиссий и переплат.</p>
+
+            <div class="about-payment__cards-wrapper">
+                <div class="about-payment__card about-payment__card--selected">
+                    <h4 class="fs-xxs fw-900">Сегодня</h4>
+                    <p class="fs-s mt-s">5 200 ₽</p>
+
+                </div>
+
+                <div class="about-payment__card">
+                    <h4 class="fs-xxs fw-900">
+                        <script type="text/javascript">
+                            document.write(getDayAndMonthName({ numWeeks: 2 }));
+                        </script>
+                    </h4>
+                    <p class="fs-s mt-s">5 200 ₽</p>
+                </div>
+
+                <div class="about-payment__card">
+                    <h4 class="fs-xxs fw-900">
+                        <script type="text/javascript">
+                            document.write(getDayAndMonthName({ numWeeks: 4 }));
+                        </script>
+                    </h4>
+                    <p class="fs-s mt-s">5 200 ₽</p>
+                </div>
+
+                <div class="about-payment__card">
+                    <h4 class="fs-xxs fw-900">
+                        <script type="text/javascript">
+                            document.write(getDayAndMonthName({ numWeeks: 6 }));
+                        </script>
+                    </h4>
+                    <p class="fs-s mt-s">5 200 ₽</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="main__finished-image">
+            <div class="block-title">
+                <h3 class="fs-s fw-800">Готовый образ</h3>
+                <a href="#" class="block-title__more-link">все</a>
+            </div>
+
+            <div class="filter-buttons mt-xl bg-white">
+                <button class="filter-buttons__btn filter-buttons__btn--active">Образы с этим товаром</button>
+                <button class="filter-buttons__btn">Хиты</button>
+                <button class="filter-buttons__btn">Премиум</button>
+            </div>
+
+            <div class="swiper slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__slide">
+                        <div class="product-card">
+                            <div class="product-card__img-wrapper">
+                                <img src="assets/image/slider-img/kit1.png" alt="product img">
+                                <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                            </div>
+    
+                            <div class="product-card__description-wrapper">
+                                <div>
+                                    <h3 class="fw-800">Nike Air Max SC</h3>
+                                </div>
+    
+                                <p class="product-card__score">4.6</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider__slide">
+                        <div class="product-card">
+                            <div class="product-card__img-wrapper">
+                                <img src="assets/image/slider-img/kit2.png" alt="product img">
+                                <p class="product-card__price fs-s fw-800 bg-white">
+                                    48 060
+                                </p>
+                            </div>
+    
+                            <div class="product-card__description-wrapper">
+                                <div>
+                                    <h3 class="fw-800">Nike Air Max SC</h3>
+                                </div>
+    
+                                <p class="product-card__score">4.6</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="main__feedback-sections bg-second-gray">
             <section class="main__faq-wrapper faq-wrapper">
                 <h1 class="faq-wrapper__title fs-s fw-800">Вопросы и ответы</h1>
 
                 <div class="faq-wrapper__accordion faq-wrapper__accordion--open">
-                    <div class="faq-wrapper__accordion-summary-wrapper bg-white fw-500">
+                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
                         <h4>
                             Как оформить заказ?
                         </h4>
                         <div class="faq-wrapper__accordion-condition"></div>
-                    </div>
+                    </button>
                     <div class="faq-wrapper__accordion-content fw-300">
                         <p>
                             Выберите категорию или бренд в меню навигации или введите в поиске название интересующей
@@ -288,12 +609,12 @@
                 </div>
 
                 <div class="faq-wrapper__accordion">
-                    <div class="faq-wrapper__accordion-summary-wrapper bg-white fw-500">
+                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
                         <h4>
                             Могу ли я оформить заказ через менеджеров?
                         </h4>
                         <div class="faq-wrapper__accordion-condition"></div>
-                    </div>
+                    </button>
                     <div class="faq-wrapper__accordion-content fw-300">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -305,12 +626,12 @@
                 </div>
 
                 <div class="faq-wrapper__accordion">
-                    <div class="faq-wrapper__accordion-summary-wrapper bg-white fw-500">
+                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
                         <h4>
                             Нужно ли регистрироваться на сайте чтобы сделать заказ?
                         </h4>
                         <div class="faq-wrapper__accordion-condition"></div>
-                    </div>
+                    </button>
                     <div class="faq-wrapper__accordion-content fw-300">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -322,10 +643,10 @@
                 </div>
 
                 <div class="faq-wrapper__accordion">
-                    <div class="faq-wrapper__accordion-summary-wrapper bg-white fw-500">
+                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
                         <h4>Как найти товары?</h4>
                         <div class="faq-wrapper__accordion-condition"></div>
-                    </div>
+                    </button>
                     <div class="faq-wrapper__accordion-content fw-300">
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -357,7 +678,8 @@
                         SALE и новых поступлениях
                     </p>
 
-                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта">
+                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
+                        name="mail">
 
                     <p class="communication-block__sub-text fs-xss">
                         Подписываясь на рассылку, вы подтверждаете свое согласие с
@@ -434,15 +756,7 @@
             <p>MYREACT.RU © 2018 – 2023</p>
         </div>
     </footer>
-
-    <!-- Подключение слайдера -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="assets/js/swiper.js"></script>
-    <!-- ### -->
-
-    <!-- Подключение функционала аккордиона -->
-    <script src="assets/js/accordion.js"></script>
-    <!-- ### -->
 </body>
 
 </html>
+

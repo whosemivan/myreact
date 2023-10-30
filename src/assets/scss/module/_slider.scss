@@ -1,11 +1,17 @@
 .slider {
+    width: 100%;
+    box-sizing: border-box;
+
     &__slide {
         width: auto;
-        
-        margin-right: 2px;
+        padding-right: 2px;
 
         overflow: hidden;
         border-radius: 10px 10px 0 0;
+
+        &:last-of-type {
+            padding-right: 0;
+        }
     }
 
     &__pagination {
@@ -31,7 +37,9 @@
 
         &--bottom-center {
             justify-content: center;
+            right: 0;
             bottom: 0;
+            left: 0;
         }
 
         &--top-right {
@@ -70,6 +78,10 @@
 
         &--with-bg {
             background: center / contain no-repeat url("/assets/image/slider-img/pencels.png");
+        }
+
+        &:last-of-type {
+            margin-right: 0;
         }
     }
 }

@@ -1,0 +1,70 @@
+.about-payment {
+    padding: 0 25px;
+    padding-top: 29px;
+    padding-bottom: 51px;
+
+    color: $second-black;
+    background-color: $off-white;
+
+    &__title {
+        display: flex;
+        align-items: center;
+
+        color: #3075FC;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &::before {
+            content: "";
+
+            display: inline-block;
+
+            width: 12px;
+            height: 12px;
+
+            margin-right: 11px;
+
+            background: center / contain no-repeat url("/assets/image/about-payment-logo.svg");
+        }
+    }
+
+    &__text {
+        margin-top: 35px;
+    }
+
+    &__cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        margin-top: 18px;
+    }
+
+    &__card {
+        position: relative;
+
+        min-width: 80px;
+        min-height: 52px;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            bottom: 0;
+
+            width: 100%;
+            height: 4px;
+
+            border-radius: 4px;
+            background-color: #48455C;
+        }
+
+        &--selected {
+            color: #3075FC;
+
+            &::before {
+                background-color: #3075FC;
+            }
+        }
+    }
+}

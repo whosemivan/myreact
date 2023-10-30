@@ -4,16 +4,27 @@
         position: relative;
     }
 
-    &__cost {
+    &__price {
         position: absolute;
         bottom: 0;
         right: 0;
 
         padding: 5px 12px 1px 12px;
+        text-align: right;
 
-        &::after {
-            content: "₽";
-            margin-left: 4px;
+        &-old {
+            display: block;
+
+            text-decoration: line-through;
+
+            color: #F91818;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        &::after,
+        &-old::after {
+            content: " ₽";
             position: relative;
         }
     }
@@ -33,7 +44,7 @@
 
         color: #999999;
         font-size: 12px;
-        
+
         &::after {
             content: "";
 
@@ -48,17 +59,38 @@
         }
     }
 
-    &--best &__img-wrapper::after {
-        content: "";
+    &--mark-best,
+    &--mark-discount {
+        .product-card__img-wrapper::after {
+            content: "";
 
-        position: absolute;
-        top: 9px;
-        right: 22px;
+            position: absolute;
+            top: 12px;
+            left: 11px;
+            right: unset;
 
-        min-width: 52px;
-        min-height: 33px;
+            min-width: 34px;
+            min-height: 22px;
 
-        border-radius: 60px;
-        background: center / 21.22px no-repeat url("/assets/image/medal.svg"), #F6C9C9;
+            border-radius: 60px;
+        }
+    }
+
+    &--mark-best {
+        .product-card__img-wrapper::after {
+            top: 9px;
+            right: 22px;
+            left: unset;
+
+            min-width: 52px;
+            min-height: 33px;
+            background: center / 21.22px no-repeat url("/assets/image/medal.svg"), #F6C9C9;
+        }
+    }
+
+    &--mark-discount {
+        .product-card__img-wrapper::after {
+            background: center / 14px no-repeat url("/assets/image/down-arrow.svg"), #F6C9C9;
+        }
     }
 }

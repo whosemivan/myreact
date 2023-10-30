@@ -22,11 +22,12 @@
         }
     }
 
-    &__accordion-summary-wrapper {
+    &__accordion-summary-btn {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
+        width: 100%;
         min-height: 50px;
         padding: 9px 13.5px 9px 9px;
 

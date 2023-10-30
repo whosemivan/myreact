@@ -1,0 +1,25 @@
+.filter-buttons {
+    display: flex;
+
+    min-height: 60px;
+    padding: 6px 9px;
+
+    box-sizing: border-box;
+
+    border-radius: 60px;
+
+    &__btn {
+        flex-grow: 1;
+
+        border-radius: 60px;
+        background-color: #00000000;
+
+        transition: .15s ease-in-out;
+
+        &--active {
+            color: $white;
+            font-weight: 700;
+            background-color: #3075FC;
+        }
+    }
+}

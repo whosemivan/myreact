@@ -26,31 +26,7 @@
         justify-content: flex-end;
     }
 
-    &__slider-title {
-        display: flex;
-        justify-content: space-between;
-        
+    &__block-title {
         margin: 26px 16px 11px 16px;
-    }
-
-    &__more-link {
-        display: inline-flex;
-        align-items: center;
-
-        font-size: 12px;
-        font-weight: 800;
-
-        color: #3075FC;
-        text-decoration: none;
-
-        &::after {
-            content: "";
-            display: block;
-
-            width: 18px;
-            height: 18px;
-
-            background: center / contain no-repeat url("/assets/image/arrow2.svg");
-        }
     }
 }
