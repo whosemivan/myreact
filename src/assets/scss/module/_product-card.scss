@@ -1,0 +1,216 @@
+.product-card {
+    display: table;
+
+    &__img-wrapper {
+        position: relative;
+        overflow: hidden;
+
+        &--round {
+            border-radius: 10px;
+        }
+
+        &--kit-img {
+            width: 250px;
+            height: 250px;
+        }
+
+        &--blog-img {
+            width: 280px;
+            height: 180px;
+        }
+
+        &>img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        padding: 5px 12px 1px 12px;
+        text-align: right;
+
+        &-old {
+            display: block;
+
+            text-decoration: line-through;
+
+            color: #F91818;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        &::after,
+        &-old::after {
+            content: " ₽";
+            position: relative;
+        }
+    }
+
+    &__price--basket {
+        position: static;
+        padding: 0;
+        padding-top: 3px;
+        margin-bottom: 10px;
+        text-align: left;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &__addBasket {
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        background: #3075FC;
+        color: #FFF;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 9px 0;
+        padding-left: 11px;
+        padding-right: 5px;
+        width: 100%;
+
+        svg {
+            margin-left: auto;
+        }
+    }
+
+    &__description-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        margin-top: 8px;
+        margin-left: 11px;
+    }
+
+    &__block--basket {
+        width: 100%;
+    }
+
+    &__score {
+        display: flex;
+        align-items: center;
+
+        color: #999999;
+        font-size: 12px;
+
+        &::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 14px;
+            height: 14px;
+
+            margin-left: 6px;
+
+            background: center / contain no-repeat url("/assets/image/star.svg");
+        }
+    }
+
+    &__heart {
+        min-width: 16px;
+        min-height: 16px;
+        background: center / cover no-repeat url("/assets/image/heart.svg");
+    }
+
+    &__info-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 8px;
+        padding-top: 8px;
+
+        border-top: 1.5px solid #F6F6F6;
+    }
+
+    &__opinion {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+
+        margin-right: 26px;
+
+        &::before {
+            content: "";
+
+            width: 18px;
+            height: 18px;
+        }
+
+        &--positive {
+            color: #3075FC;
+
+            &::before {
+                background: center / cover no-repeat url("/assets/image/smile.svg");
+            }
+        }
+
+        &--negative {
+            color: #F91818;
+
+            &::before {
+                background: center / cover no-repeat url("/assets/image/sad.svg");
+            }
+        }
+    }
+
+    &--mark-best,
+    &--mark-discount,
+    &--mark-favorite {
+        .product-card__img-wrapper::after {
+            content: "";
+
+            position: absolute;
+            top: 12px;
+            left: 11px;
+            right: unset;
+
+            min-width: 34px;
+            min-height: 22px;
+
+            border-radius: 60px;
+        }
+    }
+
+    &--mark-best {
+        .product-card__img-wrapper::after {
+            top: 9px;
+            right: 22px;
+            left: unset;
+
+            min-width: 52px;
+            min-height: 33px;
+            background: center / 21.22px no-repeat url("/assets/image/medal.svg"), #F6C9C9;
+        }
+    }
+
+    &--mark-discount {
+        .product-card__img-wrapper::after {
+            background: center / 14px no-repeat url("/assets/image/down-arrow.svg"), #F6C9C9;
+        }
+    }
+
+    &--mark-favorite {
+        .product-card__img-wrapper::after {
+            top: 10px;
+            right: 9px;
+            left: unset;
+
+            min-width: 16px;
+            min-height: 16px;
+            background: center / cover no-repeat url("/assets/image/heart.svg");
+        }
+    }
+}

@@ -33,6 +33,17 @@
 
 @font-face {
     font-family: "Gilroy";
+    src: url("/assets/fonts/Gilroy-Semibold.eot") format("eot"),
+        url("/assets/fonts/Gilroy-Semibold.ttf") format("truetype"),
+        url("/assets/fonts/Gilroy-Semibold.woff") format("woff"),
+        url("/assets/fonts/Gilroy-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
     src: url("/assets/fonts/Gilroy-Medium.eot") format("eot"),
         url("/assets/fonts/Gilroy-Medium.ttf") format("truetype"),
         url("/assets/fonts/Gilroy-Medium.woff") format("woff"),

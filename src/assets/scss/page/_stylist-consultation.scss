@@ -1,0 +1,108 @@
+.stylist-consultation {
+    width: 100%;
+    min-height: 463px;
+
+    padding: 26px 16px;
+
+    color: $white;
+    background: center / cover no-repeat url("/assets/image/stylist-consultation bg.png");
+    box-sizing: border-box;
+
+    &__title-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        display: inline-block;
+
+        font-weight: 700;
+        font-size: $l-fs;
+    }
+
+    &__info-btn {
+        display: inline-block;
+
+        width: 20px;
+        height: 20px;
+
+        margin-top: 5px;
+        margin-left: auto;
+
+        background: center / contain no-repeat url("/assets/image/info.svg");
+    }
+
+    &__price {
+        margin-top: 6px;
+        font-weight: 800;
+
+        &::after {
+            content: " ₽";
+        }
+    }
+
+    &__steps-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        margin-top: 40px;
+        counter-reset: num;
+    }
+
+    &__step {
+        display: flex;
+
+        &-info {
+            max-width: 140px;
+            
+            font-size: 12px;
+            line-height: 14.09px;
+        }
+
+        &-title {
+            display: block;
+            margin-bottom: 3px;
+
+            font-weight: 700;
+
+            &::after {
+                content: "Шаг " counter(num);
+            }
+        }
+
+        &::before {
+            content: counter(num);
+            counter-increment: num;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 38.87px;
+            height: 38.87px;
+
+            margin-right: 19px;
+
+            font-weight: 300;
+            font-size: 20px;
+
+            border: 2px dashed #FFFFFF;
+            border-radius: 100%;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+
+        margin-top: 40px;
+        padding: 11px 29px;
+
+        border-radius: 4px;
+
+        font-weight: 700;
+        text-transform: uppercase;
+        background: linear-gradient(89.08deg, #3075FC 0%, #A230FC 93.22%);
+    }
+}

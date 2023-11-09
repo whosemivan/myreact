@@ -4,24 +4,16 @@
     "global/reset",
     "global/variables",
     "global/base";
-// 
-
-
-// Импорт утилит
-@import
-    "utils/spacing",
-    "utils/colors",
-    "utils/font",
-    "utils/animation";
-// 
-
+//
 
 // Импорт страниц
 @import
     "page/main",
     "page/main-slider",
     "page/filter-buttons",
-    "page/nav";
+    "page/stylist-consultation",
+    "page/nav",
+    "page/basket";
 //
 
 
@@ -33,7 +25,7 @@
     "module/slider",
     "module/baner",
     "module/top-block",
-    "module/product",
+    "module/product-card",
     "module/faq-wrapper",
     "module/communication-block",
     "module/chat",
@@ -41,3 +33,12 @@
     "module/block-title",
     "module/info-block";
 // 
+
+
+// Импорт утилит
+@import
+    "utils/spacing",
+    "utils/colors",
+    "utils/font",
+    "utils/animation";
+//

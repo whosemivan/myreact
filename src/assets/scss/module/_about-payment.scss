@@ -6,6 +6,68 @@
     color: $second-black;
     background-color: $off-white;
 
+    &--basket {
+       padding-left: 0;
+       padding-right: 0; 
+
+       .about-payment__text,
+       .about-payment__cards-wrapper {
+        padding-left: 21px;
+       }
+    }
+
+    &__title-wrapper {
+        border-radius: 6px;
+        background: #F0F5FE;
+        box-shadow: 0px 4px 14px 0px rgba(48, 117, 252, 0.10);
+        display: flex;
+        align-items: center;
+        padding: 17px 23px;
+        margin-top: -50px;
+        position: relative;
+
+        .about-payment__radio {
+            display: none;
+        }
+
+        .about-payment__label {
+            color: #3075FC;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            position: relative;
+            padding-left: 25px;
+
+            &::before {
+                content: "";
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                border: 1px solid #3075FC;
+                position: absolute;
+                top: -3px;
+                left: 0;
+            }
+        }
+
+        .about-payment__radio:checked+.about-payment__label::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #48455C;
+            position: absolute;
+            top: 2px;
+            left: 5px;
+        }
+
+        .about-payment__price {
+            margin-left: auto;
+        }
+    }
+
     &__title {
         display: flex;
         align-items: center;
