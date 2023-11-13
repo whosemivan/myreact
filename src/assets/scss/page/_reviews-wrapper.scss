@@ -1,0 +1,76 @@
+.reviews-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__review {
+        position: relative;
+
+        padding: 11px 35px 18px 25px;
+
+        font-weight: 500;
+
+        border-radius: 10px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 10px 15px 0px #0000001A;
+
+        &-score {
+            display: block;
+
+            position: absolute;
+            top: 0;
+            right: 25px;
+
+            min-width: 23px;
+            height: 40px;
+
+            padding: 0 5px;
+            padding-top: 9px;
+
+            box-sizing: border-box;
+
+            color: $white;
+            text-align: center;
+
+            background-color: $black;
+
+            &::after {
+                content: "";
+
+                display: block;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+                border: 12px solid transparent;
+                border-bottom: 10px solid $white;
+            }
+        }
+    }
+
+    &__user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        margin-bottom: 30px;
+    }
+
+    &__user-avatar {
+        width: 44.74px;
+        height: 39px;
+
+        border-radius: 100%;
+    }
+
+    &__user-text {
+        margin-top: 10px;
+        margin-bottom: 42px;
+    }
+}

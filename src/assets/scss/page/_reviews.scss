@@ -1,0 +1,36 @@
+.main {
+
+    &__reviews-filter {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 32px 25px 0 18px;
+    }
+
+    &__stars-wrapper {
+        margin-top: 9px;
+    }
+
+    &__reviews-wrapper {
+        margin: 0 20px;
+        margin-top: 41px;
+    }
+
+    &__add-review {
+        margin: 0 15px;
+        margin-top: 37px;
+    }
+
+    &__communication-blocks-wrapper {
+        padding: 0 15px;
+        margin-top: 39px;
+    }
+
+    &__page-selcetor {
+        justify-content: flex-end;
+
+        margin-top: 27px;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}

@@ -24,10 +24,14 @@
 
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
-    <!--  -->
+    <!-- ### -->
+
+    <!-- Кнопки счетчика -->
+    <script defer src="assets/js/counter-btns.js"></script>
+    <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="assets/css/main-page.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 
 <body>
@@ -52,7 +56,12 @@
 
                 <div class="nav__btns-wrapper">
                     <button class="nav__search-btn bg-second-gray" type="submit"></button>
-                    <input class="nav__search-counter bg-second-gray" type="text" value="36" name="count">
+                    <div class="nav__search-counter-wrapper">
+                        <input class="nav__search-counter bg-second-gray" type="number" value="36" min="1" max="100" name="count"
+                            id="counter">
+                        <button class="nav__search-counter-btn" id="inc-count" type="button"></button>
+                        <button class="nav__search-counter-btn" id="dec-count" type="button"></button>
+                    </div>
                 </div>
             </form>
 
@@ -78,19 +87,19 @@
                 <div class="swiper-slide">
                     <div>
                         <img src="assets/image/slider-img/nike sneakers.png" alt="nike sneakers img"
-                            class="main-slider__img">
+                            class="main__primary-slider-img">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div>
                         <img src="assets/image/slider-img/nike sneakers.png" alt="nike sneakers img"
-                            class="main-slider__img">
+                            class="main__primary-slider-img">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div>
                         <img src="assets/image/slider-img/nike sneakers.png" alt="nike sneakers img"
-                            class="main-slider__img">
+                            class="main__primary-slider-img">
                     </div>
                 </div>
             </div>
@@ -637,13 +646,13 @@
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
 
-                            <div class="product-card__heart"></div>
+                            <div class="news-block__heart"></div>
                         </div>
 
-                        <div class="product-card__info-wrapper">
+                        <div class="news-block__info-wrapper">
                             <div>
-                                <span class="product-card__opinion product-card__opinion--positive">24</span>
-                                <span class="product-card__opinion product-card__opinion--negative">4</span>
+                                <span class="news-block__opinion news-block__opinion--positive">24</span>
+                                <span class="news-block__opinion news-block__opinion--negative">4</span>
                             </div>
 
                             <p class="fs-xss">11.02.2022</p>
@@ -664,13 +673,13 @@
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
 
-                            <div class="product-card__heart"></div>
+                            <div class="news-block__heart"></div>
                         </div>
 
-                        <div class="product-card__info-wrapper">
+                        <div class="news-block__info-wrapper">
                             <div>
-                                <span class="product-card__opinion product-card__opinion--positive">24</span>
-                                <span class="product-card__opinion product-card__opinion--negative">4</span>
+                                <span class="news-block__opinion news-block__opinion--positive">24</span>
+                                <span class="news-block__opinion news-block__opinion--negative">4</span>
                             </div>
 
                             <p class="fs-xss">11.02.2022</p>
@@ -686,7 +695,8 @@
                 <a href="#" class="stylist-consultation__info-btn"></a>
             </div>
 
-            <p class="mt-m">Краткое описание услуги Lorem ipsum dolor sit amet consectetur.psum dolor sit amet consectetur.</p>
+            <p class="mt-m">Краткое описание услуги Lorem ipsum dolor sit amet consectetur.psum dolor sit amet
+                consectetur.</p>
 
             <p class="stylist-consultation__price">8 000</p>
 

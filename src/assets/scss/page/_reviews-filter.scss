@@ -1,0 +1,89 @@
+.reviews-filter {
+    position: relative;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    min-width: 430px;
+    min-height: 713px;
+
+    border-radius: 10px;
+    background-color: $white;
+
+    &__title {
+        margin-top: 38px;
+        margin-left: 33px;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        width: 14px;
+        height: 14px;
+
+        background: center url("/assets/image/close-icon.svg") no-repeat;
+    }
+
+    &__date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 375px;
+        height: 60px;
+
+        margin: 53px 27px 0 28px;
+        padding-left: 22px;
+
+        box-sizing: border-box;
+
+        border-radius: 60px;
+        background-color: #F8F8F8;
+        cursor: pointer;
+
+        &>input[type="date"] {
+
+            &::before {
+                content: "";
+
+                width: 24px;
+                height: 24px;
+
+                background: center url("/assets/image/calendar-icon.svg") no-repeat;
+            }
+        }
+    }
+
+    &__stars-list {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+
+        margin: 52px 38px 0 35px;
+    }
+
+    &__stars-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .stars-wrapper__start, & .stars-wrapper__start--light {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__accept-btn {
+        min-height: 50px;
+
+        margin: 84px 35px 30px 35px;
+
+        color: $white;
+        text-transform: uppercase;
+
+        border-radius: 6px;
+        background-color: $black;
+    }
+}

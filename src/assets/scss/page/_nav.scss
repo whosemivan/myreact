@@ -24,9 +24,7 @@
         width: 16px;
         height: 16px;
 
-        background-image: url("/assets/image/search.svg");
-        background-repeat: no-repeat;
-        background-position: center;
+        background: center url("/assets/image/search.svg") no-repeat;
     }
 
     &__search-input {
@@ -57,9 +55,14 @@
             background-color: $red;
 
             position: absolute;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             border-radius: 46px;
         }
+    }
+
+    &__search-counter-wrapper {
+        position: relative;
     }
 
     &__search-counter {
@@ -70,6 +73,25 @@
         margin-left: 7px;
 
         border-radius: 50px;
+
+        &-btn {
+            position: absolute;
+            right: 0;
+
+            width: 10px;
+            height: 10px;
+
+            padding: 0 10px;
+            padding-top: 13px;
+
+            background: bottom url("/assets/image/mini-top-arrow.svg") no-repeat;
+
+            &#dec-count {
+                bottom: 0;
+
+                background: top url("/assets/image/mini-down-arrow.svg") no-repeat;
+            }
+        }
     }
 
     &__links-wrapper {

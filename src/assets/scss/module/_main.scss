@@ -29,4 +29,16 @@
     &__block-title {
         margin: 26px 16px 11px 16px;
     }
+
+    &__title-wrapper {
+        margin: 13px 15px 0 15px;
+
+        color: #3075FC;
+        text-transform: lowercase;
+    }
+
+    &__title,
+    &__subtitle {
+        text-transform: uppercase;
+    }
 }

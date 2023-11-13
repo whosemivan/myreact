@@ -1,0 +1,23 @@
+.main {
+
+    &__open-news {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        margin-top: 8px;
+
+        &>.news-block__info-wrapper {
+            margin-top: 5px;
+            padding-top: 0;
+        }
+    }
+
+    &__block-title {
+        margin-top: 51px;
+    }
+
+    &__slider {
+        padding: 0 15px;
+    }
+}

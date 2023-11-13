@@ -1,0 +1,79 @@
+.header {
+    overflow: hidden;
+    background: linear-gradient(257.17deg, #3075FC 6.89%, #A230FC 97.54%);
+
+    &__breadcrumbs>ul>li {
+        color: $white;
+    }
+
+    &__page-icon,
+    &__basket {
+        background-color: #FFFFFF33;
+    }
+
+    &__page-icon {
+        background-image: url("/assets/image/home--white.svg");
+    }
+
+    &__basket {
+        background-image: url("/assets/image/shopping-bag--white.svg");
+    }
+
+    &__page-title {
+        position: relative;
+
+        margin-top: 45px;
+        margin-bottom: 71px;
+
+        z-index: 0;
+
+        color: #48455C;
+        text-align: center;
+        text-transform: uppercase;
+
+        p {
+            letter-spacing: 8px;
+            text-transform: lowercase;
+        }
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: -18px;
+            left: -77px;
+
+            width: 100%;
+            min-width: 561px;
+            height: 561px;
+
+            z-index: -1;
+
+            background-color: $white;
+            border-radius: 100%;
+        }
+    }
+}
+
+.main {
+    
+    &__open-news {
+        margin-top: 0;
+    }
+
+    &__block-title {
+        margin-top: 50px;
+    }
+
+    &__slider {
+        padding: 0 15px;
+    }
+
+    &__new-products-slider {
+        margin-top: 53px;
+    }
+
+    &__feedback-sections {
+        margin-top: 60px;
+    }
+}

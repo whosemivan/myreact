@@ -50,6 +50,16 @@
         }
     }
 
+    &__price,
+    &__price-old,
+    &__cost {
+
+        &::after {
+            content: " ₽";
+            position: relative;
+        }
+    }
+
     &__price--basket {
         position: static;
         padding: 0;
@@ -118,52 +128,49 @@
         }
     }
 
-    &__heart {
-        min-width: 16px;
-        min-height: 16px;
-        background: center / cover no-repeat url("/assets/image/heart.svg");
-    }
+    &__more-btn {
+        position: absolute;
+        top: 12px;
+        right: 7px;
 
-    &__info-wrapper {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 50px;
 
-        margin-top: 8px;
-        padding-top: 8px;
+        padding: 10px 10px 10px 20px;
 
-        border-top: 1.5px solid #F6F6F6;
-    }
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
 
-    &__opinion {
-        display: inline-flex;
-        align-items: center;
-        gap: 9px;
+        border-radius: 40px;
+        background-color: #A230FC;
 
-        margin-right: 26px;
-
-        &::before {
+        &::after {
             content: "";
 
-            width: 18px;
-            height: 18px;
+            display: inline-block;
+
+            width: 24px;
+            height: 24px;
+
+            background: center / contain no-repeat url("/assets/image/arrow.svg");
         }
+    }
 
-        &--positive {
-            color: #3075FC;
+    &__buy-btn {
+        display: block;
 
-            &::before {
-                background: center / cover no-repeat url("/assets/image/smile.svg");
-            }
-        }
+        margin-top: 19px;
+        padding-top: 17px;
+        padding-bottom: 16px;
 
-        &--negative {
-            color: #F91818;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
 
-            &::before {
-                background: center / cover no-repeat url("/assets/image/sad.svg");
-            }
-        }
+        border-radius: 6px;
+        background-color: #3075FC;
     }
 
     &--mark-best,

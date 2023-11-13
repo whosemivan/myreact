@@ -11,7 +11,7 @@ var imagemin = require("gulp-imagemin")
 var del = require("del");
 
 gulp.task("css", function () {
-    return gulp.src("src/assets/scss/style.scss")
+    return gulp.src("src/assets/scss/*.scss")
         .pipe(plumber())
         .pipe(sourcemap.init())
         .pipe(sass())
@@ -20,7 +20,7 @@ gulp.task("css", function () {
         ]))
         .pipe(gulp.dest("public/assets/css"))
         .pipe(csso())
-        .pipe(rename("style.min.css"))
+        .pipe(rename({ suffix: ".min" }))
         .pipe(sourcemap.write("."))
         .pipe(gulp.dest("public/assets/css"))
         .pipe(server.stream());
