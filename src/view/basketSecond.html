@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Корзина</title>
+
+    <!-- Подключение слайдера -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/swiper.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
+
+    <!-- Утилиты -->
+    <script src="assets/js/utils.js"></script>
+    <!--  -->
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/basket.min.css">
+</head>
+
+<body>
+    <div class="top-block color-white bg-black">
+        <a class="top-block__text mb-s fs-xss">
+            Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
+        </a>
+    </div>
+
+    <header class="header mx-m">
+        <div class="header__logo-and-basket-wrapper my-m">
+            <h1 class="logo">myreact</h1>
+            <button class="header__basket bg-second-gray"></button>
+        </div>
+
+        <div class="header__breadcrumbs">
+            <div class="header__page-icon bg-second-gray"></div>
+            <ul>
+                <li><a href="#">Мужское</a></li>
+                <li><a href="#">Обувь</a></li>
+                <li><a href="#">Корзина</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="basket">
+        <h1 class="visually-hidden">Корзина</h1>
+        <div class="basket__stages basket__stages--second mx-m">
+            <span class="basket__stage basket__stage--active">
+                Корзина
+            </span>
+            <span class="basket__stage basket__stage--active">
+                Доставка
+            </span>
+            <span class="basket__stage">
+                Оплата
+            </span>
+            <span class="basket__stage">
+                Оформить
+            </span>
+        </div>
+
+        <div class="basket__sum mx-m">
+            <span class="basket__sum-info">Сумма</span>
+            <span class="basket__sum-price">48 060 ₽</span>
+        </div>
+
+
+        <form>
+
+            <div class="basket__delivery mx-m">
+                <h2 class="basket__delivery-title">Доставка</h2>
+                <div class="basket__delivery-inputs">
+                    <p class="basket__delivery-wrapper">
+                        <input type="radio" id="contactChoice1" name="delivery" value="pvz"
+                            class="basket__delivery-radio" />
+                        <label for="contactChoice1" class="basket__delivery-label">ПВЗ</label>
+                    </p>
+                    <p class="basket__delivery-wrapper">
+                        <input type="radio" id="contactChoice2" name="delivery" value="postamat"
+                            class="basket__delivery-radio" checked />
+                        <label for="contactChoice2" class="basket__delivery-label">Постамат</label>
+                    </p>
+                    <p class="basket__delivery-wrapper">
+                        <input type="radio" id="contactChoice3" name="delivery" value="courier"
+                            class="basket__delivery-radio" />
+                        <label for="contactChoice3" class="basket__delivery-label">Курьер</label>
+                    </p>
+                </div>
+            </div>
+
+            <div class="basket__own-info mx-m">
+                <p class="basket__form-block">
+                    <label for="fullName" class="basket__form-label">ФИО</label>
+                    <input type="text" id="fullName" name="fullName" class="basket__form-input">
+                </p>
+                <p class="basket__form-block">
+                    <label for="userEmail" class="basket__form-label">Почта</label>
+                    <input type="text" id="userEmail" name="userEmail" class="basket__form-input">
+                </p>
+                <p class="basket__form-block">
+                    <label for="userPhone" class="basket__form-label">Телефон</label>
+                    <input type="text" id="userPhone" name="userPhone" class="basket__form-input">
+                </p>
+            </div>
+
+            <div class="basket__own-info mx-m">
+                <p class="basket__form-block">
+                    <label for="city" class="basket__form-label">Город</label>
+                    <input type="text" id="city" name="city" class="basket__form-input">
+                </p>
+                <p class="basket__form-block">
+                    <label for="adress" class="basket__form-label">Адрес</label>
+                    <input type="text" id="adress" name="adress" class="basket__form-input">
+                </p>
+                <p class="basket__form-block">
+                    <label for="details" class="basket__form-label">Детали</label>
+                    <input type="text" id="details" name="details" class="basket__form-input basket__form-input--more">
+                </p>
+            </div>
+
+
+            <div class="basket__transports mx-m">
+                <h3 class="basket__transports-title">Выбор транспортных компаний</h3>
+                <div class="basket__transports-inputs">
+                    <p class="basket__transports-wrapper">
+                        <input type="radio" id="transport1" name="transports" value="postOffice"
+                            class="basket__transports-radio" />
+                        <label for="transport1" class="basket__transports-label">
+                            <img src="assets/image/pochtaLogo.svg" alt="Почта России" width="42" height="23">
+                            <span>599 руб</span>
+                        </label>
+                    </p>
+                    <p class="basket__transports-wrapper">
+                        <input type="radio" id="transport2" name="transports" value="cdek"
+                            class="basket__transports-radio" checked />
+                        <label for="transport2" class="basket__transports-label">
+                            <img src="assets/image/cdek.svg" alt="CDEK" width="69" height="14">
+                            <span>100 руб</span>
+                        </label>
+                    </p>
+                    <p class="basket__transports-wrapper">
+                        <input type="radio" id="transport3" name="transports" value="boxberry"
+                            class="basket__transports-radio" />
+                        <label for="transport3" class="basket__transports-label">
+                            <img src="assets/image/boxberry.svg" alt="boxberry" width="79" height="17">
+                            <span>1 000 руб</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <div class="basket__conditions mx-m">
+                <h3 class="basket__conditions-title">Условия доставки</h3>
+                <div class="basket__conditions-inputs">
+                    <p class="basket__conditions-wrapper">
+                        <input type="radio" id="condition1" name="conditions" value="postOffice"
+                            class="basket__conditions-radio" />
+                        <label for="condition1" class="basket__conditions-label">
+                            <span class="basket__conditions-main-label">Сегодня</span>
+                            <span class="basket__conditions-other-label">
+                                Стоимость доставки - 599 руб., вне зависимости от суммы покупки.
+                                <span class="basket__conditions-time">Ближайшая дата доставки: 8 августа</span>
+                            </span>
+                        </label>
+                    </p>
+                    <p class="basket__conditions-wrapper">
+                        <input type="radio" id="condition2" name="conditions" value="cdek"
+                            class="basket__conditions-radio" checked />
+                        <label for="condition2" class="basket__conditions-label">
+                            <span class="basket__conditions-main-label">В течение 2 часов</span>
+                            <span class="basket__conditions-other-label">
+                                Стоимость доставки - 800 руб., вне зависимости от суммы покупки.
+                                <span class="basket__conditions-time">Ближайшая дата доставки: 8 августа</span>
+                            </span>
+                        </label>
+                    </p>
+                    <p class="basket__conditions-wrapper">
+                        <input type="radio" id="condition3" name="conditions" value="boxberry"
+                            class="basket__conditions-radio" />
+                        <label for="condition3" class="basket__conditions-label">
+                            <span class="basket__conditions-main-label">Бесплатно</span>
+                            <span class="basket__conditions-other-label">
+                                При сумме выкупа от 4500 руб.
+                                <span class="basket__conditions-time">Ближайшая дата доставки: 8 августа</span>
+                            </span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <button type="submit" class="basket__btnSubmit mx-m">
+                Оформить
+                <span>
+                    48 000 ₽
+                </span>
+            </button>
+        </form>
+
+    </main>
+
+    <footer class="footer bg-black">
+        <h1 class="footer__logo logo color-white">myreact</h1>
+
+        <div class="footer__info-blocks-wrapper">
+            <section class="info-block">
+                <h3 class="info-block__title">помощь</h3>
+
+                <ul class="info-block__list">
+                    <li><a class="color-white" href="#">Помощь и контакты</a></li>
+                    <li><a class="color-white" href="#">Вопросы и ответы</a></li>
+                    <li><a class="color-white" href="#">Оплата и доставка</a></li>
+                    <li><a class="color-white" href="#">Обмен и возврат</a></li>
+                    <li><a class="color-white" href="#">Таблица размеров</a></li>
+                </ul>
+            </section>
+
+            <section class="info-block">
+                <h3 class="info-block__title">myreact</h3>
+
+                <ul class="info-block__list">
+                    <li><a class="color-white" href="#">О нас</a></li>
+                    <li><a class="color-white" href="#">Отзывы</a></li>
+                    <li><a class="color-white" href="#">Новости</a></li>
+                    <li><a class="color-white" href="#">Статьи</a></li>
+                    <li><a class="color-white" href="#">Акции</a></li>
+                    <li><a class="color-white" href="#">Контакты</a></li>
+                </ul>
+            </section>
+
+            <section class="info-block">
+                <h3 class="info-block__title">контакты</h3>
+
+                <ul class="info-block__list">
+                    <li class="info-block__decorated-link"><a class="color-white" href="#">8 800 511-53-72</a></li>
+                    <li class="info-block__decorated-link">
+                        <a class="color-white" href="#">info&#64;myreact.ru</a>
+                    </li>
+
+                    <li><br></li>
+
+                    <ul>
+                        <li><a class="color-white" href="#">пн-пт с 09:00 до 21:00</a></li>
+                        <li><a class="color-white" href="#">сб-вс с 12:00 до 18:00</a></li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="info-block info-block--stretched">
+                <h3 class="info-block__title">способы оплаты</h3>
+                <div class="info-block__img"></div>
+            </section>
+        </div>
+
+        <div class="footer__copyright-rights">
+            <p>MYREACT.RU © 2018 – 2023</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.main {
+
+    &__nav {
+        margin: 12px 16px 11px;
+    }
+
+    &__page-selcetor {
+        justify-content: flex-end;
+        margin: 37px 28px 42px auto;
+    }
+
+    &__logo-slider {
+        margin-top: 34px;
+        padding: 0 18px;
+
+        & .swiper-wrapper {
+            align-items: center;
+        }
+
+        & .slider__slide {
+            padding-right: 43px;
+            border-radius: 0;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__filter-buttons {
+        margin: 0 16px;
+    }
+}

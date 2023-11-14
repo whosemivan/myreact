@@ -1,0 +1,45 @@
+.brands-list {
+    margin-top: 22px;
+    margin: 22px 29px 0 20px;
+
+    font-weight: 300;
+
+    &__brand {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 8px;
+        line-height: 30px;
+
+        &--crown {
+
+            &>.brands-list__brand-name {
+                position: relative;
+
+                &::after {
+                    content: "";
+
+                    position: absolute;
+                    top: 50%;
+
+                    display: inline-block;
+
+                    width: 14px;
+                    height: 14px;
+
+                    transform: translate(0, -50%);
+                    margin-left: 10px;
+
+                    background: center url("/assets/image/crown--black.svg") no-repeat;
+                }
+            }
+        }
+    }
+
+    &__favorite-btn {
+        width: 18px;
+        height: 18px;
+
+        background: center url("/assets/image/heart--light.svg") no-repeat;
+    }
+}
