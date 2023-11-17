@@ -1,0 +1,51 @@
+<header class="header mx-m">
+    <div class="header__logo-and-basket-wrapper my-m">
+        <h1 class="logo">myreact</h1>
+        <button class="header__basket bg-second-gray"></button>
+    </div>
+
+    @@if (pageName === 'index') {
+    <nav class="nav mb-m">
+        <form class="nav__search-wrapper bg-white pl-l">
+            <label class="nav__search">
+                <div class="nav__search-icon"></div>
+                <input class="nav__search-input ml-l" type="search" placeholder="Поиск" name="search">
+            </label>
+
+            <div class="nav__btns-wrapper">
+                <button class="nav__search-btn bg-second-gray" type="submit"></button>
+                <div class="nav__search-counter-wrapper">
+                    <input class="nav__search-counter bg-second-gray" type="number" value="36" min="1" max="100"
+                        name="count" id="counter">
+                    <button class="nav__search-counter-btn" id="inc-count" type="button"></button>
+                    <button class="nav__search-counter-btn" id="dec-count" type="button"></button>
+                </div>
+            </div>
+        </form>
+
+        <div class="nav__links-wrapper mt-m fs-xss">
+            <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Верхняя одежда</span></a>
+            <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Платья</span></a>
+            <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Обувь</span></a>
+        </div>
+    </nav>
+    }
+
+    <div class="header__breadcrumbs">
+        <div class="header__page-icon bg-second-gray"></div>
+        <ul>
+            <!-- @@if (pageName === 'cabinet') {
+            <li><a href="#">Личный кабинет</a></li>
+            } 
+            @@if (pageName === 'index') {
+            <li><a href="#">Главная</a></li>
+            } -->
+
+            @@if (typeof breadcrumbs !== 'undefined') {
+                @@for (var i = 0; i < breadcrumbs.length; i++) {
+                    <li><a href="#">`+breadcrumbs[i]+`</a></li>
+                }
+            }
+        </ul>
+    </div>
+</header>

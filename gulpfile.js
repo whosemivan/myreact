@@ -9,6 +9,7 @@ var rename = require("gulp-rename")
 var postcss = require("gulp-postcss");
 var imagemin = require("gulp-imagemin")
 var del = require("del");
+const fileinclude = require('gulp-file-include');
 
 gulp.task("css", function () {
     return gulp.src("src/assets/scss/*.scss")
@@ -20,7 +21,9 @@ gulp.task("css", function () {
         ]))
         .pipe(gulp.dest("public/assets/css"))
         .pipe(csso())
-        .pipe(rename({ suffix: ".min" }))
+        .pipe(rename({
+            suffix: ".min"
+        }))
         .pipe(sourcemap.write("."))
         .pipe(gulp.dest("public/assets/css"))
         .pipe(server.stream());
@@ -28,7 +31,7 @@ gulp.task("css", function () {
 
 gulp.task("js", function () {
     return gulp.src("src/assets/js/**/*.js")
-        
+
         .pipe(gulp.dest("public/assets/js"));
 });
 
@@ -55,18 +58,22 @@ gulp.task("fonts", function () {
 
 gulp.task("html", function () {
     return gulp.src("src/view/*.html")
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
         .pipe(gulp.dest("public"));
 });
 
 gulp.task("copy", function () {
     return gulp.src([
-        "src/assets/fonts/**/*.{woff,woff2}",
-        "src/assets/image/**",
-        "src/assets/js/**",
-        "src/*.ico"
-    ], {
-        base: "src"
-    })
+            "src/assets/fonts/**/*.{woff,woff2}",
+            "src/assets/image/**",
+            "src/assets/js/**",
+            "src/*.ico"
+        ], {
+            base: "src"
+        })
         .pipe(gulp.dest("public"));
 });
 

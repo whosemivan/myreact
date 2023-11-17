@@ -41,50 +41,11 @@
         </a>
     </div>
 
-    <header class="header mx-m">
-        <div class="header__logo-and-basket-wrapper my-m">
-            <h1 class="logo">myreact</h1>
-            <button class="header__basket bg-second-gray"></button>
-        </div>
 
-        <nav class="nav mb-m">
-            <div class="nav__search-with-filter">
-                <form class="nav__search-wrapper bg-white pl-l">
-                    <label class="nav__search">
-                        <div class="nav__search-icon"></div>
-                        <input class="nav__search-input ml-l" type="search" placeholder="Поиск" name="search">
-                    </label>
-
-                    <div class="nav__btns-wrapper">
-                        <button class="nav__search-btn bg-second-gray" type="submit"></button>
-                        <div class="nav__search-counter-wrapper">
-                            <input class="nav__search-counter bg-second-gray" type="number" value="36" min="1" max="100"
-                                name="count" id="counter">
-                            <button class="nav__search-counter-btn" id="inc-count" type="button"></button>
-                            <button class="nav__search-counter-btn" id="dec-count" type="button"></button>
-                        </div>
-                    </div>
-                </form>
-
-                <button class="filter-btn"></button>
-            </div>
-
-            <div class="nav__links-wrapper mt-m fs-xss">
-                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Верхняя одежда</span></a>
-                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Платья</span></a>
-                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Обувь</span></a>
-            </div>
-        </nav>
-
-        <div class="header__breadcrumbs">
-            <div class="header__page-icon bg-second-gray"></div>
-            <ul>
-                <li><a href="#">Мужское</a></li>
-                <li><a href="#">Обувь</a></li>
-                <li><a href="#">Кроссовки</a></li>
-            </ul>
-        </div>
-    </header>
+    @@include('./partials/header.html', {
+        "pageName": "index",
+        "breadcrumbs": ["Мужское", "Обувь", "Кроссовки"]
+    })
 
     <main class="main">
         <div class="main__product-preview product-preview">
@@ -1030,63 +991,8 @@
         </div>
     </main>
 
-    <footer class="footer bg-black">
-        <h1 class="footer__logo logo color-white">myreact</h1>
+    @@include('./partials/footer.html')
 
-        <div class="footer__info-blocks-wrapper">
-            <section class="info-block">
-                <h3 class="info-block__title">помощь</h3>
-
-                <ul class="info-block__list">
-                    <li><a class="color-white" href="#">Помощь и контакты</a></li>
-                    <li><a class="color-white" href="#">Вопросы и ответы</a></li>
-                    <li><a class="color-white" href="#">Оплата и доставка</a></li>
-                    <li><a class="color-white" href="#">Обмен и возврат</a></li>
-                    <li><a class="color-white" href="#">Таблица размеров</a></li>
-                </ul>
-            </section>
-
-            <section class="info-block">
-                <h3 class="info-block__title">myreact</h3>
-
-                <ul class="info-block__list">
-                    <li><a class="color-white" href="#">О нас</a></li>
-                    <li><a class="color-white" href="#">Отзывы</a></li>
-                    <li><a class="color-white" href="#">Новости</a></li>
-                    <li><a class="color-white" href="#">Статьи</a></li>
-                    <li><a class="color-white" href="#">Акции</a></li>
-                    <li><a class="color-white" href="#">Контакты</a></li>
-                </ul>
-            </section>
-
-            <section class="info-block">
-                <h3 class="info-block__title">контакты</h3>
-
-                <ul class="info-block__list">
-                    <li class="info-block__decorated-link"><a class="color-white" href="#">8 800 511-53-72</a></li>
-                    <li class="info-block__decorated-link">
-                        <a class="color-white" href="#">info&#64;myreact.ru</a>
-                    </li>
-
-                    <li><br></li>
-
-                    <ul>
-                        <li><a class="color-white" href="#">пн-пт с 09:00 до 21:00</a></li>
-                        <li><a class="color-white" href="#">сб-вс с 12:00 до 18:00</a></li>
-                    </ul>
-                </ul>
-            </section>
-
-            <section class="info-block info-block--stretched">
-                <h3 class="info-block__title">способы оплаты</h3>
-                <div class="info-block__img"></div>
-            </section>
-        </div>
-
-        <div class="footer__copyright-rights">
-            <p>MYREACT.RU © 2018 – 2023</p>
-        </div>
-    </footer>
 
     <script>
         const elems = document.getElementsByClassName("reviews-wrapper__user-text");

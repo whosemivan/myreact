@@ -899,43 +899,63 @@
         }
 
         .basket__isPresent-label {
-            width: 168px;
-            padding-left: 40px;
+            width: 225px;
+            padding-left: 20px;
             color: #000;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             position: relative;
-
-            &::before {
-                content: "";
-                width: 19px;
-                height: 19px;
-                border-radius: 50%;
-                border: 1px solid #48455C;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
+            cursor: pointer;
+            z-index: 10201;
 
             .basket__presentBtn {
                 position: absolute;
                 top: 18px;
-                left: 103px;
+                left: 86px;
+            }
+
+            .radio-mark {
+                display: flex;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 1px solid #48455C;
+                position: relative;
+                top: 0;
+                left: 0;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+            
+            
+            .radio-mark::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #48455C;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+            
+            .radio-input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }            
+
+            .radio-input:checked+.radio-mark::before {
+                opacity: 1;
             }
         }
 
-        .basket__input-radio:checked+.basket__isPresent-label::after {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #48455C;
-            position: absolute;
-            top: 6px;
-            left: 6px;
-        }
     }
 
     &__promocode {

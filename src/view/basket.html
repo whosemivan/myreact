@@ -29,21 +29,10 @@
         </a>
     </div>
 
-    <header class="header mx-m">
-        <div class="header__logo-and-basket-wrapper my-m">
-            <h1 class="logo">myreact</h1>
-            <button class="header__basket bg-second-gray"></button>
-        </div>
-
-        <div class="header__breadcrumbs">
-            <div class="header__page-icon bg-second-gray"></div>
-            <ul>
-                <li><a href="#">Мужское</a></li>
-                <li><a href="#">Обувь</a></li>
-                <li><a href="#">Корзина</a></li>
-            </ul>
-        </div>
-    </header>
+    @@include('./partials/header.html', {
+    "pageName": "basket",
+    "breadcrumbs": ["Мужское", "Обувь", "Корзина"]
+    })
 
     <main class="basket">
         <h1 class="visually-hidden">Корзина</h1>
@@ -236,8 +225,9 @@
             </div>
 
             <div class="basket__isPresent mx-m">
-                <input class="basket__input-radio" id="present" type="radio">
                 <label class="basket__isPresent-label" for="present">
+                    <span class="radio-mark"></span>
+                    <input type="checkbox" class="radio-input" id="present">
                     Упаковать в подарочную упаковку
                     <button class="basket__presentBtn" type="button">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,6 +238,7 @@
                         <span class="visually-hidden">Дополнительная информация</span>
                     </button>
                 </label>
+
             </div>
 
             <div class="basket__promocode mx-m">
@@ -285,7 +276,7 @@
 
         <section class="about-payment about-payment--basket">
             <div class="about-payment__title-wrapper mx-m">
-                <input id="aboutPayment" type="radio" class="about-payment__radio">
+                <input id="aboutPayment" type="checkbox" class="about-payment__radio">
                 <label for="aboutPayment" class="about-payment__label">Oплата долями</label>
                 <span class="about-payment__price">5 200 ₽</span>
             </div>
@@ -411,63 +402,7 @@
         </div>
     </main>
 
-    <footer class="footer bg-black">
-        <h1 class="footer__logo logo color-white">myreact</h1>
-
-        <div class="footer__info-blocks-wrapper">
-            <section class="info-block">
-                <h3 class="info-block__title">помощь</h3>
-
-                <ul class="info-block__list">
-                    <li><a class="color-white" href="#">Помощь и контакты</a></li>
-                    <li><a class="color-white" href="#">Вопросы и ответы</a></li>
-                    <li><a class="color-white" href="#">Оплата и доставка</a></li>
-                    <li><a class="color-white" href="#">Обмен и возврат</a></li>
-                    <li><a class="color-white" href="#">Таблица размеров</a></li>
-                </ul>
-            </section>
-
-            <section class="info-block">
-                <h3 class="info-block__title">myreact</h3>
-
-                <ul class="info-block__list">
-                    <li><a class="color-white" href="#">О нас</a></li>
-                    <li><a class="color-white" href="#">Отзывы</a></li>
-                    <li><a class="color-white" href="#">Новости</a></li>
-                    <li><a class="color-white" href="#">Статьи</a></li>
-                    <li><a class="color-white" href="#">Акции</a></li>
-                    <li><a class="color-white" href="#">Контакты</a></li>
-                </ul>
-            </section>
-
-            <section class="info-block">
-                <h3 class="info-block__title">контакты</h3>
-
-                <ul class="info-block__list">
-                    <li class="info-block__decorated-link"><a class="color-white" href="#">8 800 511-53-72</a></li>
-                    <li class="info-block__decorated-link">
-                        <a class="color-white" href="#">info&#64;myreact.ru</a>
-                    </li>
-
-                    <li><br></li>
-
-                    <ul>
-                        <li><a class="color-white" href="#">пн-пт с 09:00 до 21:00</a></li>
-                        <li><a class="color-white" href="#">сб-вс с 12:00 до 18:00</a></li>
-                    </ul>
-                </ul>
-            </section>
-
-            <section class="info-block info-block--stretched">
-                <h3 class="info-block__title">способы оплаты</h3>
-                <div class="info-block__img"></div>
-            </section>
-        </div>
-
-        <div class="footer__copyright-rights">
-            <p>MYREACT.RU © 2018 – 2023</p>
-        </div>
-    </footer>
+    @@include('./partials/footer.html')
 </body>
 
 </html>
