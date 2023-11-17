@@ -60,3 +60,42 @@ button {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+
+.radio-mark {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #48455C;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-mark::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #48455C;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.radio-input:checked + .radio-mark::before {
+    opacity: 1;
+}
