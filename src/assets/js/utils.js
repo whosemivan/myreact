@@ -15,3 +15,9 @@ function getDayAndMonthName({ numWeeks = 0 } = {}) {
     return `${now.getDate()} ${getMonthName(now)}`;
 }
 //
+
+
+function textToEllipsis(target) {
+    const text = target.innerText.split("");
+    target.innerText = text.slice(0, 110).join("") + "...";    
+}

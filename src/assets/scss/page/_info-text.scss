@@ -1,0 +1,33 @@
+.info-text {
+    padding: 0 20px 21px 20px;
+
+    font-weight: 500;
+
+    border-radius: 10px;
+    box-shadow: 15px 10px 15px 0px #0000001A;
+    background-color: #F8F8F8;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        max-width: 254px;
+
+        padding-top: 36px;
+        padding-bottom: 23px;
+
+        color: #48455C;
+        font-size: 18px;
+        font-weight: 800;
+
+        text-transform: uppercase;
+    }
+
+    &__img {
+        width: 7em;
+
+        margin-top: 7px;
+    }
+}

@@ -1,0 +1,41 @@
+.description-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 290px;
+    min-height: 200px;
+
+    padding: 16px;
+    padding-right: 24px;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: $white;
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__more-link {
+        display: flex;
+        align-items: center;
+
+        color: #3075FC;
+        margin-top: 20px;
+
+        &::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 14px;
+            height: 14px;
+
+            margin-left: 8px;
+            margin-top: 3px;
+
+            background: center / contain url("/assets/image/arrow--blue.svg") no-repeat;
+        }
+    }
+}

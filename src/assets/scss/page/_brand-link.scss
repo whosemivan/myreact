@@ -1,0 +1,15 @@
+.brand-link {
+    text-align: center;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    &__img {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 5px;
+
+        border-radius: 100%;
+    }
+}

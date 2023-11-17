@@ -1,0 +1,45 @@
+.main {
+
+    &__filter-buttons-slider {
+        padding: 0 15px;
+
+        & .filter-buttons__btn {
+            font-size: 12px;
+            color: #3075FC;
+        }
+    }
+
+    &__products-list {
+        margin: 0 14px;
+        margin-top: 30px;
+    }
+
+    &__page-selcetor {
+        justify-content: flex-end;
+
+        margin-top: 36px;
+    }
+
+    &__category-links-wrapper {
+        margin-top: 30px;
+        padding: 26px 15px 20px 15px;
+
+        background: linear-gradient(#A230FC, #3075FC);
+    }
+
+    &__brand-links-wrapper {
+        padding: 0 19px;
+    }
+
+    &__brand-baner {
+        margin: 31px 18px 0 15px;
+
+        .banner__wrapper {
+            padding: 14px 17px 23px 17px;
+        }
+    }
+
+    &__communication-blocks-wrapper {
+        margin-top: 17px;
+    }
+}

@@ -1,0 +1,20 @@
+.category-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 25px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #3075FC;
+    background-color: #FFFFFF;
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+    }
+}

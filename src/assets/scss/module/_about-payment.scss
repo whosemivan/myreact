@@ -129,4 +129,13 @@
             }
         }
     }
+
+    &__anchor-link {
+        width: 24px;
+        height: 24px;
+
+        margin-left: auto;
+
+        background: center url("/assets/image/arrow-blue.svg") no-repeat;
+    }
 }

@@ -1,0 +1,27 @@
+.main {
+
+    &__brand-baner {
+        margin: 19px 17px 0 16px;
+
+        & .banner__wrapper {
+            padding: 17px 17px 23px 17px;
+        }
+    }
+
+    &__filter-buttons {
+        margin-top: 28px;
+
+        & .filter-buttons__btn {
+            font-size: 12px;
+            color: #3075FC;
+        }
+    }
+
+    &__products-list {
+        margin: 0 14px;
+    }
+
+    &__reviews-slider-wrapper {
+        margin-top: 46px;
+    }
+}

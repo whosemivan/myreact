@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Страница бренда</title>
+
+    <!-- Подключение слайдера -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="assets/js/swiper.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
+
+    <!-- Подключение функционала фильтрующих кнопок -->
+    <script defer src="assets/js/filter-buttons.js"></script>
+    <!-- ### -->
+
+    <!-- Утилиты -->
+    <script src="assets/js/utils.js"></script>
+    <!-- ### -->
+
+    <!-- Кнопки счетчика -->
+    <script defer src="assets/js/counter-btns.js"></script>
+    <!-- ### -->
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/brand.min.css">
+</head>
+
+<body>
+    <div class="top-block color-white bg-black">
+        <a class="top-block__text mb-s fs-xss">
+            Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
+        </a>
+    </div>
+
+    <header class="header mx-m">
+        <div class="header__logo-and-basket-wrapper my-m">
+            <h1 class="logo">myreact</h1>
+            <button class="header__basket bg-second-gray"></button>
+        </div>
+
+        <nav class="nav mb-m">
+            <div class="nav__search-with-filter">
+                <form class="nav__search-wrapper bg-white pl-l">
+                    <label class="nav__search">
+                        <div class="nav__search-icon"></div>
+                        <input class="nav__search-input ml-l" type="search" placeholder="Поиск" name="search">
+                    </label>
+
+                    <div class="nav__btns-wrapper">
+                        <button class="nav__search-btn bg-second-gray" type="submit"></button>
+                        <div class="nav__search-counter-wrapper">
+                            <input class="nav__search-counter bg-second-gray" type="number" value="36" min="1" max="100"
+                                name="count" id="counter">
+                            <button class="nav__search-counter-btn" id="inc-count" type="button"></button>
+                            <button class="nav__search-counter-btn" id="dec-count" type="button"></button>
+                        </div>
+                    </div>
+                </form>
+
+                <button class="filter-btn"></button>
+            </div>
+
+            <div class="nav__links-wrapper mt-m fs-xss">
+                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Верхняя одежда</span></a>
+                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Платья</span></a>
+                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Обувь</span></a>
+            </div>
+        </nav>
+
+        <div class="header__breadcrumbs">
+            <div class="header__page-icon bg-second-gray"></div>
+            <ul>
+                <li><a href="#">Адидас</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__block-title block-title">
+            <h3 class="fs-s fw-800">Адидас</h3>
+        </div>
+
+        <div class="main__filter-buttons-slider swiper slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide">
+                    <div class="filter-buttons--outline">
+                        <button class="filter-buttons__btn filter-buttons__btn--active">Все</button>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="filter-buttons--outline">
+                        <button class="filter-buttons__btn">Campus</button>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="filter-buttons--outline">
+                        <button class="filter-buttons__btn">Forum low</button>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="filter-buttons--outline">
+                        <button class="filter-buttons__btn">Nite jogger</button>
+                    </div>
+                </div>
+                <div class="swiper-slide slider__slide">
+                    <div class="filter-buttons--outline">
+                        <button class="filter-buttons__btn">Nite jogger</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__products-list products-list">
+            <div class="products-list__card">
+                <a href="#" class="product-card">
+                    <div class="product-card__img-wrapper">
+                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                    </div>
+
+                    <div class="product-card__description-wrapper">
+                        <div>
+                            <h3 class="fw-800">Nike</h3>
+                            <p>Air Max SC</p>
+                        </div>
+
+                        <p class="product-card__score">4.6</p>
+                    </div>
+                </a>
+            </div>
+            <div class="products-list__card">
+                <a href="#" class="product-card">
+                    <div class="product-card__img-wrapper">
+                        <img src="assets/image/slider-img/product2.png" alt="product img">
+                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                    </div>
+
+                    <div class="product-card__description-wrapper">
+                        <div>
+                            <h3 class="fw-800">Nike</h3>
+                            <p>Air Max SC</p>
+                        </div>
+
+                        <p class="product-card__score">4.6</p>
+                    </div>
+                </a>
+            </div>
+            <div class="products-list__card">
+                <a href="#" class="product-card">
+                    <div class="product-card__img-wrapper">
+                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                    </div>
+
+                    <div class="product-card__description-wrapper">
+                        <div>
+                            <h3 class="fw-800">Nike</h3>
+                            <p>Air Max SC</p>
+                        </div>
+
+                        <p class="product-card__score">4.6</p>
+                    </div>
+                </a>
+            </div>
+            <div class="products-list__card">
+                <a href="#" class="product-card">
+                    <div class="product-card__img-wrapper">
+                        <img src="assets/image/slider-img/product2.png" alt="product img">
+                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                    </div>
+
+                    <div class="product-card__description-wrapper">
+                        <div>
+                            <h3 class="fw-800">Nike</h3>
+                            <p>Air Max SC</p>
+                        </div>
+
+                        <p class="product-card__score">4.6</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="main__page-selcetor page-selcetor">
+            <a href=".." class="page-selcetor__back">
+                <span class="page-selcetor__back-icon page-selcetor__back-icon--disabled"></span>
+            </a>
+
+            <div class="page-selcetor__pages-wrapper">
+                <a href="#" class="page-selcetor__page page-selcetor__page--select">1</a>
+                <a href="#" class="page-selcetor__page">2</a>
+                <a href="#" class="page-selcetor__page">3</a>
+                <a href="#" class="page-selcetor__page">4</a>
+            </div>
+
+            <a href="#" class="page-selcetor__next">
+                <span class="page-selcetor__next-icon"></span>
+            </a>
+        </div>
+
+        <div class="main__category-links-wrapper swiper slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="category-link">
+                        <img src="assets/image/category-cion1.svg" alt="category-link ">
+                        <p>Верхняя одежда</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="category-link">
+                        <img src="assets/image/category-cion2.svg" alt="category-link__icon">
+                        <p>Платья</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="category-link">
+                        <img src="assets/image/category-cion3.svg" alt="category-link__icon">
+                        <p>Обувь</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="category-link">
+                        <img src="assets/image/category-cion1.svg" alt="category-link ">
+                        <p>Верхняя одежда</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="category-link">
+                        <img src="assets/image/category-cion2.svg" alt="category-link__icon">
+                        <p>Платья</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="category-link">
+                        <img src="assets/image/category-cion3.svg" alt="category-link__icon">
+                        <p>Обувь</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__block-title block-title">
+            <h3 class="fs-s fw-800">Тренды осени</h3> 
+        </div>
+
+        <div class="main__brand-links-wrapper swiper slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="brand-link">
+                        <img class="brand-link__img" src="assets/image/brand-bg.jpg" alt="brand-img">
+                        <p>Nike</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="brand-link">
+                        <img class="brand-link__img" src="assets/image/brand-bg.jpg" alt="brand-img">
+                        <p>Adidas</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="brand-link">
+                        <img class="brand-link__img" src="assets/image/brand-bg.jpg" alt="brand-img">
+                        <p>Nike</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="brand-link">
+                        <img class="brand-link__img" src="assets/image/brand-bg.jpg" alt="brand-img">
+                        <p>Nike</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="brand-link">
+                        <img class="brand-link__img" src="assets/image/brand-bg.jpg" alt="brand-img">
+                        <p>Adidas</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="brand-link">
+                        <img class="brand-link__img" src="assets/image/brand-bg.jpg" alt="brand-img">
+                        <p>Nike</p>
+                    </a>
+                </div>
+                <div class="swiper-slide slider__slide pr-m">
+                    <a href="#" class="brand-link">
+                        <img class="brand-link__img" src="assets/image/brand-bg.jpg" alt="brand-img">
+                        <p>Adidas</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__brand-baner banner">
+            <section class="banner__wrapper color-white fs-xxs bg-black">
+                <div class="banner__header">
+                    <div class="banner__logo-and-link-wrapper">
+                        <img class="banner__brand-logo" src="/assets/image/Yeezy-logo.svg"></img>
+
+                        <a href="#" class="banner__brand-link fs-xss fw-300">
+                            <p class="banner__brand-name fw-800">yeezy</p>
+                            Магазин
+                        </a>
+                    </div>
+
+                    <p class="banner__brand-rating fs-s fw-600">4.98</p>
+                </div>
+
+                <div>
+                    <p class="fw-700">Оригинальные товары</p>
+                    <br>
+                    <p class="fw-500">Чем кроссовки Yeezy лучше других? Это неизменная надежность, комфорт и
+                        классический стиль...</p>
+                </div>
+
+                <a href="#" class="banner__link fw-800">Другие товары бренда yeezy</a>
+            </section>
+        </div>
+
+        <div class="main__feedback-sections">
+            <div class="main__communication-blocks-wrapper">
+                <section class="communication-block communication-block--with-img color-white">
+                    <h3 class="communication-block__title">Нужна помощь?</h3>
+                    <p class="communication-block__sub-title">
+                        Наши консультанты будут рады ответить на Ваши вопросы.
+                    </p>
+
+                    <div class="communication-block__btns-wrapper">
+                        <button class="communication-block__btn p-s">написать</button>
+                        <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
+                    </div>
+                </section>
+
+                <section class="communication-block bg-off-white color-second-black">
+                    <h3 class="communication-block__title">подпишитесь</h3>
+                    <p class="communication-block__text">
+                        Оставьте свой e-mail, чтобы первыми узнать о старте
+                        SALE и новых поступлениях
+                    </p>
+
+                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
+                        name="mail">
+
+                    <p class="communication-block__sub-text fs-xss">
+                        Подписываясь на рассылку, вы подтверждаете свое согласие с
+                        <a class="color-second-black" href="#">политикой конфиденциальности.</a>
+                    </p>
+                </section>
+            </div>
+
+            <div class="main__chat-wrapper">
+                <button class="chat fs-m fw-700 color-white bg-black">
+                    <div class="chat__points">
+                        <span class="chat__point bg-white"></span>
+                        <span class="chat__point bg-white"></span>
+                        <span class="chat__point bg-white"></span>
+                    </div>
+                    <p>чат</p>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer bg-black">
+        <h1 class="footer__logo logo color-white">myreact</h1>
+
+        <div class="footer__info-blocks-wrapper">
+            <section class="info-block">
+                <h3 class="info-block__title">помощь</h3>
+
+                <ul class="info-block__list">
+                    <li><a class="color-white" href="#">Помощь и контакты</a></li>
+                    <li><a class="color-white" href="#">Вопросы и ответы</a></li>
+                    <li><a class="color-white" href="#">Оплата и доставка</a></li>
+                    <li><a class="color-white" href="#">Обмен и возврат</a></li>
+                    <li><a class="color-white" href="#">Таблица размеров</a></li>
+                </ul>
+            </section>
+
+            <section class="info-block">
+                <h3 class="info-block__title">myreact</h3>
+
+                <ul class="info-block__list">
+                    <li><a class="color-white" href="#">О нас</a></li>
+                    <li><a class="color-white" href="#">Отзывы</a></li>
+                    <li><a class="color-white" href="#">Новости</a></li>
+                    <li><a class="color-white" href="#">Статьи</a></li>
+                    <li><a class="color-white" href="#">Акции</a></li>
+                    <li><a class="color-white" href="#">Контакты</a></li>
+                </ul>
+            </section>
+
+            <section class="info-block">
+                <h3 class="info-block__title">контакты</h3>
+
+                <ul class="info-block__list">
+                    <li class="info-block__decorated-link"><a class="color-white" href="#">8 800 511-53-72</a></li>
+                    <li class="info-block__decorated-link">
+                        <a class="color-white" href="#">info&#64;myreact.ru</a>
+                    </li>
+
+                    <li><br></li>
+
+                    <ul>
+                        <li><a class="color-white" href="#">пн-пт с 09:00 до 21:00</a></li>
+                        <li><a class="color-white" href="#">сб-вс с 12:00 до 18:00</a></li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="info-block info-block--stretched">
+                <h3 class="info-block__title">способы оплаты</h3>
+                <div class="info-block__img"></div>
+            </section>
+        </div>
+
+        <div class="footer__copyright-rights">
+            <p>MYREACT.RU © 2018 – 2023</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+// Импорт переменных
+@import "global/variables";
+//
+
+// Импорт модулей
+@import "module/popup";
+// 
+
+
+// Импорт страниц
+@import
+    "page/filter-icon",
+    "page/news-block",
+    "page/stars-wrapper",
+    "page/reviews-wrapper",
+    "page/page-selector",
+    "page/reviews-filter",
+    "page/reviews",
+    "page/news-block",
+    "page/main",
+    "page/filter-buttons",
+    "page/stylist-consultation",
+    "page/nav",
+    "page/reviews-slider-wrapper",
+    "page/product-preview",
+    "page/product-size-card",
+    "page/size-chart",
+    "page/description-card",
+    "page/add-to-basket-btn",
+    "page/custom-checkbox",
+    "page/category-card",
+    "page/product";
+// 

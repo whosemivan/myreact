@@ -1,4 +1,14 @@
 .nav {
+
+    &__search-with-filter {
+        display: flex;
+        gap: 10px;
+
+        &>.nav__search-wrapper {
+            flex: 1 1;
+        }
+    }
+
     &__search-wrapper {
         display: flex;
         align-items: stretch;

@@ -88,6 +88,14 @@
         }
     }
 
+    &__more-link {
+        margin-bottom: 40px;
+
+        &::after {
+            transform: rotate(90deg);
+        }
+    }
+
     &__link {
         display: block;
         margin-top: auto;
@@ -96,6 +104,7 @@
     }
 
     &__brand-name,
+    &__more-link,
     &__link {
 
         &::after {

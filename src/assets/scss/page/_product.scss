@@ -1,0 +1,120 @@
+.main {
+
+    &__product-preview {
+        margin-top: 19px;
+    }
+
+    &__reviews-slider-wrapper {
+        margin-top: 27px;
+    }
+
+    &__finished-image {
+        margin-top: 48px;
+    }
+
+    &__brand-baner {
+        margin: 38px 15px -38px 15px;
+
+        box-sizing: border-box;
+
+        & .banner__wrapper {
+            padding-bottom: 50px;
+        }
+    }
+
+    &__mini-slider {
+        padding: 0 30px;
+    }
+
+    &__feedback-sections {
+        margin-top: 32px;
+    }
+
+    &__primary-slider {
+        margin-top: -24px;
+
+        &>.slider__pagination {
+            bottom: 11px;
+        }
+    }
+
+    &__product-type-selector {
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+
+    &__link-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        margin: 0 15px;
+        margin-top: 17px;
+    }
+
+    &__buy-link {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+
+        min-width: 300px;
+        min-height: 50px;
+
+        box-sizing: border-box;
+
+        padding-left: 21px;
+        padding-right: 37px;
+
+        border-radius: 6px;
+        text-transform: uppercase;
+    }
+
+    &__basket-link {
+        display: inline-block;
+
+        width: 90px;
+        height: 50px;
+
+        border: 1px solid #3075FC;
+        border-radius: 6px;
+        background: center url("/assets/image/shopping-bag--blue.svg") no-repeat;
+    }
+
+    &__description-slider {
+        margin-top: -20px;
+        padding: 0 20px;
+    }
+
+    &__product-categories-wrapper {
+        min-height: 297px;
+
+        margin-top: -47px;
+        padding-top: 83px;
+        padding-bottom: 23px;
+
+        box-sizing: border-box;
+        background: $gradient;
+
+        &-title {
+            margin: 0 16px;
+            margin-bottom: 21px;
+        }
+
+        & .swiper {
+            padding: 0 16px;
+        }
+    }
+
+    &__recommendations-slider {
+        margin-top: 21px;
+
+        & .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__add-to-basket-btn {
+        margin: 0 15px;
+        margin-top: 51px;
+    }
+}
