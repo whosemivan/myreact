@@ -847,11 +847,13 @@
         }
 
         .basket__banner-btn {
+            z-index: 1;
             position: absolute;
             border: none;
             background: transparent;
-            right: 15px;
-            top: 13px;
+            padding: 5px;
+            right: 10px;
+            top: 8px;
         }
 
         .basket__baner-title {

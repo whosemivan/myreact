@@ -7,27 +7,12 @@
 
     <title>Главная</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
-    <!-- Подключение функционала аккордиона -->
-    <script defer src="assets/js/accordion.js"></script>
-    <!-- ### -->
-
-    <!-- Подключение функционала фильтрующих кнопок -->
-    <script defer src="assets/js/filter-buttons.js"></script>
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
     <!-- ### -->
 
-    <!-- Кнопки счетчика -->
-    <script defer src="assets/js/counter-btns.js"></script>
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -41,10 +26,12 @@
         </a>
     </div>
 
-    @@include('./partials/header.html', {
-    "pageName": "cabinet",
-    "breadcrumbs": ["Личный кабинет"]
-    })
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
+        "pageName": "cabinet",
+        "breadcrumbs": ["Личный кабинет"]
+        })
+    </header>
 
     <main class="main">
         <section class="cabinet mx-m">
@@ -56,7 +43,7 @@
                     <img class="cabinet__image" src="assets/image/avatar.jpg" alt="Аватар пользователя">
                     <div class="cabinet__profile-name">
                         <span class="cabinet__name">Иван Иванов</span>
-                        <span class="cabinet__phone">+7 88 888 88 88</span>
+                        <span class="cabinet__phone">78888888888</span>
                     </div>
                 </div>
 
@@ -101,141 +88,141 @@
                 <div class="cabinet__slider swiper slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product1.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card product-card--mark-discount">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card product-card--mark-discount">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product2.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">
-                                        <span class="product-card__price-old">57 060</span>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">
+                                        <span class="card__price product-card__price-old">57 060</span>
                                         48 060
                                     </p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product1.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product2.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product1.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product2.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product1.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide slider__slide">
-                            <a href="#" class="product-card">
-                                <div class="product-card__img-wrapper">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper">
                                     <img src="assets/image/slider-img/product2.png" alt="product img">
-                                    <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                                    <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                                 </div>
 
-                                <div class="product-card__description-wrapper">
+                                <div class="card__description-wrapper">
                                     <div>
                                         <h3 class="fw-800">Nike</h3>
                                         <p>Air Max SC</p>
                                     </div>
 
-                                    <p class="product-card__score">4.6</p>
+                                    <p class="card__score">4.6</p>
                                 </div>
                             </a>
                         </div>
@@ -247,6 +234,24 @@
 
     @@include('./partials/footer.html')
 
+    @@include('./partials/bottomNav.html', {
+    "pageName": "cabinet"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение функционала фильтрующих кнопок -->
+    <script src="assets/js/filter-buttons.js"></script>
+    <!-- ### -->
+
+    <script>
+        const phoneDiv = document.querySelector(".cabinet__phone");
+        console.log(phoneDiv.innerText);
+        phoneDiv.innerText = validPhone(phoneDiv.innerText);
+    </script>
 </body>
 
 </html>

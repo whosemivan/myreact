@@ -7,16 +7,9 @@
 
     <title>Отзывы</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
+    <!-- Подключение стилей слайдера -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- ### -->
-
-    <!-- Утилиты -->
-    <script defer src="assets/js/popup.js"></script>
-    <!--  -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/css/reviews.min.css">
@@ -29,11 +22,12 @@
         </a>
     </div>
 
-
-    @@include('./partials/header.html', {
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
         "pageName": "reviews",
         "breadcrumbs": ["Мужское", "Обувь", "Отзывы"]
-    })
+        })
+    </header>
 
     <main class="main">
         <div class="main__reviews-filter">
@@ -178,10 +172,10 @@
     </main>
 
     <div class="popup--hidden" id="popup">
-        <section class="reviews-filter" id="reviews-filter">
+        <section class="popup__content-wrapper reviews-filter" id="reviews-filter">
             <h3 class="reviews-filter__title fs-m fw-300">Фильтры</h3>
 
-            <button class="reviews-filter__close-btn" onclick="closePopup()"></button>
+            <button class="popup__close-btn" onclick="closePopup(this)"></button>
 
             <label class="reviews-filter__date fw-600" for="date">
                 Дата
@@ -268,6 +262,18 @@
 
     @@include('./partials/footer.html')
 
+    @@include('./partials/bottomNav.html', {
+    "pageName": "reviews"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Функционал открытия и закрытия popup-а -->
+    <script src="assets/js/popup.js"></script>
+    <!-- ### -->
 </body>
 
 </html>

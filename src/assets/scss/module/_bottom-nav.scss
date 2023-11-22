@@ -1,0 +1,52 @@
+.bottom-nav {
+    display: flex;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9;
+
+    background: #FFF;
+
+    &__link {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 17px 15px 9px 15px;
+
+        &.active {
+            color: $white;
+            background-color: #3075FC;
+        }
+
+        &--highlighted {
+            color: #3075FC;
+        }
+    }
+
+    &__page-icon {
+        min-height: 24px;
+    }
+
+    &__page-title {
+        margin-top: 8px;
+    }
+
+    &>ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        width: 100%;
+
+        text-align: center;
+
+        & li {
+            flex: 1 1;
+        }
+    }
+}

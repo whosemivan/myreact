@@ -7,16 +7,13 @@
 
     <title>Корзина</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
-    <!--  -->
+    <!-- ### -->
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/css/basket.min.css">
@@ -29,10 +26,12 @@
         </a>
     </div>
 
-    @@include('./partials/header.html', {
-    "pageName": "basket",
-    "breadcrumbs": ["Мужское", "Обувь", "Корзина"]
-    })
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
+        "pageName": "basket",
+        "breadcrumbs": ["Мужское", "Обувь", "Корзина"]
+        })
+    </header>
 
     <main class="basket">
         <h1 class="visually-hidden">Корзина</h1>
@@ -211,7 +210,7 @@
             </ul>
 
             <div class="basket__banner mx-m">
-                <button type="button" class="basket__banner-btn">
+                <button type="button" class="basket__banner-btn" onclick="hideParent(this)">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M7.82246 7.00001L10.3308 4.49751C10.4406 4.38766 10.5024 4.23868 10.5024 4.08334C10.5024 3.928 10.4406 3.77902 10.3308 3.66917C10.221 3.55933 10.072 3.49762 9.91663 3.49762C9.76129 3.49762 9.61231 3.55933 9.50247 3.66917L6.99996 6.17751L4.49746 3.66917C4.38762 3.55933 4.23864 3.49762 4.0833 3.49762C3.92796 3.49762 3.77897 3.55933 3.66913 3.66917C3.55929 3.77902 3.49758 3.928 3.49758 4.08334C3.49758 4.23868 3.55929 4.38766 3.66913 4.49751L6.17746 7.00001L3.66913 9.50251C3.61446 9.55674 3.57106 9.62125 3.54144 9.69234C3.51183 9.76342 3.49658 9.83967 3.49658 9.91667C3.49658 9.99368 3.51183 10.0699 3.54144 10.141C3.57106 10.2121 3.61446 10.2766 3.66913 10.3308C3.72336 10.3855 3.78788 10.4289 3.85896 10.4585C3.93005 10.4881 4.00629 10.5034 4.0833 10.5034C4.1603 10.5034 4.23655 10.4881 4.30763 10.4585C4.37872 10.4289 4.44324 10.3855 4.49746 10.3308L6.99996 7.82251L9.50247 10.3308C9.55669 10.3855 9.62121 10.4289 9.6923 10.4585C9.76338 10.4881 9.83962 10.5034 9.91663 10.5034C9.99364 10.5034 10.0699 10.4881 10.141 10.4585C10.2121 10.4289 10.2766 10.3855 10.3308 10.3308C10.3855 10.2766 10.4289 10.2121 10.4585 10.141C10.4881 10.0699 10.5033 9.99368 10.5033 9.91667C10.5033 9.83967 10.4881 9.76342 10.4585 9.69234C10.4289 9.62125 10.3855 9.55674 10.3308 9.50251L7.82246 7.00001Z"
@@ -226,10 +225,10 @@
 
             <div class="basket__isPresent mx-m">
                 <label class="basket__isPresent-label" for="present">
-                    
-                    <span class="radio-mark"></span>
+
                     <input type="checkbox" class="radio-input" id="present">
-                    
+                    <span class="radio-mark"></span>
+
                     Упаковать в подарочную упаковку
                     <button class="basket__presentBtn" type="button">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,8 +277,11 @@
 
         <section class="about-payment about-payment--basket">
             <div class="about-payment__title-wrapper mx-m">
-                <input id="aboutPayment" type="checkbox" class="about-payment__radio">
+                <input type="checkbox" class="radio-input" id="aboutPayment">
+                <span class="radio-mark radio-mark--blue radio-mark--round"></span>
+
                 <label for="aboutPayment" class="about-payment__label">Oплата долями</label>
+
                 <span class="about-payment__price">5 200 ₽</span>
             </div>
 
@@ -332,15 +334,15 @@
 
         <h3 class="basket__product-title fs-s fw-800 mx-m">Добавить к заказу</h3>
         <div class="basket__product-list mx-m">
-            <a href="#" class="product-card">
-                <div class="product-card__img-wrapper">
+            <a href="#" class="card">
+                <div class="card__img-wrapper card__img-wrapper--round">
                     <img src="assets/image/slider-img/product1.png" alt="product img">
                 </div>
 
-                <div class="product-card__description-wrapper">
-                    <div class="product-card__block product-card__block--basket">
+                <div>
+                    <div class="product-card__block--basket">
                         <h3 class="fw-800">Nike Air Max SC</h3>
-                        <p class="product-card__price product-card__price--basket fs-s bg-white">48 060</p>
+                        <p class="card__price product-card__price product-card__price--basket">48 060</p>
                         <button type="button" class="product-card__addBasket">
                             В корзину
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -355,15 +357,15 @@
 
                 </div>
             </a>
-            <a href="#" class="product-card">
-                <div class="product-card__img-wrapper">
+            <a href="#" class="card">
+                <div class="card__img-wrapper card__img-wrapper--round">
                     <img src="assets/image/slider-img/product1.png" alt="product img">
                 </div>
 
-                <div class="product-card__description-wrapper">
-                    <div class="product-card__block product-card__block--basket">
+                <div>
+                    <div class="product-card__block--basket">
                         <h3 class="fw-800">Nike Air Max SC</h3>
-                        <p class="product-card__price product-card__price--basket fs-s bg-white">48 060</p>
+                        <p class="card__price product-card__price product-card__price--basket">48 060</p>
                         <button type="button" class="product-card__addBasket">
                             В корзину
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -378,15 +380,15 @@
 
                 </div>
             </a>
-            <a href="#" class="product-card">
-                <div class="product-card__img-wrapper">
+            <a href="#" class="card">
+                <div class="card__img-wrapper card__img-wrapper--round">
                     <img src="assets/image/slider-img/product1.png" alt="product img">
                 </div>
 
-                <div class="product-card__description-wrapper">
-                    <div class="product-card__block product-card__block--basket">
+                <div>
+                    <div class="product-card__block--basket">
                         <h3 class="fw-800">Nike Air Max SC</h3>
-                        <p class="product-card__price product-card__price--basket fs-s bg-white">48 060</p>
+                        <p class="card__price product-card__price product-card__price--basket">48 060</p>
                         <button type="button" class="product-card__addBasket">
                             В корзину
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -405,6 +407,19 @@
     </main>
 
     @@include('./partials/footer.html')
+
+    @@include('./partials/bottomNav.html', {
+    "pageName": "basket"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Скрытие родительского тега -->
+    <script src="assets/js/hide-parent.js"></script>
+    <!-- ### -->
 </body>
 
 </html>

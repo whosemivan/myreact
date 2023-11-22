@@ -7,16 +7,13 @@
 
     <title>Блог</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
-    <!--  -->
+    <!-- ### -->
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/css/blog.min.css">
@@ -30,31 +27,17 @@
     </div>
 
     <header class="header px-m pt-m color-white">
-        <div class="header__logo-and-basket-wrapper my-m">
-            <h1 class="logo">myreact</h1>
-            <button class="header__basket"></button>
-        </div>
-
-        <div class="header__breadcrumbs">
-            <div class="header__page-icon"></div>
-            <ul>
-                <li><a href="#">Мужское</a></li>
-                <li><a href="#">Обувь</a></li>
-                <li><a href="#">Блог</a></li>
-            </ul>
-        </div>
-
-        <section class="header__page-title">
-            <h2 class="fw-700 fs-l">Блог</h2>
-            <p class="fw-300 fs-xxs mt-m">от myreact</p>
-        </section>
+        @@include('./partials/header.html', {
+        "pageName": "blog",
+        "breadcrumbs": ["Мужское", "Обувь", "Блог"]
+        })
     </header>
 
     <main class="main">
         <div class="main__open-news open-news">
             <img class="open-news__img" src="/assets/image/circle of shoes.png" alt="news img">
 
-            <div class="product-card__description-wrapper ml-0">
+            <div class="card__description-wrapper ml-0">
                 <div>
                     <h3 class="fw-800">Тренды сезона</h3>
                     <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corrupti
@@ -82,13 +65,12 @@
         <div class="main__slider swiper slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/air-max.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -109,13 +91,12 @@
                 </div>
 
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/showcase ked.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -145,13 +126,12 @@
         <div class="main__slider swiper slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/air-max.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -172,13 +152,12 @@
                 </div>
 
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/showcase ked.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -203,38 +182,38 @@
         <div class="main__slider main__new-products-slider swiper slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide pr-xl">
-                    <div class="product-card">
-                        <div class="product-card__img-wrapper">
+                    <div class="card">
+                        <div class="card__img-wrapper product-card__img-wrapper--new-product-img">
                             <img src="assets/image/slider-img/sneakers.png" alt="product img">
-                            <a href="#" class="product-card__more-btn">Больше</a>
+                            <a href="#" class="card__more-btn">Больше</a>
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fs-s fw-600">Новинка ot <span class="fs-s fw-900">nike</span></h3>
                                 <p class="mt-s fs-xxs">Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
 
-                            <p class="product-card__cost fw-700">8 599</p>
+                            <p class="card__price fw-700">8 599</p>
                         </div>
 
                         <a href="#" class="product-card__buy-btn fw-600">Купить</a>
                     </div>
                 </div>
                 <div class="swiper-slide slider__slide pr-xl">
-                    <div class="product-card">
-                        <div class="product-card__img-wrapper">
+                    <div class="card">
+                        <div class="card__img-wrapper product-card__img-wrapper--new-product-img">
                             <img src="assets/image/slider-img/sneakers.png" alt="product img">
-                            <a href="#" class="product-card__more-btn">Больше</a>
+                            <a href="#" class="card__more-btn">Больше</a>
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fs-s fw-600">Новинка ot <span class="fs-s fw-900">nike</span></h3>
                                 <p class="mt-s fs-xxs">Lorem ipsum dolor sit amet consectetur.</p>
                             </div>
 
-                            <p class="product-card__cost fw-700">8 599</p>
+                            <p class="card__price fw-700">8 599</p>
                         </div>
 
                         <a href="#" class="product-card__buy-btn fw-600">Купить</a>
@@ -251,13 +230,12 @@
         <div class="main__slider swiper slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/air-max.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -278,13 +256,12 @@
                 </div>
 
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/showcase ked.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -314,13 +291,12 @@
         <div class="main__slider swiper slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/air-max.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -341,13 +317,12 @@
                 </div>
 
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/showcase ked.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -377,13 +352,12 @@
         <div class="main__slider swiper slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide pr-xl">
-                    <a href="#" class="product-card">
-                        <div
-                            class="product-card__img-wrapper product-card__img-wrapper--round product-card__img-wrapper--blog-img">
+                    <a href="#" class="card">
+                        <div class="card__img-wrapper card__img-wrapper--round blog-card__img-wrapper--blog-img">
                             <img src="assets/image/slider-img/air-max.jpg" alt="product img">
                         </div>
 
-                        <div class="product-card__description-wrapper ml-0">
+                        <div class="card__description-wrapper ml-0">
                             <div>
                                 <h3 class="fw-800">Lorem, ipsum.</h3>
                                 <p class="fs-xxs mt-m">Lorem ipsum dolor sit amet consectetur.</p>
@@ -450,6 +424,15 @@
     </main>
 
     @@include('./partials/footer.html')
+
+    @@include('./partials/bottomNav.html', {
+    "pageName": "blog"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
 </body>
 
 </html>

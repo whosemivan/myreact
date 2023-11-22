@@ -7,15 +7,12 @@
 
     <title>О компании</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -29,10 +26,12 @@
         </a>
     </div>
 
-    @@include('./partials/header.html', {
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
         "pageName": "about",
         "breadcrumbs": ["Мужское", "Обувь", "О компании"]
-    })
+        })
+    </header>
 
     <main class="main">
         <section class="main__title-wrapper">
@@ -65,10 +64,13 @@
             <h1 class="main__text-title fw-800">Почему именно мы?</h1>
 
             <ul class="main__text-list">
-                <li>Большой выбор оригинальной спортивной обуви, одежды и аксессуаров мировых торговых марок. Гарантия отсутствия подделок;</li>
-                <li>Лояльная ценовая политика, направленная на то, чтобы дать возможность покупателям приобретать наши товарные позиции выгодно;</li>
+                <li>Большой выбор оригинальной спортивной обуви, одежды и аксессуаров мировых торговых марок. Гарантия
+                    отсутствия подделок;</li>
+                <li>Лояльная ценовая политика, направленная на то, чтобы дать возможность покупателям приобретать наши
+                    товарные позиции выгодно;</li>
                 <li>Все реализуемые изделия проверяются в аутентификационном центре;</li>
-                <li>Своим покупателям мы гарантируем оригинальность, надёжность и функциональность всех реализуемых товаров;</li>
+                <li>Своим покупателям мы гарантируем оригинальность, надёжность и функциональность всех реализуемых
+                    товаров;</li>
                 <li>Оперативная обработка заказов, и их быстрая доставка;</li>
                 <li>Индивидуальный подход и помощь в подборе необходимых товаров.</li>
             </ul>
@@ -135,6 +137,14 @@
 
     @@include('./partials/footer.html')
 
+    @@include('./partials/bottomNav.html', {
+    "pageName": "about"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
 </body>
 
 </html>

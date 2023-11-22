@@ -1,0 +1,49 @@
+.radio-mark {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #48455C;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #48455C;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    &--blue {
+        border-color: #3075FC;
+
+        &::before {
+            background: #3075FC;
+        }
+    }
+
+    &--round {
+        border-radius: 50%;
+    }
+}
+
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-input:checked+.radio-mark::before {
+    opacity: 1;
+}

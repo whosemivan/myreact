@@ -7,23 +7,12 @@
 
     <title>Страница магазина</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
-    <!-- Подключение функционала фильтрующих кнопок -->
-    <script defer src="assets/js/filter-buttons.js"></script>
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
     <!-- ### -->
 
-    <!-- Кнопки счетчика -->
-    <script defer src="assets/js/counter-btns.js"></script>
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -37,53 +26,12 @@
         </a>
     </div>
 
-    <!-- <header class="header mx-m">
-        <div class="header__logo-and-basket-wrapper my-m">
-            <h1 class="logo">myreact</h1>
-            <button class="header__basket bg-second-gray"></button>
-        </div>
-
-        <nav class="nav mb-m">
-            <div class="nav__search-with-filter">
-                <form class="nav__search-wrapper bg-white pl-l">
-                    <label class="nav__search">
-                        <div class="nav__search-icon"></div>
-                        <input class="nav__search-input ml-l" type="search" placeholder="Поиск" name="search">
-                    </label>
-
-                    <div class="nav__btns-wrapper">
-                        <button class="nav__search-btn bg-second-gray" type="submit"></button>
-                        <div class="nav__search-counter-wrapper">
-                            <input class="nav__search-counter bg-second-gray" type="number" value="36" min="1" max="100"
-                                name="count" id="counter">
-                            <button class="nav__search-counter-btn" id="inc-count" type="button"></button>
-                            <button class="nav__search-counter-btn" id="dec-count" type="button"></button>
-                        </div>
-                    </div>
-                </form>
-
-                <button class="filter-btn"></button>
-            </div>
-
-            <div class="nav__links-wrapper mt-m fs-xss">
-                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Верхняя одежда</span></a>
-                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Платья</span></a>
-                <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Обувь</span></a>
-            </div>
-        </nav>
-
-        <div class="header__breadcrumbs">
-            <div class="header__page-icon bg-second-gray"></div>
-            <ul>
-                <li><a href="#">Адидас</a></li>
-            </ul>
-        </div>
-    </header> -->
-
-    @@include('./partials/header.html', {
-        "pageName": "index",
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
+        "pageName": "shop",
         "breadcrumbs": ["Адидас"]
-    })
+        })
+    </header>
 
     <main class="main">
         <div class="main__brand-baner banner">
@@ -120,70 +68,70 @@
 
         <div class="main__products-list products-list">
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product1.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product2.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product1.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product2.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
@@ -294,70 +242,70 @@
 
         <div class="main__products-list products-list">
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product1.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product2.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product1.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product2.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
@@ -370,70 +318,70 @@
 
         <div class="main__products-list products-list">
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product1.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product2.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product1.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
             <div class="products-list__card">
-                <a href="#" class="product-card">
-                    <div class="product-card__img-wrapper">
+                <a href="#" class="card">
+                    <div class="card__img-wrapper">
                         <img src="assets/image/slider-img/product2.png" alt="product img">
-                        <p class="product-card__price fs-s fw-800 bg-white">48 060</p>
+                        <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
                     </div>
 
-                    <div class="product-card__description-wrapper">
+                    <div class="card__description-wrapper">
                         <div>
                             <h3 class="fw-800">Nike</h3>
                             <p>Air Max SC</p>
                         </div>
 
-                        <p class="product-card__score">4.6</p>
+                        <p class="card__score">4.6</p>
                     </div>
                 </a>
             </div>
@@ -485,6 +433,26 @@
 
     @@include('./partials/footer.html')
 
+    @@include('./partials/bottomNav.html', {
+    "pageName": "shop"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение функционала фильтрующих кнопок -->
+    <script src="assets/js/filter-buttons.js"></script>
+    <!-- ### -->
+
+    <!-- Утилиты -->
+    <script src="assets/js/utils.js"></script>
+    <!-- ### -->
+
+    <!-- Кнопки счетчика -->
+    <script src="assets/js/counter-btns.js"></script>
+    <!-- ### -->
 
     <script>
         const elems = document.getElementsByClassName("reviews-wrapper__user-text");

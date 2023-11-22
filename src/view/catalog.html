@@ -7,19 +7,12 @@
 
     <title>Каталог</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
-    <!-- Подключение функционала фильтрующих кнопок -->
-    <script defer src="assets/js/filter-buttons.js"></script>
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -33,10 +26,12 @@
         </a>
     </div>
 
-    @@include('./partials/header.html', {
-        "pageName": "index",
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
+        "pageName": "catalog",
         "breadcrumbs": ["Каталог"]
-    })
+        })
+    </header>
 
     <main class="main">
         <div class="main__filter-buttons filter-buttons">
@@ -73,16 +68,18 @@
                     <p class="info-text__title">Lorem ipsum dolor sit amet consectetur.</p>
                     <img class="info-text__img" src="assets/image/hanger.png" alt="img">
                 </div>
-    
+
                 <p>
                     Nunc erat gravida cursus diam accumsan vitae ultrices magna sed. Nisi donec feugiat metus nunc
-                    pellentesque risus. Dignissim faucibus ut proin fermentum adipiscing dui augue. Viverra condimentum quam
-                    sed vel et ornare posuere lectus risus. Elit laoreet urna sem odio nulla. Nisl mauris ac facilisi dolor
+                    pellentesque risus. Dignissim faucibus ut proin fermentum adipiscing dui augue. Viverra condimentum
+                    quam
+                    sed vel et ornare posuere lectus risus. Elit laoreet urna sem odio nulla. Nisl mauris ac facilisi
+                    dolor
                     id rhoncus tellus morbi. Duis vivamus amet eget pellentesque facilisi in. Pellentesque amet diam sem
                     turpis aenean vitae sit.
                 </p>
             </div>
-            
+
             <div class="main__communication-blocks-wrapper">
                 <section class="communication-block communication-block--with-img color-white">
                     <h3 class="communication-block__title">Нужна помощь?</h3>
@@ -128,6 +125,18 @@
 
     @@include('./partials/footer.html')
 
+    @@include('./partials/bottomNav.html', {
+    "pageName": "catalog"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение функционала фильтрующих кнопок -->
+    <script src="assets/js/filter-buttons.js"></script>
+    <!-- ### -->
 </body>
 
 </html>

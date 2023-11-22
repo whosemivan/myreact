@@ -1,0 +1,124 @@
+.card {
+    display: table;
+
+    &__img-wrapper {
+        position: relative;
+        overflow: hidden;
+
+        &--round {
+            border-radius: 10px;
+        }
+
+        &--mini-img {
+            width: 122.25px;
+
+            &-with-border {
+                border: 2px solid #3075FC;
+            }
+        }
+
+        &--supa-mini-img {
+            width: 80px;
+        }
+
+        &>img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__price {
+
+        &::after {
+            content: " ₽";
+            position: relative;
+        }
+    }
+
+    &__description-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        margin-top: 8px;
+        margin-left: 11px;
+    }
+
+    &__more-btn {
+        position: absolute;
+        top: 12px;
+        right: 7px;
+
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        padding: 10px 10px 10px 20px;
+
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        border-radius: 40px;
+        background-color: #A230FC;
+
+        &::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 24px;
+            height: 24px;
+
+            background: center / contain no-repeat url("/assets/image/arrow.svg");
+        }
+    }
+
+    &__mini-btns-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__score {
+        display: flex;
+        align-items: center;
+
+        color: #999999;
+        font-size: 12px;
+
+        &::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 14px;
+            height: 14px;
+
+            margin-left: 6px;
+
+            background: center / contain no-repeat url("/assets/image/star.svg");
+        }
+    }
+
+    &--empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 200px;
+        min-height: 200px;
+
+        padding: 10px;
+
+        color: #48455C;
+
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        border: 10px solid #FFF;
+        background-color: #F5F5F5;
+    }
+}

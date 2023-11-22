@@ -3,7 +3,9 @@
 //
 
 // Импорт модулей
-@import "module/popup";
+@import
+    "module/popup",
+    "module/radio-mark";
 // 
 
 
@@ -27,7 +29,7 @@
     "page/size-chart",
     "page/description-card",
     "page/add-to-basket-btn",
-    "page/custom-checkbox",
     "page/category-card",
+    "page/size-table",
     "page/product";
 // 

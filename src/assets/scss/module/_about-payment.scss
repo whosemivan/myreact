@@ -26,10 +26,6 @@
         margin-top: -50px;
         position: relative;
 
-        .about-payment__radio {
-            display: none;
-        }
-
         .about-payment__label {
             color: #3075FC;
             font-size: 14px;
@@ -39,28 +35,6 @@
             text-transform: uppercase;
             position: relative;
             padding-left: 25px;
-
-            &::before {
-                content: "";
-                width: 17px;
-                height: 17px;
-                border-radius: 50%;
-                border: 1px solid #3075FC;
-                position: absolute;
-                top: -3px;
-                left: 0;
-            }
-        }
-
-        .about-payment__radio:checked+.about-payment__label::after {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #48455C;
-            position: absolute;
-            top: 2px;
-            left: 5px;
         }
 
         .about-payment__price {

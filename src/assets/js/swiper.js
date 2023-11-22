@@ -1,6 +1,11 @@
 const slider = new Swiper(".slider", {
     direction: "horizontal",
     slidesPerView: "auto",
+});
+
+const sliderWithPagination = new Swiper(".slider--with-pagination", {
+    direction: "horizontal",
+    slidesPerView: "auto",
 
     pagination: {
         el: ".slider__pagination",
@@ -8,6 +13,13 @@ const slider = new Swiper(".slider", {
         bulletActiveClass: "slider__pagination-bullet-active",
         modifierClass: "slider__pagination-",
         clickable: true,
+    },
+});
+
+const sliderWithArrows = new Swiper(".slider--with-arrows", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
@@ -29,7 +41,7 @@ const primarySlider = new Swiper(".main__primary-slider", {
         delay: 10000,
     },
 
-    // // Если нужна пагинация
+    // Если нужна пагинация
     pagination: {
         el: ".slider__pagination",
         bulletClass: "slider__pagination-bullet",

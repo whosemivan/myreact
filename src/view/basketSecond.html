@@ -7,16 +7,13 @@
 
     <title>Корзина</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
-    <!--  -->
+    <!-- ### -->
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/css/basket.min.css">
@@ -29,10 +26,12 @@
         </a>
     </div>
 
-    @@include('./partials/header.html', {
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
         "pageName": "basket",
         "breadcrumbs": ["Мужское", "Обувь", "Корзина"]
-    })
+        })
+    </header>
 
 
     <main class="basket">
@@ -192,6 +191,15 @@
     </main>
 
     @@include('./partials/footer.html')
+
+    @@include('./partials/bottomNav.html', {
+    "pageName": "basket"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
 </body>
 
 </html>

@@ -7,19 +7,12 @@
 
     <title>Бренды</title>
 
-    <!-- Подключение слайдера -->
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script defer src="assets/js/swiper.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- ### -->
-
-    <!-- Подключение функционала фильтрующих кнопок -->
-    <script defer src="assets/js/filter-buttons.js"></script>
-    <!-- ### -->
-
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -33,10 +26,12 @@
         </a>
     </div>
 
-    @@include('./partials/header.html', {
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
         "pageName": "brands",
-        "breadcrumbs": ["Мужское", "Обувь", "Корзина"]
-    })
+        "breadcrumbs": ["Мужское", "Обувь", "Отзывы"]
+        })
+    </header>
 
     <main class="main">
         <div class="main__block-title block-title">
@@ -116,18 +111,30 @@
         </div>
 
         <ul class="brands-list">
-            <li class="brands-list__brand brands-list__brand--crown"><a href="#" class="brands-list__brand-name">Адидас</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Найк</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Адидас</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand brands-list__brand--crown"><a href="#" class="brands-list__brand-name">Найк</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand brands-list__brand--crown"><a href="#" class="brands-list__brand-name">Адидас</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Найк</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Адидас</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Найк</a> <button class="brands-list__favorite-btn"></button></li>
-            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand brands-list__brand--crown"><a href="#"
+                    class="brands-list__brand-name">Адидас</a> <button class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Найк</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Адидас</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand brands-list__brand--crown"><a href="#"
+                    class="brands-list__brand-name">Найк</a> <button class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand brands-list__brand--crown"><a href="#"
+                    class="brands-list__brand-name">Адидас</a> <button class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Найк</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Адидас</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Найк</a> <button
+                    class="brands-list__favorite-btn"></button></li>
+            <li class="brands-list__brand"><a href="#" class="brands-list__brand-name">Пума</a> <button
+                    class="brands-list__favorite-btn"></button></li>
         </ul>
 
         <div class="main__page-selcetor page-selcetor">
@@ -149,6 +156,19 @@
     </main>
 
     @@include('./partials/footer.html')
+
+    @@include('./partials/bottomNav.html', {
+    "pageName": "brands"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение функционала фильтрующих кнопок -->
+    <script src="assets/js/filter-buttons.js"></script>
+    <!-- ### -->
 </body>
 
 </html>
