@@ -67,7 +67,7 @@
                 <button class="product-preview__promotion-banner-close-btn" onclick="hideParent(this)"></button>
             </div>
 
-            <div class="main__primary-slider swiper bg-second-gray">
+            <div class="main__primary-slider swiper can-be-viewed bg-second-gray">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="product-preview__slider-card">
@@ -131,8 +131,8 @@
                     <a href="#" class="size-chart__size-type-link">EU</a>
                 </div>
 
-                <button type="button" onclick="openPopup('size-notification-popup')" href="#"
-                    class="size-chart__more-sizes">Не нашли размер?</button>
+                <button type="button" onclick="openPopup('size-notification-popup')" class="size-chart__more-sizes">Не
+                    нашли размер?</button>
             </div>
 
             <div class="size-chart__product-size-selector swiper slider">
@@ -473,7 +473,8 @@
             </div>
 
             <div class="reviews-slider-wrapper__links-wrapper">
-                <a href="#" class="reviews-slider-wrapper__link">Прочитать все отзыв</a>
+                <button class="reviews-slider-wrapper__link" onclick="openPopup('reviews-list-popup')">Прочитать все
+                    отзыв</button>
                 <a href="#" class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight">Добавить
                     отзыв</a>
             </div>
@@ -923,12 +924,12 @@
     </main>
 
     <div class="popup--hidden" id="size-table-popup">
-        <section class="popup__content-wrapper">
+        <section class="popup__content-wrapper size-table">
             <h3 class="popup__title">Таблица размеров</h3>
 
             <button class="popup__close-btn" onclick="closePopup(this)"></button>
 
-            <table class="size-table">
+            <table class="popup__content size-table">
                 <thead>
                     <tr>
                         <td>RUS</td>
@@ -1029,109 +1030,161 @@
     </div>
 
     <div class="popup--hidden" id="size-notification-popup">
-        <section class="size-table">
+        <section class="popup__content-wrapper">
             <h3 class="popup__title">Не нашли размер?</h3>
 
             <button class="popup__close-btn" onclick="closePopup(this)"></button>
 
-            <table>
-                <thead>
-                    <tr>
-                        <td>RUS</td>
-                        <td>US</td>
-                        <td>EUR</td>
-                        <td>CM</td>
-                    </tr>
-                </thead>
+            <div class="popup__content size-notice-form">
+                <p class="size-notice-form__title fw-800">Вы можете подписаться на отсутствующий размер</p>
 
-                <tbody>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>35</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>22</td>
-                    </tr>
-                </tbody>
-            </table>
+                <form action="#" method="post">
+                    <div class="size-notice-form__size-selector size-chart__product-size-selector swiper slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide pr-s">
+                                <a href="#" class="product-size-card product-size-card--over">39</a>
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <a href="#" class="product-size-card product-size-card--over">40</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input name="contact" type="text" placeholder="Tелефон/почта" required
+                        pattern="^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})|(\d{3}-\d{3}-\d{4})$"
+                        class="size-notice-form__contact-input">
+
+                    <div class="size-notice-form__checkboxes-wrapper">
+                        <div class="size-notice-form__checkbox-wrapper">
+                            <input type="checkbox" class="radio-input" id="call">
+                            <span class="radio-mark radio-mark--round"></span>
+
+                            <label for="call">Звонок</label>
+                        </div>
+
+                        <div class="size-notice-form__checkbox-wrapper">
+                            <input type="checkbox" class="radio-input" id="sms">
+                            <span class="radio-mark radio-mark--round"></span>
+
+                            <label for="sms">СМС</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="popup__btn size-notice-form__btn">Подписаться</button>
+                </form>
+            </div>
         </section>
+    </div>
+
+    <div class="popup--hidden" id="reviews-list-popup">
+        <div class="popup__content-wrapper reviews-list-popup">
+            <button class="popup__close-btn" onclick="closePopup(this)"></button>
+
+            <div class="reviews-list-popup__header">
+                <div>
+                    <h2 class="fs-s fw-800">Отзывы</h2>
+
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <span class="fs-s fw-400 ml-s">203</span>
+                </div>
+
+                <button class="filter-btn dropdown-btn">
+                    <div class="dropdown dropdown--hidden fs-s">
+                        <a href="#">По умолчанию</a>
+                        <a href="#">По рейтингу</a>
+                        <a href="#">По новизне</a>
+                        <a href="#">Самый плохой</a>
+                        <a href="#">Самый хороший</a>
+                    </div>
+                </button>
+            </div>
+
+            <div class="reviews-wrapper">
+                <div class="reviews-wrapper__review">
+                    <div class="reviews-wrapper__user-info">
+                        <img src="/assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                        <p class="fw-700">Иван Иванов</p>
+                    </div>
+
+                    <span class="reviews-wrapper__review-score">5</span>
+
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <p class="reviews-wrapper__user-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                        minima maiores illum molestiae ipsa eveniet id quo iure velit libero officia, nemo facere quas
+                        aperiam numquam explicabo error sint quaerat.</p>
+
+                    <div class="news-block__info-wrapper">
+                        <div>
+                            <span class="news-block__opinion news-block__opinion--positive">24</span>
+                            <span class="news-block__opinion news-block__opinion--negative">4</span>
+                        </div>
+
+                        <p class="fs-xss">11.02.2022</p>
+                    </div>
+                </div>
+
+                <div class="reviews-wrapper__review">
+                    <div class="reviews-wrapper__user-info">
+                        <img src="/assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                        <p class="fw-700">Иван Иванов</p>
+                    </div>
+
+                    <span class="reviews-wrapper__review-score">5</span>
+
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <p class="reviews-wrapper__user-text">Если вы искренне хотите найти</p>
+
+                    <div class="news-block__info-wrapper">
+                        <div>
+                            <span class="news-block__opinion news-block__opinion--positive">24</span>
+                            <span class="news-block__opinion news-block__opinion--negative">4</span>
+                        </div>
+
+                        <p class="fs-xss">11.02.2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-list-popup__page-selcetor page-selcetor">
+                <a href=".." class="page-selcetor__back">
+                    <span class="page-selcetor__back-icon page-selcetor__back-icon--disabled"></span>
+                </a>
+
+                <div class="page-selcetor__pages-wrapper">
+                    <a href="#" class="page-selcetor__page page-selcetor__page--select">1</a>
+                    <a href="#" class="page-selcetor__page">2</a>
+                    <a href="#" class="page-selcetor__page">3</a>
+                    <a href="#" class="page-selcetor__page">4</a>
+                </div>
+
+                <a href="#" class="page-selcetor__next">
+                    <span class="page-selcetor__next-icon"></span>
+                </a>
+            </div>
+
+            <button type="submit" class="popup__btn reviews-list-popup__btn">Добавить отзыв</button>
+        </div>
     </div>
 
     @@include('./partials/footer.html')
@@ -1163,6 +1216,14 @@
 
     <!-- Функционал открытия и закрытия popup-а -->
     <script src="assets/js/popup.js"></script>
+    <!-- ### -->
+
+    <!-- Функционал открытия и закрытия dropdown-а -->
+    <script src="assets/js/dropdown.js"></script>
+    <!-- ### -->
+    
+    <!-- Функционал открытия и закрытия swiper-а -->
+    <script src="assets/js/swiper-toggle.js"></script>
     <!-- ### -->
 
     <script>

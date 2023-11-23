@@ -1,10 +1,15 @@
 .reviews-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
 
     &__review {
+        flex-grow: 1;
+
         position: relative;
+
+        width: 100%;
+        max-width: 480px;
 
         padding: 11px 35px 18px 25px;
 

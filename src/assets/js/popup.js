@@ -1,4 +1,16 @@
 function openPopup(popupId = undefined) {
+    const openPopups = document.querySelectorAll(".popup");
+
+    if (openPopups.length) {
+        console.log(openPopups);
+
+        openPopups.forEach((popup) => {
+            popup.classList.remove("popup");
+            popup.classList.add("popup--hidden");
+        })
+    }
+
+
     const popup = popupId ? document.getElementById(popupId) : document.getElementById("popup");
 
     document.body.style.overflow = "hidden";
