@@ -475,8 +475,8 @@
             <div class="reviews-slider-wrapper__links-wrapper">
                 <button class="reviews-slider-wrapper__link" onclick="openPopup('reviews-list-popup')">Прочитать все
                     отзыв</button>
-                <a href="#" class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight">Добавить
-                    отзыв</a>
+                <button class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight" onclick="openPopup('leave-review-popup')">Добавить
+                    отзыв</button>
             </div>
         </div>
 
@@ -650,7 +650,8 @@
                 </div>
             </div>
 
-            <a href="#" class="stylist-consultation__btn">Получить консультаци</a>
+            <button class="stylist-consultation__btn color-white"
+                onclick="openPopup('stylist-consultation-popup')">Получить консультаци</button>
         </div>
 
         <div class="main__brand-baner">
@@ -925,7 +926,7 @@
 
     <div class="popup--hidden" id="size-table-popup">
         <section class="popup__content-wrapper size-table">
-            <h3 class="popup__title">Таблица размеров</h3>
+            <h3 class="popup__title fs-l fw-800">Таблица размеров</h3>
 
             <button class="popup__close-btn" onclick="closePopup(this)"></button>
 
@@ -1183,8 +1184,79 @@
                 </a>
             </div>
 
-            <button type="submit" class="popup__btn reviews-list-popup__btn">Добавить отзыв</button>
+            <button type="button" class="popup__btn reviews-list-popup__btn" onclick="openPopup('leave-review-popup')">Добавить отзыв</button>
         </div>
+    </div>
+
+    <div class="popup--hidden" id="stylist-consultation-popup">
+        <div class="popup__content-wrapper stylist-consultation-form">
+            <h3 class="stylist-consultation-form__title fs-l fw-700">Получи консультацию стилиста</h3>
+
+            <button class="popup__close-btn" onclick="closePopup(this)"></button>
+
+            <div class="popup__content">
+                <p class="stylist-consultation-form__text">Оставьте свои контактные данные и вопросы, чтобы получить
+                    персональную консультацию от нашего
+                    стилиста</p>
+
+                <form action="#" method="post">
+                    <div class="popup__inputs-wrapper stylist-consultation-form__inputs-wrapper">
+                        <div class="custom-input">
+                            <label for="firstName-input" class="custom-input__label">Имя</label>
+                            <input name="firstName" type="text" id="firstName-input" class="custom-input__input"
+                                required />
+                        </div>
+                        <div class="custom-input">
+                            <label for="email-input" class="custom-input__label">Электронная почта</label>
+                            <input name="email" type="email" id="email-input" class="custom-input__input" required />
+                        </div>
+                        <div class="custom-input">
+                            <label for="tel-input" class="custom-input__label">Телефон</label>
+                            <input name="tel" type="tel" id="tel-input" class="custom-input__input" required />
+                        </div>
+                        <div class="custom-input">
+                            <label for="text-input" class="custom-input__label">Вопросы/пожелания к стилисту</label>
+                            <textarea id="text-input" rows="5" class="custom-input__input"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="popup__btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup--hidden" id="leave-review-popup">
+        <section class="popup__content-wrapper leave-review-form">
+            <h3 class="popup__title fs-l fw-300">Что бы оставить отзыв</h3>
+            <p class="popup__title fs-l fw-700">Необходимо авторизоваться</p>
+
+            <button class="popup__close-btn" onclick="closePopup(this)"></button>
+
+            <form action="#" method="post" id="login-form">
+                <div class="popup__inputs-wrapper leave-review-form__inputs-wrapper">
+                    <div class="custom-input">
+                        <label for="tel-input1" class="custom-input__label">Телефон</label>
+                        <input name="tel" type="tel" id="tel-input1" class="custom-input__input" required />
+                    </div>
+                    <div class="custom-input">
+                        <label for="pass-input" class="custom-input__label">Пароль</label>
+                        <input name="pass" type="password" id="pass-input" class="custom-input__input" required />
+                    </div>
+                </div>
+            </form>
+
+            <div class="leave-review-form__social-wrapper social-wrapper">
+                <a href="#" class="social-wrapper__social social-wrapper__social--instagram"></a>
+                <a href="#" class="social-wrapper__social social-wrapper__social--facebook"></a>
+                <a href="#" class="social-wrapper__social social-wrapper__social--apple"></a>
+                <a href="#" class="social-wrapper__social social-wrapper__social--google"></a>
+                <a href="#" class="social-wrapper__social social-wrapper__social--twitter"></a>
+            </div>
+
+            <button form="login-form" type="submit" class="popup__btn">Вход</button>
+            <a href="#" class="popup__link fs-xss fw-800 mt-m">Регистрация</a>
+        </section>
     </div>
 
     @@include('./partials/footer.html')
@@ -1221,9 +1293,13 @@
     <!-- Функционал открытия и закрытия dropdown-а -->
     <script src="assets/js/dropdown.js"></script>
     <!-- ### -->
-    
+
     <!-- Функционал открытия и закрытия swiper-а -->
     <script src="assets/js/swiper-toggle.js"></script>
+    <!-- ### -->
+    
+    <!-- Функционал открытия и закрытия color-selector-а -->
+    <script src="assets/js/color-selector.js"></script>
     <!-- ### -->
 
     <script>
