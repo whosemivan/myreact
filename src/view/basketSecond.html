@@ -62,21 +62,21 @@
             <div class="basket__delivery mx-m">
                 <h2 class="basket__delivery-title">Доставка</h2>
                 <div class="basket__delivery-inputs">
-                    <p class="basket__delivery-wrapper">
-                        <input type="radio" id="contactChoice1" name="delivery" value="pvz"
-                            class="basket__delivery-radio" />
-                        <label for="contactChoice1" class="basket__delivery-label">ПВЗ</label>
-                    </p>
-                    <p class="basket__delivery-wrapper">
-                        <input type="radio" id="contactChoice2" name="delivery" value="postamat"
-                            class="basket__delivery-radio" checked />
-                        <label for="contactChoice2" class="basket__delivery-label">Постамат</label>
-                    </p>
-                    <p class="basket__delivery-wrapper">
-                        <input type="radio" id="contactChoice3" name="delivery" value="courier"
-                            class="basket__delivery-radio" />
-                        <label for="contactChoice3" class="basket__delivery-label">Курьер</label>
-                    </p>
+                    <label class="basket__delivery-wrapper">
+                        <input type="radio" class="radio-input" name="delivery" value="courier">
+                        <span class="radio-mark radio-mark--white"></span>
+                        ПВЗ
+                    </label>
+                    <label class="basket__delivery-wrapper">
+                        <input type="radio" class="radio-input" name="delivery" value="courier" checked>
+                        <span class="radio-mark radio-mark--white"></span>
+                        Постамат
+                    </label>
+                    <label class="basket__delivery-wrapper">
+                        <input type="radio" class="radio-input" name="delivery" value="courier">
+                        <span class="radio-mark radio-mark--white"></span>
+                        Курьер
+                    </label>
                 </div>
             </div>
 
@@ -114,69 +114,75 @@
             <div class="basket__transports mx-m">
                 <h3 class="basket__transports-title">Выбор транспортных компаний</h3>
                 <div class="basket__transports-inputs">
-                    <p class="basket__transports-wrapper">
-                        <input type="radio" id="transport1" name="transports" value="postOffice"
-                            class="basket__transports-radio" />
-                        <label for="transport1" class="basket__transports-label">
+                    <label class="basket__transports-wrapper">
+                        <input type="radio" class="radio-input" name="transports" value="postOffice">
+                        <span class="radio-mark radio-mark"></span>
+
+                        <div>
                             <img src="assets/image/pochtaLogo.svg" alt="Почта России" width="42" height="23">
-                            <span>599 руб</span>
-                        </label>
-                    </p>
-                    <p class="basket__transports-wrapper">
-                        <input type="radio" id="transport2" name="transports" value="cdek"
-                            class="basket__transports-radio" checked />
-                        <label for="transport2" class="basket__transports-label">
+                            <p class="fs-xxs fw-500 mt-s">599 руб</p>
+                        </div>
+                    </label>
+                    <label class="basket__transports-wrapper">
+                        <input type="radio" class="radio-input" name="transports" value="cdek" checked>
+                        <span class="radio-mark radio-mark"></span>
+
+                        <div>
                             <img src="assets/image/cdek.svg" alt="CDEK" width="69" height="14">
-                            <span>100 руб</span>
-                        </label>
-                    </p>
-                    <p class="basket__transports-wrapper">
-                        <input type="radio" id="transport3" name="transports" value="boxberry"
-                            class="basket__transports-radio" />
-                        <label for="transport3" class="basket__transports-label">
+                            <p class="fs-xxs fw-500 mt-s">100 руб</p>
+                        </div>
+                    </label>
+                    <label class="basket__transports-wrapper">
+                        <input type="radio" class="radio-input" name="transports" value="boxberry">
+                        <span class="radio-mark radio-mark"></span>
+
+                        <div>
                             <img src="assets/image/boxberry.svg" alt="boxberry" width="79" height="17">
-                            <span>1 000 руб</span>
-                        </label>
-                    </p>
+                            <p class="fs-xxs fw-500 mt-s">1 000 руб</p>
+                        </div>
+                    </label>
                 </div>
             </div>
 
             <div class="basket__conditions mx-m">
                 <h3 class="basket__conditions-title">Условия доставки</h3>
                 <div class="basket__conditions-inputs">
-                    <p class="basket__conditions-wrapper">
-                        <input type="radio" id="condition1" name="conditions" value="postOffice"
-                            class="basket__conditions-radio" />
-                        <label for="condition1" class="basket__conditions-label">
+                    <label class="basket__conditions-wrapper">
+                        <input type="radio" class="radio-input" name="conditions" value="today" checked>
+                        <span class="radio-mark radio-mark"></span>
+
+                        <div class="basket__conditions-label">
                             <span class="basket__conditions-main-label">Сегодня</span>
                             <span class="basket__conditions-other-label">
                                 Стоимость доставки - 599 руб., вне зависимости от суммы покупки.
                                 <span class="basket__conditions-time">Ближайшая дата доставки: 8 августа</span>
                             </span>
-                        </label>
-                    </p>
-                    <p class="basket__conditions-wrapper">
-                        <input type="radio" id="condition2" name="conditions" value="cdek"
-                            class="basket__conditions-radio" checked />
-                        <label for="condition2" class="basket__conditions-label">
+                        </div>
+                    </label>
+                    <label class="basket__conditions-wrapper">
+                        <input type="radio" class="radio-input" name="conditions" value="2h">
+                        <span class="radio-mark radio-mark"></span>
+
+                        <div class="basket__conditions-label">
                             <span class="basket__conditions-main-label">В течение 2 часов</span>
                             <span class="basket__conditions-other-label">
                                 Стоимость доставки - 800 руб., вне зависимости от суммы покупки.
                                 <span class="basket__conditions-time">Ближайшая дата доставки: 8 августа</span>
                             </span>
-                        </label>
-                    </p>
-                    <p class="basket__conditions-wrapper">
-                        <input type="radio" id="condition3" name="conditions" value="boxberry"
-                            class="basket__conditions-radio" />
-                        <label for="condition3" class="basket__conditions-label">
+                        </div>
+                    </label>
+                    <label class="basket__conditions-wrapper">
+                        <input type="radio" class="radio-input" name="conditions" value="free">
+                        <span class="radio-mark radio-mark"></span>
+
+                        <div class="basket__conditions-label">
                             <span class="basket__conditions-main-label">Бесплатно</span>
                             <span class="basket__conditions-other-label">
                                 При сумме выкупа от 4500 руб.
                                 <span class="basket__conditions-time">Ближайшая дата доставки: 8 августа</span>
                             </span>
-                        </label>
-                    </p>
+                        </div>
+                    </label>
                 </div>
             </div>
 

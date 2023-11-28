@@ -2,7 +2,6 @@ function openPopup(popupId = undefined) {
     const openPopups = document.querySelectorAll(".popup");
 
     if (openPopups.length) {
-        console.log(openPopups);
 
         openPopups.forEach((popup) => {
             popup.classList.remove("popup");

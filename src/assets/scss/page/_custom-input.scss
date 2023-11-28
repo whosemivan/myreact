@@ -25,6 +25,9 @@
 
         border: unset;
         outline: unset;
+
+        color: inherit;
+        background-color: unset;
     }
 
     &__link {
@@ -41,5 +44,14 @@
 
         color: #3075FC;
         text-transform: uppercase;
+    }
+
+    &--light {
+        border: 1px solid #FFF;
+        background: rgba(240, 245, 254, 0.20);
+
+        & .custom-input__input {
+            background-color: unset;
+        }
     }
 }

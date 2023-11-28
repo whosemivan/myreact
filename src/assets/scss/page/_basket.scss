@@ -147,9 +147,13 @@
         }
 
         .basket__delivery-wrapper {
-            display: flex;
-            flex-direction: column;
             position: relative;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #FFF;
 
             &::after {
                 content: "Бесплатно";
@@ -170,44 +174,6 @@
             &:nth-child(3)::after {
                 content: "1 000 ₽";
             }
-
-
-            .basket__delivery-radio {
-                display: none;
-            }
-
-
-            .basket__delivery-label {
-                padding-left: 29px;
-                color: #FFF;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                position: relative;
-
-                &::before {
-                    content: "";
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                    border: 1px solid #ffffff;
-                    position: absolute;
-                    top: -3px;
-                    left: 0;
-                }
-            }
-
-            .basket__delivery-radio:checked+.basket__delivery-label::after {
-                content: "";
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background: #ffffff;
-                position: absolute;
-                top: 3px;
-                left: 5.5px;
-            }
         }
     }
 
@@ -222,6 +188,7 @@
             position: relative;
 
             .basket__form-input {
+                padding: 0 13px;
                 min-height: 50px;
                 width: 100%;
                 border-radius: 6px;
@@ -277,56 +244,23 @@
             .basket__transports-wrapper {
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
+
                 flex: 1 1;
-                padding: 64px 67px 13px 9px;
+
+                min-width: 120px;
+                min-height: 120px;
+
+                padding: 13px 9px;
+
                 border-radius: 6px;
                 background: #F0F5FE;
-
-                .basket__transports-radio {
-                    display: none;
-                }
-
-                .basket__transports-label {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    position: relative;
-
-                    span {
-                        color: #48455C;
-                        font-size: 12px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: normal;
-                    }
-
-                    &::before {
-                        content: "";
-                        width: 18px;
-                        height: 18px;
-                        border-radius: 50%;
-                        border: 1px solid #48455C;
-                        position: absolute;
-                        top: -50px;
-                        left: 0;
-                    }
-                }
-
-                .basket__transports-radio:checked+.basket__transports-label::after {
-                    content: "";
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: #48455C;
-                    position: absolute;
-                    top: -45px;
-                    left: 5.5px;
-                }
             }
         }
     }
 
     &__conditions {
+        margin-top: 25px;
         margin-bottom: 20px;
 
         .basket__conditions-title {
@@ -343,18 +277,19 @@
             gap: 10px;
 
             .basket__conditions-wrapper {
-                padding: 20px 13px 18px 50px;
+                display: flex;
+                gap: 14px;
+
+                padding: 20px 13px 18px 18px;
                 border-radius: 6px;
                 background: #F0F5FE;
-
-                .basket__conditions-radio {
-                    display: none;
-                }
 
                 .basket__conditions-label {
                     display: flex;
                     flex-direction: column;
                     position: relative;
+
+                    flex: 1;
 
                     .basket__conditions-main-label {
                         color: #48455C;
@@ -362,6 +297,8 @@
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
+
+                        margin-bottom: 1rem;
                     }
 
                     .basket__conditions-other-label {
@@ -372,6 +309,8 @@
                         line-height: normal;
 
                         .basket__conditions-time {
+                            display: block;
+
                             color: #A5A3AF;
                             font-size: 12px;
                             font-style: normal;
@@ -379,28 +318,6 @@
                             line-height: normal;
                         }
                     }
-
-                    &::before {
-                        content: "";
-                        width: 18px;
-                        height: 18px;
-                        border-radius: 50%;
-                        border: 1px solid #48455C;
-                        position: absolute;
-                        top: -2px;
-                        left: -35px;
-                    }
-                }
-
-                .basket__conditions-radio:checked+.basket__conditions-label::after {
-                    content: "";
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: #48455C;
-                    position: absolute;
-                    top: 4px;
-                    left: -29.5px;
                 }
             }
         }
@@ -414,45 +331,25 @@
         margin-bottom: 42px;
 
         .basket__pay-block {
-            padding: 17px 12px;
             border-radius: 6px;
             border: 1px solid #48455C;
             box-shadow: 0px 4px 14px 0px rgba(48, 117, 252, 0.10);
 
             .basket__pay-input {
-                display: none;
+                display: flex;
+                align-items: center;
+                gap: 14px;
+
+                padding: 17px 12px;
             }
 
             .basket__pay-label {
-                padding-left: 44px;
                 color: #48455C;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
                 position: relative;
-
-                &::before {
-                    content: "";
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                    border: 1px solid #48455C;
-                    position: absolute;
-                    top: -3px;
-                    left: 0;
-                }
-            }
-
-            .basket__pay-input:checked+.basket__pay-label::after {
-                content: "";
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background: #48455C;
-                position: absolute;
-                top: 2px;
-                left: 5.5px;
             }
         }
 
@@ -468,34 +365,29 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-
-                &::before {
-                    content: "";
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                    border: 1px solid #3075FC;
-                    position: absolute;
-                    top: -3px;
-                    left: 0;
-                }
             }
 
-            .basket__pay-input:checked+.basket__pay-label::after {
-                content: "";
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background: #3075FC;
-                position: absolute;
-                top: 2px;
-                left: 5.5px;
+            .basket__pay-info {
+                display: block;
+
+                padding-top: 17px;
             }
+        }
+
+        .basket__pay-info-input-wrapper {
+            position: relative;
         }
 
         .basket__pay-info {
             position: relative;
-            margin-top: 27px;
+
+            max-height: 0;
+
+            padding: 0 12px;
+
+            overflow: hidden;
+            box-sizing: content-box;
+            transition: all 0.3s ease-in-out;
 
             .basket__btnSubmit--pay {
                 width: 100%;

@@ -59,11 +59,16 @@
 
         <form>
             <section class="about-payment about-payment--basket">
-                <div class="about-payment__title-wrapper mx-m">
-                    <input id="aboutPayment" type="radio" class="about-payment__radio">
-                    <label for="aboutPayment" class="about-payment__label">Oплата долями</label>
+                <label for="payment" class="about-payment__title-wrapper mx-m">
+                    <div class="about-payment__radio">
+                        <input type="checkbox" class="radio-input" name="payment" id="payment">
+                        <span class="radio-mark radio-mark--blue"></span>
+
+                        <span class="about-payment__label">Oплата долями</span>
+                    </div>
+
                     <span class="about-payment__price">5 200 ₽</span>
-                </div>
+                </label>
 
                 <p class="about-payment__text fs-xxs fw-600 mx-m">Оплачивайте 25% покупки сразу, остальное частями — в
                     течение 8
@@ -114,16 +119,18 @@
 
             <div class="basket__pay mx-m">
                 <div class="basket__pay-block">
-                    <input type="radio" id="payMethod1" name="pay" value="cash" class="basket__pay-input">
-                    <label for="payMethod1" class="basket__pay-label">Оплата при получении</label>
-                </div>
-                <div class="basket__pay-block basket__pay-block--active">
-                    <input type="radio" id="payMethod2" name="pay" value="card" class="basket__pay-input" checked>
-                    <label for="payMethod2" class="basket__pay-label">Онлайн оплата картой</label>
+                    <label class="basket__pay-input">
+                        <input type="radio" class="radio-input" name="pay" value="cash">
+                        <span class="radio-mark"></span>
+
+                        <span class="basket__pay-label">Oплата долями</span>
+                    </label>
 
                     <div class="basket__pay-info">
-                        <label for="number" class="basket__pay-info-label">Номер карты</label>
-                        <input type="number" id="number" class="basket__pay-info-input">
+                        <p class="basket__pay-info-input-wrapper">
+                            <label for="number" class="basket__pay-info-label">Номер карты</label>
+                            <input type="number" id="number" class="basket__pay-info-input">
+                        </p>
 
                         <div class="basket__pay-info-block">
                             <p>
@@ -144,21 +151,70 @@
                         </button>
                     </div>
                 </div>
-                <div class="basket__pay-block">
-                    <input type="radio" id="payMethod3" name="pay" value="apple" class="basket__pay-input">
-                    <label for="payMethod3" class="basket__pay-label">Apple pay</label>
+                <div class="basket__pay-block basket__pay-block--active">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="radio-input" name="pay" value="card" checked>
+                        <span class="radio-mark radio-mark--blue"></span>
+
+                        <span class="basket__pay-label">Онлайн оплата картой</span>
+                    </label>
+
+                    <div class="basket__pay-info">
+                        <p class="basket__pay-info-input-wrapper">
+                            <label for="number" class="basket__pay-info-label">Номер карты</label>
+                            <input type="number" id="number" class="basket__pay-info-input">
+                        </p>
+                        
+                        <div class="basket__pay-info-block">
+                            <p>
+                                <label for="date" class="basket__pay-info-label">Дата</label>
+                                <input type="number" id="date" class="basket__pay-info-input">
+                            </p>
+                            <p>
+                                <label for="cvv" class="basket__pay-info-label">CVV</label>
+                                <input type="number" id="cvv" class="basket__pay-info-input">
+                            </p>
+                        </div>
+
+                        <button type="submit" class="basket__btnSubmit basket__btnSubmit--pay">
+                            Оплатить
+                            <span>
+                                48 000 ₽
+                            </span>
+                        </button>
+                    </div>
                 </div>
                 <div class="basket__pay-block">
-                    <input type="radio" id="payMethod4" name="pay" value="gpay" class="basket__pay-input">
-                    <label for="payMethod4" class="basket__pay-label">Gpay</label>
+                    <label class="basket__pay-input">
+                        <input type="radio" class="radio-input" name="pay" value="apple">
+                        <span class="radio-mark"></span>
+
+                        <span class="basket__pay-label">Apple pay</span>
+                    </label>
                 </div>
                 <div class="basket__pay-block">
-                    <input type="radio" id="payMethod5" name="pay" value="yoo" class="basket__pay-input">
-                    <label for="payMethod5" class="basket__pay-label">Yoo Money</label>
+                    <label class="basket__pay-input">
+                        <input type="radio" class="radio-input" name="pay" value="gpay">
+                        <span class="radio-mark"></span>
+
+                        <span class="basket__pay-label">Gpay</span>
+                    </label>
                 </div>
                 <div class="basket__pay-block">
-                    <input type="radio" id="payMethod6" name="pay" value="sber" class="basket__pay-input">
-                    <label for="payMethod6" class="basket__pay-label">Sber Pay</label>
+                    <label class="basket__pay-input">
+                        <input type="radio" class="radio-input" name="pay" value="yoo">
+                        <span class="radio-mark"></span>
+
+                        <span class="basket__pay-label">Yoo Money</span>
+                    </label>
+                </div>
+                <div class="basket__pay-block">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="radio-input" name="pay" value="sber">
+                        <span class="radio-mark"></span>
+
+                        <span class="basket__pay-label">Sber Pay</span>
+                    </label>
                 </div>
             </div>
         </form>
@@ -174,6 +230,10 @@
     <!-- Подключение кода слайдера -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение функционла открытия pay-input карточек -->
+    <script src="assets/js/pay-input.js"></script>
     <!-- ### -->
 </body>
 

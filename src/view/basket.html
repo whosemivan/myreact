@@ -225,8 +225,7 @@
 
             <div class="basket__isPresent mx-m">
                 <label class="basket__isPresent-label" for="present">
-
-                    <input type="checkbox" class="radio-input" id="present">
+                    <input type="checkbox" class="radio-input" name="present" id="present">
                     <span class="radio-mark"></span>
 
                     Упаковать в подарочную упаковку
@@ -239,7 +238,6 @@
                         <span class="visually-hidden">Дополнительная информация</span>
                     </button>
                 </label>
-
             </div>
 
             <div class="basket__promocode mx-m">
@@ -276,14 +274,16 @@
         </button>
 
         <section class="about-payment about-payment--basket">
-            <div class="about-payment__title-wrapper mx-m">
-                <input type="checkbox" class="radio-input" id="aboutPayment">
-                <span class="radio-mark radio-mark--blue radio-mark--round"></span>
+            <label for="payment" class="about-payment__title-wrapper mx-m">
+                <div class="about-payment__radio">
+                    <input type="checkbox" class="radio-input" name="payment" id="payment">
+                    <span class="radio-mark radio-mark--blue"></span>
 
-                <label for="aboutPayment" class="about-payment__label">Oплата долями</label>
+                    <span class="about-payment__label">Oплата долями</span>
+                </div>
 
                 <span class="about-payment__price">5 200 ₽</span>
-            </div>
+            </label>
 
             <p class="about-payment__text fs-xxs fw-600 mx-m">Оплачивайте 25% покупки сразу, остальное частями — в
                 течение 8

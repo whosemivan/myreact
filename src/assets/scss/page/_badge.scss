@@ -1,0 +1,34 @@
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    position: absolute;
+    top: 22px;
+    left: 24px;
+
+    z-index: 2;
+
+    min-height: 22px;
+    padding: 0 10px;
+
+    font-size: 12px;
+    border-radius: 40px;
+
+    &--web-best-badge {
+        color: #F91818;
+        background-color: #F9181833;
+
+        &::after {
+            content: "Лидер продаж";
+            display: inline-block;
+        }
+
+        &>.badge-icon {
+            width: 14px;
+            height: 14px;
+
+            background: center / cover url("/assets/image/medal.svg") no-repeat;
+        }
+    }
+}

@@ -3,14 +3,23 @@
 //
 
 
+// Импорт модулей
+@import
+    "module/popup";
+// 
+
+
 // Импорт страниц
 @import
     "page/filter-icon",
+    "page/product-size-card",
     "page/filter-buttons",
     "page/products-list",
     "page/nav",
     "page/page-selector",
     "page/category-link",
     "page/brand-link",
+    "page/from-to-inputs",
+    "page/product-filter-form",
     "page/brand";
 //

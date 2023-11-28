@@ -112,4 +112,30 @@
 
         background: center url("/assets/image/arrow-blue.svg") no-repeat;
     }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+    }
+
+    &--hidden {
+        height: 0;
+
+        margin-bottom: 43px;
+        padding-bottom: 0;
+
+        overflow: hidden;
+
+        background-color: unset;
+
+        & .about-payment__title-wrapper {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        & .about-payment__anchor-link {
+            transform: rotate(180deg);
+        }
+    }
 }

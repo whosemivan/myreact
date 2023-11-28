@@ -39,7 +39,8 @@
         }
     }
 
-    &__title {
+    &__title,
+    &__sub-title {
         color: #000;
         text-align: center;
     }
@@ -57,9 +58,17 @@
         z-index: 10;
 
         background: center url("/assets/image/close-icon.svg") no-repeat;
+
+        &--light {
+            background: center url("/assets/image/close-icon--light.svg") no-repeat;
+        }
     }
 
     &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         width: 100%;
         min-height: 50px;
 
@@ -70,6 +79,11 @@
         border-radius: 4px;
 
         background-color: $black;
+
+        &--light {
+            color: #3075FC;
+            background-color: $white;
+        }
     }
 
     &__link {

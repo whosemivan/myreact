@@ -3,7 +3,7 @@
     <button class="header__basket bg-second-gray"></button>
 </div>
 
-@@if (pageName == 'index' || pageName == 'catalog') {
+@@if (pageName == 'index') {
 <nav class="nav mb-m">
     <form class="nav__search-wrapper bg-white pl-l">
         <label class="nav__search">
@@ -24,7 +24,7 @@
         <div class="nav__color-selector nav__color-selector--hidden" id="color-selector">
             <p>Выбрать цвет</p>
 
-            <div class="nav__colors-btns-wrapper">
+            <div class="nav__colors-btns-wrapper mt-xl">
                 <button class="nav__color-btn bg-second-gray" type="button" data-color="FB6949"></button>
                 <button class="nav__color-btn bg-second-gray" type="button" data-color="A230FC"></button>
                 <button class="nav__color-btn bg-second-gray" type="button" data-color="219653"></button>
@@ -46,7 +46,7 @@
 </nav>
 }
 
-@@if (pageName == 'shop' || pageName == 'product' || pageName == 'brand' || pageName == '') {
+@@if (pageName == 'shop' || pageName == 'product' || pageName == 'brand' ||  pageName == 'catalog' || pageName == '') {
 <nav class="nav mb-m">
     <div class="nav__search-with-filter">
         <form class="nav__search-wrapper bg-white pl-l">
@@ -68,7 +68,7 @@
             <div class="nav__color-selector nav__color-selector--hidden" id="color-selector">
                 <p>Выбрать цвет</p>
 
-                <div class="nav__colors-btns-wrapper">
+                <div class="nav__colors-btns-wrapper mt-xl">
                     <button class="nav__color-btn bg-second-gray" type="button" data-color="FB6949"></button>
                     <button class="nav__color-btn bg-second-gray" type="button" data-color="A230FC"></button>
                     <button class="nav__color-btn bg-second-gray" type="button" data-color="219653"></button>
@@ -84,7 +84,7 @@
             <input hidden type="text" name="color" id="color" value="FB6949">
         </form>
 
-        <button class="filter-btn"></button>
+        <button class="filter-btn" onclick="openPopup()"></button>
     </div>
 
     <div class="nav__links-wrapper mt-m fs-xss">

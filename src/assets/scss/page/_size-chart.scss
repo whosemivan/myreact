@@ -1,6 +1,8 @@
 .size-chart {
-    margin-left: 10px;
-    margin-right: 26px;
+    padding-left: 10px;
+    padding-right: 26px;
+
+    overflow: hidden;
 
     &__header {
         display: flex;
@@ -44,17 +46,23 @@
     &__product-size-selector {
         margin-top: 10px;
 
+        overflow: visible;
+
         & .swiper-slide {
             width: auto;
         }
     }
 
     &__last-size-link {
-        display: block;
+        display: flex;
+        align-items: center;
+
         margin-top: 10px;
 
         &::before {
             content: "";
+
+            display: inline-block;
 
             width: 14px;
             height: 14px;

@@ -35,7 +35,7 @@
 
     <main class="main">
         <div class="main__product-preview product-preview">
-            <section class="product-preview__header">
+            <!-- <section class="product-preview__header">
                 <h3 class="fs-s fw-800">Nike Air Max SC</h3>
 
                 <div class="product-preview__info-wrapper">
@@ -52,9 +52,9 @@
 
                 <p class="fs-xxs">или 4 платежа по 5 200₽ <span
                         class="product-preview__highlight-payment-info-text">долями</span></p>
-            </section>
+            </section> -->
 
-            <div class="product-preview__promotion-banner">
+            <!-- <div class="product-preview__promotion-banner">
                 <p class="product-preview__discount fw-800">35</p>
 
                 <p class="product-preview__discount-info fs-xxs fw-500">
@@ -65,6 +65,30 @@
                 <div class="product-preview__bear"></div>
 
                 <button class="product-preview__promotion-banner-close-btn" onclick="hideParent(this)"></button>
+            </div> -->
+
+            <div class="discount-timer">
+                <p class="discount-timer__title">Скидка заканчивается</p>
+
+                <div>
+                    <div class="discount-timer__time fw-700">
+                        <span>00</span>
+                        <span>23</span>
+                        <span>00</span>
+                        <span>00</span>
+                    </div>
+
+                    <div class="discount-timer__time-sign fs-xss">
+                        <span>День</span>
+                        <span>Час</span>
+                        <span>Мин</span>
+                        <span>Сек</span>
+                    </div>
+                </div>
+
+                <a href="#" class="discount-timer__btn fw-600">Купить</a>
+
+                <button class="discount-timer__close-btn" onclick="hideParent(this)"></button>
             </div>
 
             <div class="main__primary-slider swiper can-be-viewed bg-second-gray">
@@ -87,6 +111,10 @@
                 </div>
 
                 <div class="slider__pagination slider__pagination--bottom-center"></div>
+
+                <div class="badge badge--web-best-badge">
+                    <span class="badge-icon"></span>
+                </div>
             </div>
 
             <a href="#" class="product-preview__image-link fw-600">Входит в образ</a>
@@ -138,31 +166,36 @@
             <div class="size-chart__product-size-selector swiper slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card">37</a>
+                        <label for="size1" class="product-size-card product-size-card--less">37</label>
+                        <input hidden type="checkbox" name="size" id="size1" value="37">
                     </div>
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card selected">38</a>
+                        <label for="size2" class="product-size-card product-size-card--notification selected">38</label>
+                        <input hidden type="checkbox" name="size" id="size2" value="38" checked>
                     </div>
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card product-size-card--over">39</a>
+                        <label for="size3" class="product-size-card product-size-card--over">39</label>
+                        <input hidden type="checkbox" name="size" id="size3" value="39" disabled>
                     </div>
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card product-size-card--over">40</a>
+                        <label for="size4" class="product-size-card product-size-card--over">40</label>
+                        <input hidden type="checkbox" name="size" id="size4" value="40" disabled>
                     </div>
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card">41</a>
+                        <label for="size5" class="product-size-card product-size-card">41</label>
+                        <input hidden type="checkbox" name="size" id="size5" value="41">
                     </div>
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card">42</a>
+                        <label for="size6" class="product-size-card product-size-card">42</label>
+                        <input hidden type="checkbox" name="size" id="size6" value="42">
                     </div>
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card">43</a>
+                        <label for="size7" class="product-size-card product-size-card">43</label>
+                        <input hidden type="checkbox" name="size" id="size7" value="43">
                     </div>
                     <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card">44</a>
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <a href="#" class="product-size-card">45</a>
+                        <label for="size9" class="product-size-card product-size-card"></label>
+                        <input hidden type="checkbox" name="size" id="size9" value="">
                     </div>
                 </div>
             </div>
@@ -171,10 +204,10 @@
         </div>
 
         <div class="main__link-wrapper">
-            <a href="#" class="main__buy-link bg-black color-white">
+            <button class="main__buy-link bg-black color-white" onclick="openPopup('added-to-cart-popup')">
                 <p class="fw-600">Купить</p>
                 <p class="fw-600">48 060 ₽</p>
-            </a>
+            </button>
 
             <a href="#" class="main__basket-link">
             </a>
@@ -183,10 +216,12 @@
         <section class="main__about-payment about-payment about-payment--basket">
             <div class="about-payment__title-wrapper mx-m">
                 <h3 class="about-payment__title">Oплата долями</h3>
-                <a href="#" class="about-payment__anchor-link"></a>
+                <button type="button" class="about-payment__anchor-link"
+                    onclick="accordionState('about-payment', 'about-payment--hidden')"></button>
             </div>
 
-            <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в течение 8
+            <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в
+                течение 8
                 недель. Без комиссий и переплат.</p>
 
             <div class="about-payment__cards-wrapper">
@@ -307,8 +342,8 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="radio-input" id="selected1">
-                                <span class="radio-mark radio-mark--blue"></span>
+                                <input type="checkbox" class="hidden-input" name="product1">
+                                <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
                     </div>
@@ -325,8 +360,8 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="radio-input" id="selected1">
-                                <span class="radio-mark radio-mark--blue"></span>
+                                <input type="checkbox" class="hidden-input" name="product2">
+                                <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
                     </div>
@@ -345,8 +380,8 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="radio-input" id="selected1">
-                                <span class="radio-mark radio-mark--blue"></span>
+                                <input type="checkbox" class="hidden-input" name="product3">
+                                <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
                     </div>
@@ -363,16 +398,16 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="radio-input" id="selected1">
-                                <span class="radio-mark radio-mark--blue"></span>
+                                <input type="checkbox" class="hidden-input" name="product4">
+                                <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev slider__button"></div>
+            <div class="swiper-button-next slider__button"></div>
         </div>
 
         <div class="main__add-to-basket-btn add-to-basket-btn">
@@ -429,8 +464,8 @@
 
                             <div class="news-block__info-wrapper">
                                 <div>
-                                    <span class="news-block__opinion news-block__opinion--positive">24</span>
-                                    <span class="news-block__opinion news-block__opinion--negative">4</span>
+                                    <button class="news-block__opinion news-block__opinion--positive">24</button>
+                                    <button class="news-block__opinion news-block__opinion--negative">4</button>
                                 </div>
 
                                 <p class="fs-xss">11.02.2022</p>
@@ -461,8 +496,8 @@
 
                             <div class="news-block__info-wrapper">
                                 <div>
-                                    <span class="news-block__opinion news-block__opinion--positive">24</span>
-                                    <span class="news-block__opinion news-block__opinion--negative">4</span>
+                                    <button class="news-block__opinion news-block__opinion--positive">24</button>
+                                    <button class="news-block__opinion news-block__opinion--negative">4</button>
                                 </div>
 
                                 <p class="fs-xss">11.02.2022</p>
@@ -475,7 +510,8 @@
             <div class="reviews-slider-wrapper__links-wrapper">
                 <button class="reviews-slider-wrapper__link" onclick="openPopup('reviews-list-popup')">Прочитать все
                     отзыв</button>
-                <button class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight" onclick="openPopup('leave-review-popup')">Добавить
+                <button class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight"
+                    onclick="openPopup('leave-review-popup')">Добавить
                     отзыв</button>
             </div>
         </div>
@@ -1057,15 +1093,15 @@
 
                     <div class="size-notice-form__checkboxes-wrapper">
                         <div class="size-notice-form__checkbox-wrapper">
-                            <input type="checkbox" class="radio-input" id="call">
-                            <span class="radio-mark radio-mark--round"></span>
+                            <input type="radio" class="hidden-input" name="type" id="call">
+                            <span class="mark mark--radio"></span>
 
                             <label for="call">Звонок</label>
                         </div>
 
                         <div class="size-notice-form__checkbox-wrapper">
-                            <input type="checkbox" class="radio-input" id="sms">
-                            <span class="radio-mark radio-mark--round"></span>
+                            <input type="radio" class="hidden-input" name="type" id="sms">
+                            <span class="mark mark--radio"></span>
 
                             <label for="sms">СМС</label>
                         </div>
@@ -1130,8 +1166,8 @@
 
                     <div class="news-block__info-wrapper">
                         <div>
-                            <span class="news-block__opinion news-block__opinion--positive">24</span>
-                            <span class="news-block__opinion news-block__opinion--negative">4</span>
+                            <button class="news-block__opinion news-block__opinion--positive">24</button>
+                            <button class="news-block__opinion news-block__opinion--negative">4</button>
                         </div>
 
                         <p class="fs-xss">11.02.2022</p>
@@ -1158,8 +1194,8 @@
 
                     <div class="news-block__info-wrapper">
                         <div>
-                            <span class="news-block__opinion news-block__opinion--positive">24</span>
-                            <span class="news-block__opinion news-block__opinion--negative">4</span>
+                            <button class="news-block__opinion news-block__opinion--positive">24</button>
+                            <button class="news-block__opinion news-block__opinion--negative">4</button>
                         </div>
 
                         <p class="fs-xss">11.02.2022</p>
@@ -1184,7 +1220,8 @@
                 </a>
             </div>
 
-            <button type="button" class="popup__btn reviews-list-popup__btn" onclick="openPopup('leave-review-popup')">Добавить отзыв</button>
+            <button type="button" class="popup__btn reviews-list-popup__btn"
+                onclick="openPopup('leave-review-popup')">Добавить отзыв</button>
         </div>
     </div>
 
@@ -1216,7 +1253,7 @@
                         </div>
                         <div class="custom-input">
                             <label for="text-input" class="custom-input__label">Вопросы/пожелания к стилисту</label>
-                            <textarea id="text-input" rows="5" class="custom-input__input"></textarea>
+                            <textarea id="text-input" name="text" rows="5" class="custom-input__input"></textarea>
                         </div>
                     </div>
 
@@ -1259,6 +1296,181 @@
         </section>
     </div>
 
+    <div class="popup--hidden" id="added-to-cart-popup">
+        <section class="popup__content-wrapper added-to-cart">
+            <p class="popup__title fs-l fw-700">Товар добавлен в корзину</p>
+
+            <button class="popup__close-btn" onclick="closePopup(this)"></button>
+
+            <div class="popup__content">
+                <p class="popup__sub-title mt-l">С этим товаром часто покупают</p>
+
+                <div class="swiper slider mt-xl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider__slide pr-l">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper card__img-wrapper--round card__img-wrapper--mini-img">
+                                    <img src="assets/image/slider-img/product1.png" alt="product img">
+                                </div>
+
+                                <div>
+                                    <div class="product-card__block--basket">
+                                        <h3 class="fw-800">Nike Air Max SC</h3>
+                                        <p class="card__price product-card__price product-card__price--basket">48 060
+                                        </p>
+                                        <button type="button" class="product-card__addBasket">
+                                            В корзину
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.6875 0H2.8125C2.06658 0 1.35121 0.296316 0.823762 0.823762C0.296316 1.35121 0 2.06658 0 2.8125V10.6875C0 11.4334 0.296316 12.1488 0.823762 12.6762C1.35121 13.2037 2.06658 13.5 2.8125 13.5H10.6875C11.4334 13.5 12.1488 13.2037 12.6762 12.6762C13.2037 12.1488 13.5 11.4334 13.5 10.6875V2.8125C13.5 2.06658 13.2037 1.35121 12.6762 0.823762C12.1488 0.296316 11.4334 0 10.6875 0ZM9 7.3125H7.3125V9C7.3125 9.14918 7.25324 9.29226 7.14775 9.39775C7.04226 9.50324 6.89918 9.5625 6.75 9.5625C6.60082 9.5625 6.45774 9.50324 6.35225 9.39775C6.24676 9.29226 6.1875 9.14918 6.1875 9V7.3125H4.5C4.35082 7.3125 4.20774 7.25324 4.10225 7.14775C3.99676 7.04226 3.9375 6.89918 3.9375 6.75C3.9375 6.60082 3.99676 6.45774 4.10225 6.35225C4.20774 6.24676 4.35082 6.1875 4.5 6.1875H6.1875V4.5C6.1875 4.35082 6.24676 4.20774 6.35225 4.10225C6.45774 3.99676 6.60082 3.9375 6.75 3.9375C6.89918 3.9375 7.04226 3.99676 7.14775 4.10225C7.25324 4.20774 7.3125 4.35082 7.3125 4.5V6.1875H9C9.14918 6.1875 9.29226 6.24676 9.39775 6.35225C9.50324 6.45774 9.5625 6.60082 9.5625 6.75C9.5625 6.89918 9.50324 7.04226 9.39775 7.14775C9.29226 7.25324 9.14918 7.3125 9 7.3125Z"
+                                                    fill="white" />
+                                            </svg>
+
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slider__slide pr-l">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper card__img-wrapper--round card__img-wrapper--mini-img">
+                                    <img src="assets/image/slider-img/product1.png" alt="product img">
+                                </div>
+
+                                <div>
+                                    <div class="product-card__block--basket">
+                                        <h3 class="fw-800">Nike Air Max SC</h3>
+                                        <p class="card__price product-card__price product-card__price--basket">48 060
+                                        </p>
+                                        <button type="button" class="product-card__addBasket">
+                                            В корзину
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.6875 0H2.8125C2.06658 0 1.35121 0.296316 0.823762 0.823762C0.296316 1.35121 0 2.06658 0 2.8125V10.6875C0 11.4334 0.296316 12.1488 0.823762 12.6762C1.35121 13.2037 2.06658 13.5 2.8125 13.5H10.6875C11.4334 13.5 12.1488 13.2037 12.6762 12.6762C13.2037 12.1488 13.5 11.4334 13.5 10.6875V2.8125C13.5 2.06658 13.2037 1.35121 12.6762 0.823762C12.1488 0.296316 11.4334 0 10.6875 0ZM9 7.3125H7.3125V9C7.3125 9.14918 7.25324 9.29226 7.14775 9.39775C7.04226 9.50324 6.89918 9.5625 6.75 9.5625C6.60082 9.5625 6.45774 9.50324 6.35225 9.39775C6.24676 9.29226 6.1875 9.14918 6.1875 9V7.3125H4.5C4.35082 7.3125 4.20774 7.25324 4.10225 7.14775C3.99676 7.04226 3.9375 6.89918 3.9375 6.75C3.9375 6.60082 3.99676 6.45774 4.10225 6.35225C4.20774 6.24676 4.35082 6.1875 4.5 6.1875H6.1875V4.5C6.1875 4.35082 6.24676 4.20774 6.35225 4.10225C6.45774 3.99676 6.60082 3.9375 6.75 3.9375C6.89918 3.9375 7.04226 3.99676 7.14775 4.10225C7.25324 4.20774 7.3125 4.35082 7.3125 4.5V6.1875H9C9.14918 6.1875 9.29226 6.24676 9.39775 6.35225C9.50324 6.45774 9.5625 6.60082 9.5625 6.75C9.5625 6.89918 9.50324 7.04226 9.39775 7.14775C9.29226 7.25324 9.14918 7.3125 9 7.3125Z"
+                                                    fill="white" />
+                                            </svg>
+
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slider__slide pr-l">
+                            <a href="#" class="card">
+                                <div class="card__img-wrapper card__img-wrapper--round card__img-wrapper--mini-img">
+                                    <img src="assets/image/slider-img/product1.png" alt="product img">
+                                </div>
+
+                                <div>
+                                    <div class="product-card__block--basket">
+                                        <h3 class="fw-800">Nike Air Max SC</h3>
+                                        <p class="card__price product-card__price product-card__price--basket">48 060
+                                        </p>
+                                        <button type="button" class="product-card__addBasket">
+                                            В корзину
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.6875 0H2.8125C2.06658 0 1.35121 0.296316 0.823762 0.823762C0.296316 1.35121 0 2.06658 0 2.8125V10.6875C0 11.4334 0.296316 12.1488 0.823762 12.6762C1.35121 13.2037 2.06658 13.5 2.8125 13.5H10.6875C11.4334 13.5 12.1488 13.2037 12.6762 12.6762C13.2037 12.1488 13.5 11.4334 13.5 10.6875V2.8125C13.5 2.06658 13.2037 1.35121 12.6762 0.823762C12.1488 0.296316 11.4334 0 10.6875 0ZM9 7.3125H7.3125V9C7.3125 9.14918 7.25324 9.29226 7.14775 9.39775C7.04226 9.50324 6.89918 9.5625 6.75 9.5625C6.60082 9.5625 6.45774 9.50324 6.35225 9.39775C6.24676 9.29226 6.1875 9.14918 6.1875 9V7.3125H4.5C4.35082 7.3125 4.20774 7.25324 4.10225 7.14775C3.99676 7.04226 3.9375 6.89918 3.9375 6.75C3.9375 6.60082 3.99676 6.45774 4.10225 6.35225C4.20774 6.24676 4.35082 6.1875 4.5 6.1875H6.1875V4.5C6.1875 4.35082 6.24676 4.20774 6.35225 4.10225C6.45774 3.99676 6.60082 3.9375 6.75 3.9375C6.89918 3.9375 7.04226 3.99676 7.14775 4.10225C7.25324 4.20774 7.3125 4.35082 7.3125 4.5V6.1875H9C9.14918 6.1875 9.29226 6.24676 9.39775 6.35225C9.50324 6.45774 9.5625 6.60082 9.5625 6.75C9.5625 6.89918 9.50324 7.04226 9.39775 7.14775C9.29226 7.25324 9.14918 7.3125 9 7.3125Z"
+                                                    fill="white" />
+                                            </svg>
+
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup__content">
+                <ul class="basket__list mt-xl">
+                    <li class="basket__item">
+                        <div class="basket__image-wrapper">
+                            <img src="assets/image/shoose.jpg" alt="Товар">
+                        </div>
+
+                        <div class="added-to-cart__product-info">
+                            <div class="added-to-cart__product-info-wrapper">
+                                <div class="basket__item-wrapper">
+                                    <h3 class="basket__item-title">Training Crew Socks</h3>
+                                    <div class="basket__item-sizes">
+                                        <button type="button" class="basket__item-btn">36</button>
+                                    </div>
+                                </div>
+
+                                <div class="basket__item-block">
+                                    <div class="basket__item-btns">
+                                        <button class="basket__item-btn basket__item-btn--minus" type="button">
+                                            -
+                                            <span class="visually-hidden">Убавить</span>
+                                        </button>
+                                        <span class="basket__item-count">1</span>
+                                        <button class="basket__item-btn basket__item-btn--plus" type="button">
+                                            +
+                                            <span class="visually-hidden">Прибавить</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span class="basket__item-price fw-700">28 600 ₽</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#" class="popup__btn">ПОСМОТРЕТЬ ТОВАРЫ В КОРЗИНЕ</a>
+        </section>
+    </div>
+
+    <div class="popup--hidden" id="add-review-popup">
+        <section class="popup__content-wrapper add-review-form">
+            <h3 class="popup__title add-review-form__title fs-l">Добавить отзыв</h3>
+
+            <button class="popup__close-btn popup__close-btn--light" onclick="closePopup(this)"></button>
+
+            <form action="#" method="POST">
+                <div class="full-stars">
+                    <div class="rating-group">
+                        <input name="fst" value="0" type="radio" disabled checked />
+
+                        <label for="fst-1"></label>
+                        <input name="fst" id="fst-1" value="1" type="radio" />
+
+                        <label for="fst-2"></label>
+                        <input name="fst" id="fst-2" value="2" type="radio" />
+
+                        <label for="fst-3"></label>
+                        <input name="fst" id="fst-3" value="3" type="radio" />
+
+                        <label for="fst-4"></label>
+                        <input name="fst" id="fst-4" value="4" type="radio" />
+
+                        <label for="fst-5"></label>
+                        <input name="fst" id="fst-5" value="5" type="radio" />
+                    </div>
+                </div>
+
+                <div class="custom-input custom-input--light">
+                    <textarea name="text" rows="5" class="custom-input__input">Написать отзыв</textarea>
+
+                    <label for="file" class="fs-m fw-700">Прикрепить фото/видео</label>
+                </div>
+
+                <input id="file" type="file" accept="image/png, image/jpeg, video/*" hidden />
+
+                <button type="submit" class="popup__btn popup__btn--light">Добавить Отзыв</a>
+            </form>
+        </section>
+    </div>
+
     @@include('./partials/footer.html')
 
     @@include('./partials/bottomNav.html', {
@@ -1297,9 +1509,17 @@
     <!-- Функционал открытия и закрытия swiper-а -->
     <script src="assets/js/swiper-toggle.js"></script>
     <!-- ### -->
-    
+
     <!-- Функционал открытия и закрытия color-selector-а -->
     <script src="assets/js/color-selector.js"></script>
+    <!-- ### -->
+
+    <!-- Функционал открытия и закрытия accordion-а -->
+    <script src="assets/js/single-accordion.js"></script>
+    <!-- ### -->
+
+    <!-- Функционал выбора размера -->
+    <script src="assets/js/size-selector.js"></script>
     <!-- ### -->
 
     <script>
