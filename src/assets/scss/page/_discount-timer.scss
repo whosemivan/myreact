@@ -26,9 +26,26 @@
     }
 
     &__time {
+        display: flex;
+        justify-content: space-between;
+        min-width: 100px;
 
-        &>span:not(:last-of-type)::after {
-            content: " :";
+        &>span {
+            position: relative;
+
+            display: inline-flex;
+            justify-content: center;
+
+            flex: 1;
+
+            &:not(:last-of-type)::after {
+                content: ":";
+
+                position: absolute;
+                right: 0;
+
+                width: 1.5px;
+            }
         }
     }
 

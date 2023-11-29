@@ -9,6 +9,10 @@
     }
 
     &__communication-blocks-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 23px;
+
         margin-top: 34px;
 
         padding-left: 12px;
@@ -41,5 +45,16 @@
     &__title,
     &__subtitle {
         text-transform: uppercase;
+    }
+}
+
+
+
+@media only screen and (min-width: $tablet) {
+    .main {
+
+        &__communication-blocks-wrapper {
+            gap: 30px;
+        }
     }
 }

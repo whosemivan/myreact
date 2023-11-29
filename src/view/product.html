@@ -71,7 +71,7 @@
                 <p class="discount-timer__title">Скидка заканчивается</p>
 
                 <div>
-                    <div class="discount-timer__time fw-700">
+                    <div class="discount-timer__time fw-700" id="timer">
                         <span>00</span>
                         <span>23</span>
                         <span>00</span>
@@ -112,7 +112,7 @@
 
                 <div class="slider__pagination slider__pagination--bottom-center"></div>
 
-                <div class="badge badge--web-best-badge">
+                <div class="badge badge--web-sales-leader">
                     <span class="badge-icon"></span>
                 </div>
             </div>
@@ -342,7 +342,7 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="hidden-input" name="product1">
+                                <input type="checkbox" class="input-with-mark" hidden name="product1">
                                 <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
@@ -360,7 +360,7 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="hidden-input" name="product2">
+                                <input type="checkbox" class="input-with-mark" hidden name="product2">
                                 <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
@@ -380,7 +380,7 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="hidden-input" name="product3">
+                                <input type="checkbox" class="input-with-mark" hidden name="product3">
                                 <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
@@ -398,7 +398,7 @@
                             <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
                             <label>
-                                <input type="checkbox" class="hidden-input" name="product4">
+                                <input type="checkbox" class="input-with-mark" hidden name="product4">
                                 <span class="mark mark--blue mark--checkbox"></span>
                             </label>
                         </div>
@@ -546,7 +546,7 @@
                     </a>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <a href="#" class="card product-card--mark-discount">
+                    <a href="#" class="card">
                         <div class="card__img-wrapper">
                             <img src="assets/image/slider-img/product2.png" alt="product img">
                             <p class="card__price product-card__price fs-s fw-800 bg-white">
@@ -562,6 +562,10 @@
                             </div>
 
                             <p class="card__score">4.6</p>
+                        </div>
+
+                        <div class="badge badge--mob-discount">
+                            <span class="badge-icon"></span>
                         </div>
                     </a>
                 </div>
@@ -740,6 +744,10 @@
                             <h3 class="fw-800">Nike Air Max SC</h3>
                             <p class="card__price mt-s fw-500">48 060</p>
                         </div>
+
+                        <div class="badge badge--mob-new-product">
+                            <span class="badge-icon"></span>
+                        </div>
                     </a>
                 </div>
                 <div class="swiper-slide slider__slide pr-l">
@@ -824,7 +832,7 @@
         <div class="main__slider swiper slider mt-l">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slider__slide">
-                    <a href="#" class="card product-card--mark-best">
+                    <a href="#" class="card">
                         <div class="card__img-wrapper">
                             <img src="assets/image/slider-img/product1.png" alt="product img">
                             <p class="card__price product-card__price fs-s fw-800 bg-white">48 060</p>
@@ -837,6 +845,10 @@
                             </div>
 
                             <p class="card__score">4.6</p>
+                        </div>
+
+                        <div class="badge badge--mob-sales-leader">
+                            <span class="badge-icon"></span>
                         </div>
                     </a>
                 </div>
@@ -1093,14 +1105,14 @@
 
                     <div class="size-notice-form__checkboxes-wrapper">
                         <div class="size-notice-form__checkbox-wrapper">
-                            <input type="radio" class="hidden-input" name="type" id="call">
+                            <input type="radio" class="input-with-mark" hidden name="type" id="call">
                             <span class="mark mark--radio"></span>
 
                             <label for="call">Звонок</label>
                         </div>
 
                         <div class="size-notice-form__checkbox-wrapper">
-                            <input type="radio" class="hidden-input" name="type" id="sms">
+                            <input type="radio" class="input-with-mark" hidden name="type" id="sms">
                             <span class="mark mark--radio"></span>
 
                             <label for="sms">СМС</label>
@@ -1521,11 +1533,17 @@
     <!-- Функционал выбора размера -->
     <script src="assets/js/size-selector.js"></script>
     <!-- ### -->
+    
+    <!-- Функционал таймер -->
+    <script src="assets/js/timer.js"></script>
+    <!-- ### -->
 
     <script>
         const elems = document.getElementsByClassName("reviews-wrapper__user-text");
 
         for (const elem of elems) textToEllipsis(elem);
+
+        startCountdown(new Date("December 11, 2023 23:59:59").getTime());
     </script>
 </body>
 

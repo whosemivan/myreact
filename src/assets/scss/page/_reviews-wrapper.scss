@@ -4,12 +4,9 @@
     gap: 10px;
 
     &__review {
-        flex-grow: 1;
-
         position: relative;
 
-        width: 100%;
-        max-width: 480px;
+        flex-grow: 1;
 
         padding: 11px 35px 18px 25px;
 
@@ -92,5 +89,28 @@
 
         color: #3075FC;
         text-decoration: underline;
+    }
+}
+
+
+
+@media only screen and (min-width: $tablet) {
+    .reviews-wrapper {
+        gap: 30px;
+
+        &__review {
+            width: 40%;
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .reviews-wrapper {
+
+        &__review {
+            flex: 1;
+
+            width: 100%;
+        }
     }
 }

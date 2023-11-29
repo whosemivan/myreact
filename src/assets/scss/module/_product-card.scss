@@ -93,8 +93,8 @@
         background: #3075FC;
     }
 
-    &--mark-best,
-    &--mark-discount,
+    // &--mark-best,
+    // &--mark-discount,
     &--mark-favorite {
         .card__img-wrapper::after {
             content: "";
@@ -108,24 +108,6 @@
             min-height: 22px;
 
             border-radius: 60px;
-        }
-    }
-
-    &--mark-best {
-        .card__img-wrapper::after {
-            top: 9px;
-            right: 22px;
-            left: unset;
-
-            min-width: 52px;
-            min-height: 33px;
-            background: center / 21.22px no-repeat url("/assets/image/medal.svg"), #F6C9C9;
-        }
-    }
-
-    &--mark-discount {
-        .card__img-wrapper::after {
-            background: center / 14px no-repeat url("/assets/image/down-arrow.svg"), #F6C9C9;
         }
     }
 

@@ -1,7 +1,6 @@
 .chat {
     position: relative;
 
-    // display: inline-flex;
     display: none;
     justify-content: center;
     align-items: center;
@@ -44,5 +43,13 @@
 
         background-color: $black;
         border-radius: 1.5px;
+    }
+}
+
+
+
+@media only screen and (min-width: $tablet) {
+    .chat {
+        display: inline-flex;
     }
 }

@@ -1,0 +1,163 @@
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    position: absolute;
+    top: 5%;
+    right: 6%;
+
+    z-index: 2;
+
+    min-height: 22px;
+    padding: 0 10px;
+
+    font-size: 12px;
+    border-radius: 40px;
+
+    &--mob-new-product,
+    &--web-new-product {
+        color: #3075FC;
+        background-color: #3075FC33;
+
+        &>.badge-icon {
+            background: center / cover url("/assets/image/badges/new-product--icon.svg") no-repeat;
+        }
+    }
+
+    &--web-new-product {
+        left: 6%;
+        right: unset;
+
+        &::after {
+            content: "Новинка";
+            display: inline-block;
+        }
+    }
+
+    &--mob-discount,
+    &--web-discount {
+        color: #FB6949;
+        background-color: #FB694933;
+
+        &>.badge-icon {
+            background: center / cover url("/assets/image/badges/discount--icon.svg") no-repeat;
+        }
+    }
+
+    &--web-discount {
+        left: 6%;
+        right: unset;
+
+        &::after {
+            content: "Скидка";
+            display: inline-block;
+        }
+    }
+
+    
+    &--mob-free-shipping,
+    &--web-free-shipping {
+        color: #74A350;
+        background-color: #74A35033;
+
+        &>.badge-icon {
+            background: center / cover url("/assets/image/badges/free-shipping--icon.svg") no-repeat;
+        }
+    }
+
+    &--web-free-shipping {
+        left: 6%;
+        right: unset;
+
+        &::after {
+            content: "Бесплатная доставка";
+            display: inline-block;
+        }
+    }
+
+    &--mob-popular,
+    &--web-popular {
+        color: #A230FC;
+        background-color: #A230FC33;
+
+        &>.badge-icon {
+            background: center / cover url("/assets/image/badges/popular--icon.svg") no-repeat;
+        }
+    }
+
+    &--web-popular {
+        left: 6%;
+        right: unset;
+
+        &::after {
+            content: "Популярный";
+            display: inline-block;
+        }
+    }
+
+    &--mob-sales-leader,
+    &--web-sales-leader {
+        color: #F91818;
+        background-color: #F9181833;
+
+        &>.badge-icon {
+            background: center / cover url("/assets/image/badges/sales-leader--icon.svg") no-repeat;
+        }
+    }
+
+    &--web-sales-leader {
+        left: 6%;
+        right: unset;
+
+        &::after {
+            content: "Лидер продаж";
+            display: inline-block;
+        }
+    }
+
+    &--mob-premium,
+    &--web-premium {
+        color: #000000;
+        background-color: #00000033;
+
+        &>.badge-icon {
+            background: center / cover url("/assets/image/badges/premium--icon.svg") no-repeat;
+        }
+    }
+
+    &--web-premium {
+        left: 6%;
+        right: unset;
+
+        &::after {
+            content: "Премиум";
+            display: inline-block;
+        }
+    }
+
+    &--mob-finished-image,
+    &--web-finished-image {
+        color: #FFC657;
+        background-color: #FFC65733;
+
+        &>.badge-icon {
+            background: center / cover url("/assets/image/badges/finished-image--icon.svg") no-repeat;
+        }
+    }
+
+    &--web-finished-image {
+        left: 6%;
+        right: unset;
+
+        &::after {
+            content: "Готовый образ";
+            display: inline-block;
+        }
+    }
+
+    &>.badge-icon {
+        width: 14px;
+        height: 14px;
+    }
+}

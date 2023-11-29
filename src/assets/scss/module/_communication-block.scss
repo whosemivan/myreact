@@ -1,9 +1,9 @@
 .communication-block {
     position: relative;
 
+    width: 100%;
     min-height: 200px;
 
-    margin-top: 23px;
     padding: 23px 24px 15px 24px;
 
     border-radius: 10px;
@@ -66,8 +66,12 @@
     &--with-img {
         background: url("/assets/image/help-support.png") no-repeat right 23px bottom 7px / 128px 128px, linear-gradient(257.17deg, #3075fc 6.89%, #a230fc 97.54%);
     }
+}
 
-    &:first-of-type {
-        margin-top: 0;
+
+
+@media only screen and (min-width: $tablet) {
+    .communication-block {
+        flex: 1;
     }
 }

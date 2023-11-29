@@ -1,9 +1,11 @@
 .card {
     display: table;
+    position: relative;
 
     &__img-wrapper {
         position: relative;
         overflow: hidden;
+        border-radius: 10px 10px 0 0;
 
         &--round {
             border-radius: 10px;

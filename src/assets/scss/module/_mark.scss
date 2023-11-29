@@ -66,14 +66,6 @@
     }
 }
 
-.hidden-input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.hidden-input:checked+.mark::before {
+.input-with-mark:checked+.mark::before {
     opacity: 1;
 }
