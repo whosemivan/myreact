@@ -56,3 +56,11 @@
         background-position: center;
     }
 }
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .header {
+        margin: 0 100px;
+    }
+}

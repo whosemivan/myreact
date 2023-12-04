@@ -42,7 +42,7 @@
             <p>“Мы знаем, что нужно каждому нашему клиенту!”</p>
         </section>
 
-        <section class="open-news">
+        <section class="main__open-news open-news">
             <h3 class="fw-800">Каждый день — это повод стать лучше!</h3>
             <br>
             <p>
@@ -94,10 +94,12 @@
         <div class="main__feedback-sections">
             <div class="main__communication-blocks-wrapper">
                 <section class="communication-block communication-block--with-img color-white">
-                    <h3 class="communication-block__title">Нужна помощь?</h3>
-                    <p class="communication-block__sub-title">
-                        Наши консультанты будут рады ответить на Ваши вопросы.
-                    </p>
+                    <div class="communication-block__content-wrapper">
+                        <h3 class="communication-block__title">Нужна помощь?</h3>
+                        <p class="communication-block__sub-title">
+                            Наши консультанты будут рады ответить на Ваши вопросы.
+                        </p>
+                    </div>
 
                     <div class="communication-block__btns-wrapper">
                         <button class="communication-block__btn p-s">написать</button>
@@ -106,24 +108,26 @@
                 </section>
 
                 <section class="communication-block bg-off-white color-second-black">
-                    <h3 class="communication-block__title">подпишитесь</h3>
-                    <p class="communication-block__text">
-                        Оставьте свой e-mail, чтобы первыми узнать о старте
-                        SALE и новых поступлениях
-                    </p>
+                    <div class="communication-block__content-wrapper">
+                        <h3 class="communication-block__title">подпишитесь</h3>
+                        <p class="communication-block__text">
+                            Оставьте свой e-mail, чтобы первыми узнать о старте
+                            SALE и новых поступлениях
+                        </p>
 
-                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
-                        name="mail">
+                        <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
+                            name="mail">
 
-                    <p class="communication-block__sub-text fs-xss">
-                        Подписываясь на рассылку, вы подтверждаете свое согласие с
-                        <a class="color-second-black" href="#">политикой конфиденциальности.</a>
-                    </p>
+                        <p class="communication-block__sub-text fs-xss">
+                            Подписываясь на рассылку, вы подтверждаете свое согласие с
+                            <a class="color-second-black" href="#">политикой конфиденциальности.</a>
+                        </p>
+                    </div>
                 </section>
             </div>
 
             <div class="main__chat-wrapper">
-                <button class="chat fs-m fw-700 color-white bg-black">
+                <button class="chat fw-700 color-white bg-black">
                     <div class="chat__points">
                         <span class="chat__point bg-white"></span>
                         <span class="chat__point bg-white"></span>

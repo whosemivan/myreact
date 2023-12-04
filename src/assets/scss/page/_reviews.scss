@@ -34,3 +34,28 @@
         margin-right: 20px;
     }
 }
+
+
+
+@media (max-width: $wide-breakpoint) {
+    .header {
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    .main {
+
+        &__reviews-filter,
+        &__stars-wrapper,
+        &__reviews-wrapper,
+        &__add-review,
+        &__communication-blocks-wrapper,
+        &__page-selcetor {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    }
+}

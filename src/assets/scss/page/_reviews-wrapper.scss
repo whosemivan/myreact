@@ -6,6 +6,9 @@
     &__review {
         position: relative;
 
+        display: flex;
+        flex-direction: column;
+
         flex-grow: 1;
 
         padding: 11px 35px 18px 25px;
@@ -94,7 +97,7 @@
 
 
 
-@media only screen and (min-width: $tablet) {
+@media (min-width: $mobile-breakpoint) {
     .reviews-wrapper {
         gap: 30px;
 
@@ -104,7 +107,7 @@
     }
 }
 
-@media only screen and (min-width: $desktop) {
+@media (min-width: $desktop-breakpoint) {
     .reviews-wrapper {
 
         &__review {

@@ -8,7 +8,8 @@
         }
 
         &--new-product-img {
-            width: 330px;
+            width: calc(330px + (223 + 223 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+            height: 320px;
         }
     }
 
@@ -93,8 +94,6 @@
         background: #3075FC;
     }
 
-    // &--mark-best,
-    // &--mark-discount,
     &--mark-favorite {
         .card__img-wrapper::after {
             content: "";
@@ -120,6 +119,20 @@
             min-width: 16px;
             min-height: 16px;
             background: center / cover no-repeat url("/assets/image/heart.svg");
+        }
+    }
+}
+
+
+
+@media (min-width: $tablet-breakpoint) {
+    .product-card {
+
+        &__img-wrapper {
+
+            &--new-product-img {
+                width: calc(330px + 223 * (100vw / $hd-plus-width));
+            }
         }
     }
 }

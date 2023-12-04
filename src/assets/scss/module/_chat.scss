@@ -8,6 +8,8 @@
     min-width: 102px;
     min-height: 49.5px;
 
+    font-size: 18px;
+
     border-radius: 60px;
     box-shadow: 0px 6.000027179718018px 21.00009536743164px 0px #00000040;
 
@@ -48,7 +50,7 @@
 
 
 
-@media only screen and (min-width: $tablet) {
+@media (min-width: $mobile-breakpoint) {
     .chat {
         display: inline-flex;
     }

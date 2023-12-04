@@ -50,11 +50,12 @@
 
 
 
-@media only screen and (min-width: $tablet) {
+@media (min-width: $wide-breakpoint) {
     .main {
 
         &__communication-blocks-wrapper {
-            gap: 30px;
+            margin: 0 100px;
+            padding: 0;
         }
     }
 }

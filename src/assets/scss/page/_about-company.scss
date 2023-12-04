@@ -1,11 +1,11 @@
 .main {
 
     &__title {
-        font-size: 54px;
+        font-size: calc(54px + (26 + 26 * 0.7) * ((100vw - 430px) / $hd-plus-width));
     }
 
-    &__open-news-wrapper {
-        margin: 27px 15px 0 15px;
+    &__open-news {
+        text-align: justify;
     }
 
     &__wrapper-with-line {
@@ -22,8 +22,8 @@
             top: -63px;
             left: -242px;
 
-            width: 501.96px;
-            height: 396.83px;
+            width: calc(502px + (581 + 581 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+            height: calc(397px + (594 + 581 * 0.7) * ((100vw - 430px) / $hd-plus-width));
 
             background: center / contain url("/assets/image/company.png") no-repeat;
         }
@@ -69,5 +69,80 @@
         margin-bottom: -101px;
 
         border-radius: 0;
+    }
+}
+
+
+
+@media (min-width: $tablet-breakpoint) {
+    .main {
+
+        &__title {
+            font-size: calc(54px + 26 * (100vw / $hd-plus-width));
+        }
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    .header {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__title-wrapper,
+        &__open-news,
+        &__wrapper-with-line,
+        &__info-banner {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        &__title-wrapper {
+            padding-right: 0;
+        }
+
+        &__text-title,
+        &__text-list {
+            width: auto;
+            margin: 0;
+            text-align: left;
+        }
+
+        &__text-title {
+            margin-bottom: 26px;
+        }
+
+        &__open-news,
+        &__wrapper-with-line {
+            flex: 0 0 991px;
+            box-sizing: content-box;
+            margin-left: auto;
+        }
+
+        &__open-news {
+            padding-left: unset;
+        }
+
+
+        &__wrapper-with-line {
+
+            &::before {
+                left: unset;
+                left: -80%;
+
+                width: calc(502px + 581 * (100vw / $hd-plus-width));
+                height: calc(397px + 594 * (100vw / $hd-plus-width));
+            }
+
+            &::after {
+                right: unset;
+            }
+        }
     }
 }

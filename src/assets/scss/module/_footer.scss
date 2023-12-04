@@ -12,6 +12,7 @@
     &__info-blocks-wrapper {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin: 0 24px 0 29px;
     }
 
@@ -24,5 +25,42 @@
 
         color: #A5A3AF;
         background-color: #48455C;
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10%;
+
+        &__logo {
+            margin: 50px 0 50px 100px;
+        }
+
+        &__info-blocks-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+
+            margin: 50px 100px 50px 0;
+
+            & .info-block--stretched {
+                flex-direction: column;
+                justify-content: flex-start;
+
+                width: auto;
+
+                margin: 0;
+            }
+        }
+
+        &__copyright-rights {
+            width: 100%;
+
+            padding: 0 100px;
+        }
     }
 }

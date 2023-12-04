@@ -53,7 +53,7 @@
 
 
 
-@media only screen and (min-width: $tablet) {
+@media (min-width: $mobile-breakpoint) {
     .bottom-nav {
         display: none;
     }

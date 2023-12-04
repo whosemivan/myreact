@@ -62,3 +62,11 @@ button {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+
+
+@media (max-width: $tablet-breakpoint) {
+    body {
+        font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
+}

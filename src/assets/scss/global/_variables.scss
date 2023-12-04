@@ -21,14 +21,25 @@ $night: #5E5E5E;
 // 
 
 
+// Брейкпоинты
+$hd-plus-breakpoint: 1920px;
+$hd-plus-width: 1920;
+$hd-breakpoint: 1440px;
+$wide-breakpoint: 1200px;
+$desktop-breakpoint: 992px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 568px;
+//
+
+
 // Размер текста
 $xxl-fs: 60px;
-$l-fs: 24px;
-$m-fs: 18px;
-$s-fs: 16px;
-$xs-fs: 14px;
-$xxs-fs: 12px;
-$xss-fs: 10px;
+$l-fs: calc(24px + 12 * (100vw / $hd-plus-width));
+$m-fs: calc(18px + 18 * (100vw / $hd-plus-width));
+$s-fs: calc(16px + 16 * (100vw / $hd-plus-width));
+$xs-fs: calc(14px + 4 * (100vw / $hd-plus-width));
+$xxs-fs: calc(12px + 6 * (100vw / $hd-plus-width));
+$xss-fs: calc(10px + 8 * (100vw / $hd-plus-width));
 // 
 
 
@@ -43,17 +54,29 @@ $xxxl-spacer: 112px;
 //
 
 
-// Брейкпоинты
-$hd-plus-breakpoint: 1920px;
-$hd-breakpoint: 1440px;
-$wide-breakpoint: 1200px;
-$desktop-breakpoint: 992px;
-$tablet-breakpoint: 768px;
-$mobile-breakpoint: 568px;
-// 
 
+@media (max-width: $tablet-breakpoint) {
+    .fs-l {
+        font-size: calc(24px + (12 + 12 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
 
-// Размеры для адаптива
-$desktop: 1440px;
-$tablet: 768px;
-// 
+    .fs-m {
+        font-size: calc(18px + (18 + 18 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
+
+    .fs-s {
+        font-size: calc(16px + (16 + 16 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
+
+    .fs-xs {
+        font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
+
+    .fs-xxs {
+        font-size: calc(12px + (6 + 6 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
+
+    .fs-xss {
+        font-size: calc(10px + (8 + 8 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
+}
