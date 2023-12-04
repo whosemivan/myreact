@@ -124,18 +124,33 @@
 
         z-index: 10;
 
-        &::before {
+        &>.swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+
+        &>.badge {
+            display: none;
+        }
+
+        &::before,
+        &::after {
             content: "";
 
             position: absolute;
-            top: 0;
-            bottom: 0;
 
             width: 100%;
-            // height: 100%;
+            height: 50px;
 
-            border-top: 3rem solid $black;
-            border-bottom: 3rem solid $black;
+            background-color: $black;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
         }
     }
 }
