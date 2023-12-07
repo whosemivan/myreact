@@ -3,6 +3,7 @@
     .basket--desktop {
         display: none;
     }
+
     &__stages {
         display: flex;
         justify-content: space-between;
@@ -939,6 +940,10 @@
     &__sum--third {
         margin-bottom: 45px;
     }
+
+    .basket__feedback--hidden {
+        display: none;
+    }
 }
 
 
@@ -969,6 +974,10 @@
             }
         }
 
+        .basket__shareBtn {
+            display: none;
+        }
+
         .basket__sum--hidden {
             display: none;
         }
@@ -979,41 +988,188 @@
             justify-content: space-between;
 
             .basket__list {
-                width: 50%;
+                width: 45%;
+                margin-left: 100px;
+
+                .basket__item {
+                    .basket__image-wrapper {
+                        width: 262px;
+                        height: 190px;
+
+                        img {
+                            width: 50%;
+                        }
+                    }
+
+                    .basket__item-title {
+                        font-size: 24px;
+                    }
+
+                    .basket__item-prop {
+                        font-size: 20px;
+                    }
+
+                    .basket__item-sizes {
+                        .basket__item-btn {
+                            font-size: 20px;
+                            width: 44px;
+                            height: 44px;
+                        }
+                    }
+
+                    .basket__item-price {
+                        font-size: 24px;
+                    }
+
+                    .basket__item-count {
+                        font-size: 20px;
+                    }
+
+                    .basket__item-btns {
+                        gap: 10px;
+                    }
+                }
             }
 
             .basket__container {
-                width: 40%;
+                width: 37%;
                 display: flex;
                 flex-direction: column;
+                margin-right: 100px;
 
                 .basket__isPresent {
                     order: 1;
+                    padding: 43px 20px;
+
+                    &::after {
+                        background-repeat: no-repeat;
+                        width: 142px;
+                        height: 142px;
+                        background-size: 100%;
+                        bottom: -21px;
+                    }
+
+                    .basket__isPresent-label {
+                        font-size: 24px;
+                        width: auto;
+                        align-items: center;
+
+                        .basket__presentBtn {
+                            position: static;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            svg {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
                 }
 
                 .basket__promocode {
                     order: 2;
+
+                    .basket__promocode-label {
+                        font-size: 18px;
+                    }
+
+                    .basket__promocode-input {
+                        padding: 24px 20px;
+                        font-size: 18px;
+                    }
+
+                    .basket__promocode-btn {
+                        font-size: 24px;
+                        top: 32px;
+                    }
                 }
 
                 .basket--desktop {
                     display: block;
                     order: 3;
+                    margin-bottom: 17px;
+
+                    .about-payment__label {
+                        font-size: 24px;
+                    }
+
+                    .about-payment__price {
+                        color: #3075FC;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+
+                    .about-payment__title-wrapper {
+                        padding: 31px 23px;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+
+                    .about-payment__text {
+                        color: #48455C;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    .about-payment__cards-wrapper {
+                        justify-content: space-between;
+                        padding-left: 0;
+                        margin: 18px 31px;
+                    }
                 }
 
                 .basket__banner {
                     order: 4;
+                    padding: 34px 20px;
+                    margin-left: 0;
+                    margin-right: 0;
+
+                    .basket__baner-title {
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                    }
+
+                    .basket__baner-text {
+                        font-size: 18px;
+                        width: 60%;
+                    }
                 }
             }
 
             .basket__btnSubmit {
-                width: 50%;
-                margin-top: -100px;
+                width: 45%;
+                margin-left: 100px;
+                margin-top: -116px;
                 height: 70px;
+                align-items: center;
+            }
+        }
+
+        .basket__product-title {
+            margin-left: 100px;
+            margin-bottom: 56px;
+        }
+
+        .basket__product-list {
+            margin-left: 100px;
+
+            .card {
+                width: 380px;
             }
         }
 
         .basket--mobile {
             display: none;
+        }
+
+        .basket__feedback--hidden {
+            display: block;
         }
     }
 }

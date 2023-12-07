@@ -7,17 +7,100 @@
         width: 497px;
         height: 476px;
         position: absolute;
-        right: -100px;
+        right: -175px;
         top: -230px;
         z-index: -1;
     }
 
     .checkout__title {
+        width: 300px;
+        margin-top: 37px;
+        margin-bottom: 119px;
         color: #333333;
         font-size: 34px;
         font-style: normal;
         font-weight: 900;
         line-height: normal;
         text-transform: uppercase;
+    }
+
+    .checkout__info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 44px;
+
+        .checkout__infokey {
+            color: #333;
+            font-size: 8px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .checkout__infovalue {
+            color: #333;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    .checkout__form {
+        padding: 38px 35px;
+        border-radius: 40px;
+        background: #F5F6F6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .checkout__form-title {
+            margin-bottom: 73px;
+            color: #333;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .checkout__btns {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+
+            .checkout__btn {
+                font-size: 40.916px;
+            }
+        }
+
+        .checkout__label {
+            margin-bottom: 21px;
+            color: #333;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .checkout__input {
+            margin-bottom: 73px;
+            width: 100%;
+            min-height: 101px;
+            border-radius: 6px;
+            background: #FFF;
+        }
+
+        .checkout__submitBtn {
+            width: 100%;
+            padding: 17px 0;
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            border-radius: 6px;
+            background: #000;
+        }
     }
 }

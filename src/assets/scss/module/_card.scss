@@ -7,6 +7,9 @@
         overflow: hidden;
         border-radius: 10px 10px 0 0;
 
+        width: calc(200px + (180 + 180 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+        height: calc(200px + (180 + 180 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+
         &--round {
             border-radius: 10px;
         }
@@ -124,5 +127,17 @@
 
         border: 10px solid #FFF;
         background-color: #F5F5F5;
+    }
+}
+
+
+
+@media (min-width: $tablet-breakpoint) {
+    .card {
+
+        &__img-wrapper {
+            width: calc(200px + 180 * (100vw / $hd-plus-width));
+            height: calc(200px + 180 * (100vw / $hd-plus-width));
+        }
     }
 }

@@ -32,10 +32,40 @@
     <main class="checkout pb-l">
         <h1 class="checkout__title mx-m">Спасибо за покупку</h1>
 
-        <p class="checkout__info">
+        <p class="checkout__info mx-m">
             <span class="checkout__infokey">Номер заказа</span>
             <span class="checkout__infovalue"># 29220202002</span>
         </p>
+
+        <form class="checkout__form mx-m">
+            <h2 class="checkout__form-title">Оцените удобство навигации по основным разделам странцы товара</h2>
+
+            <div class="checkout__btns">
+                <button class="checkout__btn" type="button">
+                    😍
+                </button>
+                <button class="checkout__btn" type="button">
+                    🙂
+                </button>
+                <button class="checkout__btn" type="button">
+                    😐
+                </button>
+                <button class="checkout__btn" type="button">
+                    ☹️
+                </button>
+                </button>
+                <button class="checkout__btn" type="button">
+                    🤮
+                </button>
+            </div>
+
+            <label class="checkout__label" for="review" >
+                Легко ли было найти характеристики, отзывы, комментарии? Что бы вы хотели изменить?
+            </label>
+            <input type="text" class="checkout__input" id="review">
+
+            <button class="checkout__submitBtn" type="submit">Оценить</button>
+        </form>
     </main>
 
     @@include('./partials/footer.html')

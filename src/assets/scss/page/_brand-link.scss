@@ -1,7 +1,7 @@
 .brand-link {
     text-align: center;
 
-    font-size: 10px;
+    font-size: calc(10px + (14 + 14 * 0.7) * ((100vw - 430px) / $hd-plus-width));
     font-weight: 500;
 
     &__img {
@@ -11,5 +11,18 @@
         margin-bottom: 5px;
 
         border-radius: 100%;
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .brand-link {
+        font-size: calc(10px + 14 * (100vw / $hd-plus-width));
+
+        &__img {
+            width: 133px;
+            height: 133px;
+        }
     }
 }

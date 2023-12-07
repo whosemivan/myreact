@@ -7,14 +7,28 @@
 
     border-radius: 50px;
 
-    font-size: 12px;
+    font-size: calc(12px + (6 + 6 * 0.7) * ((100vw - 430px) / $hd-plus-width));
     font-weight: 700;
 
     color: #3075FC;
     background-color: #FFFFFF;
 
     &__icon {
+        display: block;
         width: 16px;
         height: 16px;
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .category-link {
+        font-size: calc(12px + 6 * (100vw / $hd-plus-width));
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+        }
     }
 }

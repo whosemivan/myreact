@@ -44,3 +44,34 @@
         margin-top: 17px;
     }
 }
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .header {
+        margin: 0;
+
+        &__logo-and-basket-wrapper,
+        &__breadcrumbs,
+        &>.nav {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    }
+
+    .main {
+
+        &__block-title,
+        &__filter-buttons-slider,
+        &__products-list,
+        &__page-selcetor,
+        &__category-links-wrapper,
+        &__brand-links-wrapper,
+        &__brand-baner {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+}

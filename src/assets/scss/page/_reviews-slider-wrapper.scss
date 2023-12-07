@@ -16,8 +16,9 @@
         overflow-y: unset;
 
         & .swiper-slide {
-            width: 340px;
-            height: 225px;
+            width: calc(340px + (213 + 213 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+            height: auto;
+            min-height: 225px;
 
             margin-right: 10px;
 
@@ -50,7 +51,7 @@
     &__link {
         width: 100%;
 
-        padding: 16px 0;
+        padding: 16px 5px;
 
         color: #3075FC;
         text-transform: uppercase;
@@ -63,5 +64,20 @@
     &__link--highlight {
         color: $white;
         background-color: #3075FC;
+    }
+}
+
+
+
+@media (min-width: $tablet-breakpoint) {
+    .reviews-slider-wrapper {
+
+        &__reviews-slider {
+
+            & .swiper-slide {
+                width: calc(340px + 213 * (100vw / $hd-plus-width));
+                min-height: 291px;
+            }
+        }
     }
 }

@@ -79,3 +79,41 @@
         }
     }
 }
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .header {
+        margin: 0;
+
+        &__logo-and-basket-wrapper,
+        &__breadcrumbs,
+        &>.nav {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    }
+
+    .main {
+
+        &__primary-slider,
+        &__block-title,
+        &__slider {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        &__slider-banner {
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: -171px;
+        }
+        
+        &__filter-buttons {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    }
+}

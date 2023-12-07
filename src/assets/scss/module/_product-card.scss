@@ -19,7 +19,9 @@
         right: 0;
 
         padding: 5px 12px 1px 12px;
+
         text-align: right;
+        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 430px) / $hd-plus-width));
 
         &-old {
             display: block;
@@ -132,6 +134,14 @@
 
             &--new-product-img {
                 width: calc(330px + 223 * (100vw / $hd-plus-width));
+            }
+        }
+
+        &__price {
+            font-size: calc(16px + 8 * ((100vw - 430px) / $hd-plus-width));
+
+            &-old {
+                font-size: calc(12px + 6 * ((100vw - 430px) / $hd-plus-width));
             }
         }
     }

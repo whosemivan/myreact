@@ -83,11 +83,13 @@
 
     &__text-wrapper {
         position: relative;
+
+        height: 100%;
     }
 
     &__reed-more {
         position: absolute;
-        bottom: 18px;
+        bottom: 1rex;
         right: 0;
 
         color: #3075FC;
