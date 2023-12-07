@@ -16,6 +16,7 @@
         align-items: center;
 
         margin-top: auto;
+        margin-bottom: 5px;
 
         &::after {
             content: "";
@@ -27,7 +28,23 @@
 
             margin-left: 7px;
 
-            background: center no-repeat url("/assets/image/arrow.svg");
+            background: center / cover no-repeat url("/assets/image/arrow.svg");
+        }
+    }
+}
+
+
+
+@media (min-width: $tablet-breakpoint) {
+    .top-block {
+
+        &__text {
+            margin: auto;
+
+            &::after {
+                width: 34px;
+                height: 34px;
+            }
         }
     }
 }

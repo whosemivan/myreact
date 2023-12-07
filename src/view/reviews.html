@@ -16,11 +16,7 @@
 </head>
 
 <body>
-    <div class="top-block color-white bg-black">
-        <a class="top-block__text mb-s fs-xss">
-            Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
-        </a>
-    </div>
+    @@include('./partials/topBlock.html')
 
     <header class="header">
         @@include('./partials/header.html', {
@@ -31,7 +27,7 @@
 
     <main class="main">
         <div class="main__reviews-filter">
-            <div>
+            <div class="main__custom-title">
                 <h2 class="fs-s fw-800">Отзывы</h2>
 
                 <ul class="main__stars-wrapper stars-wrapper">
@@ -42,7 +38,7 @@
                     <li class="stars-wrapper__start--light"></li>
                 </ul>
 
-                <span class="fs-s fw-400 ml-s">203</span>
+                <span class="fw-400 ml-s">203</span>
             </div>
 
             <button class="filter-btn" onclick="openPopup()"></button>

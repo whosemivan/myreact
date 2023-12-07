@@ -48,3 +48,20 @@
         background: center / cover no-repeat url("/assets/image/heart.svg");
     }
 }
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .news-block {
+
+        &__opinion::before {
+            width: 24px;
+            height: 24px;
+        }
+
+        &__heart {
+            min-width: 26px;
+            min-height: 26px;
+        }
+    }
+}

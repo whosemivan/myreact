@@ -1,7 +1,8 @@
 .stars-wrapper {
     display: inline-block;
-    
-    &__start, &__start--light {
+
+    &__start,
+    &__start--light {
         display: inline-block;
 
         width: 10px;
@@ -15,8 +16,21 @@
     &__start {
         background: center / contain url("/assets/image/star--fill.svg") no-repeat;
     }
-    
+
     &__start--light {
         background: center / contain url("/assets/image/star--light.svg") no-repeat;
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .stars-wrapper {
+
+        &__start,
+        &__start--light {
+            width: 18px;
+            height: 18px;
+        }
     }
 }
