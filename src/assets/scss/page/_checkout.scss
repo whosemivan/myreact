@@ -1,0 +1,23 @@
+.checkout {
+    position: relative;
+
+    &::after {
+        content: "";
+        background-image: url("/assets/image/checkout-icon.svg");
+        width: 497px;
+        height: 476px;
+        position: absolute;
+        right: -100px;
+        top: -230px;
+        z-index: -1;
+    }
+
+    .checkout__title {
+        color: #333333;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+}

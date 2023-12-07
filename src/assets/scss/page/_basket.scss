@@ -1,4 +1,8 @@
 .basket {
+
+    .basket--desktop {
+        display: none;
+    }
     &__stages {
         display: flex;
         justify-content: space-between;
@@ -9,7 +13,7 @@
         &--second {
             &::before {
                 content: "";
-                width: calc(32% - 23px);
+                width: calc(50% - 27px);
                 height: 2px;
                 z-index: 1;
                 top: 11px;
@@ -22,7 +26,7 @@
         &--third {
             &::before {
                 content: "";
-                width: calc(62% - 23px);
+                width: calc(98% - 34px);
                 height: 2px;
                 z-index: 1;
                 top: 11px;
@@ -47,7 +51,7 @@
 
         &::after {
             content: "";
-            width: calc(100% - 80px);
+            width: calc(100% - 50px);
             height: 2px;
             z-index: -1;
             top: 11px;
@@ -110,6 +114,7 @@
             }
         }
     }
+
 
     &__delivery {
         margin-bottom: 27px;
@@ -933,5 +938,82 @@
 
     &__sum--third {
         margin-bottom: 45px;
+    }
+}
+
+
+@media (min-width: $wide-breakpoint) {
+    .basket {
+        .basket__stages {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 106px;
+            margin-bottom: 39px;
+
+            .basket__stage {
+                font-size: 18px;
+                font-weight: 700;
+                color: #000;
+
+                &::before {
+                    font-size: 20px;
+                    width: 44px;
+                    height: 44px;
+                    top: -23px;
+                }
+            }
+
+            &::after {
+                width: calc(100% - 69px);
+                top: -2px;
+            }
+        }
+
+        .basket__sum--hidden {
+            display: none;
+        }
+
+        .basket__form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .basket__list {
+                width: 50%;
+            }
+
+            .basket__container {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+
+                .basket__isPresent {
+                    order: 1;
+                }
+
+                .basket__promocode {
+                    order: 2;
+                }
+
+                .basket--desktop {
+                    display: block;
+                    order: 3;
+                }
+
+                .basket__banner {
+                    order: 4;
+                }
+            }
+
+            .basket__btnSubmit {
+                width: 50%;
+                margin-top: -100px;
+                height: 70px;
+            }
+        }
+
+        .basket--mobile {
+            display: none;
+        }
     }
 }
