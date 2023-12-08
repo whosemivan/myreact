@@ -98,11 +98,17 @@
 
         &__primary-slider,
         &__block-title,
-        &__slider {
+        &__slider,
+        &__finished-image,
+        &__brand-baner {
             margin-left: 0;
             margin-right: 0;
             padding-left: 100px;
             padding-right: 100px;
+        }
+
+        &__finished-image {
+            padding-top: 82px;
         }
 
         &__slider-banner {
@@ -110,10 +116,42 @@
             margin-right: 20%;
             margin-top: -171px;
         }
-        
+
         &__filter-buttons {
             margin-left: 100px;
             margin-right: 100px;
+        }
+
+        &__feedback-sections {
+            background-color: unset;
+        }
+
+        &__about-payment {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding-left: 100px;
+            padding-right: 100px;
+
+            &>.about-payment__text-wrapper,
+            &>.about-payment__cards-wrapper {
+                flex: 1;
+            }
+
+            &>.about-payment__text-wrapper {
+                max-width: 683px;
+                font-size: 20px;
+
+                &>.about-payment__title {
+                    font-size: 36px;
+                }
+            }
+
+            &>.about-payment__cards-wrapper {
+                display: flex;
+                justify-content: flex-end;
+            }
         }
     }
 }

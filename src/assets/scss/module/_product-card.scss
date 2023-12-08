@@ -3,8 +3,8 @@
     &__img-wrapper {
 
         &--kit-img {
-            width: 250px;
-            height: 250px;
+            width: calc(250px + (158 + 158 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+            height: calc(250px + (158 + 158 * 0.7) * ((100vw - 430px) / $hd-plus-width));
         }
 
         &--new-product-img {
@@ -131,6 +131,11 @@
     .product-card {
 
         &__img-wrapper {
+
+            &--kit-img {
+                width: calc(250px + 158 * (100vw / $hd-plus-width));
+                height: calc(250px + 158 * (100vw / $hd-plus-width));
+            }
 
             &--new-product-img {
                 width: calc(330px + 223 * (100vw / $hd-plus-width));

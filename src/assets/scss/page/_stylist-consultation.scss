@@ -57,7 +57,7 @@
 
         &-info {
             max-width: 140px;
-            
+
             font-size: 12px;
             line-height: 14.09px;
         }
@@ -76,7 +76,7 @@
         &::before {
             content: counter(num);
             counter-increment: num;
-            
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -104,5 +104,69 @@
         font-weight: 700;
         text-transform: uppercase;
         background: linear-gradient(89.08deg, #3075FC 0%, #A230FC 93.22%);
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .stylist-consultation {
+        min-height: 762px;
+
+        display: grid;
+        grid-auto-columns: 420px;
+        grid-template-rows: min-content;
+
+        align-content: end;
+        align-items: end;
+        justify-content: space-between;
+        justify-items: start;
+
+        padding: 0 100px 68px 100px;
+
+        &__steps-wrapper {
+            margin-top: auto;
+            grid-column: 2 / 3;
+            grid-row: 1 / 5;
+        }
+
+        &__left-panel-wrapper {
+            grid-row: 1 / 4;
+        }
+
+        &__btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            max-height: 70px;
+
+            font-size: 24px;
+        }
+
+        &__step {
+
+            &-info {
+                max-width: unset;
+                font-size: 20px;
+                line-height: normal;
+            }
+
+            &-title {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+
+            &::before {
+                width: 94px;
+                height: 94px;
+
+                margin-right: 46px;
+
+                background-size: contain;
+
+                font-size: 47px;
+            }
+        }
     }
 }

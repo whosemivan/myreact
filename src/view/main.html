@@ -428,10 +428,13 @@
         </div>
 
         <section class="main__about-payment about-payment">
-            <h3 class="about-payment__title">Oплата долями</h3>
+            <div class="about-payment__text-wrapper">
+                <h3 class="about-payment__title">Oплата долями</h3>
 
-            <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в течение 8
-                недель. Без комиссий и переплат.</p>
+                <p class="about-payment__text fw-600">Оплачивайте 25% покупки сразу, остальное частями — в
+                    течение 8
+                    недель. Без комиссий и переплат.</p>
+            </div>
 
             <div class="about-payment__cards-wrapper">
                 <div class="about-payment__card about-payment__card--selected">
@@ -608,40 +611,7 @@
             </div>
         </div>
 
-        <div class="stylist-consultation">
-            <div class="stylist-consultation__title-wrapper">
-                <h1 class="stylist-consultation__title">Консультация стилиста</h1>
-                <a href="#" class="stylist-consultation__info-btn"></a>
-            </div>
-
-            <p class="mt-m">Краткое описание услуги Lorem ipsum dolor sit amet consectetur.psum dolor sit amet
-                consectetur.</p>
-
-            <p class="stylist-consultation__price">8 000</p>
-
-            <div class="stylist-consultation__steps-wrapper">
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#" class="stylist-consultation__btn">Получить консультацию</a>
-        </div>
+        @@include('./partials/stylistConsultation.html')
 
         <div class="main__block-title block-title">
             <h3 class="fs-s fw-800">Тренды весны</h3>
@@ -790,71 +760,75 @@
 
         <div class="main__feedback-sections bg-second-gray">
             <section class="main__faq-wrapper faq-wrapper">
-                <h1 class="faq-wrapper__title fs-s fw-800">Вопросы и ответы</h1>
+                <div>
+                    <h1 class="faq-wrapper__title fs-s fw-800">Вопросы и ответы</h1>
 
-                <div class="faq-wrapper__accordion faq-wrapper__accordion--open">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Как оформить заказ?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Выберите категорию или бренд в меню навигации или введите в поиске название интересующей
-                            вещи или тренда.
-                        </p>
+                    <div class="faq-wrapper__accordion faq-wrapper__accordion--open">
+                        <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                            <h4>
+                                Как оформить заказ?
+                            </h4>
+                            <div class="faq-wrapper__accordion-condition"></div>
+                        </button>
+                        <div class="faq-wrapper__accordion-content fw-300">
+                            <p>
+                                Выберите категорию или бренд в меню навигации или введите в поиске название интересующей
+                                вещи или тренда.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-wrapper__accordion">
+                        <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                            <h4>
+                                Могу ли я оформить заказ через менеджеров?
+                            </h4>
+                            <div class="faq-wrapper__accordion-condition"></div>
+                        </button>
+                        <div class="faq-wrapper__accordion-content fw-300">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Atque eius eos iure commodi consequatur
+                                sapiente inventore, facere itaque. Quod a perspiciatis in, animi corrupti necessitatibus
+                                pariatur nesciunt vel vero at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-wrapper__accordion">
+                        <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                            <h4>
+                                Нужно ли регистрироваться на сайте чтобы сделать заказ?
+                            </h4>
+                            <div class="faq-wrapper__accordion-condition"></div>
+                        </button>
+                        <div class="faq-wrapper__accordion-content fw-300">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Possimus officia facere, sint tempora
+                                mollitia cum necessitatibus, pariatur molestiae quibusdam commodi et explicabo ratione
+                                doloremque quaerat aliquid! Sequi perferendis inventore cum!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-wrapper__accordion">
+                        <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
+                            <h4>Как найти товары?</h4>
+                            <div class="faq-wrapper__accordion-condition"></div>
+                        </button>
+                        <div class="faq-wrapper__accordion-content fw-300">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing
+                                elit. Rerum molestiae itaque earum alias et.
+                                Earum sint a exercitationem quaerat inventore impedit, placeat facilis ipsa provident
+                                consequatur, omnis rerum officia fugit.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Могу ли я оформить заказ через менеджеров?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Atque eius eos iure commodi consequatur
-                            sapiente inventore, facere itaque. Quod a perspiciatis in, animi corrupti necessitatibus
-                            pariatur nesciunt vel vero at.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Нужно ли регистрироваться на сайте чтобы сделать заказ?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Possimus officia facere, sint tempora
-                            mollitia cum necessitatibus, pariatur molestiae quibusdam commodi et explicabo ratione
-                            doloremque quaerat aliquid! Sequi perferendis inventore cum!
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>Как найти товары?</h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Rerum molestiae itaque earum alias et.
-                            Earum sint a exercitationem quaerat inventore impedit, placeat facilis ipsa provident
-                            consequatur, omnis rerum officia fugit.
-                        </p>
-                    </div>
-                </div>
+                <div class="faq-wrapper__megaphone"></div>
             </section>
 
             <div class="main__communication-blocks-wrapper">

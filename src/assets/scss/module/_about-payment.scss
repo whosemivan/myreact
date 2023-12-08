@@ -7,13 +7,13 @@
     background-color: $off-white;
 
     &--basket {
-       padding-left: 0;
-       padding-right: 0; 
+        padding-left: 0;
+        padding-right: 0;
 
-       .about-payment__text,
-       .about-payment__cards-wrapper {
-        padding-left: 21px;
-       }
+        .about-payment__text,
+        .about-payment__cards-wrapper {
+            padding-left: 21px;
+        }
     }
 
     &__title-wrapper {
@@ -136,6 +136,25 @@
 
         & .about-payment__anchor-link {
             transform: rotate(180deg);
+        }
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .about-payment {
+        &__title {
+            font-size: 36px;
+
+            &::before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__card>p {
+            font-size: 24px;
         }
     }
 }
