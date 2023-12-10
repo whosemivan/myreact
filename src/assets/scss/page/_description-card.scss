@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    width: 290px;
+
+    width: calc(290px + (264 + 264 * 0.7) * ((100vw - 430px) / $hd-plus-width));
     min-height: 200px;
 
     padding: 16px;
@@ -37,5 +37,19 @@
 
             background: center / contain url("/assets/image/arrow--blue.svg") no-repeat;
         }
+    }
+}
+
+
+
+@media (min-width: $tablet-breakpoint) {
+    .description-card {
+        width: calc(290px + 264 * (100vw / $hd-plus-width));
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    .description-card {
+        padding: 30px;
     }
 }

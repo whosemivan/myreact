@@ -46,6 +46,30 @@
     &__subtitle {
         text-transform: uppercase;
     }
+
+    &__block-title-with-filter-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .block-title,
+        & .filter-buttons {
+            width: 100%;
+        }
+
+        & .filter-buttons {
+            margin: 0;
+            margin-top: 17px;
+        }
+    }
+
+    &__communication-block-and-interview-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+
+        flex: 1;
+    }
 }
 
 
@@ -53,9 +77,40 @@
 @media (min-width: $wide-breakpoint) {
     .main {
 
+        &__feedback-sections {
+            background-color: unset !important;
+        }
+
+        &__communication-blocks-wrapper,
+        &__communication-block-and-interview-card-wrapper {
+            gap: 30px;
+        }
+
         &__communication-blocks-wrapper {
             margin: 0 100px;
             padding: 0;
+        }
+
+        &__block-title-with-filter-buttons {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+
+            & .block-title,
+            & .filter-buttons {
+                width: auto;
+            }
+
+            & .block-title__more-link {
+                display: none;
+            }
+        }
+
+        &__communication-block-and-interview-card-wrapper {
+
+            &>.communication-block {
+                min-height: 314px;
+            }
         }
     }
 }

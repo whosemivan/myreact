@@ -10,7 +10,7 @@
     z-index: 2;
 
     min-height: 22px;
-    padding: 0 10px;
+    padding: 4px 10px;
 
     font-size: 12px;
     border-radius: 40px;
@@ -55,7 +55,7 @@
         }
     }
 
-    
+
     &--mob-free-shipping,
     &--web-free-shipping {
         color: #74A350;
@@ -159,5 +159,18 @@
     &>.badge-icon {
         width: 14px;
         height: 14px;
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .badge {
+        padding: 10px 20px;
+
+        &>.badge-icon {
+            width: 27px;
+            height: 27px;
+        }
     }
 }

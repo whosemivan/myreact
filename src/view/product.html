@@ -210,14 +210,17 @@
         </div>
 
         <section class="main__about-payment about-payment about-payment--basket">
-            <div class="about-payment__title-wrapper mx-m" onclick="accordionState('about-payment', 'about-payment--hidden')">
-                <h3 class="about-payment__title">Oплата долями</h3>
-                <span class="about-payment__anchor-link"></span>
-            </div>
+            <div class="about-payment__text-wrapper">
+                <div class="about-payment__title-wrapper mx-m"
+                    onclick="accordionState('about-payment', 'about-payment--hidden')">
+                    <h3 class="about-payment__title">Oплата долями</h3>
+                    <span class="about-payment__anchor-link"></span>
+                </div>
 
-            <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в
-                течение 8
-                недель. Без комиссий и переплат.</p>
+                <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в
+                    течение 8
+                    недель. Без комиссий и переплат.</p>
+            </div>
 
             <div class="about-payment__cards-wrapper">
                 <div class="about-payment__card about-payment__card--selected">
@@ -321,94 +324,100 @@
             <h3 class="fs-s fw-800">Вместе дешевле!</h3>
         </div>
 
-        <div class="main__recommendations-slider swiper slider slider--with-arrows">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="card pr-xxl">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
+        <div class="main__recommendations-wrapper">
+            <div class="main__recommendations-slider swiper slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
-                        </div>
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
 
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
 
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product1">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product1">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
+
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product2">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
 
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product2">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product3">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
+                                src="assets/image/slider-img/product1.png" alt="product img">
+
+                            <div class="mt-s">
+                                <h3 class="fw-800">Nike Air Max SC</h3>
+                                <p class="card__price mt-s fw-500">48 060</p>
+                            </div>
+
+                            <div class="card__mini-btns-wrapper mt-s">
+                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
+
+                                <label>
+                                    <input type="checkbox" class="input-with-mark" hidden name="product4">
+                                    <span class="mark mark--blue mark--checkbox"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="card pr-xxl">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
 
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
-                        </div>
-
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product3">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-
-                        <div class="mt-s">
-                            <h3 class="fw-800">Nike Air Max SC</h3>
-                            <p class="card__price mt-s fw-500">48 060</p>
-                        </div>
-
-                        <div class="card__mini-btns-wrapper mt-s">
-                            <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                            <label>
-                                <input type="checkbox" class="input-with-mark" hidden name="product4">
-                                <span class="mark mark--blue mark--checkbox"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
+                <div class="swiper-button-prev slider__button"></div>
+                <div class="swiper-button-next slider__button"></div>
             </div>
 
-            <div class="swiper-button-prev slider__button"></div>
-            <div class="swiper-button-next slider__button"></div>
-        </div>
-
-        <div class="main__add-to-basket-btn add-to-basket-btn">
-            <p class="fw-900">В корзину</p>
-            <p class="add-to-basket-btn__cost fw-900 card__price">48 060</p>
-            <p class="add-to-basket-btn__sale fw-500 fs-s card__price">-6 340</p>
+            <div class="main__add-to-basket-btn add-to-basket-btn">
+                <p class="fw-900">В корзину</p>
+                <p class="add-to-basket-btn__cost fw-900 card__price">48 060</p>
+                <p class="add-to-basket-btn__sale fw-500 card__price">-6 340</p>
+            </div>
         </div>
 
         <div class="main__reviews-slider-wrapper reviews-slider-wrapper">
@@ -424,7 +433,7 @@
                         <li class="stars-wrapper__start--light"></li>
                     </ul>
 
-                    <span class="fs-s fw-400 ml-s">203</span>
+                    <span class="fw-400 ml-s">203</span>
                 </div>
             </div>
 
@@ -459,8 +468,8 @@
 
                             <div class="news-block__info-wrapper">
                                 <div>
-                                    <button class="news-block__opinion news-block__opinion--positive">24</button>
-                                    <button class="news-block__opinion news-block__opinion--negative">4</button>
+                                    <span class="news-block__opinion news-block__opinion--positive">24</span>
+                                    <span class="news-block__opinion news-block__opinion--negative">4</span>
                                 </div>
 
                                 <p class="fs-xss">11.02.2022</p>
@@ -491,8 +500,8 @@
 
                             <div class="news-block__info-wrapper">
                                 <div>
-                                    <button class="news-block__opinion news-block__opinion--positive">24</button>
-                                    <button class="news-block__opinion news-block__opinion--negative">4</button>
+                                    <span class="news-block__opinion news-block__opinion--positive">24</span>
+                                    <span class="news-block__opinion news-block__opinion--negative">4</span>
                                 </div>
 
                                 <p class="fs-xss">11.02.2022</p>
@@ -503,22 +512,22 @@
             </div>
 
             <div class="reviews-slider-wrapper__links-wrapper">
-                <button class="reviews-slider-wrapper__link" onclick="openPopup('reviews-list-popup')">Прочитать все
-                    отзыв</button>
-                <button class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight"
-                    onclick="openPopup('leave-review-popup')">Добавить
-                    отзыв</button>
+                <a href="#" class="reviews-slider-wrapper__link">Прочитать все отзыв</a>
+                <a href="#" class="reviews-slider-wrapper__link reviews-slider-wrapper__link--highlight">Добавить
+                    отзыв</a>
             </div>
         </div>
 
-        <div class="main__block-title block-title">
-            <h3 class="fs-s fw-800">С этим товаром покупают</h3>
-        </div>
+        <div class="main__block-title main__block-title-with-filter-buttons">
+            <div class="block-title">
+                <h3 class="fs-s fw-800">С этим товаром покупают</h3>
+            </div>
 
-        <div class="filter-buttons mx-m mt-l bg-dark-white">
-            <button class="filter-buttons__btn filter-buttons__btn--active">Базовый</button>
-            <button class="filter-buttons__btn">Ультрамодный</button>
-            <button class="filter-buttons__btn">Премиум</button>
+            <div class="filter-buttons mt-l bg-dark-white">
+                <button class="filter-buttons__btn filter-buttons__btn--active">Базовый</button>
+                <button class="filter-buttons__btn">Ультрамодный</button>
+                <button class="filter-buttons__btn">Премиум</button>
+            </div>
         </div>
 
         <div class="main__slider swiper slider mt-l">
@@ -602,15 +611,18 @@
         </div>
 
         <div class="main__finished-image">
-            <div class="block-title">
-                <h3 class="fs-s fw-800">Готовый образ</h3>
-                <a href="#" class="block-title__more-link">все</a>
-            </div>
 
-            <div class="filter-buttons mt-xl bg-white">
-                <button class="filter-buttons__btn filter-buttons__btn--active">Образы с этим товаром</button>
-                <button class="filter-buttons__btn">Хиты</button>
-                <button class="filter-buttons__btn">Премиум</button>
+            <div class="main__block-title-with-filter-buttons">
+                <div class="block-title">
+                    <h3 class="fs-s fw-800">Готовый образ</h3>
+                    <a href="#" class="block-title__more-link">все</a>
+                </div>
+
+                <div class="filter-buttons mt-xl bg-white">
+                    <button class="filter-buttons__btn filter-buttons__btn--active">Образы с этим товаром</button>
+                    <button class="filter-buttons__btn">Хиты</button>
+                    <button class="filter-buttons__btn">Премиум</button>
+                </div>
             </div>
 
             <div class="swiper slider">
@@ -649,45 +661,16 @@
                             </div>
                         </a>
                     </div>
+                    <div class="swiper-slide slider__slide">
+                        <a href="#" class="card card--empty product-card__img-wrapper--kit-img">
+                            <p>Посмотреть все образы</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="stylist-consultation">
-            <div class="stylist-consultation__title-wrapper">
-                <h1 class="stylist-consultation__title">Консультация стилиста</h1>
-                <a href="#" class="stylist-consultation__info-btn"></a>
-            </div>
-
-            <p class="mt-m">Краткое описание услуги Lorem ipsum dolor sit amet consectetur.psum dolor sit amet
-                consectetur.</p>
-
-            <p class="stylist-consultation__price">8 000</p>
-
-            <div class="stylist-consultation__steps-wrapper">
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="stylist-consultation__step">
-                    <div class="stylist-consultation__step-info">
-                        <span class="stylist-consultation__step-title"></span>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-            </div>
-
-            <button class="stylist-consultation__btn color-white"
-                onclick="openPopup('stylist-consultation-popup')">Получить консультаци</button>
-        </div>
+        @@include('./partials/stylistConsultation.html')
 
         <div class="main__brand-baner">
             <section class="banner__wrapper color-white fs-xxs bg-black">
@@ -814,14 +797,16 @@
             </div>
         </div>
 
-        <div class="main__block-title block-title">
-            <h3 class="fs-s fw-800">Для вас</h3>
-            <a href="#" class="block-title__more-link">все</a>
-        </div>
+        <div class="main__block-title main__block-title-with-filter-buttons">
+            <div class="block-title">
+                <h3 class="fs-s fw-800">Для вас</h3>
+                <a href="#" class="block-title__more-link">все</a>
+            </div>
 
-        <div class="filter-buttons mx-m mt-l bg-dark-white">
-            <button class="filter-buttons__btn filter-buttons__btn--active">Вам может понравиться</button>
-            <button class="filter-buttons__btn">Вы недавно смотрели</button>
+            <div class="filter-buttons mx-m mt-l bg-dark-white">
+                <button class="filter-buttons__btn filter-buttons__btn--active">Вам может понравиться</button>
+                <button class="filter-buttons__btn">Вы недавно смотрели</button>
+            </div>
         </div>
 
         <div class="main__slider swiper slider mt-l">
@@ -848,127 +833,17 @@
                     </a>
                 </div>
                 <div class="swiper-slide slider__slide">
-                    <a href="#" class="card card--empty">
+                    <a href="#" class="card card__img-wrapper card--empty">
                         <p>Посмотреть все образы</p>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="main__feedback-sections bg-second-gray">
-            <section class="main__faq-wrapper faq-wrapper">
-                <h1 class="faq-wrapper__title fs-s fw-800">Вопросы и ответы</h1>
-
-                <div class="faq-wrapper__accordion faq-wrapper__accordion--open">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Как оформить заказ?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Выберите категорию или бренд в меню навигации или введите в поиске название интересующей
-                            вещи или тренда.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Могу ли я оформить заказ через менеджеров?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Atque eius eos iure commodi consequatur
-                            sapiente inventore, facere itaque. Quod a perspiciatis in, animi corrupti necessitatibus
-                            pariatur nesciunt vel vero at.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>
-                            Нужно ли регистрироваться на сайте чтобы сделать заказ?
-                        </h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Possimus officia facere, sint tempora
-                            mollitia cum necessitatibus, pariatur molestiae quibusdam commodi et explicabo ratione
-                            doloremque quaerat aliquid! Sequi perferendis inventore cum!
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-wrapper__accordion">
-                    <button class="faq-wrapper__accordion-summary-btn bg-white fw-500">
-                        <h4>Как найти товары?</h4>
-                        <div class="faq-wrapper__accordion-condition"></div>
-                    </button>
-                    <div class="faq-wrapper__accordion-content fw-300">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Rerum molestiae itaque earum alias et.
-                            Earum sint a exercitationem quaerat inventore impedit, placeat facilis ipsa provident
-                            consequatur, omnis rerum officia fugit.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <div class="main__communication-blocks-wrapper">
-                <section class="communication-block communication-block--with-img color-white">
-                    <div class="communication-block__content-wrapper">
-                        <h3 class="communication-block__title">Нужна помощь?</h3>
-                        <p class="communication-block__sub-title">
-                            Наши консультанты будут рады ответить на Ваши вопросы.
-                        </p>
-                    </div>
-
-                    <div class="communication-block__btns-wrapper">
-                        <button class="communication-block__btn p-s">написать</button>
-                        <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
-                    </div>
-                </section>
-
-                <section class="communication-block bg-off-white color-second-black">
-                    <div class="communication-block__content-wrapper">
-                        <h3 class="communication-block__title">подпишитесь</h3>
-                        <p class="communication-block__text">
-                            Оставьте свой e-mail, чтобы первыми узнать о старте
-                            SALE и новых поступлениях
-                        </p>
-
-                        <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
-                            name="mail">
-
-                        <p class="communication-block__sub-text fs-xss">
-                            Подписываясь на рассылку, вы подтверждаете свое согласие с
-                            <a class="color-second-black" href="#">политикой конфиденциальности.</a>
-                        </p>
-                    </div>
-                </section>
-            </div>
-
-            <div class="main__chat-wrapper">
-                <button class="chat fw-700 color-white bg-black">
-                    <div class="chat__points">
-                        <span class="chat__point bg-white"></span>
-                        <span class="chat__point bg-white"></span>
-                        <span class="chat__point bg-white"></span>
-                    </div>
-                    <p>чат</p>
-                </button>
-            </div>
-        </div>
+        @@include('./partials/feedbackSections.html', {
+        "includeFaq": true,
+        "infoText": false,
+        })
     </main>
 
     <div class="popup--hidden" id="size-table-popup">
@@ -1532,7 +1407,7 @@
     <!-- Функционал выбора размера -->
     <script src="assets/js/size-selector.js"></script>
     <!-- ### -->
-    
+
     <!-- Функционал таймер -->
     <script src="assets/js/timer.js"></script>
     <!-- ### -->

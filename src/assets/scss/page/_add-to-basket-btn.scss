@@ -41,9 +41,22 @@
         top: -20.5px;
         right: 31.5px;
 
+        font-size: 16px;
+
         padding: 6px 15px;
 
         border-radius: 30px;
         background: linear-gradient(83deg, #A230FC 0.95%, #FC6BFF 0.96%, #A230FC 103.68%, #A230FC 103.69%);
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .add-to-basket-btn {
+
+        &__sale {
+            font-size: 21px;
+        }
     }
 }

@@ -61,7 +61,8 @@
                         ПВЗ
                     </label>
                     <label class="basket__delivery-wrapper">
-                        <input type="radio" class="input-with-mark" hidden name="delivery" value="parcel automat" checked>
+                        <input type="radio" class="input-with-mark" hidden name="delivery" value="parcel automat"
+                            checked>
                         <span class="mark mark--radio mark--white"></span>
                         Постамат
                     </label>
@@ -99,7 +100,8 @@
                 </p>
                 <p class="basket__form-block">
                     <label for="details" class="basket__form-label">Детали</label>
-                    <textarea type="text" id="details" name="details" class="basket__form-input basket__form-input--more"></textarea>
+                    <textarea type="text" id="details" name="details"
+                        class="basket__form-input basket__form-input--more"></textarea>
                 </p>
             </div>
 
@@ -187,6 +189,10 @@
             </button>
         </form>
 
+        @@include('./partials/feedbackSections.html', {
+        "includeFaq": false,
+        "infoText": false,
+        })
     </main>
 
     @@include('./partials/footer.html')

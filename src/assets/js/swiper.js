@@ -33,12 +33,49 @@ const freeModeSlider = new Swiper(".slider--free-mode", {
     },
 });
 
+const recommendationsSlider = new Swiper(".main__recommendations-slider", {
+    direction: "horizontal",
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+
+    breakpoints: {
+        1200: {
+            slidesPerView: "auto",
+            spaceBetween: 124,
+            
+            freeMode: {
+                enabled: true,
+                sticky: false,
+            },
+        },
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
 const primarySlider = new Swiper(".main__primary-slider", {
     // Опциональные параметры
     direction: "horizontal",
-    loop: true,
+    loop: false,
     autoplay: {
         delay: 10000,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 9,
+        },
     },
 
     // Если нужна пагинация

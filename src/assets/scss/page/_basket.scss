@@ -941,13 +941,20 @@
         margin-bottom: 45px;
     }
 
-    .basket__feedback--hidden {
+    &__feedback--hidden {
         display: none;
     }
 }
 
 
 @media (min-width: $wide-breakpoint) {
+    .main {
+
+        &__feedback-sections {
+            display: block;
+        }
+    }
+
     .basket {
         .basket__stages {
             width: 60%;
@@ -1157,11 +1164,7 @@
         }
 
         .basket__product-list {
-            margin-left: 100px;
-
-            .card {
-                width: 380px;
-            }
+            padding: 0 100px;
         }
 
         .basket--mobile {

@@ -22,6 +22,10 @@
         }
     }
 
+    &__about-payment {
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+
     &__mini-slider {
         padding: 0 30px;
     }
@@ -110,11 +114,130 @@
         & .swiper-slide {
             display: flex;
             justify-content: center;
+            gap: 36px;
         }
     }
 
     &__add-to-basket-btn {
         margin: 0 15px;
         margin-top: 51px;
+    }
+}
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .main {
+
+        &__feedback-sections {
+            background-color: #f5f6f6;
+        }
+
+        &__product-preview,
+        &__product-type-selector,
+        &__link-wrapper,
+        &__description-slider,
+        &__product-categories-wrapper,
+        &__reviews-slider-wrapper,
+        &__mini-slider {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        &__brand-baner {
+            margin: 38px 0 -90px;
+
+            &>.banner__wrapper {
+            min-height: 399px;
+            }
+        }
+
+        &__mini-slider {
+            padding-left: 150px;
+        }
+
+        &__about-payment {
+            align-items: start;
+
+            min-height: 365px;
+
+            padding-top: 60px;
+
+            & .about-payment__title-wrapper {
+                display: contents;
+            }
+
+            & .about-payment__text {
+                padding-left: 0;
+            }
+        }
+
+        &>.stylist-consultation {
+            margin-top: 0;
+        }
+
+        &__description-slider,
+        &__product-categories-wrapper {
+            margin-top: 0;
+        }
+
+        &__description-slider {
+            display: flex;
+
+            padding-top: 36px;
+
+            overflow: unset;
+
+            &>.swiper-wrapper {
+                position: absolute;
+                top: -100px;
+
+                width: auto;
+                height: auto;
+                align-items: stretch;
+            }
+        }
+
+        &__product-categories-wrapper {
+            padding-top: 122px;
+
+            &-title {
+                margin-left: 0;
+            }
+
+            & .swiper {
+                padding-left: 0;
+            }
+        }
+
+        &__recommendations-slider {
+            overflow: visible;
+
+            & .swiper-slide {
+                justify-content: flex-start;
+
+                width: auto;
+            }
+
+            &>.slider__button {
+                display: none;
+            }
+        }
+
+        &__recommendations-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+
+            overflow: hidden;
+
+            padding: 0 100px;
+        }
+
+        &__add-to-basket-btn {
+            width: 400px;
+            margin-left: auto;
+        }
     }
 }

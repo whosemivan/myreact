@@ -34,3 +34,14 @@
         }
     }
 }
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .filter-buttons {
+
+        &__btn {
+            font-size: 14px;
+        }
+    }
+}

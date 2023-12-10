@@ -157,7 +157,7 @@
                             <label for="number" class="basket__pay-info-label">Номер карты</label>
                             <input type="number" id="number" class="basket__pay-info-input">
                         </p>
-                        
+
                         <div class="basket__pay-info-block">
                             <p>
                                 <label for="date" class="basket__pay-info-label">Дата</label>
@@ -212,6 +212,10 @@
             </div>
         </form>
 
+        @@include('./partials/feedbackSections.html', {
+        "includeFaq": false,
+        "infoText": false,
+        })
     </main>
 
     @@include('./partials/footer.html')

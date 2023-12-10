@@ -114,7 +114,7 @@
         align-items: center;
 
         max-width: 200px;
-        min-height: 200px;
+        height: 100%;
 
         padding: 10px;
 
@@ -135,9 +135,20 @@
 @media (min-width: $tablet-breakpoint) {
     .card {
 
-        &__img-wrapper {
+        &__img-wrapper,
+        &__img-wrapper--mini-img {
             width: calc(200px + 180 * (100vw / $hd-plus-width));
             height: calc(200px + 180 * (100vw / $hd-plus-width));
+        }
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    .card {
+        &--empty {
+            max-width: 387px;
+
+            font-size: 20px;
         }
     }
 }

@@ -378,52 +378,10 @@
             </div>
         </div>
 
-        <div class="main__feedback-sections">
-            <div class="main__communication-blocks-wrapper">
-                <section class="communication-block communication-block--with-img color-white">
-                    <div class="communication-block__content-wrapper">
-                        <h3 class="communication-block__title">Нужна помощь?</h3>
-                        <p class="communication-block__sub-title">
-                            Наши консультанты будут рады ответить на Ваши вопросы.
-                        </p>
-                    </div>
-
-                    <div class="communication-block__btns-wrapper">
-                        <button class="communication-block__btn p-s">написать</button>
-                        <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
-                    </div>
-                </section>
-
-                <section class="communication-block bg-off-white color-second-black">
-                    <div class="communication-block__content-wrapper">
-                        <h3 class="communication-block__title">подпишитесь</h3>
-                        <p class="communication-block__text">
-                            Оставьте свой e-mail, чтобы первыми узнать о старте
-                            SALE и новых поступлениях
-                        </p>
-
-                        <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
-                            name="mail">
-
-                        <p class="communication-block__sub-text fs-xss">
-                            Подписываясь на рассылку, вы подтверждаете свое согласие с
-                            <a class="color-second-black" href="#">политикой конфиденциальности.</a>
-                        </p>
-                    </div>
-                </section>
-            </div>
-
-            <div class="main__chat-wrapper">
-                <button class="chat fw-700 color-white bg-black">
-                    <div class="chat__points">
-                        <span class="chat__point bg-white"></span>
-                        <span class="chat__point bg-white"></span>
-                        <span class="chat__point bg-white"></span>
-                    </div>
-                    <p>чат</p>
-                </button>
-            </div>
-        </div>
+        @@include('./partials/feedbackSections.html', {
+        "includeFaq": false,
+        "infoText": false,
+        })
     </main>
 
     @@include('./partials/footer.html')

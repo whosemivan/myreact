@@ -81,3 +81,40 @@
         }
     }
 }
+
+@media (min-width: $wide-breakpoint) {
+    .reviews-slider-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        background-color: unset;
+
+        &>.block-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            gap: 18px;
+
+            &>div {
+                font-size: 18px;
+            }
+        }
+
+        &__reviews-slider {
+            grid-column: 1 / 3;
+        }
+
+        &__links-wrapper {
+            grid-row: 1 / 1;
+            grid-column: 2 / 3;
+
+            justify-content: flex-end;
+
+            &__link {
+                width: auto;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+}
