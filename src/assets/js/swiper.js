@@ -4,9 +4,6 @@ const slider = new Swiper(".slider", {
 });
 
 const sliderWithPagination = new Swiper(".slider--with-pagination", {
-    direction: "horizontal",
-    slidesPerView: "auto",
-
     pagination: {
         el: ".slider__pagination",
         bulletClass: "slider__pagination-bullet",
@@ -53,6 +50,34 @@ const recommendationsSlider = new Swiper(".main__recommendations-slider", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+});
+
+const productSlider = new Swiper(".main__product-slider", {
+    direction: "horizontal",
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    loop: true,
+    autoplay: {
+        delay: 10000,
+    },
+    pagination: {
+        el: ".slider__pagination",
+        bulletClass: "slider__pagination-bullet",
+        bulletActiveClass: "slider__pagination-bullet-active",
+        modifierClass: "slider__pagination-",
+        clickable: true,
+    },
+});
+
+const productTypeSelector = new Swiper(".main__product-type-selector", {
+    direction: "horizontal",
+    slidesPerView: "auto",
+    breakpoints: {
+        1200: {
+            direction: "vertical",
+            spaceBetween: 25,
+        },
     },
 });
 

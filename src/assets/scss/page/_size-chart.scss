@@ -73,3 +73,14 @@
         }
     }
 }
+
+
+
+@media (min-width: $wide-breakpoint) {
+    .size-chart {
+
+        &__last-size-link {
+            margin-top: 20px;
+        }
+    }
+}

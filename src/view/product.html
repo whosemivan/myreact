@@ -30,27 +30,28 @@
     </header>
 
     <main class="main">
-        <div class="main__product-preview product-preview">
-            <!-- <section class="product-preview__header">
-                <h3 class="fs-s fw-800">Nike Air Max SC</h3>
+        <div class="product-data-wrapper">
+            <div class="main__product-preview product-preview">
+                <section class="product-preview__header">
+                    <h3 class="fs-s fw-800">Nike Air Max SC</h3>
 
-                <div class="product-preview__info-wrapper">
-                    <div>
-                        <p class="product-preview__price fs-l fw-500">48 060</p>
-                        <p class="product-preview__price-old fs-m fw-300">67 060</p>
+                    <div class="product-preview__info-wrapper">
+                        <div>
+                            <p class="product-preview__price fs-l fw-500">48 060</p>
+                            <p class="product-preview__price-old fs-m fw-300">67 060</p>
+                        </div>
+
+                        <div class="product-preview__btn-wrapper">
+                            <button class="product-preview__star-btn"></button>
+                            <button class="product-preview__like-btn"></button>
+                        </div>
                     </div>
 
-                    <div class="product-preview__btn-wrapper">
-                        <button class="product-preview__star-btn"></button>
-                        <button class="product-preview__like-btn"></button>
-                    </div>
-                </div>
+                    <p class="fs-xxs">или 4 платежа по 5 200₽ <span
+                            class="product-preview__highlight-payment-info-text">долями</span></p>
+                </section>
 
-                <p class="fs-xxs">или 4 платежа по 5 200₽ <span
-                        class="product-preview__highlight-payment-info-text">долями</span></p>
-            </section> -->
-
-            <!-- <div class="product-preview__promotion-banner">
+                <!-- <div class="product-preview__promotion-banner">
                 <p class="product-preview__discount fw-800">35</p>
 
                 <p class="product-preview__discount-info fs-xxs fw-500">
@@ -63,150 +64,157 @@
                 <button class="product-preview__promotion-banner-close-btn" onclick="hideParent(this)"></button>
             </div> -->
 
-            <div class="discount-timer">
-                <p class="discount-timer__title">Скидка заканчивается</p>
+                <div class="product-data-wrapper__left-block">
+                    <div class="mian__discount-timer discount-timer">
+                        <p class="discount-timer__title">Скидка заканчивается</p>
 
-                <div>
-                    <div class="discount-timer__time fw-700" id="timer">
-                        <span>00</span>
-                        <span>23</span>
-                        <span>00</span>
-                        <span>00</span>
+                        <div>
+                            <div class="discount-timer__time fw-700" id="timer">
+                                <span>00</span>
+                                <span>23</span>
+                                <span>00</span>
+                                <span>00</span>
+                            </div>
+
+                            <div class="discount-timer__time-sign fs-xss">
+                                <span>День</span>
+                                <span>Час</span>
+                                <span>Мин</span>
+                                <span>Сек</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="discount-timer__btn fw-600">Купить</a>
+
+                        <button class="discount-timer__close-btn" onclick="hideParent(this)"></button>
                     </div>
 
-                    <div class="discount-timer__time-sign fs-xss">
-                        <span>День</span>
-                        <span>Час</span>
-                        <span>Мин</span>
-                        <span>Сек</span>
-                    </div>
-                </div>
+                    <div class="product-data-wrapper__sliders-wrapper">
+                        <div class="main__product-slider swiper can-be-viewed bg-second-gray">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product-preview__slider-card">
+                                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-preview__slider-card">
+                                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-preview__slider-card">
+                                        <img src="assets/image/slider-img/product1.png" alt="product img">
+                                    </div>
+                                </div>
+                            </div>
 
-                <a href="#" class="discount-timer__btn fw-600">Купить</a>
+                            <div class="slider__pagination slider__pagination--bottom-center"></div>
 
-                <button class="discount-timer__close-btn" onclick="hideParent(this)"></button>
-            </div>
+                            <div class="badge badge--web-sales-leader">
+                                <span class="badge-icon"></span>
+                            </div>
 
-            <div class="main__primary-slider swiper can-be-viewed bg-second-gray">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="product-preview__slider-card">
-                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                            <a href="#" class="product-preview__image-link fw-600">Входит в образ</a>
+                        </div>
+
+                        <div class="main__product-type-selector swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide slider__slide pr-l">
+                                    <a href="#" class="card">
+                                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
+                                            src="assets/image/slider-img/product1.png" alt="product img">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="product-preview__slider-card">
-                            <img src="assets/image/slider-img/product1.png" alt="product img">
+                </div>
+
+                <div class="main__size-chart size-chart fs-xxs">
+                    <div class="size-chart__header">
+                        <div>
+                            <button type="button" onclick="openPopup('size-table-popup')" class="size-chart__title">Таблица
+                                размеров</button>
+    
+                            <a href="#" class="size-chart__size-type-link selected">RUS</a>
+                            <a href="#" class="size-chart__size-type-link">EU</a>
+                        </div>
+    
+                        <button type="button" onclick="openPopup('size-notification-popup')"
+                            class="size-chart__more-sizes">Не
+                            нашли размер?</button>
+                    </div>
+    
+                    <div class="size-chart__product-size-selector swiper slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide pr-s">
+                                <label for="size1" class="product-size-card product-size-card--less">37</label>
+                                <input hidden type="checkbox" name="size" id="size1" value="37">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size2"
+                                    class="product-size-card product-size-card--notification selected">38</label>
+                                <input hidden type="checkbox" name="size" id="size2" value="38" checked>
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size3" class="product-size-card product-size-card--over">39</label>
+                                <input hidden type="checkbox" name="size" id="size3" value="39" disabled>
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size4" class="product-size-card product-size-card--over">40</label>
+                                <input hidden type="checkbox" name="size" id="size4" value="40" disabled>
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size5" class="product-size-card product-size-card">41</label>
+                                <input hidden type="checkbox" name="size" id="size5" value="41">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size6" class="product-size-card product-size-card">42</label>
+                                <input hidden type="checkbox" name="size" id="size6" value="42">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size7" class="product-size-card product-size-card">43</label>
+                                <input hidden type="checkbox" name="size" id="size7" value="43">
+                            </div>
+                            <div class="swiper-slide pr-s">
+                                <label for="size9" class="product-size-card product-size-card"></label>
+                                <input hidden type="checkbox" name="size" id="size9" value="">
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="product-preview__slider-card">
-                            <img src="assets/image/slider-img/product1.png" alt="product img">
-                        </div>
-                    </div>
+    
+                    <a href="#" class="size-chart__last-size-link fw-600">Полседний размер</a>
                 </div>
-
-                <div class="slider__pagination slider__pagination--bottom-center"></div>
-
-                <div class="badge badge--web-sales-leader">
-                    <span class="badge-icon"></span>
-                </div>
-            </div>
-
-            <a href="#" class="product-preview__image-link fw-600">Входит в образ</a>
-        </div>
-
-        <div class="main__product-type-selector swiper slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-                    </a>
-                </div>
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-                    </a>
-                </div>
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
-                    </a>
-                </div>
-                <div class="swiper-slide slider__slide pr-l">
-                    <a href="#" class="card">
-                        <img class="card__img-wrapper--round card__img-wrapper--supa-mini-img"
-                            src="assets/image/slider-img/product1.png" alt="product img">
+    
+                <div class="main__link-wrapper">
+                    <button class="main__buy-link bg-black color-white" onclick="openPopup('added-to-cart-popup')">
+                        <p class="fw-600">Купить</p>
+                        <p class="fw-600">48 060 ₽</p>
+                    </button>
+    
+                    <a href="#" class="main__basket-link">
                     </a>
                 </div>
             </div>
-        </div>
-
-        <div class="main__size-chart size-chart fs-xxs">
-            <div class="size-chart__header">
-                <div>
-                    <button type="button" onclick="openPopup('size-table-popup')" class="size-chart__title">Таблица
-                        размеров</button>
-
-                    <a href="#" class="size-chart__size-type-link selected">RUS</a>
-                    <a href="#" class="size-chart__size-type-link">EU</a>
-                </div>
-
-                <button type="button" onclick="openPopup('size-notification-popup')" class="size-chart__more-sizes">Не
-                    нашли размер?</button>
-            </div>
-
-            <div class="size-chart__product-size-selector swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide pr-s">
-                        <label for="size1" class="product-size-card product-size-card--less">37</label>
-                        <input hidden type="checkbox" name="size" id="size1" value="37">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size2" class="product-size-card product-size-card--notification selected">38</label>
-                        <input hidden type="checkbox" name="size" id="size2" value="38" checked>
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size3" class="product-size-card product-size-card--over">39</label>
-                        <input hidden type="checkbox" name="size" id="size3" value="39" disabled>
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size4" class="product-size-card product-size-card--over">40</label>
-                        <input hidden type="checkbox" name="size" id="size4" value="40" disabled>
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size5" class="product-size-card product-size-card">41</label>
-                        <input hidden type="checkbox" name="size" id="size5" value="41">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size6" class="product-size-card product-size-card">42</label>
-                        <input hidden type="checkbox" name="size" id="size6" value="42">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size7" class="product-size-card product-size-card">43</label>
-                        <input hidden type="checkbox" name="size" id="size7" value="43">
-                    </div>
-                    <div class="swiper-slide pr-s">
-                        <label for="size9" class="product-size-card product-size-card"></label>
-                        <input hidden type="checkbox" name="size" id="size9" value="">
-                    </div>
-                </div>
-            </div>
-
-            <a href="#" class="size-chart__last-size-link fw-600">Полседний размер</a>
-        </div>
-
-        <div class="main__link-wrapper">
-            <button class="main__buy-link bg-black color-white" onclick="openPopup('added-to-cart-popup')">
-                <p class="fw-600">Купить</p>
-                <p class="fw-600">48 060 ₽</p>
-            </button>
-
-            <a href="#" class="main__basket-link">
-            </a>
         </div>
 
         <section class="main__about-payment about-payment about-payment--basket">

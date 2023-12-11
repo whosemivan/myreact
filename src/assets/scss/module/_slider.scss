@@ -17,6 +17,7 @@
 
     &__pagination {
         display: flex;
+        align-items: center;
         gap: 5px;
 
         position: absolute;
@@ -116,9 +117,12 @@
     &--viewed {
         position: fixed;
         top: 0;
+        left: 0;
 
         width: 100vw;
+        min-width: 430px;
         height: 100vh;
+        min-height: 100%;
 
         margin: 0 !important;
         padding: 50px 0;
@@ -166,6 +170,31 @@
             min-height: 294px;
 
             background-size: cover;
+        }
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    .slider {
+
+        &__pagination {
+            gap: 12px;
+            height: 5px;
+    
+            &>&-bullet {
+    
+                &::after {
+                    width: 25px;
+                    height: 5px;
+                }
+            }
+    
+            &--bottom-center {
+                justify-content: center;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
         }
     }
 }
