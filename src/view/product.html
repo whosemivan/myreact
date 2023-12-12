@@ -33,7 +33,21 @@
         <div class="product-data-wrapper">
             <div class="main__product-preview product-preview">
                 <section class="product-preview__header">
-                    <h3 class="fs-s fw-800">Nike Air Max SC</h3>
+                    <div class="product-preview__title-block">
+                        <h3 class="fs-s fw-800">Nike Air Max SC</h3>
+
+                        <div class="product-preview__stars-wrapper">
+                            <ul class="stars-wrapper">
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start"></li>
+                                <li class="stars-wrapper__start--light"></li>
+                            </ul>
+
+                            <span class="fw-400 ml-s">1236</span>
+                        </div>
+                    </div>
 
                     <div class="product-preview__info-wrapper">
                         <div>
@@ -152,18 +166,19 @@
                 <div class="main__size-chart size-chart fs-xxs">
                     <div class="size-chart__header">
                         <div>
-                            <button type="button" onclick="openPopup('size-table-popup')" class="size-chart__title">Таблица
+                            <button type="button" onclick="openPopup('size-table-popup')"
+                                class="size-chart__title">Таблица
                                 размеров</button>
-    
+
                             <a href="#" class="size-chart__size-type-link selected">RUS</a>
                             <a href="#" class="size-chart__size-type-link">EU</a>
                         </div>
-    
+
                         <button type="button" onclick="openPopup('size-notification-popup')"
                             class="size-chart__more-sizes">Не
                             нашли размер?</button>
                     </div>
-    
+
                     <div class="size-chart__product-size-selector swiper slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide pr-s">
@@ -201,16 +216,16 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <a href="#" class="size-chart__last-size-link fw-600">Полседний размер</a>
                 </div>
-    
+
                 <div class="main__link-wrapper">
                     <button class="main__buy-link bg-black color-white" onclick="openPopup('added-to-cart-popup')">
                         <p class="fw-600">Купить</p>
                         <p class="fw-600">48 060 ₽</p>
                     </button>
-    
+
                     <a href="#" class="main__basket-link">
                     </a>
                 </div>
@@ -1425,7 +1440,7 @@
 
         for (const elem of elems) textToEllipsis(elem);
 
-        startCountdown(new Date("December 11, 2023 23:59:59").getTime());
+        startCountdown(new Date("December 30, 2023 23:59:59").getTime());
     </script>
 </body>
 

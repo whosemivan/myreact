@@ -37,35 +37,48 @@
             <span class="checkout__infovalue"># 29220202002</span>
         </p>
 
-        <form class="checkout__form mx-m">
-            <h2 class="checkout__form-title">Оцените удобство навигации по основным разделам странцы товара</h2>
+        <form action="#" method="post" class="checkout__question-cards question-cards mx-m">
+            <div class="question-cards__card">
+                <div>
+                    <p class="fs-xs fw-700">
+                        Оцените полноты, качество и доступность для понимания информации, указанной в описании и
+                        характеристиках товара
+                    </p>
 
-            <div class="checkout__btns">
-                <button class="checkout__btn" type="button">
-                    😍
-                </button>
-                <button class="checkout__btn" type="button">
-                    🙂
-                </button>
-                <button class="checkout__btn" type="button">
-                    😐
-                </button>
-                <button class="checkout__btn" type="button">
-                    ☹️
-                </button>
-                </button>
-                <button class="checkout__btn" type="button">
-                    🤮
-                </button>
+                    <ul>
+                        <li><input type="radio" hidden required name="question4" id="q4i1"><span><label
+                                    for="q4i1"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i2"><span><label
+                                    for="q4i2"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i3"><span><label
+                                    for="q4i3"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i4"><span><label
+                                    for="q4i4"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i5"><span><label
+                                    for="q4i5"></label></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="mt-xl fs-xs fw-700">
+                        Легко ли было найти характеристики, отзывы, комментарии? Что бы вы хотели изменить?
+                    </p>
+
+                    <textarea name="question5" class="question-cards__card-textarea fs-xs"></textarea>
+                </div>
+
+                <div class="question-cards__submit-btn-wrapper">
+                    <button type="submit" class="question-cards__submit-btn fs-xs fw-600">Оценить</button>
+                </div>
             </div>
-
-            <label class="checkout__label" for="review" >
-                Легко ли было найти характеристики, отзывы, комментарии? Что бы вы хотели изменить?
-            </label>
-            <input type="text" class="checkout__input" id="review">
-
-            <button class="checkout__submitBtn" type="submit">Оценить</button>
         </form>
+
+        <span class="checkout__rect"></span>
     </main>
 
     @@include('./partials/footer.html')
@@ -77,6 +90,10 @@
     <!-- Подключение кода слайдера -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Функционал input-ов -->
+    <script src="assets/js/question.js"></script>
     <!-- ### -->
 </body>
 

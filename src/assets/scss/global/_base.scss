@@ -4,13 +4,21 @@
 
 html,
 body {
+    display: flex;
+    flex-direction: column;
+
     min-width: 430px;
+    min-height: 100vh;
 
     color: $black;
 
     font-family: "Gilroy", Arial, "sans-serif";
     font-size: $xs-fs;
     font-weight: 400;
+}
+
+footer {
+    margin-top: auto;
 }
 
 a,

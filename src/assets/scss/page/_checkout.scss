@@ -1,15 +1,16 @@
 .checkout {
     position: relative;
 
-    &::after {
-        content: "";
-        background-image: url("/assets/image/checkout-icon.svg");
-        width: 497px;
+    &__rect {
+        width: 240px;
         height: 476px;
+
         position: absolute;
-        right: -175px;
+        right: 0;
         top: -230px;
         z-index: -1;
+
+        background: bottom left/150% url("/assets/image/checkout-icon.svg") no-repeat;
     }
 
     .checkout__title {
@@ -45,62 +46,63 @@
             line-height: normal;
         }
     }
+}
 
-    .checkout__form {
-        padding: 38px 35px;
-        border-radius: 40px;
-        background: #F5F6F6;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
-        .checkout__form-title {
-            margin-bottom: 73px;
-            color: #333;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
+
+@media (min-width: $wide-breakpoint) {
+    .header {
+        margin: 0;
+
+        &__logo-and-basket-wrapper,
+        &__breadcrumbs,
+        &>.nav {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    }
+
+    .checkout {
+
+        .checkout__title,
+        .checkout__info,
+        &__question-cards {
+            margin-left: 100px;
+            margin-right: 100px;
+            padding-left: 0;
+            padding-right: 0;
         }
 
-        .checkout__btns {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
+        &__rect {
+            width: 874px;
+            height: 864px;
+        }
 
-            .checkout__btn {
-                font-size: 40.916px;
+        .checkout__title {
+            margin-bottom: 176px;
+        }
+
+        .checkout__info {
+            margin-bottom: 146px;
+        }
+
+        &__question-cards {
+            &>.question-cards__card {
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 53px 110px;
+
+                &>div {
+                    flex: 1;
+                }
+
+                &>.question-cards__submit-btn-wrapper {
+                    width: 100%;
+                    flex: unset;
+                }
             }
-        }
 
-        .checkout__label {
-            margin-bottom: 21px;
-            color: #333;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        .checkout__input {
-            margin-bottom: 73px;
-            width: 100%;
-            min-height: 101px;
-            border-radius: 6px;
-            background: #FFF;
-        }
-
-        .checkout__submitBtn {
-            width: 100%;
-            padding: 17px 0;
-            color: #FFF;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            text-transform: uppercase;
-            border-radius: 6px;
-            background: #000;
+            margin-bottom: 53px;
         }
     }
 }

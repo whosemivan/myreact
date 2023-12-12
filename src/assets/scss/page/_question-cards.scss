@@ -1,0 +1,128 @@
+.question-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        flex: 1;
+
+        width: 100%;
+        min-width: 408px;
+        min-height: 240px;
+
+        padding: 32px 45px 45px;
+
+        flex-shrink: 0;
+
+        border-radius: 40px;
+        background: #F5F6F6;
+
+        & ul {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 48px;
+
+            &>li {
+
+                &>span {
+                    width: 58px;
+                    height: 58px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    background-color: #ffffff00;
+
+                    &>label {
+                        width: 41px;
+                        height: 41px;
+
+                        opacity: 1;
+                    }
+                }
+
+                &:nth-child(1)>span>label {
+                    background: center/contain url("/assets/image/emoji/1.svg") no-repeat;
+                }
+
+                &:nth-child(2)>span>label {
+                    background: center/contain url("/assets/image/emoji/2.svg") no-repeat;
+                }
+
+                &:nth-child(3)>span>label {
+                    background: center/contain url("/assets/image/emoji/3.svg") no-repeat;
+                }
+
+                &:nth-child(4)>span>label {
+                    background: center/contain url("/assets/image/emoji/4.svg") no-repeat;
+                }
+
+                &:nth-child(5)>span>label {
+                    background: center/contain url("/assets/image/emoji/5.svg") no-repeat;
+                }
+
+                &>input[type="radio"] {
+
+                    &:checked {
+                        &+span {
+                            background-color: #fff;
+                            border-radius: 100%;
+
+                            &>label {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__card-title {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 auto auto;
+
+        text-align: center;
+    }
+
+    &__card-textarea {
+        min-width: 100%;
+        min-height: 101px;
+
+        margin-top: 21px;
+        padding: 10px;
+
+        border-radius: 6px;
+        background: #FFF;
+    }
+
+    &__submit-btn-wrapper {
+        width: 100%;
+
+        margin-top: 44px;
+    }
+
+    &__submit-btn {
+        width: 100%;
+        max-width: 350px;
+        min-height: 50px;
+
+        margin-right: auto;
+
+        border-radius: 6px;
+        background: #000;
+
+        color: #fff;
+        text-transform: uppercase;
+    }
+}

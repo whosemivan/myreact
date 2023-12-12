@@ -6,6 +6,10 @@
         margin-right: 29px;
     }
 
+    &__stars-wrapper {
+        display: none;
+    }
+
     &__info-wrapper {
         margin-top: 16px;
 
@@ -76,14 +80,14 @@
         padding: 4px 10px 4px 10px;
 
         border-radius: 40px;
-        background: center url("/assets/image/star--blue.svg") no-repeat, #A230FC33;
+        background: center/11px url("/assets/image/star--blue.svg") no-repeat, #A230FC33;
     }
 
     &__like-btn {
         width: 16px;
         height: 16px;
 
-        background: center url("/assets/image/heart.svg") no-repeat;
+        background: center/contain url("/assets/image/heart.svg") no-repeat;
     }
 
     &__highlight-payment-info-text {
@@ -240,6 +244,35 @@
             &>p {
                 font-size: 24px;
             }
+        }
+
+        &__title-block {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__stars-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        &__btn-wrapper {
+            gap: 15px;
+        }
+
+        &__star-btn {
+            width: 18px;
+            height: 18px;
+
+            padding: 12px;
+
+            border-radius: 40px;
+            background-size: 18px;
+        }
+
+        &__like-btn {
+            width: 26px;
+            height: 26px;
         }
 
         &__info-wrapper {
