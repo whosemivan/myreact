@@ -32,7 +32,7 @@
             width: 16px;
             height: 16px;
 
-            background: center url("/assets/image/shopping-bag--white.svg") no-repeat;
+            background: center/contain url("/assets/image/shopping-bag--white.svg") no-repeat;
         }
     }
 
@@ -54,8 +54,24 @@
 
 @media (min-width: $wide-breakpoint) {
     .add-to-basket-btn {
+        min-height: 70px;
+
+        padding-left: 30px;
+        padding-right: 25px;
+
+        &__cost {
+    
+            &::before {
+                width: 24px;
+                height: 24px;
+
+                top: -4px;
+            }
+        }
 
         &__sale {
+            right: 20px;
+
             font-size: 21px;
         }
     }

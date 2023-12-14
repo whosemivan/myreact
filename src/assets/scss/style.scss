@@ -7,6 +7,15 @@
 //
 
 
+// Импорт утилит
+@import
+    "utils/spacing",
+    "utils/colors",
+    "utils/font",
+    "utils/animation";
+//
+
+
 // Импорт модулей
 @import
     "module/header",
@@ -28,12 +37,3 @@
     "module/interview-card",
     "module/info-block";
 // 
-
-
-// Импорт утилит
-@import
-    "utils/spacing",
-    "utils/colors",
-    "utils/font",
-    "utils/animation";
-//

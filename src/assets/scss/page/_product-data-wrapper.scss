@@ -36,7 +36,6 @@
             gap: 19px;
 
             width: 100%;
-            max-width: 817px;
             height: 533px;
         }
 
@@ -76,6 +75,7 @@
     .product-data-wrapper {
 
         & .mian__discount-timer {
+            max-width: max-content;
             margin-left: 155px;
         }
     }

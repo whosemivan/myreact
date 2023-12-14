@@ -14,7 +14,8 @@
     }
 
     .checkout__title {
-        width: 300px;
+        display: flex;
+        flex-direction: column;
         margin-top: 37px;
         margin-bottom: 119px;
         color: #333333;
@@ -63,6 +64,7 @@
     }
 
     .checkout {
+        position: unset;
 
         .checkout__title,
         .checkout__info,
@@ -74,11 +76,14 @@
         }
 
         &__rect {
-            width: 874px;
-            height: 864px;
+            width: 774px;
+            height: 764px;
+
+            top: 0px;
         }
 
         .checkout__title {
+            margin-top: 148px;
             margin-bottom: 176px;
         }
 

@@ -3,6 +3,7 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 5px;
 
     max-width: 500px;
@@ -20,7 +21,9 @@
     background: linear-gradient(93deg, #3075FC 26.36%, #A230FC 90.49%);
 
     &__title {
-        flex: 1;
+        display: flex;
+        flex-direction: column;
+
         font-weight: 700;
         line-height: normal;
     }
@@ -95,5 +98,17 @@
         height: 70px;
 
         background: center url("/assets/image/discount-timer-img.svg") no-repeat;
+    }
+}
+
+
+
+@media (min-width: $hd-plus-breakpoint) {
+    .discount-timer {
+        gap: 2rem;
+
+        &__time-sign {
+            gap: 1rex;
+        }
     }
 }

@@ -22,10 +22,6 @@
         }
     }
 
-    &__about-payment {
-        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.10);
-    }
-
     &__mini-slider {
         padding: 0 30px;
     }
@@ -129,6 +125,10 @@
 @media (min-width: $wide-breakpoint) {
     .main {
 
+        &__product-preview {
+            margin-top: 80px;
+        }
+
         &__feedback-sections {
             background-color: #f5f6f6;
         }
@@ -142,6 +142,31 @@
             margin-right: 0;
             padding-left: 100px;
             padding-right: 100px;
+        }
+
+        &__link-wrapper {
+            gap: 10px;
+        }
+
+        &__basket-link {
+            display: flex;
+            align-items: center;
+
+            padding: 10px 20px;
+
+            width: 100%;
+            max-width: 335px;
+            height: 100%;
+
+            background-position: right 20px center;
+
+            &::before {
+                content: "В корзину";
+
+                color: #3075FC;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
         }
 
         &__brand-baner {
@@ -179,6 +204,10 @@
         &__description-slider,
         &__product-categories-wrapper {
             margin-top: 0;
+        }
+
+        &__product-categories-wrapper {
+            margin-bottom: 100px;
         }
 
         &__description-slider {
