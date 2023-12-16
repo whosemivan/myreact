@@ -134,7 +134,8 @@
             justify-content: center;
         }
 
-        &>.badge {
+        &>.badge,
+        &>.product-preview__image-link {
             display: none;
         }
 

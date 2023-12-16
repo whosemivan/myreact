@@ -37,9 +37,9 @@
             width: 10px;
             height: 10px;
 
-            margin-right: 2px;
+            margin-right: 1rex;
 
-            background: center url("/assets/image/bell.svg") no-repeat;
+            background: center/cover url("/assets/image/bell.svg") no-repeat;
         }
     }
 
@@ -81,6 +81,14 @@
 
         &__last-size-link {
             margin-top: 20px;
+        }
+
+        &__more-sizes {
+
+            &::before {
+                width: 16px;
+                height: 19px;
+            }
         }
     }
 }

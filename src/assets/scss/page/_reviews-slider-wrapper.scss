@@ -87,7 +87,15 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        overflow: hidden;
+
         background-color: unset;
+
+        &>.block-title,
+        &__reviews-slider {
+            margin: 0;
+            padding: 0;
+        }
 
         &>.block-title {
             display: flex;
@@ -102,6 +110,7 @@
 
         &__reviews-slider {
             grid-column: 1 / 3;
+            overflow: unset;
         }
 
         &__links-wrapper {

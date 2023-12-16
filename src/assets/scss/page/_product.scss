@@ -204,6 +204,10 @@
         &__description-slider,
         &__product-categories-wrapper {
             margin-top: 0;
+
+            &>.swiper-wrapper {
+                gap: 30px;
+            }
         }
 
         &__product-categories-wrapper {

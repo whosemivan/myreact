@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
-var sass = require('gulp-sass')(require('sass'))
+var sass = require("gulp-sass")(require("sass"))
 var server = require("browser-sync").create()
 var csso = require("gulp-csso")
 var autoprefixer = require("autoprefixer")
@@ -9,7 +9,10 @@ var rename = require("gulp-rename")
 var postcss = require("gulp-postcss");
 var imagemin = require("gulp-imagemin")
 var del = require("del");
-const fileinclude = require('gulp-file-include');
+const fileinclude = require("gulp-file-include");
+const ghPages = require("gulp-gh-pages");
+
+gulp.task("deploy", () => gulp.src("./dist/**/*").pipe(ghPages()));
 
 gulp.task("css", function () {
     return gulp.src("src/assets/scss/*.scss")
@@ -59,8 +62,8 @@ gulp.task("fonts", function () {
 gulp.task("html", function () {
     return gulp.src("src/view/*.html")
         .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file'
+            prefix: "@@",
+            basepath: "@file"
         }))
         .pipe(gulp.dest("public"));
 });

@@ -1,6 +1,12 @@
 const slider = new Swiper(".slider", {
     direction: "horizontal",
     slidesPerView: "auto",
+
+    breakpoints: {
+        1200: {
+            spaceBetween: 10,
+        },
+    },
 });
 
 const sliderWithPagination = new Swiper(".slider--with-pagination", {
