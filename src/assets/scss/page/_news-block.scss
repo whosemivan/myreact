@@ -29,7 +29,7 @@
             color: #3075FC;
 
             &::before {
-                background: center / cover no-repeat url("/assets/image/smile.svg");
+                background: center / cover no-repeat url("../image/smile.svg");
             }
         }
 
@@ -37,7 +37,7 @@
             color: #F91818;
 
             &::before {
-                background: center / cover no-repeat url("/assets/image/sad.svg");
+                background: center / cover no-repeat url("../image/sad.svg");
             }
         }
     }
@@ -45,7 +45,7 @@
     &__heart {
         min-width: 16px;
         min-height: 16px;
-        background: center / cover no-repeat url("/assets/image/heart.svg");
+        background: center / cover no-repeat url("../image/heart.svg");
     }
 }
 

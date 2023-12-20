@@ -27,7 +27,7 @@
             width: calc(502px + (581 + 581 * 0.7) * ((100vw - 430px) / $hd-plus-width));
             height: calc(397px + (594 + 581 * 0.7) * ((100vw - 430px) / $hd-plus-width));
 
-            background: center / contain url("/assets/image/company.png") no-repeat;
+            background: center / contain url("../image/company.png") no-repeat;
         }
 
         // &::after {

@@ -25,7 +25,7 @@
         width: 115px;
         height: 115px;
 
-        background: center / cover url("/assets/image/mega-star.png") no-repeat;
+        background: center / cover url("../image/mega-star.png") no-repeat;
     }
 }
 
@@ -43,22 +43,22 @@
     }
 
     &__social--instagram {
-        background: center url("/assets/image/social/instagram.svg") no-repeat;
+        background: center url("../image/social/instagram.svg") no-repeat;
     }
 
     &__social--facebook {
-        background: center url("/assets/image/social/facebook.svg") no-repeat;
+        background: center url("../image/social/facebook.svg") no-repeat;
     }
 
     &__social--apple {
-        background: center url("/assets/image/social/apple.svg") no-repeat;
+        background: center url("../image/social/apple.svg") no-repeat;
     }
 
     &__social--google {
-        background: center url("/assets/image/social/google.svg") no-repeat;
+        background: center url("../image/social/google.svg") no-repeat;
     }
 
     &__social--twitter {
-        background: center url("/assets/image/social/twitter.svg") no-repeat;
+        background: center url("../image/social/twitter.svg") no-repeat;
     }
 }
