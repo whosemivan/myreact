@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Оформить</title>
+
+    <!-- Утилиты -->
+    <script src="assets/js/utils.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/checkout.min.css">
+</head>
+
+<body>
+    <div class="top-block color-white bg-black">
+    <a class="top-block__text fs-xss">
+        Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
+    </a>
+</div>
+
+    <header class="header mx-m">
+        <div class="header__logo-and-basket-wrapper my-m">
+    <a href="/" class="logo">myreact</a>
+    <button class="header__basket bg-second-gray"></button>
+</div>
+
+
+
+
+
+<div class="header__breadcrumbs">
+    <div class="header__page-icon bg-second-gray"></div>
+    <ul>
+        <!--  
+         -->
+
+        
+         <li><a href="#">Мужское</a></li>
+             <li><a href="#">Обувь</a></li>
+             <li><a href="#">Корзина</a></li>
+            
+            
+    </ul>
+</div>
+
+
+    </header>
+
+    <main class="checkout pb-l">
+        <h1 class="checkout__title mx-m">Спасибо <span>за покупку</span></h1>
+
+        <p class="checkout__info mx-m">
+            <span class="checkout__infokey">Номер заказа</span>
+            <span class="checkout__infovalue"># 29220202002</span>
+        </p>
+
+        <form action="#" method="post" class="checkout__question-cards question-cards mx-m">
+            <div class="question-cards__card">
+                <div>
+                    <p class="fs-xs fw-700">
+                        Оцените полноты, качество и доступность для понимания информации, указанной в описании и
+                        характеристиках товара
+                    </p>
+
+                    <ul>
+                        <li><input type="radio" hidden required name="question4" id="q4i1"><span><label for="q4i1"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i2"><span><label for="q4i2"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i3"><span><label for="q4i3"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i4"><span><label for="q4i4"></label></span>
+                        </li>
+                        <li><input type="radio" hidden required name="question4" id="q4i5"><span><label for="q4i5"></label></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="mt-xl fs-xs fw-700">
+                        Легко ли было найти характеристики, отзывы, комментарии? Что бы вы хотели изменить?
+                    </p>
+
+                    <textarea name="question5" class="question-cards__card-textarea fs-xs"></textarea>
+                </div>
+
+                <div class="question-cards__submit-btn-wrapper">
+                    <button type="submit" class="question-cards__submit-btn fs-xs fw-600">Оценить</button>
+                </div>
+            </div>
+        </form>
+
+        <span class="checkout__rect"></span>
+    </main>
+
+    <footer class="footer bg-black">
+    <h1 class="footer__logo logo color-white">myreact</h1>
+
+    <div class="footer__info-blocks-wrapper">
+        <section class="info-block">
+            <h3 class="info-block__title">помощь</h3>
+
+            <ul class="info-block__list">
+                <li><a class="color-white" href="#">Помощь и контакты</a></li>
+                <li><a class="color-white" href="#">Вопросы и ответы</a></li>
+                <li><a class="color-white" href="#">Оплата и доставка</a></li>
+                <li><a class="color-white" href="#">Обмен и возврат</a></li>
+                <li><a class="color-white" href="#">Таблица размеров</a></li>
+            </ul>
+        </section>
+
+        <section class="info-block">
+            <h3 class="info-block__title">myreact</h3>
+
+            <ul class="info-block__list">
+                <li><a class="color-white" href="#">О нас</a></li>
+                <li><a class="color-white" href="#">Отзывы</a></li>
+                <li><a class="color-white" href="#">Новости</a></li>
+                <li><a class="color-white" href="#">Статьи</a></li>
+                <li><a class="color-white" href="#">Акции</a></li>
+                <li><a class="color-white" href="#">Контакты</a></li>
+            </ul>
+        </section>
+
+        <section class="info-block">
+            <h3 class="info-block__title">контакты</h3>
+
+            <ul class="info-block__list">
+                <li class="info-block__decorated-link"><a class="color-white" href="#">8 800 511-53-72</a></li>
+                <li class="info-block__decorated-link">
+                    <a class="color-white" href="#">info&#64;myreact.ru</a>
+                </li>
+
+                <li><br></li>
+
+                <ul>
+                    <li><a class="color-white" href="#">пн-пт с 09:00 до 21:00</a></li>
+                    <li><a class="color-white" href="#">сб-вс с 12:00 до 18:00</a></li>
+                </ul>
+            </ul>
+        </section>
+
+        <section class="info-block info-block--stretched">
+            <h3 class="info-block__title">способы оплаты</h3>
+            <div class="info-block__img"></div>
+        </section>
+    </div>
+
+    <div class="footer__copyright-rights">
+        <p>MYREACT.RU © 2018 – 2023</p>
+    </div>
+</footer>
+
+    <nav class="bottom-nav">
+    <ul>
+        <li>
+            <!-- <a href="/" class="bottom-nav__link bottom-nav__link--highlighted "> -->
+            <a href="/" class="bottom-nav__link bottom-nav__link--highlighted">
+                <img src="assets/image/bottom-nav/home.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fw-800 fs-xss">Главная</p>
+            </a>
+        </li>
+        <li>
+            <a href="/catalog.html" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/catalog.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Каталог</p>
+            </a>
+        </li>
+        <li>
+            <a href="/basket.html" class="bottom-nav__link active">
+                <img src="assets/image/bottom-nav/basket.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Корзина</p>
+            </a>
+        </li>
+        <li>
+            <a href="/" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/images.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Образы</p>
+            </a>
+        </li>
+        <li>
+            <a href="/cabinet.html" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/profile.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Профиль</p>
+            </a>
+        </li>
+        <li>
+            <a href="/" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/chat.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Чат</p>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Функционал input-ов -->
+    <script src="assets/js/question.js"></script>
+    <!-- ### -->
+</body>
+
+</html>

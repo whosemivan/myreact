@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Отзывы</title>
+
+    <!-- Подключение стилей слайдера -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- ### -->
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/reviews.min.css">
+</head>
+
+<body>
+    <div class="top-block color-white bg-black">
+    <a class="top-block__text fs-xss">
+        Бери <span class="top-block__highlighted-text fw-900">500 рублей</span> в подарок прямо сейчас!
+    </a>
+</div>
+
+    <header class="header">
+        <div class="header__logo-and-basket-wrapper my-m">
+    <a href="/" class="logo">myreact</a>
+    <button class="header__basket bg-second-gray"></button>
+</div>
+
+
+
+
+
+<div class="header__breadcrumbs">
+    <div class="header__page-icon bg-second-gray"></div>
+    <ul>
+        <!--  
+         -->
+
+        
+         <li><a href="#">Мужское</a></li>
+             <li><a href="#">Обувь</a></li>
+             <li><a href="#">Отзывы</a></li>
+            
+            
+    </ul>
+</div>
+
+
+    </header>
+
+    <main class="main">
+        <div class="main__reviews-filter">
+            <div class="main__custom-title">
+                <h2 class="fs-s fw-800">Отзывы</h2>
+
+                <ul class="main__stars-wrapper stars-wrapper">
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start--light"></li>
+                </ul>
+
+                <span class="fw-400 ml-s">203</span>
+            </div>
+
+            <button class="filter-btn" onclick="openPopup()"></button>
+        </div>
+
+        <div class="main__reviews-wrapper reviews-wrapper">
+            <div class="reviews-wrapper__review">
+                <div class="reviews-wrapper__user-info">
+                    <img src="assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                    <p class="fw-700">Иван Иванов</p>
+                </div>
+
+                <span class="reviews-wrapper__review-score">5</span>
+
+                <ul class="stars-wrapper">
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start--light"></li>
+                </ul>
+
+                <p class="reviews-wrapper__user-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                    minima maiores illum molestiae ipsa eveniet id quo iure velit libero officia, nemo facere quas
+                    aperiam numquam explicabo error sint quaerat.</p>
+
+                <div class="news-block__info-wrapper">
+                    <div>
+                        <button class="news-block__opinion news-block__opinion--positive">24</button>
+                        <button class="news-block__opinion news-block__opinion--negative">4</button>
+                    </div>
+
+                    <p class="fs-xss">11.02.2022</p>
+                </div>
+            </div>
+
+            <div class="reviews-wrapper__review">
+                <div class="reviews-wrapper__user-info">
+                    <img src="assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                    <p class="fw-700">Иван Иванов</p>
+                </div>
+
+                <span class="reviews-wrapper__review-score">5</span>
+
+                <ul class="stars-wrapper">
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start--light"></li>
+                </ul>
+
+                <p class="reviews-wrapper__user-text">Если вы искренне хотите найти</p>
+
+                <div class="news-block__info-wrapper">
+                    <div>
+                        <button class="news-block__opinion news-block__opinion--positive">24</button>
+                        <button class="news-block__opinion news-block__opinion--negative">4</button>
+                    </div>
+
+                    <p class="fs-xss">11.02.2022</p>
+                </div>
+            </div>
+
+            <div class="reviews-wrapper__review">
+                <div class="reviews-wrapper__user-info">
+                    <img src="assets/image/user-avatar.png" class="reviews-wrapper__user-avatar">
+                    <p class="fw-700">Иван Иванов</p>
+                </div>
+
+                <span class="reviews-wrapper__review-score">5</span>
+
+                <ul class="stars-wrapper">
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start"></li>
+                    <li class="stars-wrapper__start--light"></li>
+                </ul>
+
+                <p class="reviews-wrapper__user-text">Если вы искренне хотите найти</p>
+
+                <div class="news-block__info-wrapper">
+                    <div>
+                        <button class="news-block__opinion news-block__opinion--positive">24</button>
+                        <button class="news-block__opinion news-block__opinion--negative">4</button>
+                    </div>
+
+                    <p class="fs-xss">11.02.2022</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__page-selcetor page-selcetor">
+            <a href=".." class="page-selcetor__back">
+                <span class="page-selcetor__back-icon page-selcetor__back-icon--disabled"></span>
+            </a>
+
+            <div class="page-selcetor__pages-wrapper">
+                <a href="#" class="page-selcetor__page page-selcetor__page--select">1</a>
+                <a href="#" class="page-selcetor__page">2</a>
+                <a href="#" class="page-selcetor__page">3</a>
+                <a href="#" class="page-selcetor__page">4</a>
+            </div>
+
+            <a href="#" class="page-selcetor__next">
+                <span class="page-selcetor__next-icon"></span>
+            </a>
+        </div>
+
+        <a href="#" class="main__add-review product-card__buy-btn fw-600">Добавить отзыв</a>
+
+        <div class="main__feedback-sections">
+    
+
+    
+
+    
+    <div class="main__communication-blocks-wrapper">
+        <section class="communication-block communication-block--with-img color-white">
+            <div class="communication-block__content-wrapper">
+                <h3 class="communication-block__title">Нужна помощь?</h3>
+                <p class="communication-block__sub-title">
+                    Наши консультанты будут рады ответить на Ваши вопросы.
+                </p>
+            </div>
+
+            <div class="communication-block__btns-wrapper">
+                <button class="communication-block__btn p-s">написать</button>
+                <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
+            </div>
+        </section>
+
+        <div class="main__communication-block-and-interview-card-wrapper">
+            <section class="communication-block bg-off-white color-second-black">
+                <div class="communication-block__content-wrapper">
+                    <h3 class="communication-block__title">подпишитесь</h3>
+                    <p class="communication-block__text">
+                        Оставьте свой e-mail, чтобы первыми узнать о старте
+                        SALE и новых поступлениях
+                    </p>
+
+                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
+                        name="mail">
+
+                    <p class="communication-block__sub-text fs-xss">
+                        Подписываясь на рассылку, вы подтверждаете свое согласие с
+                        <a class="color-second-black" href="#">политикой конфиденциальности.</a>
+                    </p>
+                </div>
+            </section>
+
+            <a href="../questionnaire.html" class="interview-card bg-green-gradient-g color-white">
+                <h3 class="interview-card__title">Опрос</h3>
+                <p>Сделаем сайт лучше</p>
+            </a>
+        </div>
+    </div>
+    
+
+    <div class="main__chat-wrapper">
+        <button class="chat fw-700 color-white bg-black">
+            <div class="chat__points">
+                <span class="chat__point bg-white"></span>
+                <span class="chat__point bg-white"></span>
+                <span class="chat__point bg-white"></span>
+            </div>
+            <p>чат</p>
+        </button>
+    </div>
+</div>
+    </main>
+
+    <div class="popup--hidden" id="popup">
+        <section class="popup__content-wrapper reviews-filter" id="reviews-filter">
+            <h3 class="reviews-filter__title fs-m fw-300">Фильтры</h3>
+
+            <button class="popup__close-btn" onclick="closePopup(this)"></button>
+
+            <label class="reviews-filter__date fw-600" for="date">
+                Дата
+                <input type="date" name="date" id="date">
+            </label>
+
+            <div class="reviews-filter__stars-list">
+                <div class="reviews-filter__stars-wrapper">
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                    </ul>
+
+                    <span>203</span>
+                </div>
+
+                <div class="reviews-filter__stars-wrapper">
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <span>22</span>
+                </div>
+
+                <div class="reviews-filter__stars-wrapper">
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <span>10</span>
+                </div>
+
+                <div class="reviews-filter__stars-wrapper">
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <span>5</span>
+                </div>
+
+                <div class="reviews-filter__stars-wrapper">
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <span>0</span>
+                </div>
+
+                <div class="reviews-filter__stars-wrapper">
+                    <ul class="stars-wrapper">
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                        <li class="stars-wrapper__start--light"></li>
+                    </ul>
+
+                    <span>1</span>
+                </div>
+            </div>
+
+            <button class="reviews-filter__accept-btn">Применить</button>
+        </section>
+    </div>
+
+    <footer class="footer bg-black">
+    <h1 class="footer__logo logo color-white">myreact</h1>
+
+    <div class="footer__info-blocks-wrapper">
+        <section class="info-block">
+            <h3 class="info-block__title">помощь</h3>
+
+            <ul class="info-block__list">
+                <li><a class="color-white" href="#">Помощь и контакты</a></li>
+                <li><a class="color-white" href="#">Вопросы и ответы</a></li>
+                <li><a class="color-white" href="#">Оплата и доставка</a></li>
+                <li><a class="color-white" href="#">Обмен и возврат</a></li>
+                <li><a class="color-white" href="#">Таблица размеров</a></li>
+            </ul>
+        </section>
+
+        <section class="info-block">
+            <h3 class="info-block__title">myreact</h3>
+
+            <ul class="info-block__list">
+                <li><a class="color-white" href="#">О нас</a></li>
+                <li><a class="color-white" href="#">Отзывы</a></li>
+                <li><a class="color-white" href="#">Новости</a></li>
+                <li><a class="color-white" href="#">Статьи</a></li>
+                <li><a class="color-white" href="#">Акции</a></li>
+                <li><a class="color-white" href="#">Контакты</a></li>
+            </ul>
+        </section>
+
+        <section class="info-block">
+            <h3 class="info-block__title">контакты</h3>
+
+            <ul class="info-block__list">
+                <li class="info-block__decorated-link"><a class="color-white" href="#">8 800 511-53-72</a></li>
+                <li class="info-block__decorated-link">
+                    <a class="color-white" href="#">info&#64;myreact.ru</a>
+                </li>
+
+                <li><br></li>
+
+                <ul>
+                    <li><a class="color-white" href="#">пн-пт с 09:00 до 21:00</a></li>
+                    <li><a class="color-white" href="#">сб-вс с 12:00 до 18:00</a></li>
+                </ul>
+            </ul>
+        </section>
+
+        <section class="info-block info-block--stretched">
+            <h3 class="info-block__title">способы оплаты</h3>
+            <div class="info-block__img"></div>
+        </section>
+    </div>
+
+    <div class="footer__copyright-rights">
+        <p>MYREACT.RU © 2018 – 2023</p>
+    </div>
+</footer>
+
+    <nav class="bottom-nav">
+    <ul>
+        <li>
+            <!-- <a href="/" class="bottom-nav__link bottom-nav__link--highlighted "> -->
+            <a href="/" class="bottom-nav__link bottom-nav__link--highlighted">
+                <img src="assets/image/bottom-nav/home.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fw-800 fs-xss">Главная</p>
+            </a>
+        </li>
+        <li>
+            <a href="/catalog.html" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/catalog.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Каталог</p>
+            </a>
+        </li>
+        <li>
+            <a href="/basket.html" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/basket.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Корзина</p>
+            </a>
+        </li>
+        <li>
+            <a href="/" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/images.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Образы</p>
+            </a>
+        </li>
+        <li>
+            <a href="/cabinet.html" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/profile.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Профиль</p>
+            </a>
+        </li>
+        <li>
+            <a href="/" class="bottom-nav__link ">
+                <img src="assets/image/bottom-nav/chat.svg" alt="page-icon" class="bottom-nav__page-icon">
+                <p class="bottom-nav__page-title fs-xss">Чат</p>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Функционал открытия и закрытия popup-а -->
+    <script src="assets/js/popup.js"></script>
+    <!-- ### -->
+</body>
+
+</html>
