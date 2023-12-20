@@ -18,11 +18,11 @@
             display: inline-flex;
 
             &:hover label {
-                background: center / contain url("/assets/image/star.svg") no-repeat;
+                background: center / contain url("../image/star.svg") no-repeat;
             }
 
             & input:hover~label {
-                background: center / contain url("/assets/image/star--white.svg") no-repeat;
+                background: center / contain url("../image/star--white.svg") no-repeat;
             }
         }
 
@@ -37,14 +37,14 @@
 
             padding: 0 10px;
 
-            background: center / contain url("/assets/image/star.svg") no-repeat;
+            background: center / contain url("../image/star.svg") no-repeat;
 
             cursor: pointer;
             box-sizing: content-box;
         }
 
         & input:checked~label {
-            background: center / contain url("/assets/image/star--white.svg") no-repeat;
+            background: center / contain url("../image/star--white.svg") no-repeat;
         }
     }
 

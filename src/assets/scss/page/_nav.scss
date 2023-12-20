@@ -38,7 +38,7 @@
         width: 16px;
         height: 16px;
 
-        background: center url("/assets/image/search.svg") no-repeat;
+        background: center url("../image/search.svg") no-repeat;
     }
 
     &__search-input {
@@ -126,12 +126,12 @@
             padding: 0 10px;
             padding-top: 13px;
 
-            background: bottom url("/assets/image/mini-top-arrow.svg") no-repeat;
+            background: bottom url("../image/mini-top-arrow.svg") no-repeat;
 
             &#dec-count {
                 bottom: 0;
 
-                background: top url("/assets/image/mini-down-arrow.svg") no-repeat;
+                background: top url("../image/mini-down-arrow.svg") no-repeat;
             }
         }
     }

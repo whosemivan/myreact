@@ -12,7 +12,10 @@ var del = require("del");
 const fileinclude = require("gulp-file-include");
 const ghPages = require("gulp-gh-pages");
 
-gulp.task("deploy", () => gulp.src("./dist/**/*").pipe(ghPages()));
+gulp.task("deploy", () =>
+    gulp.src("./public/**/*")
+        .pipe(ghPages())
+);
 
 gulp.task("css", function () {
     return gulp.src("src/assets/scss/*.scss")
