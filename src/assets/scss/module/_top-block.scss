@@ -6,7 +6,7 @@
     min-height: 62px;
 
     text-align: center;
-    
+
     &__highlighted-text {
         display: contents;
     }
@@ -28,7 +28,7 @@
 
             margin-left: 7px;
 
-            background: center / cover no-repeat url("../image/arrow.svg");
+            background: center / cover no-repeat url("/assets/image/arrow.svg");
         }
     }
 }
@@ -44,6 +44,32 @@
             &::after {
                 width: 34px;
                 height: 34px;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .top-block {
+
+        &__text {
+            margin: auto;
+
+            &::after {
+                display: none;
+            }
+
+            &::before {
+                content: "";
+
+                display: inline-block;
+
+                width: 34px;
+                height: 34px;
+
+                margin-right: 16px;
+
+                background: center / cover no-repeat url("/assets/image/arrow.svg");
             }
         }
     }

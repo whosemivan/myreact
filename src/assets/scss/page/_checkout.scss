@@ -10,7 +10,7 @@
         top: -230px;
         z-index: -1;
 
-        background: bottom left/150% url("../image/checkout-icon.svg") no-repeat;
+        background: bottom left/150% url("/assets/image/checkout-icon.svg") no-repeat;
     }
 
     .checkout__title {
@@ -52,17 +52,6 @@
 
 
 @media (min-width: $wide-breakpoint) {
-    .header {
-        margin: 0;
-
-        &__logo-and-basket-wrapper,
-        &__breadcrumbs,
-        &>.nav {
-            margin-left: 100px;
-            margin-right: 100px;
-        }
-    }
-
     .checkout {
         position: unset;
 

@@ -49,7 +49,7 @@
             z-index: -1;
             top: 11px;
             left: 23px;
-            background-image: url("../image/decorator.svg");
+            background-image: url("/assets/image/decorator.svg");
             position: absolute;
         }
 
@@ -120,7 +120,7 @@
 
         &::before {
             content: "";
-            background-image: url("../image/delivery.svg");
+            background-image: url("/assets/image/delivery.svg");
             width: 112px;
             height: 91px;
             position: absolute;
@@ -530,7 +530,7 @@
 
                     &::before {
                         content: "";
-                        background-image: url("../image/ticket.svg");
+                        background-image: url("/assets/image/ticket.svg");
                         position: absolute;
                         left: 0;
                         width: 14px;
@@ -567,7 +567,7 @@
 
         &::after {
             content: "";
-            background-image: url("../image/coin-wallet.svg");
+            background-image: url("/assets/image/coin-wallet.svg");
             width: 88px;
             height: 72px;
             position: absolute;
@@ -727,7 +727,7 @@
 
         &::after {
             content: "";
-            background-image: url("../image/crown.svg");
+            background-image: url("/assets/image/crown.svg");
             background-repeat: no-repeat;
             width: 112px;
             height: 112px;
@@ -778,7 +778,7 @@
 
         &::after {
             content: "";
-            background-image: url("../image/gift-box.svg");
+            background-image: url("/assets/image/gift-box.svg");
             width: 100px;
             height: 79px;
             position: absolute;
@@ -972,6 +972,7 @@
             &::before,
             &::after {
                 top: -2px;
+                left: 0;
             }
         }
 
@@ -1133,7 +1134,7 @@
                     &::after {
                         width: 30%;
                         height: 100%;
-                        background: right / contain url(../image/crown.svg) no-repeat;
+                        background: right / contain url(/assets/image/crown.svg) no-repeat;
                     }
 
                     .basket__baner-title {
@@ -1249,6 +1250,48 @@
 
             .about-payment--basket {
                 margin-top: 55px;
+            }
+        }
+
+        .basket__form--fourth {
+            display: grid;
+            grid-template-columns: 1fr minmax(auto, 750px);
+            gap: 0 70px;
+
+            margin-left: 100px;
+            margin-right: 100px;
+
+            &>* {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            & .basket__image-wrapper {
+                width: 262px;
+                height: 190px;
+
+                &>img {
+                    width: auto;
+                    height: 80%;
+                }
+            }
+
+            & .basket__item-title,
+            & .basket__item-price {
+                font-size: 24px;
+            }
+
+            .basket__item-prop,
+            .basket__item-sizes {
+                font-size: 20px;
+            }
+
+            .basket__item-sizes {
+
+                .basket__item-btn {
+                    width: 44px;
+                    height: 44px;
+                }
             }
         }
 

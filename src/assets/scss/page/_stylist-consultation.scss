@@ -5,7 +5,7 @@
     padding: 26px 16px;
 
     color: $white;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), left/cover url("../image/stylist-consultation bg.png"), lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), left/cover url("/assets/image/stylist-consultation bg.png"), lightgray 50% / cover no-repeat;
     box-sizing: border-box;
 
     &__title-wrapper {
@@ -30,7 +30,7 @@
         margin-top: 5px;
         margin-left: auto;
 
-        background: center / contain no-repeat url("../image/info.svg");
+        background: center / contain no-repeat url("/assets/image/info.svg");
     }
 
     &__price {
@@ -88,7 +88,7 @@
             font-weight: 300;
             font-size: 20px;
 
-            background: center url("../image/border.svg") no-repeat;
+            background: center url("/assets/image/border.svg") no-repeat;
         }
     }
 

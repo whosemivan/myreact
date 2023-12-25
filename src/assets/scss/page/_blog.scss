@@ -1,4 +1,5 @@
 .header {
+    z-index: -1;
     overflow: hidden;
     background: linear-gradient(257.17deg, #3075FC 6.89%, #A230FC 97.54%);
 
@@ -12,11 +13,11 @@
     }
 
     &__page-icon {
-        background-image: url("../image/home--white.svg");
+        background-image: url("/assets/image/home--white.svg");
     }
 
     &__basket {
-        background-image: url("../image/shopping-bag--white.svg");
+        background-image: url("/assets/image/shopping-bag--white.svg");
     }
 
     &__page-title {
@@ -41,13 +42,13 @@
 
             position: absolute;
             top: -18px;
-            left: -18%;
-            right: -18%;
+            left: -50%;
+            right: -50%;
+
+            z-index: -1;
 
             min-width: 561px;
             height: 561px;
-
-            z-index: -1;
 
             background-color: $white;
             border-radius: 100%;
@@ -88,6 +89,7 @@
 
 @media (min-width: $mobile-breakpoint) {
     .main {
+
         &__open-news {
             display: flex;
             flex-wrap: wrap;
@@ -110,17 +112,15 @@
 @media (min-width: $wide-breakpoint) {
     .header {
         margin: 0;
-
-        &__logo-and-basket-wrapper,
-        &__breadcrumbs {
-            margin-left: 100px;
-            margin-right: 100px;
-        }
+        padding: 28px 100px 0;
 
         &__page-title {
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+
             &::after {
-                left: -15%;
-                right: -15%;
+                left: -20%;
+                right: -20%;
             }
         }
     }

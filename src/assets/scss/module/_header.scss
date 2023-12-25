@@ -10,7 +10,7 @@
         width: 34px;
         height: 34px;
 
-        background-image: url("../image/shopping-bag.svg");
+        background-image: url("/assets/image/shopping-bag.svg");
         background-repeat: no-repeat;
         background-position: center;
 
@@ -51,7 +51,7 @@
 
         border-radius: 5px;
 
-        background-image: url("../image/home.svg");
+        background-image: url("/assets/image/home.svg");
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -61,7 +61,43 @@
 
 @media (min-width: $wide-breakpoint) {
     .header {
+        margin-top: 28px;
         margin-left: 100px;
         margin-right: 100px;
+
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr auto;
+
+        gap: 10px;
+
+        &__logo-and-basket-wrapper,
+        & .nav {
+            display: contents;
+        }
+
+        &__basket,
+        & .nav__search-with-filter {
+            justify-self: end;
+            grid-row: 1;
+        }
+
+        &__basket {
+            grid-column: 3 / 4;
+        }
+
+        & .nav__search-with-filter {
+            grid-column: 2 / 3;
+        }
+
+        &__breadcrumbs {
+            grid-column: 1/2;
+            grid-row: 2;
+        }
+
+        & .nav__links-wrapper {
+            justify-content: end;
+            grid-column: 2 / 4;
+        }
     }
 }
