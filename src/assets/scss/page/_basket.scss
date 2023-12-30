@@ -49,7 +49,7 @@
             z-index: -1;
             top: 11px;
             left: 23px;
-            background-image: url("../image/decorator.svg");
+            background-image: url("/assets/image/decorator.svg");
             position: absolute;
         }
 
@@ -120,7 +120,7 @@
 
         &::before {
             content: "";
-            background-image: url("../image/delivery.svg");
+            background-image: url("/assets/image/delivery.svg");
             width: 112px;
             height: 91px;
             position: absolute;
@@ -227,7 +227,7 @@
         flex-direction: column;
 
         .basket__transports-title {
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             color: #333;
             font-size: 16px;
             font-style: normal;
@@ -295,8 +295,6 @@
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
-
-                        margin-bottom: 1rem;
                     }
 
                     .basket__conditions-other-label {
@@ -314,9 +312,48 @@
                             font-style: normal;
                             font-weight: 500;
                             line-height: normal;
+
+                            margin-top: 1rem;
                         }
                     }
                 }
+            }
+        }
+
+        .basket__condition {
+
+            & .custom-input__label {
+                background-color: #F0F5FE;
+            }
+
+            &--active .basket__condition-content {
+                padding-top: 10px;
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                max-height: 0;
+
+                padding: 0 20px 0 18px;
+
+                overflow: hidden;
+                transition: all .3s ease-in-out;
+
+                background: #F0F5FE;
+
+                & .basket__btnSubmit {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            &--active {
+                border-radius: 6px;
+                border: 3px solid #3075FC;
+                background: #F0F5FE;
             }
         }
     }
@@ -327,6 +364,12 @@
         gap: 10px;
         margin-top: 19px;
         margin-bottom: 42px;
+
+        .basket__pay-title {
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+        }
 
         .basket__pay-block {
             border-radius: 6px;
@@ -530,7 +573,7 @@
 
                     &::before {
                         content: "";
-                        background-image: url("../image/ticket.svg");
+                        background-image: url("/assets/image/ticket.svg");
                         position: absolute;
                         left: 0;
                         width: 14px;
@@ -567,7 +610,7 @@
 
         &::after {
             content: "";
-            background-image: url("../image/coin-wallet.svg");
+            background-image: url("/assets/image/coin-wallet.svg");
             width: 88px;
             height: 72px;
             position: absolute;
@@ -727,7 +770,7 @@
 
         &::after {
             content: "";
-            background-image: url("../image/crown.svg");
+            background-image: url("/assets/image/crown.svg");
             background-repeat: no-repeat;
             width: 112px;
             height: 112px;
@@ -778,7 +821,7 @@
 
         &::after {
             content: "";
-            background-image: url("../image/gift-box.svg");
+            background-image: url("/assets/image/gift-box.svg");
             width: 100px;
             height: 79px;
             position: absolute;
@@ -936,6 +979,62 @@
     &__feedback--hidden {
         display: none;
     }
+
+    &__mini-info-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        min-height: 52px;
+
+        padding: 10px;
+        margin-bottom: 20px;
+
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        border-radius: 10px;
+        background: #F6F6F6;
+
+        &::before {
+            content: "";
+
+            width: 88px;
+            height: 20.8px;
+            flex-shrink: 0;
+
+            background: center / contain url("../image/road of life-logo.svg") no-repeat;
+        }
+    }
+
+    &__image-collection {
+        margin: 0 10px 40px;
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+        }
+
+        &-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+
+            margin-top: 10px;
+
+            & .basket__mega-card {
+                grid-row: 1 / 3;
+                grid-column: 1 / 3;
+            }
+        }
+    }
 }
 
 
@@ -972,6 +1071,7 @@
             &::before,
             &::after {
                 top: -2px;
+                left: 0;
             }
         }
 
@@ -1133,7 +1233,7 @@
                     &::after {
                         width: 30%;
                         height: 100%;
-                        background: right / contain url(../image/crown.svg) no-repeat;
+                        background: right / contain url("../image/crown.svg") no-repeat;
                     }
 
                     .basket__baner-title {
@@ -1167,6 +1267,21 @@
                     top: -25px;
                     padding-left: 65px;
                     padding-right: 65px;
+                }
+            }
+
+            &.basket__form--clear {
+                display: block;
+
+                &>*,
+                & .basket__container>* {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                & .basket__btnSubmit {
+                    max-width: unset;
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -1252,6 +1367,48 @@
             }
         }
 
+        .basket__form--fourth {
+            display: grid;
+            grid-template-columns: 1fr minmax(auto, 750px);
+            gap: 0 70px;
+
+            margin-left: 100px;
+            margin-right: 100px;
+
+            &>* {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            & .basket__image-wrapper {
+                width: 262px;
+                height: 190px;
+
+                &>img {
+                    width: auto;
+                    height: 80%;
+                }
+            }
+
+            & .basket__item-title,
+            & .basket__item-price {
+                font-size: 24px;
+            }
+
+            .basket__item-prop,
+            .basket__item-sizes {
+                font-size: 20px;
+            }
+
+            .basket__item-sizes {
+
+                .basket__item-btn {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+        }
+
         .basket__conditions {
 
             .basket__conditions-inputs {
@@ -1294,6 +1451,41 @@
 
         .basket__feedback--hidden {
             display: block;
+        }
+
+        &--clear {
+
+            & .basket__sum {
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+
+            & .basket__mini-info-block,
+            & .basket__shareBtn {
+                flex: 1 1;
+                height: 100%;
+                margin: 0;
+            }
+
+            & .basket__shareBtn {
+                display: flex;
+            }
+
+            & .basket__info-block-wrapper {
+                display: flex;
+                align-items: center;
+
+                margin: 0 100px;
+            }
+
+            & .basket__mini-info-block {
+                gap: 50px;
+
+                &::before {
+                    width: 176px;
+                    height: 41.6px;
+                }
+            }
         }
     }
 }

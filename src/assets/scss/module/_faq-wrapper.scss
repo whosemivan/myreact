@@ -11,7 +11,7 @@
         margin-bottom: 10px;
 
         &--open &-condition {
-            background-image: url("../image/minus.svg");
+            background-image: url("/assets/image/minus.svg");
         }
 
         &--open &-content {
@@ -46,7 +46,7 @@
         height: 15px;
 
         border-radius: 3px;
-        background-image: url("../image/plus.svg");
+        background-image: url("/assets/image/plus.svg");
     }
 
     &__accordion-content {
@@ -96,7 +96,7 @@
 
             grid-column: 2 / 3;
 
-            background: center url("../image/megaphone.png") no-repeat;
+            background: center url("/assets/image/megaphone.png") no-repeat;
         }
     }
 }

@@ -44,7 +44,7 @@
 
             margin-right: 9px;
 
-            background: center/cover url("../image/hand.svg") no-repeat;
+            background: center/cover url("/assets/image/hand.svg") no-repeat;
         }
     }
 
@@ -80,14 +80,14 @@
         padding: 4px 10px 4px 10px;
 
         border-radius: 40px;
-        background: center/11px url("../image/star--blue.svg") no-repeat, #A230FC33;
+        background: center/11px url("/assets/image/star--blue.svg") no-repeat, #A230FC33;
     }
 
     &__like-btn {
         width: 16px;
         height: 16px;
 
-        background: center/contain url("../image/heart.svg") no-repeat;
+        background: center/contain url("/assets/image/heart.svg") no-repeat;
     }
 
     &__highlight-payment-info-text {
@@ -107,7 +107,7 @@
             margin-left: 1em;
             margin-right: 1ex;
 
-            background: center/cover url("../image/about-payment-logo--black.svg") no-repeat;
+            background: center/cover url("/assets/image/about-payment-logo--black.svg") no-repeat;
         }
     }
 
@@ -175,7 +175,7 @@
         padding-top: 19px;
         margin-top: -19px;
 
-        background: center / cover url("../image/ice-bear.png") no-repeat;
+        background: center / cover url("/assets/image/ice-bear.png") no-repeat;
     }
 
     &__promotion-banner-close-btn {
@@ -188,7 +188,7 @@
 
         padding: 10px;
 
-        background: center url("../image/close-icon--white.svg") no-repeat;
+        background: center url("/assets/image/close-icon--white.svg") no-repeat;
     }
 
     &__slider-card {

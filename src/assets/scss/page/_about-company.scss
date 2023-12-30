@@ -27,7 +27,7 @@
             width: calc(502px + (581 + 581 * 0.7) * ((100vw - 430px) / $hd-plus-width));
             height: calc(397px + (594 + 581 * 0.7) * ((100vw - 430px) / $hd-plus-width));
 
-            background: center / contain url("../image/company.png") no-repeat;
+            background: center / contain url("/assets/image/company.png") no-repeat;
         }
 
         // &::after {
@@ -99,11 +99,6 @@
 }
 
 @media (min-width: $wide-breakpoint) {
-    .header {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
     .main {
 
         &__text-wrapper,
@@ -121,6 +116,8 @@
             display: flex;
             justify-content: space-between;
             gap: 50px;
+            
+            min-height: 737px;
 
             padding-left: 100px;
             padding-right: 100px;
@@ -160,13 +157,16 @@
             position: unset;
 
             &::before {
-                top: 25%;
+                top: 360px;
                 left: -395px;
 
                 z-index: 1;
 
                 width: calc(502px + 581 * (100vw / $hd-plus-width));
                 height: calc(397px + 594 * (100vw / $hd-plus-width));
+
+                max-width: 1101px;
+                max-height: 991px;
             }
 
             &::after {

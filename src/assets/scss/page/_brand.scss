@@ -48,17 +48,6 @@
 
 
 @media (min-width: $wide-breakpoint) {
-    .header {
-        margin: 0;
-
-        &__logo-and-basket-wrapper,
-        &__breadcrumbs,
-        &>.nav {
-            margin-left: 100px;
-            margin-right: 100px;
-        }
-    }
-
     .main {
 
         &__block-title,

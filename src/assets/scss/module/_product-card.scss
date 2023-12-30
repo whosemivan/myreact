@@ -63,6 +63,10 @@
         padding-right: 5px;
         width: 100%;
 
+        &--selected {
+            background-color: #D9D9D9;
+        }
+
         svg {
             margin-left: auto;
         }
@@ -120,7 +124,7 @@
 
             min-width: 16px;
             min-height: 16px;
-            background: center / cover no-repeat url("../image/heart.svg");
+            background: center / cover no-repeat url("/assets/image/heart.svg");
         }
     }
 }
