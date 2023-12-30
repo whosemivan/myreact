@@ -121,7 +121,7 @@
 
         &::before {
             content: "";
-            background-image: url("/assets/image/addIcon.svg");
+            background-image: url("../image/addIcon.svg");
             width: 12px;
             height: 12px;
             position: absolute;
@@ -144,7 +144,7 @@
 
             &::after {
                 content: "";
-                background-image: url("/assets/image/rightArrow.svg");
+                background-image: url("../image/rightArrow.svg");
                 width: 24px;
                 height: 24px;
                 position: absolute;

@@ -5,7 +5,7 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp start",
-    "deploy": "gulp build && gh-pages -d build"
+    "deploy": "gulp build && gh-pages -d public"
   },
   "author": "",
   "license": "ISC",
