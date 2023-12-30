@@ -41,10 +41,10 @@
   opacity: 0.5;
 }
 .page-selcetor__next-icon {
-  background-image: url("/assets/image/arrow-black.svg");
+  background-image: url("../image/arrow-black.svg");
 }
 .page-selcetor__back-icon {
-  background-image: url("/assets/image/arrow-black.svg");
+  background-image: url("../image/arrow-black.svg");
   transform: rotate(180deg);
 }
 .page-selcetor__page {
@@ -87,7 +87,7 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: center url("/assets/image/search.svg") no-repeat;
+  background: center url("../image/search.svg") no-repeat;
 }
 .nav__search-input {
   width: 100%;
@@ -153,11 +153,11 @@
   height: 10px;
   padding: 0 10px;
   padding-top: 13px;
-  background: bottom url("/assets/image/mini-top-arrow.svg") no-repeat;
+  background: bottom url("../image/mini-top-arrow.svg") no-repeat;
 }
 .nav__search-counter-btn#dec-count {
   bottom: 0;
-  background: top url("/assets/image/mini-down-arrow.svg") no-repeat;
+  background: top url("../image/mini-down-arrow.svg") no-repeat;
 }
 .nav__links-wrapper {
   display: flex;
@@ -221,12 +221,12 @@
   height: 14px;
   transform: translate(0, -50%);
   margin-left: 10px;
-  background: center url("/assets/image/crown--black.svg") no-repeat;
+  background: center url("../image/crown--black.svg") no-repeat;
 }
 .brands-list__favorite-btn {
   width: 18px;
   height: 18px;
-  background: center url("/assets/image/heart--light.svg") no-repeat;
+  background: center url("../image/heart--light.svg") no-repeat;
 }
 
 .main__nav {

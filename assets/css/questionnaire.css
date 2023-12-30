@@ -57,19 +57,19 @@
   opacity: 1;
 }
 .question-cards__card ul > li:nth-child(1) > span > label {
-  background: center/contain url("/assets/image/emoji/1.svg") no-repeat;
+  background: center/contain url("../image/emoji/1.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(2) > span > label {
-  background: center/contain url("/assets/image/emoji/2.svg") no-repeat;
+  background: center/contain url("../image/emoji/2.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(3) > span > label {
-  background: center/contain url("/assets/image/emoji/3.svg") no-repeat;
+  background: center/contain url("../image/emoji/3.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(4) > span > label {
-  background: center/contain url("/assets/image/emoji/4.svg") no-repeat;
+  background: center/contain url("../image/emoji/4.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(5) > span > label {
-  background: center/contain url("/assets/image/emoji/5.svg") no-repeat;
+  background: center/contain url("../image/emoji/5.svg") no-repeat;
 }
 .question-cards__card ul > li > input[type=radio]:checked + span {
   background-color: #fff;

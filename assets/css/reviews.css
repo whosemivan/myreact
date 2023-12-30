@@ -59,10 +59,10 @@
   height: 14px;
   padding: 10px;
   z-index: 10;
-  background: center url("/assets/image/close-icon.svg") no-repeat;
+  background: center url("../image/close-icon.svg") no-repeat;
 }
 .popup__close-btn--light {
-  background: center url("/assets/image/close-icon--light.svg") no-repeat;
+  background: center url("../image/close-icon--light.svg") no-repeat;
 }
 .popup__btn {
   display: flex;
@@ -102,7 +102,7 @@
   height: 40px;
   border-radius: 40px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0509803922);
-  background: center url("/assets/image/filter-icon.svg") no-repeat;
+  background: center url("../image/filter-icon.svg") no-repeat;
 }
 
 .news-block__info-wrapper {
@@ -128,18 +128,18 @@
   color: #3075FC;
 }
 .news-block__opinion--positive::before {
-  background: center/cover no-repeat url("/assets/image/smile.svg");
+  background: center/cover no-repeat url("../image/smile.svg");
 }
 .news-block__opinion--negative {
   color: #F91818;
 }
 .news-block__opinion--negative::before {
-  background: center/cover no-repeat url("/assets/image/sad.svg");
+  background: center/cover no-repeat url("../image/sad.svg");
 }
 .news-block__heart {
   min-width: 16px;
   min-height: 16px;
-  background: center/cover no-repeat url("/assets/image/heart.svg");
+  background: center/cover no-repeat url("../image/heart.svg");
 }
 
 @media (min-width: 1200px) {
@@ -164,10 +164,10 @@
   margin-right: 0;
 }
 .stars-wrapper__start {
-  background: center/contain url("/assets/image/star--fill.svg") no-repeat;
+  background: center/contain url("../image/star--fill.svg") no-repeat;
 }
 .stars-wrapper__start--light {
-  background: center/contain url("/assets/image/star--light.svg") no-repeat;
+  background: center/contain url("../image/star--light.svg") no-repeat;
 }
 
 @media (min-width: 1200px) {
@@ -274,10 +274,10 @@
   opacity: 0.5;
 }
 .page-selcetor__next-icon {
-  background-image: url("/assets/image/arrow-black.svg");
+  background-image: url("../image/arrow-black.svg");
 }
 .page-selcetor__back-icon {
-  background-image: url("/assets/image/arrow-black.svg");
+  background-image: url("../image/arrow-black.svg");
   transform: rotate(180deg);
 }
 .page-selcetor__page {
@@ -322,7 +322,7 @@
   content: "";
   width: 24px;
   height: 24px;
-  background: center url("/assets/image/calendar-icon.svg") no-repeat;
+  background: center url("../image/calendar-icon.svg") no-repeat;
 }
 .reviews-filter__stars-list {
   display: flex;

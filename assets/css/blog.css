@@ -56,18 +56,18 @@
   color: #3075FC;
 }
 .news-block__opinion--positive::before {
-  background: center/cover no-repeat url("/assets/image/smile.svg");
+  background: center/cover no-repeat url("../image/smile.svg");
 }
 .news-block__opinion--negative {
   color: #F91818;
 }
 .news-block__opinion--negative::before {
-  background: center/cover no-repeat url("/assets/image/sad.svg");
+  background: center/cover no-repeat url("../image/sad.svg");
 }
 .news-block__heart {
   min-width: 16px;
   min-height: 16px;
-  background: center/cover no-repeat url("/assets/image/heart.svg");
+  background: center/cover no-repeat url("../image/heart.svg");
 }
 
 @media (min-width: 1200px) {
@@ -92,10 +92,10 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 .header__page-icon {
-  background-image: url("/assets/image/home--white.svg");
+  background-image: url("../image/home--white.svg");
 }
 .header__basket {
-  background-image: url("/assets/image/shopping-bag--white.svg");
+  background-image: url("../image/shopping-bag--white.svg");
 }
 .header__page-title {
   position: relative;

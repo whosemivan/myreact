@@ -42,18 +42,18 @@
   color: #3075FC;
 }
 .news-block__opinion--positive::before {
-  background: center/cover no-repeat url("/assets/image/smile.svg");
+  background: center/cover no-repeat url("../image/smile.svg");
 }
 .news-block__opinion--negative {
   color: #F91818;
 }
 .news-block__opinion--negative::before {
-  background: center/cover no-repeat url("/assets/image/sad.svg");
+  background: center/cover no-repeat url("../image/sad.svg");
 }
 .news-block__heart {
   min-width: 16px;
   min-height: 16px;
-  background: center/cover no-repeat url("/assets/image/heart.svg");
+  background: center/cover no-repeat url("../image/heart.svg");
 }
 
 @media (min-width: 1200px) {
@@ -100,7 +100,7 @@
   min-height: 463px;
   padding: 26px 16px;
   color: #FFFFFF;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), left/cover url("/assets/image/stylist-consultation bg.png"), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), left/cover url("../image/stylist-consultation bg.png"), lightgray 50%/cover no-repeat;
   box-sizing: border-box;
 }
 .stylist-consultation__title-wrapper {
@@ -119,7 +119,7 @@
   height: 20px;
   margin-top: 5px;
   margin-left: auto;
-  background: center/contain no-repeat url("/assets/image/info.svg");
+  background: center/contain no-repeat url("../image/info.svg");
 }
 .stylist-consultation__price {
   margin-top: 6px;
@@ -162,7 +162,7 @@
   margin-right: 19px;
   font-weight: 300;
   font-size: 20px;
-  background: center url("/assets/image/border.svg") no-repeat;
+  background: center url("../image/border.svg") no-repeat;
 }
 .stylist-consultation__btn {
   display: inline-block;
@@ -244,7 +244,7 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: center url("/assets/image/search.svg") no-repeat;
+  background: center url("../image/search.svg") no-repeat;
 }
 .nav__search-input {
   width: 100%;
@@ -310,11 +310,11 @@
   height: 10px;
   padding: 0 10px;
   padding-top: 13px;
-  background: bottom url("/assets/image/mini-top-arrow.svg") no-repeat;
+  background: bottom url("../image/mini-top-arrow.svg") no-repeat;
 }
 .nav__search-counter-btn#dec-count {
   bottom: 0;
-  background: top url("/assets/image/mini-down-arrow.svg") no-repeat;
+  background: top url("../image/mini-down-arrow.svg") no-repeat;
 }
 .nav__links-wrapper {
   display: flex;

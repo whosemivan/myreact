@@ -1072,7 +1072,7 @@ button {
 .header__basket {
   width: 34px;
   height: 34px;
-  background-image: url("/assets/image/shopping-bag.svg");
+  background-image: url("../image/shopping-bag.svg");
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
@@ -1102,7 +1102,7 @@ button {
   width: 24px;
   height: 24px;
   border-radius: 5px;
-  background-image: url("/assets/image/home.svg");
+  background-image: url("../image/home.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1335,7 +1335,7 @@ button {
   content: "%";
 }
 .slider__info-slide--with-bg {
-  background: center/contain no-repeat url("/assets/image/slider-img/pencels.png");
+  background: center/contain no-repeat url("../image/slider-img/pencels.png");
 }
 .slider__info-slide:last-of-type {
   margin-right: 0;
@@ -1418,7 +1418,7 @@ button {
   top: -26px;
   width: 110px;
   height: 99px;
-  background: center/contain no-repeat url("/assets/image/ice-bear.png");
+  background: center/contain no-repeat url("../image/ice-bear.png");
 }
 .banner__wrapper {
   display: flex;
@@ -1472,7 +1472,7 @@ button {
   width: 14px;
   height: 14px;
   margin-right: 7px;
-  background: center/contain no-repeat url("/assets/image/white-star.svg");
+  background: center/contain no-repeat url("../image/white-star.svg");
 }
 .banner__more-link {
   margin-bottom: 40px;
@@ -1493,7 +1493,7 @@ button {
   width: 5px;
   margin-top: 4px;
   margin-left: 6px;
-  background: center/contain no-repeat url("/assets/image/arrow3.svg");
+  background: center/contain no-repeat url("../image/arrow3.svg");
 }
 .banner__btn {
   padding: 13px 39px;
@@ -1554,7 +1554,7 @@ button {
   width: 14px;
   height: 14px;
   margin-left: 7px;
-  background: center/cover no-repeat url("/assets/image/arrow.svg");
+  background: center/cover no-repeat url("../image/arrow.svg");
 }
 
 @media (min-width: 768px) {
@@ -1651,7 +1651,7 @@ button {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: center/contain no-repeat url("/assets/image/arrow.svg");
+  background: center/contain no-repeat url("../image/arrow.svg");
 }
 .card__mini-btns-wrapper {
   display: flex;
@@ -1670,7 +1670,7 @@ button {
   width: 14px;
   height: 14px;
   margin-left: 6px;
-  background: center/contain no-repeat url("/assets/image/star.svg");
+  background: center/contain no-repeat url("../image/star.svg");
 }
 .card--empty {
   display: flex;
@@ -1791,7 +1791,7 @@ button {
   left: unset;
   min-width: 16px;
   min-height: 16px;
-  background: center/cover no-repeat url("/assets/image/heart.svg");
+  background: center/cover no-repeat url("../image/heart.svg");
 }
 
 @media (min-width: 768px) {
@@ -1832,7 +1832,7 @@ button {
   margin-bottom: 10px;
 }
 .faq-wrapper__accordion--open .faq-wrapper__accordion-condition {
-  background-image: url("/assets/image/minus.svg");
+  background-image: url("../image/minus.svg");
 }
 .faq-wrapper__accordion--open .faq-wrapper__accordion-content {
   margin-top: 23px;
@@ -1858,7 +1858,7 @@ button {
   min-width: 15px;
   height: 15px;
   border-radius: 3px;
-  background-image: url("/assets/image/plus.svg");
+  background-image: url("../image/plus.svg");
 }
 .faq-wrapper__accordion-content {
   max-height: 0;
@@ -1894,7 +1894,7 @@ button {
     width: 475px;
     height: 475px;
     grid-column: 2/3;
-    background: center url("/assets/image/megaphone.png") no-repeat;
+    background: center url("../image/megaphone.png") no-repeat;
   }
 }
 @media (min-width: 1440px) {
@@ -1954,7 +1954,7 @@ button {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0509803922);
 }
 .communication-block--with-img {
-  background: url("/assets/image/help-support.png") no-repeat right 23px bottom 7px/128px, linear-gradient(257.17deg, #3075fc 6.89%, #a230fc 97.54%);
+  background: url("../image/help-support.png") no-repeat right 23px bottom 7px/128px, linear-gradient(257.17deg, #3075fc 6.89%, #a230fc 97.54%);
 }
 .communication-block--with-img > .communication-block__content-wrapper {
   min-width: 230px;
@@ -2094,7 +2094,7 @@ button {
   width: 12px;
   height: 12px;
   margin-right: 11px;
-  background: center/contain no-repeat url("/assets/image/about-payment-logo.svg");
+  background: center/contain no-repeat url("../image/about-payment-logo.svg");
 }
 .about-payment__text {
   margin-top: 35px;
@@ -2129,7 +2129,7 @@ button {
   width: 24px;
   height: 24px;
   margin-left: auto;
-  background: center url("/assets/image/arrow-blue.svg") no-repeat;
+  background: center url("../image/arrow-blue.svg") no-repeat;
 }
 .about-payment__radio {
   display: flex;
@@ -2197,7 +2197,7 @@ button {
   display: block;
   width: 18px;
   height: 18px;
-  background: center/contain no-repeat url("/assets/image/arrow2.svg");
+  background: center/contain no-repeat url("../image/arrow2.svg");
 }
 
 @media (max-width: 768px) {
@@ -2267,7 +2267,7 @@ button {
   background-color: rgba(48, 117, 252, 0.2);
 }
 .badge--mob-new-product > .badge-icon, .badge--web-new-product > .badge-icon {
-  background: center/cover url("/assets/image/badges/new-product--icon.svg") no-repeat;
+  background: center/cover url("../image/badges/new-product--icon.svg") no-repeat;
 }
 .badge--web-new-product {
   left: 6%;
@@ -2282,7 +2282,7 @@ button {
   background-color: rgba(251, 105, 73, 0.2);
 }
 .badge--mob-discount > .badge-icon, .badge--web-discount > .badge-icon {
-  background: center/cover url("/assets/image/badges/discount--icon.svg") no-repeat;
+  background: center/cover url("../image/badges/discount--icon.svg") no-repeat;
 }
 .badge--web-discount {
   left: 6%;
@@ -2297,7 +2297,7 @@ button {
   background-color: rgba(116, 163, 80, 0.2);
 }
 .badge--mob-free-shipping > .badge-icon, .badge--web-free-shipping > .badge-icon {
-  background: center/cover url("/assets/image/badges/free-shipping--icon.svg") no-repeat;
+  background: center/cover url("../image/badges/free-shipping--icon.svg") no-repeat;
 }
 .badge--web-free-shipping {
   left: 6%;
@@ -2312,7 +2312,7 @@ button {
   background-color: rgba(162, 48, 252, 0.2);
 }
 .badge--mob-popular > .badge-icon, .badge--web-popular > .badge-icon {
-  background: center/cover url("/assets/image/badges/popular--icon.svg") no-repeat;
+  background: center/cover url("../image/badges/popular--icon.svg") no-repeat;
 }
 .badge--web-popular {
   left: 6%;
@@ -2327,7 +2327,7 @@ button {
   background-color: rgba(249, 24, 24, 0.2);
 }
 .badge--mob-sales-leader > .badge-icon, .badge--web-sales-leader > .badge-icon {
-  background: center/cover url("/assets/image/badges/sales-leader--icon.svg") no-repeat;
+  background: center/cover url("../image/badges/sales-leader--icon.svg") no-repeat;
 }
 .badge--web-sales-leader {
   left: 6%;
@@ -2342,7 +2342,7 @@ button {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .badge--mob-premium > .badge-icon, .badge--web-premium > .badge-icon {
-  background: center/cover url("/assets/image/badges/premium--icon.svg") no-repeat;
+  background: center/cover url("../image/badges/premium--icon.svg") no-repeat;
 }
 .badge--web-premium {
   left: 6%;
@@ -2357,7 +2357,7 @@ button {
   background-color: rgba(255, 198, 87, 0.2);
 }
 .badge--mob-finished-image > .badge-icon, .badge--web-finished-image > .badge-icon {
-  background: center/cover url("/assets/image/badges/finished-image--icon.svg") no-repeat;
+  background: center/cover url("../image/badges/finished-image--icon.svg") no-repeat;
 }
 .badge--web-finished-image {
   left: 6%;
@@ -2418,7 +2418,7 @@ button {
 .info-block__img {
   min-width: 156px;
   min-height: 33.79px;
-  background: center no-repeat url("/assets/image/payment-methods.svg");
+  background: center no-repeat url("../image/payment-methods.svg");
 }
 .info-block--stretched {
   width: 100%;

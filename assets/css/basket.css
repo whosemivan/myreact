@@ -112,7 +112,7 @@
   z-index: -1;
   top: 11px;
   left: 23px;
-  background-image: url("/assets/image/decorator.svg");
+  background-image: url("../image/decorator.svg");
   position: absolute;
 }
 .basket__stages .basket__stage {
@@ -172,7 +172,7 @@
 }
 .basket__delivery::before {
   content: "";
-  background-image: url("/assets/image/delivery.svg");
+  background-image: url("../image/delivery.svg");
   width: 112px;
   height: 91px;
   position: absolute;
@@ -548,7 +548,7 @@
 }
 .basket__steps .basket__steps-step .basket__steps-info .basket__steps-promocode::before {
   content: "";
-  background-image: url("/assets/image/ticket.svg");
+  background-image: url("../image/ticket.svg");
   position: absolute;
   left: 0;
   width: 14px;
@@ -578,7 +578,7 @@
 }
 .basket__sum::after {
   content: "";
-  background-image: url("/assets/image/coin-wallet.svg");
+  background-image: url("../image/coin-wallet.svg");
   width: 88px;
   height: 72px;
   position: absolute;
@@ -716,7 +716,7 @@
 }
 .basket__banner::after {
   content: "";
-  background-image: url("/assets/image/crown.svg");
+  background-image: url("../image/crown.svg");
   background-repeat: no-repeat;
   width: 112px;
   height: 112px;
@@ -761,7 +761,7 @@
 }
 .basket__isPresent::after {
   content: "";
-  background-image: url("/assets/image/gift-box.svg");
+  background-image: url("../image/gift-box.svg");
   width: 100px;
   height: 79px;
   position: absolute;

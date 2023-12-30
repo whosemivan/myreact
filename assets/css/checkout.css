@@ -112,19 +112,19 @@
   opacity: 1;
 }
 .question-cards__card ul > li:nth-child(1) > span > label {
-  background: center/contain url("/assets/image/emoji/1.svg") no-repeat;
+  background: center/contain url("../image/emoji/1.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(2) > span > label {
-  background: center/contain url("/assets/image/emoji/2.svg") no-repeat;
+  background: center/contain url("../image/emoji/2.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(3) > span > label {
-  background: center/contain url("/assets/image/emoji/3.svg") no-repeat;
+  background: center/contain url("../image/emoji/3.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(4) > span > label {
-  background: center/contain url("/assets/image/emoji/4.svg") no-repeat;
+  background: center/contain url("../image/emoji/4.svg") no-repeat;
 }
 .question-cards__card ul > li:nth-child(5) > span > label {
-  background: center/contain url("/assets/image/emoji/5.svg") no-repeat;
+  background: center/contain url("../image/emoji/5.svg") no-repeat;
 }
 .question-cards__card ul > li > input[type=radio]:checked + span {
   background-color: #fff;
@@ -172,7 +172,7 @@
   right: 0;
   top: -230px;
   z-index: -1;
-  background: bottom left/150% url("/assets/image/checkout-icon.svg") no-repeat;
+  background: bottom left/150% url("../image/checkout-icon.svg") no-repeat;
 }
 .checkout .checkout__title {
   display: flex;
