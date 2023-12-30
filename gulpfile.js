@@ -71,7 +71,6 @@ gulp.task("html", function () {
         .pipe(gulp.dest("public"));
 });
 
-
 gulp.task("copy", function () {
     return gulp.src([
             "src/assets/fonts/**/*.{woff,woff2}",
