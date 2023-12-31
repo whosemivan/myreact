@@ -46,8 +46,7 @@
             <div class="nav__btns-wrapper">
                 <button class="nav__color-btn bg-second-gray" type="button" id="color-preview"></button>
                 <div class="nav__search-counter-wrapper">
-                    <input class="nav__search-counter bg-second-gray" type="number" value="36" min="1" max="100"
-                        name="count" id="counter">
+                    <input class="nav__search-counter bg-second-gray" type="number" value="36" min="1" max="100" name="count" id="counter">
                     <button class="nav__search-counter-btn" id="inc-count" type="button"></button>
                     <button class="nav__search-counter-btn" id="dec-count" type="button"></button>
                 </div>
@@ -76,9 +75,20 @@
     </div>
 
     <div class="nav__links-wrapper mt-m fs-xss">
-        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Верхняя одежда</span></a>
-        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Платья</span></a>
+        <div class="nav__desk-links-wrapper">
+            <a href="#"><span class="nav__desk-link nav__desk-link--selected px-xl py-s color-black">Женщинам</span></a>
+            <a href="#"><span class="nav__desk-link px-xl py-s color-black">Мужчинам</span></a>
+            <a href="#"><span class="nav__desk-link px-xl py-s color-black">Детям</span></a>
+        </div>
+        
+        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Новинки</span></a>
+        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Одежда</span></a>
         <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Обувь</span></a>
+        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Аксессуары</span></a>
+        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Бренды</span></a>
+        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Премиум</span></a>
+        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Спорт</span></a>
+        <a href="#"><span class="nav__link bg-second-gray px-xl py-s color-black">Распродажа</span></a>
     </div>
 </nav>
 
@@ -86,9 +96,6 @@
 <div class="header__breadcrumbs">
     <div class="header__page-icon bg-second-gray"></div>
     <ul>
-        <!--  
-         -->
-
         
          <li><a href="#">Мужское</a></li>
              <li><a href="#">Обувь</a></li>

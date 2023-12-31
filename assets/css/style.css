@@ -1087,7 +1087,7 @@ button {
 .header__breadcrumbs > ul > li {
   display: inline-block;
   color: #BFBFBF;
-  font-size: calc(12px + 0.3125vw);
+  font-size: 14px;
   margin-left: 15px;
 }
 .header__breadcrumbs > ul > li::after {
@@ -1120,6 +1120,11 @@ button {
   .header__logo-and-basket-wrapper, .header .nav {
     display: contents;
   }
+  .header .logo {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: flex-start;
+  }
   .header__basket, .header .nav__search-with-filter {
     justify-self: end;
     grid-row: 1;
@@ -1127,16 +1132,25 @@ button {
   .header__basket {
     grid-column: 3/4;
   }
+  .header .nav__search-wrapper {
+    width: 400px;
+    margin-left: auto;
+  }
   .header .nav__search-with-filter {
     grid-column: 2/3;
   }
   .header__breadcrumbs {
     grid-column: 1/2;
-    grid-row: 2;
+    grid-row: 1;
+    align-self: flex-end;
+    margin-top: 2rem;
   }
   .header .nav__links-wrapper {
     justify-content: end;
-    grid-column: 2/4;
+    grid-column: 1/4;
+    grid-row: 2;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 .main__feedback-sections {
