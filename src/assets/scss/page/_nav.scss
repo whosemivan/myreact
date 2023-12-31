@@ -14,7 +14,7 @@
 
         display: flex;
         align-items: stretch;
-        
+
         z-index: 2;
 
         min-height: 40px;
@@ -146,5 +146,41 @@
         display: inline-block;
 
         border-radius: 50px;
+    }
+
+    &__desk-link {
+        display: none;
+    }
+}
+
+
+@media (min-width: $wide-breakpoint) {
+    .nav {
+
+        &__desk-links-wrapper {
+            display: flex;
+            column-gap: 30px;
+            margin-right: auto;
+        }
+
+        &__link,
+        &__desk-link {
+            padding: 0;
+
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            background: unset;
+        }
+
+        &__desk-link {
+            display: inline-block;
+
+            &--selected {
+                font-weight: 700;
+                text-decoration-line: underline;
+            }
+        }
     }
 }
