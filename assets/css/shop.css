@@ -414,6 +414,9 @@
 .nav__desk-link {
   display: none;
 }
+.nav__desk-links-wrapper {
+  display: none;
+}
 
 @media (min-width: 1200px) {
   .nav__desk-links-wrapper {

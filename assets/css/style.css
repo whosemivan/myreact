@@ -2396,19 +2396,29 @@ button {
   }
 }
 .interview-card {
+  position: relative;
   padding: 22px 34px;
   border-radius: 10px;
-  background: linear-gradient(267deg, #B3EF85 9.37%, #74A350 128.25%);
   box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .interview-card__title {
   font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.interview-card::after {
+  content: "";
+  width: 95px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 24px;
+  background: top/cover url("../image/ice-bear.png") no-repeat;
 }
 
 @media (min-width: 1200px) {
   .interview-card__title {
     font-size: 28px;
-    font-weight: 800;
   }
 }
 .info-block {

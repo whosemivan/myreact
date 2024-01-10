@@ -54,7 +54,6 @@
             <h1 class="visually-hidden">Личный кабинет</h1>
 
             <div class="cabinet__profile">
-
                 <div class="cabinet__wrapper">
                     <img class="cabinet__image" src="assets/image/avatar.jpg" alt="Аватар пользователя">
                     <div class="cabinet__profile-name">
@@ -63,36 +62,85 @@
                     </div>
                 </div>
 
-                <h2 class="cabinet__title">Оплата</h2>
+                <section>
+                    <h2 class="cabinet__title">Адрес доставки</h2>
 
-                <div class="cabinet__paymethod">
-                    <div class="cabinet__paymethod-block">
-                        <span class="cabinet__pay-title">Основная карта</span>
-                        <span class="cabinet__pay-number">**** 1234</span>
+                    <button class="cabinet__info-card cabinet__info-card--changeable">
+                        <h2 class="fs-xxs fw-600">ул. Бестужева, 1/1, жилой район Адлер, Сочи</h2>
+                        <p class="fs-xxs mt-m fw-600">+7 (862) 243-23-71</p>
+                    </button>
+                </section>
+
+                <section>
+                    <h2 class="cabinet__title">Транспортная компания</h2>
+
+                    <div class="cabinet__info-card cabinet__info-card-line-items-wrapper">
+                        <img src="./assets/image/pochtaLogo.svg" alt="delivery logo" class="cabinet__info-card-img">
+                        <p class="fs-s fw-600 cabinet__info-card-cost">599</p>
                     </div>
-                    <span class="cabinet__pay-date">03/25</span>
-                </div>
+                </section>
 
-                <button type="button" class="cabinet__addBtn">
-                    Добавить карту
-                </button>
+                <section>
+                    <h2 class="cabinet__title">Оплата</h2>
 
+                    <button class="cabinet__info-card cabinet__info-card--changeable cabinet__info-card--normal-p">
+                        <h2 class="fs-fs fw-500">Иван Иванов</h2>
+
+                        <div class="cabinet__info-card-line-items-wrapper">
+                            <p class="fs-s mt-m fw-500">**** 1234</p>
+                            <p class="fs-xxs mt-m fw-500">03/25</p>
+                        </div>
+                    </button>
+                </section>
+
+                <section class="cabinet__orders-list orders-list">
+                    <a href="#" class="orders-list__title">
+                        <p class="orders-list__title-text">Mои заказы</p>
+                        <p class="orders-list__ordes-count">24</p>
+                    </a>
+
+                    <div class="orders-list__cards">
+                        <a href="#">
+                            <img src="./assets/image/slider-img/product1.png" alt="product">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/image/slider-img/product1.png" alt="product">
+                        </a>
+                    </div>
+                </section>
 
                 <ul class="cabinet__list">
-                    <li class="cabinet__item">
-                        <a class="cabinet__link" href="#">Управление подписками</a>
-                    </li>
-                    <li class="cabinet__item">
-                        <a class="cabinet__link" href="#">Промокоды</a>
+                    <li class="cabinet__items-wrapper">
+                        <a class="cabinet__link" href="#">Избранные</a>
+                        <div class="cabinet__sub-links-wrapper">
+                            <a class="cabinet__sub-link" href="#">Образы</a>
+                            <a class="cabinet__sub-link" href="#">Одежда</a>
+                            <a class="cabinet__sub-link" href="#">Обув</a>
+                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
+                            <a class="cabinet__sub-link" href="#">Образы</a>
+                            <a class="cabinet__sub-link" href="#">Одежда</a>
+                            <a class="cabinet__sub-link" href="#">Обув</a>
+                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
+                            <a class="cabinet__sub-link" href="#">Образы</a>
+                            <a class="cabinet__sub-link" href="#">Одежда</a>
+                            <a class="cabinet__sub-link" href="#">Обув</a>
+                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
+                            <a class="cabinet__sub-link" href="#">Образы</a>
+                            <a class="cabinet__sub-link" href="#">Одежда</a>
+                            <a class="cabinet__sub-link" href="#">Обув</a>
+                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
+                            <a class="cabinet__sub-link" href="#">Образы</a>
+                            <a class="cabinet__sub-link" href="#">Одежда</a>
+                        </div>
                     </li>
                     <li class="cabinet__item">
                         <a class="cabinet__link" href="#">Настройки</a>
                     </li>
                     <li class="cabinet__item">
-                        <a class="cabinet__link" href="#">Заказы</a>
+                        <a class="cabinet__link" href="#">Мои способы оплаты</a>
                     </li>
                     <li class="cabinet__item">
-                        <a class="cabinet__link" href="#">Избранное</a>
+                        <a class="cabinet__link" href="#">Управление подписками</a>
                     </li>
                 </ul>
             </div>
@@ -425,7 +473,6 @@
 
     <script>
         const phoneDiv = document.querySelector(".cabinet__phone");
-        console.log(phoneDiv.innerText);
         phoneDiv.innerText = validPhone(phoneDiv.innerText);
     </script>
 </body>
