@@ -53,81 +53,75 @@
     }
 
     &__title {
-        margin-bottom: 17px;
-        color: #858585;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
-
-    &__paymethod {
-        display: flex;
-        padding: 18px;
-        border-radius: 10px;
-        background: #FFF;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
         margin-bottom: 10px;
+        color: #333;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
 
-        .cabinet__paymethod-block {
+    &__info-card {
+        width: 100%;
+
+        padding: 20px;
+        margin-bottom: 15px;
+
+        border-radius: 6px;
+        background: #F0F5FE;
+
+        color: #48455C;
+        text-align: left;
+
+        &-img {
+            width: 10vh;
+            min-width: 80px;
+            max-width: 100px;
+        }
+
+        &-line-items-wrapper {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .cabinet__pay-title {
-            margin-bottom: 19px;
-            color: #4088DD;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+        &-cost {
+
+            &::after {
+                content: " руб";
+            }
         }
 
-        .cabinet__pay-number {
-            color: #414253;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+        &--changeable {
+            position: relative;
+
+            padding-right: 40px;
+
+            &::after {
+                content: "";
+
+                position: absolute;
+                top: 20px;
+                right: 16px;
+
+                width: 16px;
+                height: 16px;
+
+                background: center / cover url("../image/edit.svg") no-repeat;
+            }
         }
 
-        .cabinet__pay-date {
-            margin-top: auto;
-            margin-left: auto;
-            color: #414253;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+        &--normal-p {
+            padding: 20px;
         }
     }
 
-    &__addBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        background: #FFF;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
-        color: #4088DD;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        position: relative;
-        padding-top: 46px;
-        padding-bottom: 20px;
-        margin-bottom: 27px;
+    &__orders-list {
+        margin-bottom: 10px;
+        padding: 0 10px;
 
-        &::before {
-            content: "";
-            background-image: url("../image/addIcon.svg");
-            width: 12px;
-            height: 12px;
-            position: absolute;
-            top: 22px;
-            left: 50%;
-            transform: translate(-50%, 0);
+        .orders-list__cards {
+            margin-top: -10px;
+            padding: 0 20px;
         }
     }
 
@@ -137,10 +131,14 @@
         gap: 6px;
         margin-bottom: 28px;
 
-        .cabinet__item {
+        .cabinet__item,
+        .cabinet__items-wrapper {
             border-radius: 5px;
             background: #F6F8F9;
             position: relative;
+        }
+
+        .cabinet__item {
 
             &::after {
                 content: "";
@@ -148,22 +146,52 @@
                 width: 24px;
                 height: 24px;
                 position: absolute;
-                right: 0;
+                right: 16px;
                 top: 50%;
                 transform: translate(0, -50%);
             }
         }
 
+        .cabinet__items-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .cabinet__link {
             display: block;
             width: 100%;
-            height: 100%;
             padding: 23px 19px;
             color: #414253;
             font-size: 14px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 600;
             line-height: normal;
+        }
+
+        .cabinet__sub-links-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+
+            margin: -10px 21px 11px;
+        }
+
+        .cabinet__sub-link {
+            color: #3075FC;
+            font-family: Gilroy;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            border-radius: 40px;
+            background: rgba(48, 117, 252, 0.20);
+
+            display: inline-flex;
+            padding: 4px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
         }
     }
 }
@@ -175,7 +203,7 @@
 
         &__slider {
             margin-bottom: 129px;
-            padding: 0;
+            padding: 0 100px;
         }
 
         &__block-title-with-filter-buttons {
@@ -210,19 +238,6 @@
 
         &__wrapper {
             grid-column: 2 / 4;
-        }
-
-        &__paymethod {
-            grid-column: 2 / 3;
-
-            margin: 0;
-            padding: 15px 18px;
-        }
-
-        &__addBtn {
-            grid-column: 3 / 4;
-
-            margin: 0;
         }
 
         &__list {

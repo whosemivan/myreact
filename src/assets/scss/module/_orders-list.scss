@@ -1,0 +1,87 @@
+.orders-list {
+    width: 100%;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        min-height: 60px;
+
+        padding: 20px;
+
+        border-radius: 5px;
+        background: #F6F8F9;
+
+        font-weight: 600;
+    }
+
+    &__ordes-count {
+        display: flex;
+        align-items: center;
+
+        color: #D9D9D9;
+
+        &::after {
+            content: "";
+
+            display: inline-block;
+
+            width: 24px;
+            height: 24px;
+
+            margin-left: 12px;
+
+            background: center/cover url("../image/rightArrow.svg") no-repeat;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        a {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 10px 100px 10px 15px;
+
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.10);
+
+            img {
+                width: 60px;
+                height: 60px;
+
+                object-fit: cover;
+
+                border-radius: 4px;
+            }
+
+            &::before {
+                content: "";
+
+                width: 18px;
+                height: 18px;
+
+                position: absolute;
+                margin: auto;
+                right: 25px;
+
+                background: center / cover url("../image/arrow-black.svg") no-repeat;
+            }
+
+            &::after {
+                content: "Oставить отзыв на купленные модели";
+
+                font-weight: 600;
+            }
+        }
+    }
+}

@@ -34,12 +34,12 @@
         &::before {
             content: "";
 
-            width: 10px;
-            height: 10px;
+            width: 16px;
+            height: 16px;
 
             margin-right: 1rex;
 
-            background: center/cover url("../image/bell.svg") no-repeat;
+            background: center/cover url("../image/info--dark.svg") no-repeat;
         }
     }
 
@@ -83,12 +83,12 @@
             margin-top: 20px;
         }
 
-        &__more-sizes {
+        // &__more-sizes {
 
-            &::before {
-                width: 16px;
-                height: 19px;
-            }
-        }
+        //     &::before {
+        //         width: 16px;
+        //         height: 19px;
+        //     }
+        // }
     }
 }
