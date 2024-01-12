@@ -2381,6 +2381,28 @@ button {
   content: "Готовый образ";
   display: inline-block;
 }
+.badge--mob-delivery-image, .badge--web-delivery-image {
+  color: #FB6949;
+  background-color: rgba(251, 105, 73, 0.2);
+}
+.badge--mob-delivery-image > .badge-icon, .badge--web-delivery-image > .badge-icon {
+  background: center/cover url("../image/badges/delivery--icon.svg") no-repeat;
+}
+.badge--web-delivery-image {
+  left: 6%;
+  right: unset;
+}
+.badge--web-delivery-image::after {
+  content: "В процессе доставки";
+  display: inline-block;
+}
+.badge--relative {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
 .badge > .badge-icon {
   width: 14px;
   height: 14px;
@@ -2393,6 +2415,13 @@ button {
   .badge > .badge-icon {
     width: 27px;
     height: 27px;
+  }
+  .badge--mini {
+    padding: 4px 10px;
+  }
+  .badge--mini > .badge-icon {
+    width: 18px;
+    height: 18px;
   }
 }
 .interview-card {

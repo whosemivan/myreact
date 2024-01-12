@@ -33,6 +33,11 @@
   background: #F6F8F9;
   font-weight: 600;
 }
+.orders-list__title-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .orders-list__ordes-count {
   display: flex;
   align-items: center;
@@ -233,6 +238,7 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+  flex: 1;
 }
 
 @media (min-width: 1200px) {
@@ -254,7 +260,16 @@
     -moz-column-gap: 54px;
          column-gap: 54px;
     grid-template-columns: 383px 1fr 1fr;
+    row-gap: 15px;
     margin-top: 90px;
+  }
+  .cabinet__profile > section {
+    display: flex;
+    flex-direction: column;
+  }
+  .cabinet__profile > section > .cabinet__profile-content-block {
+    flex: 1;
+    margin-bottom: 0;
   }
   .cabinet__image {
     width: 189px;
@@ -266,12 +281,14 @@
   .cabinet__wrapper {
     grid-column: 2/4;
   }
-  .cabinet__list {
-    grid-row: 1/5;
+  .cabinet__desctop-panel {
+    grid-column: 1;
+    grid-row: 1/10;
   }
 }
 .filter-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   padding: 6px 9px;
   box-sizing: border-box;
@@ -279,7 +296,7 @@
 }
 .filter-buttons__btn {
   flex-grow: 1;
-  padding: 10px 25px;
+  padding: 10px;
   text-align: center;
   border-radius: 60px;
   background-color: rgba(0, 0, 0, 0);
@@ -298,4 +315,37 @@
   .filter-buttons__btn {
     font-size: 14px;
   }
+}
+.promo-codes-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-self: baseline;
+  padding: 20px 10px 17px 100px;
+  border-radius: 5px;
+  background: 16px center url("../image/discount-coupon.png") no-repeat, linear-gradient(89deg, #3075FC 17.37%, #0EA6FC 89.23%);
+}
+.promo-codes-banner__codes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.promo-codes-banner__codes-wrapper > p {
+  display: flex;
+  padding: 4px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.promo-codes-banner__codes-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background: center/cover url("../image/arrow.svg");
 }

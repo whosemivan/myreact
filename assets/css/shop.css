@@ -29,6 +29,7 @@
 
 .filter-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   padding: 6px 9px;
   box-sizing: border-box;
@@ -36,7 +37,7 @@
 }
 .filter-buttons__btn {
   flex-grow: 1;
-  padding: 10px 25px;
+  padding: 10px;
   text-align: center;
   border-radius: 60px;
   background-color: rgba(0, 0, 0, 0);

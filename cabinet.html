@@ -65,7 +65,7 @@
                 <section>
                     <h2 class="cabinet__title">Адрес доставки</h2>
 
-                    <button class="cabinet__info-card cabinet__info-card--changeable">
+                    <button class="cabinet__profile-content-block cabinet__info-card cabinet__info-card--changeable">
                         <h2 class="fs-xxs fw-600">ул. Бестужева, 1/1, жилой район Адлер, Сочи</h2>
                         <p class="fs-xxs mt-m fw-600">+7 (862) 243-23-71</p>
                     </button>
@@ -74,7 +74,7 @@
                 <section>
                     <h2 class="cabinet__title">Транспортная компания</h2>
 
-                    <div class="cabinet__info-card cabinet__info-card-line-items-wrapper">
+                    <div class="cabinet__profile-content-block cabinet__info-card cabinet__info-card-line-items-wrapper">
                         <img src="./assets/image/pochtaLogo.svg" alt="delivery logo" class="cabinet__info-card-img">
                         <p class="fs-s fw-600 cabinet__info-card-cost">599</p>
                     </div>
@@ -83,7 +83,7 @@
                 <section>
                     <h2 class="cabinet__title">Оплата</h2>
 
-                    <button class="cabinet__info-card cabinet__info-card--changeable cabinet__info-card--normal-p">
+                    <button class="cabinet__profile-content-block cabinet__info-card cabinet__info-card--changeable cabinet__info-card--normal-p">
                         <h2 class="fs-fs fw-500">Иван Иванов</h2>
 
                         <div class="cabinet__info-card-line-items-wrapper">
@@ -93,56 +93,69 @@
                     </button>
                 </section>
 
-                <section class="cabinet__orders-list orders-list">
-                    <a href="#" class="orders-list__title">
-                        <p class="orders-list__title-text">Mои заказы</p>
-                        <p class="orders-list__ordes-count">24</p>
-                    </a>
+                <div class="cabinet__desctop-panel">
+                    <section class="cabinet__orders-list orders-list">
+                        <h1 class="visually-hidden">Заказы</h1>
 
-                    <div class="orders-list__cards">
-                        <a href="#">
-                            <img src="./assets/image/slider-img/product1.png" alt="product">
+                        <a href="#" class="orders-list__title">
+                            <div class="orders-list__title-text-wrapper">
+                                <p>Mои заказы</p>
+                                <div class="badge badge--mob-delivery-image badge--relative badge--mini">
+                                    <span class="badge-icon"></span>
+                                </div>
+                            </div>
+                            <p class="orders-list__ordes-count">24</p>
                         </a>
-                        <a href="#">
-                            <img src="./assets/image/slider-img/product1.png" alt="product">
-                        </a>
-                    </div>
-                </section>
 
-                <ul class="cabinet__list">
-                    <li class="cabinet__items-wrapper">
-                        <a class="cabinet__link" href="#">Избранные</a>
-                        <div class="cabinet__sub-links-wrapper">
-                            <a class="cabinet__sub-link" href="#">Образы</a>
-                            <a class="cabinet__sub-link" href="#">Одежда</a>
-                            <a class="cabinet__sub-link" href="#">Обув</a>
-                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
-                            <a class="cabinet__sub-link" href="#">Образы</a>
-                            <a class="cabinet__sub-link" href="#">Одежда</a>
-                            <a class="cabinet__sub-link" href="#">Обув</a>
-                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
-                            <a class="cabinet__sub-link" href="#">Образы</a>
-                            <a class="cabinet__sub-link" href="#">Одежда</a>
-                            <a class="cabinet__sub-link" href="#">Обув</a>
-                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
-                            <a class="cabinet__sub-link" href="#">Образы</a>
-                            <a class="cabinet__sub-link" href="#">Одежда</a>
-                            <a class="cabinet__sub-link" href="#">Обув</a>
-                            <a class="cabinet__sub-link" href="#">Аксесуары</a>
-                            <a class="cabinet__sub-link" href="#">Образы</a>
-                            <a class="cabinet__sub-link" href="#">Одежда</a>
+                        <div class="orders-list__cards">
+                            <a href="#">
+                                <img src="./assets/image/slider-img/product1.png" alt="product">
+                            </a>
+                            <a href="#">
+                                <img src="./assets/image/slider-img/product1.png" alt="product">
+                            </a>
                         </div>
-                    </li>
-                    <li class="cabinet__item">
-                        <a class="cabinet__link" href="#">Настройки</a>
-                    </li>
-                    <li class="cabinet__item">
-                        <a class="cabinet__link" href="#">Мои способы оплаты</a>
-                    </li>
-                    <li class="cabinet__item">
-                        <a class="cabinet__link" href="#">Управление подписками</a>
-                    </li>
-                </ul>
+                    </section>
+
+                    <section>
+                        <h1 class="visually-hidden">Промокоды</h1>
+
+                        <a href="#" class="cabinet__profile-content-block cabinet__promo-codes-banner promo-codes-banner color-white fs-xs fw-600 mb-m">
+                            <p>Промокоды</p>
+                            <div class="promo-codes-banner__codes-wrapper fs-xxs">
+                                <p>-20%</p>
+                                <p>Бесплатная доставка</p>
+                            </div>
+                        </a>
+                    </section>
+
+                    <ul class="cabinet__list">
+                        <li class="cabinet__items-wrapper">
+                            <a class="cabinet__link" href="#">Избранные</a>
+                            <div class="cabinet__sub-links-wrapper">
+                                <a class="cabinet__sub-link" href="#">Образы</a>
+                                <a class="cabinet__sub-link" href="#">Одежда</a>
+                                <a class="cabinet__sub-link" href="#">Обув</a>
+                                <a class="cabinet__sub-link" href="#">Аксесуары</a>
+                                <a class="cabinet__sub-link" href="#">Образы</a>
+                                <a class="cabinet__sub-link" href="#">Одежда</a>
+                                <a class="cabinet__sub-link" href="#">Обув</a>
+                                <a class="cabinet__sub-link" href="#">Аксесуары</a>
+                                <a class="cabinet__sub-link" href="#">Образы</a>
+                                <a class="cabinet__sub-link" href="#">Одежда</a>
+                            </div>
+                        </li>
+                        <li class="cabinet__item">
+                            <a class="cabinet__link" href="#">Настройки</a>
+                        </li>
+                        <li class="cabinet__item">
+                            <a class="cabinet__link" href="#">Мои способы оплаты</a>
+                        </li>
+                        <li class="cabinet__item">
+                            <a class="cabinet__link" href="#">Управление подписками</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
