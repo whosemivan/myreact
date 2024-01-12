@@ -1,5 +1,6 @@
 .filter-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
 
     padding: 6px 9px;
@@ -11,7 +12,7 @@
     &__btn {
         flex-grow: 1;
 
-        padding: 10px 25px;
+        padding: 10px;
 
         text-align: center;
 

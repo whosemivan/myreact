@@ -1,0 +1,44 @@
+.promo-codes-banner {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+    align-self: baseline;
+
+    padding: 20px 10px 17px 100px;
+
+    border-radius: 5px;
+    background: 16px center url("../image/discount-coupon.png") no-repeat, linear-gradient(89deg, #3075FC 17.37%, #0EA6FC 89.23%);
+
+    &__codes-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        &>p {
+            display: flex;
+            padding: 4px 10px;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.20);
+        }
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 18px;
+            right: 16px;
+
+            width: 24px;
+            height: 24px;
+
+            background: center / cover url("../image/arrow.svg");
+        }
+    }
+}

@@ -74,6 +74,11 @@
         </form>
 
         <span class="checkout__rect"></span>
+
+        @@include('./partials/feedbackSections.html', {
+        "includeFaq": false,
+        "infoText": false,
+        })
     </main>
 
     @@include('./partials/footer.html')
