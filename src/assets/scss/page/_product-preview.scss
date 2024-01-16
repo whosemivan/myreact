@@ -6,6 +6,16 @@
         margin-right: 29px;
     }
 
+    &__title-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5ex;
+
+        text-transform: uppercase;
+    }
+
     &__stars-wrapper {
         display: none;
     }
@@ -36,16 +46,16 @@
     &__price {
         margin-right: 10px;
 
-        &::before {
-            display: inline-block;
+        // &::before {
+        //     display: inline-block;
 
-            width: 21px;
-            height: 19px;
+        //     width: 21px;
+        //     height: 19px;
 
-            margin-right: 9px;
+        //     margin-right: 9px;
 
-            background: center/cover url("../image/hand.svg") no-repeat;
-        }
+        //     background: center/cover url("../image/hand.svg") no-repeat;
+        // }
     }
 
     &__price-old {
@@ -90,6 +100,21 @@
         background: center/contain url("../image/heart.svg") no-repeat;
     }
 
+    &__availability-and-payment-info-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__payment-info-wrapper {
+        display: inline-flex;
+        align-items: center;
+        gap: 1em;
+
+        margin-top: 1ex;
+    }
+
     &__highlight-payment-info-text {
         display: inline-flex;
         align-items: center;
@@ -104,10 +129,30 @@
             width: 12px;
             height: 12px;
 
-            margin-left: 1em;
             margin-right: 1ex;
 
             background: center/cover url("../image/about-payment-logo--black.svg") no-repeat;
+        }
+    }
+
+    &__availability-marker {
+        display: inline-block;
+
+        color: #74A350;
+        font-weight: 800;
+
+        &::before {
+            content: "";
+
+            display: inline-block;
+
+            width: 1ex;
+            height: 1ex;
+
+            margin-right: 0.5ex;
+
+            background-color: #74A350;
+            border-radius: 100%;
         }
     }
 
@@ -254,6 +299,9 @@
         &__stars-wrapper {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
+
+            width: 100%;
         }
 
         &__btn-wrapper {

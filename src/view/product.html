@@ -34,7 +34,10 @@
             <div class="main__product-preview product-preview">
                 <section class="product-preview__header">
                     <div class="product-preview__title-block">
-                        <h3 class="fs-s fw-800">Nike Air Max SC</h3>
+                        <div class="product-preview__title-wrapper">
+                            <h3 class="fs-s fw-800">Nike Air Max SC</h3>
+                            <p class="color-gray fs-xss">купили <span class="fw-900">4 раза за 48 часов</span></p>
+                        </div>
 
                         <div class="product-preview__stars-wrapper">
                             <ul class="stars-wrapper">
@@ -55,27 +58,30 @@
                             <p class="product-preview__price-old fs-m fw-300">67 060</p>
                         </div>
 
-                        <div class="product-preview__btn-wrapper">
+                        <!-- <div class="product-preview__btn-wrapper">
                             <button class="product-preview__star-btn"></button>
                             <button class="product-preview__like-btn"></button>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <p class="fs-xxs">или 4 платежа по 5 200₽ <span class="product-preview__highlight-payment-info-text">долями</span></p>
+                    <div class="product-preview__availability-and-payment-info-wrapper">
+                        <p class="product-preview__payment-info-wrapper fs-xxs"><span class="product-preview__highlight-payment-info-text">долями</span> или 4 платежа по 5 200₽</p>
+                        <p class="product-preview__availability-marker fs-xxs">в наличии</p>
+                    </div>
                 </section>
 
                 <!-- <div class="product-preview__promotion-banner">
-                <p class="product-preview__discount fw-800">35</p>
+                    <p class="product-preview__discount fw-800">35</p>
 
-                <p class="product-preview__discount-info fs-xxs fw-500">
-                    Акция действует до 31 декабря 2023 года
-                    <span class="product-preview__more-link fs-xss fw-800">подробнее</span>
-                </p>
+                    <p class="product-preview__discount-info fs-xxs fw-500">
+                        Акция действует до 31 декабря 2023 года
+                        <span class="product-preview__more-link fs-xss fw-800">подробнее</span>
+                    </p>
 
-                <div class="product-preview__bear"></div>
+                    <div class="product-preview__bear"></div>
 
-                <button class="product-preview__promotion-banner-close-btn" onclick="hideParent(this)"></button>
-            </div> -->
+                    <button class="product-preview__promotion-banner-close-btn" onclick="hideParent(this)"></button>
+                </div> -->
 
                 <div class="product-data-wrapper__left-block">
                     <div class="mian__discount-timer discount-timer">
@@ -208,31 +214,39 @@
                         </div>
                     </div>
 
-                    <a href="#" class="size-chart__last-size-link fw-600">Полседний размер</a>
+                    <!-- <a href="#" class="size-chart__last-size-link fw-600">Полседний размер</a> -->
                 </div>
 
                 <div class="main__link-wrapper">
-                    <button class="main__buy-link bg-black color-white" onclick="openPopup('added-to-cart-popup')">
-                        <p class="fw-600">Купить</p>
-                        <p class="fw-600">48 060 ₽</p>
+                    <button class="main__buy-link bg-black color-white fw-600" onclick="openPopup('added-to-cart-popup')">
+                        <p>Купить</p>
+                        <p>48 060 ₽</p>
+                        <span>Осталась 1 шт</span>
                     </button>
 
-                    <a href="#" class="main__basket-link">
-                    </a>
+                    <!-- <a href="#" class="main__basket-link"></a> -->
+                    <a href="#" class="main__favorite-link"></a>
                 </div>
             </div>
         </div>
 
-        <section class="main__about-payment about-payment about-payment--basket">
+        <section class="main__about-payment about-payment about-payment--basket about-payment--hidden">
             <div class="about-payment__text-wrapper">
                 <div class="about-payment__title-wrapper about-payment__title-wrapper--pe-none mx-m" onclick="accordionState('about-payment', 'about-payment--hidden')">
-                    <h3 class="about-payment__title">Оплата долями</h3>
+                    <div class="about-payment__title">
+                        <div>
+                            <p>Оплата долями</p>
+                            <p class="mt-s fs-xss">4 тысячи в месяц</p>
+                        </div>
+                    </div>
                     <span class="about-payment__anchor-link"></span>
                 </div>
 
-                <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в
-                    течение 8
-                    недель. Без комиссий и переплат.</p>
+                <p class="about-payment__text fs-xxs fw-600">Оплачивайте 25% покупки сразу, остальное частями — в течение 8 недель. Без комиссий и переплат.</p>
+            </div>
+
+            <div class="basket__mini-info-block mini-info-block fs-xxs mx-m mt-m">
+                <p>Часть прибыли с покупки будет перечислена в благотворительный фонд "Дорога жизни".</p>
             </div>
 
             <div class="about-payment__cards-wrapper">
@@ -340,7 +354,9 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card">
-                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border" src="assets/image/slider-img/product1.png" alt="product img">
+                            <div class="card__img-wrapper card__img-wrapper--round">
+                                <img src="assets/image/slider-img/product1.png" alt="product img">
+                            </div>
 
                             <div class="mt-s">
                                 <h3 class="fw-800">Nike Air Max SC</h3>
@@ -349,17 +365,14 @@
 
                             <div class="card__mini-btns-wrapper mt-s">
                                 <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                                <label>
-                                    <input type="checkbox" class="input-with-mark" hidden name="product1">
-                                    <span class="mark mark--blue mark--checkbox"></span>
-                                </label>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border" src="assets/image/slider-img/product1.png" alt="product img">
+                            <div class="card__img-wrapper card__img-wrapper--round">
+                                <img src="assets/image/slider-img/product1.png" alt="product img">
+                            </div>
 
                             <div class="mt-s">
                                 <h3 class="fw-800">Nike Air Max SC</h3>
@@ -368,17 +381,14 @@
 
                             <div class="card__mini-btns-wrapper mt-s">
                                 <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                                <label>
-                                    <input type="checkbox" class="input-with-mark" hidden name="product2">
-                                    <span class="mark mark--blue mark--checkbox"></span>
-                                </label>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
-                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border" src="assets/image/slider-img/product1.png" alt="product img">
+                            <div class="card__img-wrapper card__img-wrapper--round">
+                                <img src="assets/image/slider-img/product1.png" alt="product img">
+                            </div>
 
                             <div class="mt-s">
                                 <h3 class="fw-800">Nike Air Max SC</h3>
@@ -387,37 +397,13 @@
 
                             <div class="card__mini-btns-wrapper mt-s">
                                 <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                                <label>
-                                    <input type="checkbox" class="input-with-mark" hidden name="product3">
-                                    <span class="mark mark--blue mark--checkbox"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img class="card__img-wrapper--round card__img-wrapper--mini-img card__img-wrapper--mini-img-with-border" src="assets/image/slider-img/product1.png" alt="product img">
-
-                            <div class="mt-s">
-                                <h3 class="fw-800">Nike Air Max SC</h3>
-                                <p class="card__price mt-s fw-500">48 060</p>
-                            </div>
-
-                            <div class="card__mini-btns-wrapper mt-s">
-                                <p class="product-card__sale card__price fs-xss color-white">-1 060</p>
-
-                                <label>
-                                    <input type="checkbox" class="input-with-mark" hidden name="product4">
-                                    <span class="mark mark--blue mark--checkbox"></span>
-                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="swiper-button-prev slider__button"></div>
-                <div class="swiper-button-next slider__button"></div>
+                <!-- <div class="swiper-button-prev slider__button"></div>
+                <div class="swiper-button-next slider__button"></div> -->
             </div>
 
             <div class="main__add-to-basket-btn add-to-basket-btn">
@@ -679,7 +665,7 @@
 
         @@include('./partials/stylistConsultation.html')
 
-        <div class="main__brand-baner">
+        <!-- <div class="main__brand-baner">
             <section class="banner__wrapper color-white fs-xxs bg-black">
                 <div class="banner__header">
                     <div class="banner__logo-and-link-wrapper">
@@ -705,6 +691,10 @@
 
                 <a href="#" class="banner__link fw-800">Другие товары бренда nike</a>
             </section>
+        </div> -->
+
+        <div class="main__block-title block-title">
+            <h3 class="fs-s fw-800">Другие товары бренда nike</h3>
         </div>
 
         <div class="main__mini-slider swiper slider">
