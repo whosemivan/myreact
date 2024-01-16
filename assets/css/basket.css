@@ -903,25 +903,7 @@
   display: none;
 }
 .basket__mini-info-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  min-height: 52px;
-  padding: 10px;
   margin-bottom: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  border-radius: 10px;
-  background: #F6F6F6;
-}
-.basket__mini-info-block::before {
-  content: "";
-  width: 88px;
-  height: 20.8px;
-  flex-shrink: 0;
-  background: center/contain url("../image/road of life-logo.svg") no-repeat;
 }
 .basket__image-collection {
   margin: 0 10px 40px;
@@ -1341,4 +1323,25 @@
 }
 .custom-input--light .custom-input__input {
   background-color: unset;
+}
+
+.mini-info-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 52px;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10px;
+  background: #F6F6F6;
+}
+.mini-info-block::before {
+  content: "";
+  width: 88px;
+  height: 20.8px;
+  flex-shrink: 0;
+  background: center/contain url("../image/road of life-logo.svg") no-repeat;
 }

@@ -38,24 +38,12 @@ const freeModeSlider = new Swiper(".slider--free-mode", {
 
 const recommendationsSlider = new Swiper(".main__recommendations-slider", {
     direction: "horizontal",
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-
+    slidesPerView: 3,
+    slidesPerGroup: 3,
     breakpoints: {
         1200: {
             slidesPerView: "auto",
-            spaceBetween: 124,
-            
-            freeMode: {
-                enabled: true,
-                sticky: false,
-            },
         },
-    },
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
     },
 });
 
