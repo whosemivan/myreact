@@ -5,14 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Корзина</title>
+    <title>Тип оплаты</title>
 
     <!-- Утилиты -->
     <script src="assets/js/utils.js"></script>
-    <!-- ### -->
-
-    <!-- Подключение стилей слайдера -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- ### -->
 
     <link rel="stylesheet" href="assets/css/style.min.css">
@@ -37,102 +33,19 @@
 
 
 
-<div class="header__breadcrumbs">
-    <div class="header__page-icon bg-second-gray"></div>
-    <ul>
-         <li><a href="#">Мужское</a></li>  <li><a href="#">Обувь</a></li>  <li><a href="#">Корзина</a></li> 
-    </ul>
-</div>
-
 
 
     </header>
 
 
     <main class="basket">
-        <h1 class="visually-hidden">Корзина</h1>
-        <div class="basket__stages basket__stages--third mx-m">
-            <span class="basket__stage basket__stage--active">
-                Корзина
-            </span>
-            <span class="basket__stage basket__stage--active">
-                Доставка
-            </span>
-            <span class="basket__stage basket__stage--active">
-                Оплата
-            </span>
-        </div>
-
-        <div class="basket__sum basket__sum--third basket--mobile mx-m">
-            <span class="basket__sum-info">Сумма</span>
-            <span class="basket__sum-price">48 060 ₽</span>
-        </div>
-
+        <h3 class="basket__product-title fs-s fw-800 mx-m">Оплата</h3>
 
         <form class="basket__form--third">
-            <section class="about-payment about-payment--basket">
-                <label for="payment" class="about-payment__title-wrapper mx-m">
-                    <div class="about-payment__radio">
-                        <input hidden type="checkbox" class="input-with-mark" name="payment" id="payment">
-                        <span class="mark mark--radio mark--blue"></span>
-
-                        <span class="about-payment__label">Oплата долями</span>
-                    </div>
-
-                    <span class="about-payment__price">5 200 ₽</span>
-                </label>
-
-                <p class="about-payment__text fs-xxs fw-600 mx-m">Оплачивайте 25% покупки сразу, остальное частями — в
-                    течение 8
-                    недель. Без комиссий и переплат.</p>
-
-                <div class="about-payment__cards-wrapper mx-m">
-                    <div class="about-payment__card about-payment__card--selected">
-                        <h4 class="fs-xxs fw-900">Сегодня</h4>
-                        <p class="fs-s mt-s">5 200 ₽</p>
-
-                    </div>
-
-                    <div class="about-payment__card">
-                        <h4 class="fs-xxs fw-900">
-                            <script type="text/javascript">
-                                document.write(getDayAndMonthName({
-                                    numWeeks: 2
-                                }));
-                            </script>
-                        </h4>
-                        <p class="fs-s mt-s">5 200 ₽</p>
-                    </div>
-
-                    <div class="about-payment__card">
-                        <h4 class="fs-xxs fw-900">
-                            <script type="text/javascript">
-                                document.write(getDayAndMonthName({
-                                    numWeeks: 4
-                                }));
-                            </script>
-                        </h4>
-                        <p class="fs-s mt-s">5 200 ₽</p>
-                    </div>
-
-                    <div class="about-payment__card">
-                        <h4 class="fs-xxs fw-900">
-                            <script type="text/javascript">
-                                document.write(getDayAndMonthName({
-                                    numWeeks: 6
-                                }));
-                            </script>
-                        </h4>
-                        <p class="fs-s mt-s">5 200 ₽</p>
-                    </div>
-                </div>
-            </section>
-
-
             <div class="basket__pay mx-m">
                 <div class="basket__pay-block">
                     <label class="basket__pay-input">
-                        <input type="radio" class="input-with-mark" hidden name="pay" value="cash">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
                         <span class="mark mark--radio"></span>
 
                         <span class="basket__pay-label">Oплата долями</span>
@@ -165,40 +78,38 @@
                 </div>
                 <div class="basket__pay-block basket__pay-block--active">
                     <label class="basket__pay-input">
-                        <input type="radio" class="input-with-mark" hidden name="pay" value="card" checked>
+                        <input type="radio" class="input-with-mark" hidden name="pay" checked>
                         <span class="mark mark--radio"></span>
 
                         <span class="basket__pay-label">Онлайн оплата картой</span>
                     </label>
 
-                    <div class="basket__pay-info">
-                        <p class="basket__pay-info-input-wrapper">
-                            <label for="number" class="basket__pay-info-label">Номер карты</label>
-                            <input type="number" id="number" class="basket__pay-info-input">
-                        </p>
+                    <div class="basket__pay-info basket__pay-types">
+                        <label class="basket__pay-type-input">
+                            <input type="radio" class="input-with-mark" hidden name="pay-type" value="1" checked>
+                            <span class="mark mark--radio"></span>
 
-                        <div class="basket__pay-info-block">
-                            <p>
-                                <label for="date" class="basket__pay-info-label">Дата</label>
-                                <input type="number" id="date" class="basket__pay-info-input">
-                            </p>
-                            <p>
-                                <label for="cvv" class="basket__pay-info-label">CVV</label>
-                                <input type="number" id="cvv" class="basket__pay-info-input">
-                            </p>
-                        </div>
-
-                        <button type="submit" class="basket__btnSubmit basket__btnSubmit--pay">
-                            Оплатить
-                            <span>
-                                48 000 ₽
+                            <span class="basket__pay-type-label basket__pay-type-label--active fs-s fw-600">
+                                <span>**** 1234</span>
+                                <span>03/25</span>
                             </span>
-                        </button>
+                        </label>
+                        <label class="basket__pay-type-input">
+                            <input type="radio" class="input-with-mark" hidden name="pay-type" value="2" checked>
+                            <span class="mark mark--radio"></span>
+
+                            <span class="basket__pay-type-label basket__pay-type-label fs-s fw-600">
+                                <span>**** 1234</span>
+                                <span>03/25</span>
+                            </span>
+                        </label>
+
+                        <button class="basket__add-card fs-xxs">Добавить карту</button>
                     </div>
                 </div>
                 <div class="basket__pay-block">
                     <label class="basket__pay-input">
-                        <input type="radio" class="input-with-mark" hidden name="pay" value="apple">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
                         <span class="mark mark--radio"></span>
 
                         <span class="basket__pay-label">Apple pay</span>
@@ -206,7 +117,7 @@
                 </div>
                 <div class="basket__pay-block">
                     <label class="basket__pay-input">
-                        <input type="radio" class="input-with-mark" hidden name="pay" value="gpay">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
                         <span class="mark mark--radio"></span>
 
                         <span class="basket__pay-label">Gpay</span>
@@ -214,7 +125,7 @@
                 </div>
                 <div class="basket__pay-block">
                     <label class="basket__pay-input">
-                        <input type="radio" class="input-with-mark" hidden name="pay" value="yoo">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
                         <span class="mark mark--radio"></span>
 
                         <span class="basket__pay-label">Yoo Money</span>
@@ -222,7 +133,7 @@
                 </div>
                 <div class="basket__pay-block">
                     <label class="basket__pay-input">
-                        <input type="radio" class="input-with-mark" hidden name="pay" value="sber">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
                         <span class="mark mark--radio"></span>
 
                         <span class="basket__pay-label">Sber Pay</span>
@@ -230,66 +141,6 @@
                 </div>
             </div>
         </form>
-
-        <div class="main__feedback-sections">
-    
-
-    
-
-    
-    <div class="main__communication-blocks-wrapper">
-        <section class="communication-block communication-block--with-img color-white">
-            <div class="communication-block__content-wrapper">
-                <h3 class="communication-block__title">Нужна помощь?</h3>
-                <p class="communication-block__sub-title">
-                    Наши консультанты будут рады ответить на Ваши вопросы.
-                </p>
-            </div>
-
-            <div class="communication-block__btns-wrapper">
-                <button class="communication-block__btn p-s">написать</button>
-                <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
-            </div>
-        </section>
-
-        <div class="main__communication-block-and-interview-card-wrapper">
-            <section class="communication-block bg-off-white color-second-black">
-                <div class="communication-block__content-wrapper">
-                    <h3 class="communication-block__title">подпишитесь</h3>
-                    <p class="communication-block__text">
-                        Оставьте свой e-mail, чтобы первыми узнать о старте
-                        SALE и новых поступлениях
-                    </p>
-
-                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
-                        name="mail">
-
-                    <p class="communication-block__sub-text fs-xss">
-                        Подписываясь на рассылку, вы подтверждаете свое согласие с
-                        <a class="color-second-black" href="#">политикой конфиденциальности.</a>
-                    </p>
-                </div>
-            </section>
-
-            <a href="../questionnaire.html" class="interview-card bg-green-gradient-g color-white">
-                <h3 class="interview-card__title">Опрос</h3>
-                <p>Сделаем сайт лучше</p>
-            </a>
-        </div>
-    </div>
-    
-
-    <div class="main__chat-wrapper">
-        <button class="chat fw-700 color-white bg-black">
-            <div class="chat__points">
-                <span class="chat__point bg-white"></span>
-                <span class="chat__point bg-white"></span>
-                <span class="chat__point bg-white"></span>
-            </div>
-            <p>чат</p>
-        </button>
-    </div>
-</div>
     </main>
 
     <footer class="footer bg-black">
