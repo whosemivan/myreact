@@ -147,33 +147,16 @@
         padding: 0 17px;
 
         & .swiper-wrapper {
-            gap: 1rem;
-        }
-
-        & .swiper-slide {
-            flex: 1;
-            display: flex;
-            flex-direction: row;
             align-items: center;
+            gap: 1rem;
 
-            &::after {
-                content: "";
-
+            &>span {
                 display: block;
 
-                width: 2rem;
-                height: 2rem;
-
-                margin-left: 1rem;
+                width: 1rem;
+                height: 1rem;
 
                 background: center / contain url("../image/addIcon--transpaernt.svg") no-repeat;
-            }
-
-            &:last-of-type {
-
-                &::after {
-                    background: none;
-                }
             }
         }
 
@@ -316,6 +299,13 @@
 
         &__recommendations-slider {
             padding: 0 100px;
+
+            & .swiper-wrapper {
+
+                &>span {
+                    // margin-top: 10rem;
+                }
+            }
 
             & .swiper-slide {
                 justify-content: flex-start;

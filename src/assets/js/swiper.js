@@ -38,8 +38,8 @@ const freeModeSlider = new Swiper(".slider--free-mode", {
 
 const recommendationsSlider = new Swiper(".main__recommendations-slider", {
     direction: "horizontal",
-    slidesPerView: 3,
-    slidesPerGroup: 3,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
     breakpoints: {
         1200: {
             slidesPerView: "auto",

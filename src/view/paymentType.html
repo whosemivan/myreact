@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Тип оплаты</title>
+
+    <!-- Утилиты -->
+    <script src="assets/js/utils.js"></script>
+    <!-- ### -->
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/basket.min.css">
+</head>
+
+<body>
+    @@include('./partials/topBlock.html')
+
+    <header class="header mx-m">
+        @@include('./partials/header.html', {
+        "pageName": "paymentType"
+        })
+    </header>
+
+
+    <main class="basket">
+        <h3 class="basket__product-title fs-s fw-800 mx-m">Оплата</h3>
+
+        <form class="basket__form--third">
+            <div class="basket__pay mx-m">
+                <div class="basket__pay-block">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
+                        <span class="mark mark--radio"></span>
+
+                        <span class="basket__pay-label">Oплата долями</span>
+                    </label>
+
+                    <div class="basket__pay-info">
+                        <p class="basket__pay-info-input-wrapper">
+                            <label for="number" class="basket__pay-info-label">Номер карты</label>
+                            <input type="number" id="number" class="basket__pay-info-input">
+                        </p>
+
+                        <div class="basket__pay-info-block">
+                            <p>
+                                <label for="date" class="basket__pay-info-label">Дата</label>
+                                <input type="number" id="date" class="basket__pay-info-input">
+                            </p>
+                            <p>
+                                <label for="cvv" class="basket__pay-info-label">CVV</label>
+                                <input type="number" id="cvv" class="basket__pay-info-input">
+                            </p>
+                        </div>
+
+                        <button type="submit" class="basket__btnSubmit basket__btnSubmit--pay">
+                            Оплатить
+                            <span>
+                                48 000 ₽
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="basket__pay-block basket__pay-block--active">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="input-with-mark" hidden name="pay" checked>
+                        <span class="mark mark--radio"></span>
+
+                        <span class="basket__pay-label">Онлайн оплата картой</span>
+                    </label>
+
+                    <div class="basket__pay-info basket__pay-types">
+                        <label class="basket__pay-type-input">
+                            <input type="radio" class="input-with-mark" hidden name="pay-type" value="1" checked>
+                            <span class="mark mark--radio"></span>
+
+                            <span class="basket__pay-type-label basket__pay-type-label--active fs-s fw-600">
+                                <span>**** 1234</span>
+                                <span>03/25</span>
+                            </span>
+                        </label>
+                        <label class="basket__pay-type-input">
+                            <input type="radio" class="input-with-mark" hidden name="pay-type" value="2" checked>
+                            <span class="mark mark--radio"></span>
+
+                            <span class="basket__pay-type-label basket__pay-type-label fs-s fw-600">
+                                <span>**** 1234</span>
+                                <span>03/25</span>
+                            </span>
+                        </label>
+
+                        <button class="basket__add-card fs-xxs">Добавить карту</button>
+                    </div>
+                </div>
+                <div class="basket__pay-block">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
+                        <span class="mark mark--radio"></span>
+
+                        <span class="basket__pay-label">Apple pay</span>
+                    </label>
+                </div>
+                <div class="basket__pay-block">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
+                        <span class="mark mark--radio"></span>
+
+                        <span class="basket__pay-label">Gpay</span>
+                    </label>
+                </div>
+                <div class="basket__pay-block">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
+                        <span class="mark mark--radio"></span>
+
+                        <span class="basket__pay-label">Yoo Money</span>
+                    </label>
+                </div>
+                <div class="basket__pay-block">
+                    <label class="basket__pay-input">
+                        <input type="radio" class="input-with-mark" hidden name="pay">
+                        <span class="mark mark--radio"></span>
+
+                        <span class="basket__pay-label">Sber Pay</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    @@include('./partials/footer.html')
+
+    @@include('./partials/bottomNav.html', {
+    "pageName": "basket"
+    })
+
+    <!-- Подключение кода слайдера -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <!-- ### -->
+
+    <!-- Подключение функционла открытия pay-input карточек -->
+    <script src="assets/js/pay-input.js"></script>
+    <!-- ### -->
+</body>
+
+</html>
