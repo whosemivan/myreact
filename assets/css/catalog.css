@@ -585,15 +585,17 @@
   flex-direction: column;
   margin-top: 27px;
 }
-.main__info-block-wrapper {
+.main__info-baner-wrapper {
   display: flex;
   flex-direction: column;
   margin: 0 15px;
 }
 
 @media (min-width: 1200px) {
-  .main__info-block-wrapper {
+  .main__info-baner-wrapper {
     display: inline-flex;
+    margin-left: 100px;
+    margin-right: 100px;
   }
   .main__feedback-sections {
     margin: 41px 100px 0;
@@ -606,10 +608,6 @@
     margin-right: 0;
     padding-left: 100px;
     padding-right: 100px;
-  }
-  .main__info-block-wrapper {
-    margin-left: 100px;
-    margin-right: 100px;
   }
   .main__filter-buttons {
     display: inline-flex;
@@ -625,7 +623,7 @@
     flex-direction: row;
   }
 }
-.info-block {
+.info-baner {
   position: relative;
   display: flex;
   margin: 25px 5px -10px;
@@ -636,7 +634,7 @@
   background: #FB6949;
   z-index: -1;
 }
-.info-block::after {
+.info-baner::after {
   content: "";
   width: 137px;
   height: 137px;
