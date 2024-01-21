@@ -1,0 +1,29 @@
+.info-block {
+    position: relative;
+
+    display: flex;
+
+    margin: 25px 5px -10px;
+    padding: 18px 172px 42px 19px;
+
+    color: #FFF;
+    font-weight: 800;
+
+    border-radius: 10px 10px 0 0;
+    background: #FB6949;
+
+    z-index: -1;
+
+    &::after {
+        content: "";
+
+        width: 137px;
+        height: 137px;
+
+        position: absolute;
+        right: 10px;
+        top: -35px;
+
+        background: center / cover url("../image/discount.png") no-repeat;
+    }
+}

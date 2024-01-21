@@ -30,113 +30,153 @@
     </header>
 
     <main class="main">
-        <div class="main__filter-buttons filter-buttons bg-dark-white">
-            <button class="filter-buttons__btn filter-buttons__btn--active">Все</button>
-            <button class="filter-buttons__btn">Мужское</button>
-            <button class="filter-buttons__btn">Женское</button>
-            <button class="filter-buttons__btn">Детское</button>
+        <div class="main__info-block-wrapper">
+            <div class="info-block fs-l">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="main__filter-buttons filter-buttons bg-dark-white">
+                <button class="filter-buttons__btn filter-buttons__btn--active">Все</button>
+                <button class="filter-buttons__btn">Мужское</button>
+                <button class="filter-buttons__btn">Женское</button>
+                <button class="filter-buttons__btn">Детское</button>
+            </div>
         </div>
 
         <div class="main__catalog-categories-list">
-            <div class="catalog-category-card catalog-category-card--big">
+            <div class="catalog-category-card catalog-category-card--big catalog-category-card--marked new">
                 <div class="catalog-category-card__img">
                     <img src="assets/image/category-img.jpg" alt="category-img">
                 </div>
-                <p>Идеи</p>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Идеи</p>
+                </div>
             </div>
-            <div class="catalog-category-card catalog-category-card--big">
+            <div class="catalog-category-card catalog-category-card--big catalog-category-card--marked sale">
                 <div class="catalog-category-card__img">
                     <img src="assets/image/category-img.jpg" alt="category-img">
                 </div>
-                <p>Распродажа</p>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Распродажа</p>
+                </div>
             </div>
-            <div class="catalog-category-card catalog-category-card--big">
+            <div class="catalog-category-card catalog-category-card--big catalog-category-card--marked hot">
                 <div class="catalog-category-card__img">
                     <img src="assets/image/category-img.jpg" alt="category-img">
                 </div>
-                <p>Новинки</p>
-            </div>
-        </div>
-        
-        <div class="main__catalog-categories-list">
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
                 </div>
-                <p>Идеи</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Распродажа</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
-            </div>
-            <div class="catalog-category-card">
-                <div class="catalog-category-card__img">
-                    <img src="assets/image/category-img.jpg" alt="category-img">
-                </div>
-                <p>Новинки</p>
             </div>
         </div>
 
-        @@include('./partials/feedbackSections.html', {
-        "includeFaq": false,
-        "infoText": true,
-        })
+        <div class="main__catalog-categories-list">
+            <div class="catalog-category-card catalog-category-card--marked flash">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Идеи</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Распродажа</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+            <div class="catalog-category-card">
+                <div class="catalog-category-card__img">
+                    <img src="assets/image/category-img.jpg" alt="category-img">
+                </div>
+                <div class="catalog-category-card__content-wrapper">
+                    <p>Новинки</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__feedback-sections mt-xl mx-m">
+            <div class="main__communication-block-and-interview-card-wrapper">
+                <a href="../questionnaire.html" class="interview-card bg-green-gradient-g color-white">
+                    <h3 class="interview-card__title">Опрос</h3>
+                    <p>Сделаем сайт лучше</p>
+                </a>
+            </div>
+        </div>
     </main>
 
     @@include('./partials/footer.html')
@@ -156,8 +196,7 @@
                         <label for="by-price" class="filter-buttons__btn fw-600">Цене</label>
                         <input hidden type="radio" name="sort" value="byPrice" id="by-price">
 
-                        <label for="by-default"
-                            class="filter-buttons__btn fw-600 filter-buttons__btn--active">Умолчанию</label>
+                        <label for="by-default" class="filter-buttons__btn fw-600 filter-buttons__btn--active">Умолчанию</label>
                         <input hidden type="radio" name="sort" value="byDefault" id="by-default" checked>
 
                         <label for="by-date" class="filter-buttons__btn fw-600">Дате</label>

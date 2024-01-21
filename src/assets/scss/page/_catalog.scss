@@ -1,20 +1,23 @@
 .main {
 
-    &__filter-buttons {
-        margin: 27px 15px 0 15px;
-    }
-
     &__catalog-categories-list {
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        margin: 17px 15px 0 15px;
+        margin: 10px 15px 0 15px;
     }
 
     &__communication-blocks-wrapper {
         flex-direction: column;
         margin-top: 27px;
+    }
+
+    &__info-block-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 15px;
     }
 }
 
@@ -23,8 +26,12 @@
 @media (min-width: $wide-breakpoint) {
     .main {
 
+        &__info-block-wrapper {
+            display: inline-flex;
+        }
+
         &__feedback-sections {
-            margin-top: 41px;
+            margin: 41px 100px 0;
         }
 
         &__catalog-categories-list {
@@ -38,13 +45,14 @@
             padding-right: 100px;
         }
 
-        &__filter-buttons {
+        &__info-block-wrapper {
             margin-left: 100px;
             margin-right: 100px;
         }
 
         &__filter-buttons {
             display: inline-flex;
+            justify-content: space-between;
 
             &>.filter-buttons__btn {
                 flex: none;
