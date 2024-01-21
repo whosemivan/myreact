@@ -13,7 +13,7 @@
         margin-top: 27px;
     }
 
-    &__info-block-wrapper {
+    &__info-baner-wrapper {
         display: flex;
         flex-direction: column;
 
@@ -26,8 +26,10 @@
 @media (min-width: $wide-breakpoint) {
     .main {
 
-        &__info-block-wrapper {
+        &__info-baner-wrapper {
             display: inline-flex;
+            margin-left: 100px;
+            margin-right: 100px;
         }
 
         &__feedback-sections {
@@ -43,11 +45,6 @@
             margin-right: 0;
             padding-left: 100px;
             padding-right: 100px;
-        }
-
-        &__info-block-wrapper {
-            margin-left: 100px;
-            margin-right: 100px;
         }
 
         &__filter-buttons {
