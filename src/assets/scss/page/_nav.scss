@@ -42,7 +42,7 @@
     }
 
     &__search-input {
-        width: 100%;
+        flex: 1;
         height: 100%;
     }
 
@@ -131,7 +131,8 @@
             &#dec-count {
                 bottom: 0;
 
-                background: top url("../image/mini-down-arrow.svg") no-repeat;
+                background-position: top;
+                background-image: url("../image/mini-down-arrow.svg");
             }
         }
     }
@@ -161,6 +162,13 @@
 @media (min-width: $wide-breakpoint) {
     .nav {
 
+        &__search-icon {
+            width: 26px;
+            height: 26px;
+
+            background-size: 26px;
+        }
+
         &__desk-links-wrapper {
             display: flex;
             column-gap: 30px;
@@ -185,6 +193,28 @@
                 font-weight: 700;
                 text-decoration-line: underline;
             }
+        }
+
+        &__links-wrapper {
+            column-gap: 30px;
+            align-items: flex-end;
+
+            & .nav__desk-links-wrapper {
+                align-items: flex-end;
+            }
+        }
+
+        &__search-counter {
+            width: 65px;
+            height: 35px;
+
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+
+        &__search-counter-btn {
+            padding: 1rem 15px 0;
+            background-size: 1rem;
         }
     }
 }

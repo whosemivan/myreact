@@ -71,3 +71,10 @@
         border: 1.5px solid #000000;
     }
 }
+
+@media (min-width: $wide-breakpoint) {
+    .product-size-card {
+        width: 70px;
+        height: 70px;
+    }
+}

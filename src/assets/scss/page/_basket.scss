@@ -120,7 +120,7 @@
 
         &::before {
             content: "";
-            background-image: url("../image/delivery.svg");
+            background: center / cover url("../image/delivery.svg") no-repeat;
             width: 112px;
             height: 91px;
             position: absolute;
@@ -321,6 +321,7 @@
         }
 
         .basket__condition {
+            border: 3px solid transparent;
 
             & .custom-input__label {
                 background-color: #F0F5FE;
@@ -829,8 +830,12 @@
     }
 
     &__banner {
+        grid-column: 2;
+        grid-row: 1;
         padding: 11px 20px;
         margin-bottom: 45px;
+        margin-left: 10px;
+        margin-right: 10px;
         border-radius: 10px;
         background: linear-gradient(268deg, #A230FC 6.52%, #3075FC 94.4%);
         position: relative;
@@ -1052,6 +1057,8 @@
     }
 
     &__image-collection {
+        grid-column: 1;
+
         margin: 0 10px 40px;
 
         &-title {
@@ -1064,18 +1071,31 @@
         }
 
         &-block {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
 
             margin-top: 10px;
 
+            & .card {
+                flex: 1 0 25%;
+
+                & .card__img-wrapper {
+                    width: 100%;
+                }
+            }
+
             & .basket__mega-card {
-                grid-row: 1 / 3;
-                grid-column: 1 / 3;
+                flex: 1 1 100%;
+
+                margin-bottom: 10px;
             }
         }
+    }
+
+    &__container {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -1091,6 +1111,47 @@
     }
 
     .basket {
+        
+        &__slider {
+            grid-column: 1/2;
+            grid-row: 4 / 10;
+            overflow: auto;
+        }
+
+        &__image-collection {
+
+            &-block {
+                display: inline-grid;
+                grid-template-columns: auto auto auto;
+                gap: 5px;
+
+                margin-top: 10px;
+
+                & .card {
+                    min-width: 215px;
+
+                    & .card__img-wrapper {
+                        width: auto;
+                        height: auto;
+                        max-height: 200px;
+                    }
+                }
+
+                & .basket__mega-card {
+                    grid-column: 1 / 3;
+                    grid-row: 1 / 3;
+                    margin-bottom: 0;
+
+                    & .card__img-wrapper {
+                        width: 100%;
+                        height: 100%;
+                        max-width: unset;
+                        max-height: unset;
+                    }
+                }
+            }
+        }
+
         .basket__stages {
             width: 60%;
             margin: 0 auto;
@@ -1172,9 +1233,12 @@
             }
 
             .basket__container {
+                grid-row: 2 / 5;
+                grid-column: 2;
+                margin-left: 0;
+                margin-right: 0;
 
                 .basket__isPresent {
-                    order: 1;
                     padding: 43px 20px;
                     margin-left: 0;
                     margin-right: 0;
@@ -1207,7 +1271,6 @@
                 }
 
                 .basket__promocode {
-                    order: 2;
                     margin-left: 0;
                     margin-right: 0;
                     margin-top: 25px;
@@ -1290,11 +1353,36 @@
                 }
             }
 
+            .basket__banner {
+                order: 4;
+                padding: 34px 20px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+
+                &::after {
+                    width: 30%;
+                    height: 100%;
+                    background: right / contain url("../image/crown.svg") no-repeat;
+                }
+
+                .basket__baner-title {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+
+                .basket__baner-text {
+                    font-size: 18px;
+                    width: 60%;
+                }
+            }
+
             .basket__btnSubmit {
                 width: 100%;
                 height: 70px;
 
                 margin: 0;
+                margin-top: 50px;
 
                 align-items: center;
 
@@ -1325,6 +1413,32 @@
                     max-width: unset;
                     margin-bottom: 20px;
                 }
+            }
+        }
+
+        .basket__delivery {
+
+            & .basket__delivery-title {
+                margin-bottom: 130px;
+            }
+
+            & .basket__delivery-inputs {
+                justify-content: flex-start;
+                gap: 50px;
+
+                & .basket__delivery-wrapper {
+                    font-size: 24px;
+
+                    &::after {
+                        bottom: -25px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &::before {
+                width: 230px;
+                height: 230px;
             }
         }
 
@@ -1529,6 +1643,17 @@
                 }
             }
         }
+
+        .basket__info-block-wrapper {
+            flex-direction: column;
+            gap: 35px;
+
+            margin: 20px 0 0;
+
+            & .basket__mini-info-block {
+                padding: 25px 20px;
+            }
+        }
     }
 }
 
@@ -1542,6 +1667,7 @@
 
             .basket__list {
                 grid-column: 1/2;
+                grid-row: 1/3;
             }
 
             .basket__container {
@@ -1560,10 +1686,17 @@
                     margin-top: 40px;
                 }
             }
+        }
+    }
+}
 
-            .basket__btnSubmit {
-                max-width: 70%;
-                margin-left: auto;
+@media (min-width: $hd-plus-breakpoint) {
+    .basket {
+
+        &__image-collection {
+
+            &-block {
+                grid-template-columns: auto auto auto auto;
             }
         }
     }

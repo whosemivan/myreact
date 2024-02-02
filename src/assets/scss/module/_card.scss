@@ -163,6 +163,8 @@
         }
 
         &__img-wrapper {
+            width: calc(200px + 180 * (100vw / $hd-plus-width));
+            height: calc(200px + 180 * (100vw / $hd-plus-width));
 
             &--supa-mini-img {
                 width: 118px;

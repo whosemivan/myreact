@@ -47,13 +47,19 @@
         line-height: normal;
     }
 
-    &__addBasket {
+    &__btns-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    &__add-to-basket {
+        flex: 1;
         display: flex;
         align-items: center;
         border-radius: 6px;
         background: #3075FC;
         color: #FFF;
-        font-size: 10px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -69,6 +75,20 @@
 
         svg {
             margin-left: auto;
+        }
+    }
+
+    &__like {
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        background: #48455C;
+        color: #FFF;
+        padding: 7px;
+
+        svg {
+            width: 16px;
+            height: 16px;
         }
     }
 
@@ -151,6 +171,29 @@
 
             &-old {
                 font-size: calc(12px + 6 * ((100vw - 430px) / $hd-plus-width));
+            }
+        }
+
+        &__btns-wrapper {
+            gap: 5px;
+        }
+
+        &__add-to-basket {
+            min-height: 55px;
+            padding: 10px 16px;
+
+            & svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__like {
+            padding: 15px;
+
+            svg {
+                width: 24px;
+                height: 24px;
             }
         }
     }

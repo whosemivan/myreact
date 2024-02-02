@@ -80,6 +80,7 @@
             grid-row: 1;
             grid-column: 1;
             align-self: flex-start;
+            font-size: 30px;
         }
 
         &__basket,
@@ -89,7 +90,11 @@
         }
 
         &__basket {
+            width: 70px;
+            height: 70px;
             grid-column: 3 / 4;
+            border-radius: 100%;
+            background-size: 26px;
         }
 
         & .nav__search-wrapper {
@@ -107,13 +112,12 @@
             align-self: flex-end;
 
             margin-top: 2rem;
+            margin-bottom: 1ex;
         }
 
         & .nav__links-wrapper {
-            justify-content: end;
             grid-column: 1 / 4;
             grid-row: 2;
-            column-gap: 30px;
         }
     }
 }

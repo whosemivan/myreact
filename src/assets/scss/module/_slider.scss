@@ -65,10 +65,9 @@
     }
 
     &__info-slide {
-        width: calc(290px + (263 + 263 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+        width: auto;
+        min-width: calc(290px + (263 + 263 * 0.7) * ((100vw - 430px) / $hd-plus-width));
         min-height: 200px;
-
-        box-sizing: border-box;
 
         margin-right: 10px;
         padding-top: 25px;
@@ -77,9 +76,24 @@
         border-radius: 10px;
         box-shadow: 0px 10px 15px 0px #0000001A;
 
-        &-discount {
-            margin-bottom: 46px;
+        &--with-bg {
+            background: center / contain no-repeat url("../image/slider-img/pencels.png");
+        }
 
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__discount-slide {
+
+        &>a {
+            display: flex;
+            flex-direction: column;
+            gap: 46px;
+        }
+
+        &-discount {
             color: #A230FC;
             font-size: 66px;
             font-weight: 900;
@@ -87,14 +101,6 @@
             &::after {
                 content: "%";
             }
-        }
-
-        &--with-bg {
-            background: center / contain no-repeat url("../image/slider-img/pencels.png");
-        }
-
-        &:last-of-type {
-            margin-right: 0;
         }
     }
 
@@ -167,7 +173,7 @@
     .slider {
 
         &__info-slide {
-            width: calc(290px + 263 * (100vw / $hd-plus-width));
+            min-width: calc(290px + 263 * (100vw / $hd-plus-width));
             min-height: 294px;
 
             background-size: cover;
@@ -181,20 +187,38 @@
         &__pagination {
             gap: 12px;
             height: 5px;
-    
+
             &>&-bullet {
-    
+
                 &::after {
                     width: 25px;
                     height: 5px;
                 }
             }
-    
+
             &--bottom-center {
                 justify-content: center;
                 right: 0;
                 bottom: 0;
                 left: 0;
+            }
+        }
+
+        &__info-slide {
+            padding: 40px;
+        }
+
+        &__discount-slide {
+
+            &>a {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 0;
+            }
+
+            &-discount {
+                font-size: 126px;
+                margin-left: auto;
             }
         }
     }

@@ -45,6 +45,8 @@
 
     &__product-slider {
         margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
 
         &>.slider__pagination {
             bottom: 21px;
@@ -183,6 +185,10 @@
             margin-top: 80px;
         }
 
+        &__product-slider {
+            width: calc(100% - 137px)
+        }
+
         &__feedback-sections {
             background-color: #f5f6f6;
         }
@@ -241,6 +247,7 @@
             min-height: 365px;
 
             padding-top: 60px;
+            padding-bottom: 50px;
 
             & .about-payment__title-wrapper {
                 display: contents;
@@ -258,10 +265,6 @@
         &__description-slider,
         &__product-categories-wrapper {
             margin-top: 0;
-
-            &>.swiper-wrapper {
-                gap: 30px;
-            }
         }
 
         &__product-categories-wrapper {
@@ -300,12 +303,12 @@
         &__recommendations-slider {
             padding: 0 100px;
 
-            & .swiper-wrapper {
+            // & .swiper-wrapper {
 
-                &>span {
-                    // margin-top: 10rem;
-                }
-            }
+            //     &>span {
+            //         margin-top: 10rem;
+            //     }
+            // }
 
             & .swiper-slide {
                 justify-content: flex-start;

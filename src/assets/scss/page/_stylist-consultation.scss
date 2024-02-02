@@ -138,7 +138,9 @@
             align-items: center;
             justify-content: center;
 
-            max-height: 70px;
+            min-width: 100%;
+            min-height: 70px;
+            padding: 20px 40px;
 
             font-size: 24px;
         }
