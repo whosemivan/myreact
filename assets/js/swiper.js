@@ -1,10 +1,23 @@
 const slider = new Swiper(".slider", {
     direction: "horizontal",
     slidesPerView: "auto",
+    spaceBetween: 5,
 
     breakpoints: {
         1200: {
             spaceBetween: 10,
+        },
+    },
+});
+
+const descriptionSlider = new Swiper(".description-slider", {
+    direction: "horizontal",
+    slidesPerView: "auto",
+    spaceBetween: 10,
+
+    breakpoints: {
+        1200: {
+            spaceBetween: 30,
         },
     },
 });
