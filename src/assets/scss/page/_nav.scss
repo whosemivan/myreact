@@ -162,13 +162,6 @@
 @media (min-width: $wide-breakpoint) {
     .nav {
 
-        &__search-icon {
-            width: 26px;
-            height: 26px;
-
-            background-size: 26px;
-        }
-
         &__desk-links-wrapper {
             display: flex;
             column-gap: 30px;
@@ -202,6 +195,17 @@
             & .nav__desk-links-wrapper {
                 align-items: flex-end;
             }
+        }
+
+        &__search-wrapper {
+            height: 100%;
+        }
+
+        &__search-icon {
+            width: 26px;
+            height: 26px;
+
+            background-size: 26px;
         }
 
         &__search-counter {
