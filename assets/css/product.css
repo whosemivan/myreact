@@ -921,11 +921,6 @@
 }
 
 @media (min-width: 1200px) {
-  .nav__search-icon {
-    width: 26px;
-    height: 26px;
-    background-size: 26px;
-  }
   .nav__desk-links-wrapper {
     display: flex;
     -moz-column-gap: 30px;
@@ -954,6 +949,14 @@
   }
   .nav__links-wrapper .nav__desk-links-wrapper {
     align-items: flex-end;
+  }
+  .nav__search-wrapper {
+    height: 100%;
+  }
+  .nav__search-icon {
+    width: 26px;
+    height: 26px;
+    background-size: 26px;
   }
   .nav__search-counter {
     width: 65px;
