@@ -415,7 +415,6 @@
   align-items: center;
 }
 .main__logo-slider .slider__slide {
-  padding-right: 43px;
   border-radius: 0;
 }
 .main__logo-slider .slider__slide:last-child {
@@ -473,6 +472,9 @@
   }
   .main__finished-image {
     padding-top: 82px;
+  }
+  .main__brand-baner {
+    margin-bottom: 70px;
   }
   .main__slider-banner {
     margin-left: 20%;

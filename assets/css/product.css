@@ -544,7 +544,6 @@
   align-items: center;
 }
 .main__logo-slider .slider__slide {
-  padding-right: 43px;
   border-radius: 0;
 }
 .main__logo-slider .slider__slide:last-child {
@@ -602,6 +601,9 @@
   }
   .main__finished-image {
     padding-top: 82px;
+  }
+  .main__brand-baner {
+    margin-bottom: 70px;
   }
   .main__slider-banner {
     margin-left: 20%;
@@ -1454,6 +1456,7 @@
   }
 }
 .add-to-basket-btn {
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -1976,7 +1979,6 @@
 .basket__transports .basket__transports-title {
   margin-bottom: 10px;
   color: #333;
-  font-size: 16px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -2002,7 +2004,6 @@
 }
 .basket__conditions .basket__conditions-title {
   color: #333;
-  font-size: 16px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -2090,7 +2091,7 @@
 }
 .basket__pay .basket__pay-block {
   border-radius: 6px;
-  border: 1px solid #48455C;
+  outline: 1px solid #48455C;
   box-shadow: 0px 4px 14px 0px rgba(48, 117, 252, 0.1);
 }
 .basket__pay .basket__pay-block .basket__pay-input {
@@ -2107,9 +2108,41 @@
   line-height: normal;
   position: relative;
 }
+.basket__pay .basket__pay-block .basket__pay-info {
+  display: block;
+}
+.basket__pay .basket__pay-block .basket__pay-info .basket__pay-type-input {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.basket__pay .basket__pay-block .basket__pay-info .basket__pay-type-label {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.basket__pay .basket__pay-block .basket__pay-info .basket__pay-type-label--active::before {
+  content: "Основная карта";
+  width: 100%;
+  color: #4088DD;
+  font-size: 12px;
+  font-weight: 500;
+}
+.basket__pay .basket__pay-block .basket__pay-types {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .basket__pay .basket__pay-block--active {
   border-radius: 6px;
-  border: 3px solid #3075FC;
+  outline: 3px solid #3075FC;
   background: #F0F5FE;
   box-shadow: 0px 4px 14px 0px rgba(48, 117, 252, 0.1);
 }
@@ -2121,37 +2154,9 @@
   line-height: normal;
 }
 .basket__pay .basket__pay-block--active .basket__pay-info {
-  display: block;
   padding-top: 17px;
 }
-.basket__pay .basket__pay-block--active .basket__pay-info .basket__pay-type-input {
-  display: flex;
-  gap: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  background: #FFF;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-}
-.basket__pay .basket__pay-block--active .basket__pay-info .basket__pay-type-label {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.basket__pay .basket__pay-block--active .basket__pay-info .basket__pay-type-label--active::before {
-  content: "Основная карта";
-  width: 100%;
-  color: #4088DD;
-  font-size: 12px;
-  font-weight: 500;
-}
 .basket__pay .basket__pay-block--active .basket__pay-types {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   padding-bottom: 20px;
 }
 .basket__pay .basket__add-card {
@@ -2615,7 +2620,6 @@
   border-radius: 6px;
   background: #000;
   position: relative;
-  margin-bottom: 16px;
 }
 .basket__btnSubmit span {
   margin-left: auto;
@@ -2690,6 +2694,7 @@
 }
 .basket__image-collection-block .card {
   flex: 1 0 25%;
+  min-width: 200px;
 }
 .basket__image-collection-block .card .card__img-wrapper {
   width: 100%;
@@ -2702,16 +2707,36 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+.basket__slider {
+  margin: 0 10px;
+}
+.basket__heart-and-basket-btns-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+}
 
 @media (min-width: 1200px) {
   .main__feedback-sections {
     display: block;
     margin-top: 60px;
   }
+  .basket {
+    margin-top: 55px;
+    margin-bottom: 70px;
+  }
   .basket__slider {
     grid-column: 1/2;
     grid-row: 4/10;
     overflow: auto;
+    margin: 0;
+    margin-top: 60px;
+  }
+  .basket__image-collection {
+    margin: 0;
+    margin-top: 30px;
+    padding-top: 40px;
+    border-top: 1px solid #F6F6F6;
   }
   .basket__image-collection-block {
     display: inline-grid;
@@ -2768,6 +2793,11 @@
   .basket .basket__form {
     margin-left: 100px;
     margin-right: 100px;
+  }
+  .basket .basket__form .basket__list {
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F6F6F6;
   }
   .basket .basket__form .basket__list .basket__item .basket__image-wrapper {
     width: 262px;
@@ -3392,6 +3422,9 @@
   margin: 0 15px;
   margin-top: 40px;
 }
+.main__link-wrapper .mini-info-block {
+  font-size: 10px;
+}
 .main__buy-link {
   position: relative;
   display: inline-flex;
@@ -3473,6 +3506,9 @@
 }
 
 @media (min-width: 1200px) {
+  .main .stylist-consultation {
+    margin-top: 50px;
+  }
   .main__product-preview {
     margin-top: 80px;
   }
@@ -3582,6 +3618,31 @@
     width: 100%;
     max-width: 500px;
     min-height: 70px;
+  }
+  .main__brand-links-wrapper {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+.brand-link {
+  text-align: center;
+  font-size: calc(10px + 23.8 * (100vw - 430px) / 1920);
+  font-weight: 500;
+}
+.brand-link__img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 5px;
+  border-radius: 100%;
+}
+
+@media (min-width: 1200px) {
+  .brand-link {
+    font-size: calc(10px + 0.7291666667vw);
+  }
+  .brand-link__img {
+    width: 133px;
+    height: 133px;
   }
 }
 .mini-info-block {

@@ -1,29 +1,21 @@
-function startCountdown(countDownDate) {
+function startCountdown(
+    countDownDate,
+    timeFormat = "DD:HH:mm:ss",
+) {
+    countDownDate = moment(countDownDate).add(-1, "day");
     const timer = document.getElementById("timer");
 
     const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = countDownDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        const daysSpan = document.createElement("span");
-        const hoursSpan = document.createElement("span");
-        const minutesSpan = document.createElement("span");
-        const secondsSpan = document.createElement("span");
-
-        daysSpan.innerHTML = days < 10 ? "0" + days : days;
-        hoursSpan.innerText = hours < 10 ? "0" + hours : hours;
-        minutesSpan.innerText = minutes < 10 ? "0" + minutes : minutes;
-        secondsSpan.innerText = seconds < 10 ? "0" + seconds : seconds;
+        const distance = (moment(countDownDate.diff(moment())).format(timeFormat)).split(":");
 
         timer.innerText = "";
-        timer.append(daysSpan, hoursSpan, minutesSpan, secondsSpan);
+        distance.map(item => {
+            const elem = document.createElement("span");
+            
+            elem.innerText = item;
+            timer.append(elem);
+        });
 
-        if (distance < 0) clearInterval(interval);
+        if (countDownDate.diff(moment(), "seconds") == 0) clearInterval(interval);
     }, 1000);
 }
-

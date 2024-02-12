@@ -51,11 +51,10 @@
     <main class="basket basket--clear">
         <h1 class="visually-hidden">Корзина</h1>
 
-        <div class="basket__sum mt-xl mx-m">
+        <div class="basket__sum mt-xl mx-m only-mobile">
             <span class="basket__sum-info">Сумма</span>
             <span class="basket__sum-price">48 060 ₽</span>
         </div>
-
 
         <form class="basket__form">
             <ul class="basket__list mx-m">
@@ -443,6 +442,20 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="basket__heart-and-basket-btns-wrapper only-mobile">
+                    <div class="add-to-basket-btn">
+                        <p class="fw-900">В корзину</p>
+                        <p class="add-to-basket-btn__cost fw-900 card__price">48 060</p>
+                        <p class="add-to-basket-btn__sale fw-500 card__price">-6 340</p>
+                    </div>
+
+                    <div class="heart-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.001 5.52386L12.766 4.70192C14.8786 2.4322 18.3039 2.43221 20.4165 4.70192C22.5291 6.97164 22.5291 10.6516 20.4165 12.9213L13.5311 20.3187C12.686 21.2266 11.3159 21.2266 10.4709 20.3187L3.58544 12.9213C1.47282 10.6516 1.47282 6.97164 3.58544 4.70192C5.69807 2.4322 9.12331 2.43221 11.2359 4.70192L12.001 5.52386ZM17.001 5.24963C16.5868 5.24963 16.251 5.58542 16.251 5.99963C16.251 6.41385 16.5868 6.74963 17.001 6.74963C17.6913 6.74963 18.251 7.30928 18.251 7.99963C18.251 8.41385 18.5868 8.74963 19.001 8.74963C19.4152 8.74963 19.751 8.41385 19.751 7.99963C19.751 6.48085 18.5198 5.24963 17.001 5.24963Z" fill="#3075FC" />
+                        </svg>
+                    </div>
+                </div>
             </div>
 
             <div class="basket__slider">
@@ -651,7 +664,7 @@
 
             <div class="basket__container">
                 <div class="basket__delivery">
-                    <h2 class="basket__delivery-title">Доставка</h2>
+                    <h2 class="basket__delivery-title fs-s">Доставка</h2>
                     <div class="basket__delivery-inputs">
                         <label class="basket__delivery-wrapper">
                             <input type="radio" class="input-with-mark" hidden name="delivery" value="PVZ">
@@ -672,7 +685,7 @@
                 </div>
 
                 <div class="basket__conditions">
-                    <h3 class="basket__conditions-title">Адрес доставки</h3>
+                    <h3 class="basket__conditions-title fs-s">Адрес доставки</h3>
                     <div class="basket__conditions-inputs mt-m">
                         <div class="basket__condition">
                             <label class="basket__conditions-wrapper">
@@ -748,7 +761,7 @@
                 </div>
 
                 <div class="basket__transports">
-                    <h3 class="basket__transports-title">Выбор транспортных компаний</h3>
+                    <h3 class="basket__transports-title fs-s">Выбор транспортных компаний</h3>
                     <div class="basket__transports-inputs">
                         <label class="basket__transports-wrapper">
                             <input type="radio" class="input-with-mark" hidden name="transports" value="postOffice">
@@ -912,15 +925,23 @@
                     </button>
                 </div>
 
-                <button type="submit" class="basket__btnSubmit">
-                    <span class="sale">
-                        -2 000 ₽
-                    </span>
-                    Оформить
-                    <span class="price">
-                        48 000 ₽
-                    </span>
-                </button>
+                <div class="basket__heart-and-basket-btns-wrapper mb-m">
+                    <button type="submit" class="basket__btnSubmit">
+                        <span class="sale">
+                            -2 000 ₽
+                        </span>
+                        Оформить
+                        <span class="price">
+                            48 000 ₽
+                        </span>
+                    </button>
+
+                    <div class="heart-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.001 5.52386L12.766 4.70192C14.8786 2.4322 18.3039 2.43221 20.4165 4.70192C22.5291 6.97164 22.5291 10.6516 20.4165 12.9213L13.5311 20.3187C12.686 21.2266 11.3159 21.2266 10.4709 20.3187L3.58544 12.9213C1.47282 10.6516 1.47282 6.97164 3.58544 4.70192C5.69807 2.4322 9.12331 2.43221 11.2359 4.70192L12.001 5.52386ZM17.001 5.24963C16.5868 5.24963 16.251 5.58542 16.251 5.99963C16.251 6.41385 16.5868 6.74963 17.001 6.74963C17.6913 6.74963 18.251 7.30928 18.251 7.99963C18.251 8.41385 18.5868 8.74963 19.001 8.74963C19.4152 8.74963 19.751 8.41385 19.751 7.99963C19.751 6.48085 18.5198 5.24963 17.001 5.24963Z" fill="#3075FC" />
+                        </svg>
+                    </div>
+                </div>
 
                 <div class="basket__info-block-wrapper">
                     <div class="basket__mini-info-block mini-info-block fs-xxs mx-m">
@@ -936,68 +957,6 @@
                 </div>
             </div>
         </form>
-
-        <div class="basket__feedback--hidden">
-            <div class="main__feedback-sections">
-    
-
-    
-
-    
-    <div class="main__communication-blocks-wrapper">
-        <section class="communication-block communication-block--with-img color-white">
-            <div class="communication-block__content-wrapper">
-                <h3 class="communication-block__title">Нужна помощь?</h3>
-                <p class="communication-block__sub-title">
-                    Наши консультанты будут рады ответить на Ваши вопросы.
-                </p>
-            </div>
-
-            <div class="communication-block__btns-wrapper">
-                <button class="communication-block__btn p-s">написать</button>
-                <a href="tel:12323" class="communication-block__btn p-s">позвонить</a>
-            </div>
-        </section>
-
-        <div class="main__communication-block-and-interview-card-wrapper">
-            <section class="communication-block bg-off-white color-second-black">
-                <div class="communication-block__content-wrapper">
-                    <h3 class="communication-block__title">подпишитесь</h3>
-                    <p class="communication-block__text">
-                        Оставьте свой e-mail, чтобы первыми узнать о старте
-                        SALE и новых поступлениях
-                    </p>
-
-                    <input class="communication-block__mail-input bg-white fs-xs fw-400" placeholder="Почта"
-                        name="mail">
-
-                    <p class="communication-block__sub-text fs-xss">
-                        Подписываясь на рассылку, вы подтверждаете свое согласие с
-                        <a class="color-second-black" href="#">политикой конфиденциальности.</a>
-                    </p>
-                </div>
-            </section>
-
-            <a href="../questionnaire.html" class="interview-card bg-green-gradient-g color-white">
-                <h3 class="interview-card__title">Опрос</h3>
-                <p>Сделаем сайт лучше</p>
-            </a>
-        </div>
-    </div>
-    
-
-    <div class="main__chat-wrapper">
-        <button class="chat fw-700 color-white bg-black">
-            <div class="chat__points">
-                <span class="chat__point bg-white"></span>
-                <span class="chat__point bg-white"></span>
-                <span class="chat__point bg-white"></span>
-            </div>
-            <p>чат</p>
-        </button>
-    </div>
-</div>
-        </div>
     </main>
 
     <footer class="footer bg-black">
