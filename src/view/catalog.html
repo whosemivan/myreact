@@ -31,7 +31,7 @@
 
     <main class="main">
         <div class="main__info-baner-wrapper">
-            <div class="info-baner fs-l">
+            <div class="info-baner fs-l only-mobile">
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
 
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="main__catalog-categories-list">
+        <div class="main__catalog-categories-list main__catalog-categories-list--big">
             <div class="catalog-category-card catalog-category-card--big catalog-category-card--marked new">
                 <div class="catalog-category-card__img">
                     <img src="assets/image/category-img.jpg" alt="category-img">
@@ -84,7 +84,14 @@
                     <img src="assets/image/category-img.jpg" alt="category-img">
                 </div>
                 <div class="catalog-category-card__content-wrapper">
-                    <p>Распродажа</p>
+                    <div class="catalog-category-card__content">
+                        <p>Распродажа</p>
+                        <div class="timer">
+                            <span>45</span>
+                            :
+                            <span>19</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="catalog-category-card">
@@ -170,12 +177,11 @@
         </div>
 
         <div class="main__feedback-sections mt-xl mx-m">
-            <div class="main__communication-block-and-interview-card-wrapper">
-                <a href="../questionnaire.html" class="interview-card bg-green-gradient-g color-white">
-                    <h3 class="interview-card__title">Опрос</h3>
-                    <p>Сделаем сайт лучше</p>
-                </a>
-            </div>
+            @@include('./partials/feedbackSections.html', {
+            "includeFaq": false,
+            "infoText": true,
+            "helpBlockVariant": "first",
+            })
         </div>
     </main>
 

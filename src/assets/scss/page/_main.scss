@@ -37,7 +37,6 @@
         }
 
         & .slider__slide {
-            padding-right: 43px;
             border-radius: 0;
 
             &:last-child {
@@ -128,6 +127,10 @@
 
         &__finished-image {
             padding-top: 82px;
+        }
+
+        &__brand-baner {
+            margin-bottom: 70px;
         }
 
         &__slider-banner {

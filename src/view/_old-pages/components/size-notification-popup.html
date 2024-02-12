@@ -1,0 +1,44 @@
+<div class="popup--hidden" id="size-notification-popup">
+    <section class="popup__content-wrapper">
+        <h3 class="popup__title">Не нашли размер?</h3>
+
+        <button class="popup__close-btn" onclick="closePopup(this)"></button>
+
+        <div class="popup__content size-notice-form">
+            <p class="size-notice-form__title fw-800">Вы можете подписаться на отсутствующий размер</p>
+
+            <form action="#" method="post">
+                <div class="size-notice-form__size-selector size-chart__product-size-selector swiper slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide pr-s">
+                            <a href="#" class="product-size-card product-size-card--over">39</a>
+                        </div>
+                        <div class="swiper-slide pr-s">
+                            <a href="#" class="product-size-card product-size-card--over">40</a>
+                        </div>
+                    </div>
+                </div>
+
+                <input name="contact" type="text" placeholder="Tелефон/почта" required pattern="^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})|(\d{3}-\d{3}-\d{4})$" class="size-notice-form__contact-input">
+
+                <div class="size-notice-form__checkboxes-wrapper">
+                    <div class="size-notice-form__checkbox-wrapper">
+                        <input type="radio" class="input-with-mark" hidden name="type" id="call">
+                        <span class="mark mark--radio"></span>
+
+                        <label for="call">Звонок</label>
+                    </div>
+
+                    <div class="size-notice-form__checkbox-wrapper">
+                        <input type="radio" class="input-with-mark" hidden name="type" id="sms">
+                        <span class="mark mark--radio"></span>
+
+                        <label for="sms">СМС</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="popup__btn size-notice-form__btn">Подписаться</button>
+            </form>
+        </div>
+    </section>
+</div>

@@ -89,10 +89,25 @@ button {
     overflow: hidden;
 }
 
+// .only-mobile {
+//     display: unset;
+// }
 
 
 @media (max-width: $tablet-breakpoint) {
     body {
         font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 430px) / $hd-plus-width));
+    }
+}
+
+@media (min-width: $wide-breakpoint) {
+    .only-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: $wide-breakpoint) {
+    .only-desktop {
+        display: none !important;
     }
 }

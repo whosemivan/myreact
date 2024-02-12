@@ -64,6 +64,10 @@
 
         margin: 0 15px;
         margin-top: 40px;
+
+        & .mini-info-block {
+            font-size: 10px;
+        }
     }
 
     &__buy-link {
@@ -180,6 +184,10 @@
 
 @media (min-width: $wide-breakpoint) {
     .main {
+
+        & .stylist-consultation {
+            margin-top: 50px;
+        }
 
         &__product-preview {
             margin-top: 80px;
@@ -339,6 +347,11 @@
             width: 100%;
             max-width: 500px;
             min-height: 70px;
+        }
+
+        &__brand-links-wrapper {
+            margin-left: 100px;
+            margin-right: 100px;
         }
     }
 }

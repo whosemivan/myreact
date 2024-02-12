@@ -292,60 +292,62 @@
             </div>
         </div>
 
-        <div class="main__block-title block-title">
-            <h3 class="fs-s fw-800">Бренды</h3>
-        </div>
-
-        <div class="main__slider main__logo-slider swiper slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide slider__slide">
-                    <a href="#">
-                        <img src="assets/image/slider-img/brand logo1.svg" alt="Brand logo">
-                    </a>
-                </div>
-
-                <div class="swiper-slide slider__slide">
-                    <a href="#">
-                        <img src="assets/image/slider-img/brand logo2.svg" alt="Brand logo">
-                    </a>
-                </div>
-
-                <div class="swiper-slide slider__slide">
-                    <a href="#">
-                        <img src="assets/image/slider-img/brand logo3.svg" alt="Brand logo">
-                    </a>
-                </div>
-
-                <div class="swiper-slide slider__slide">
-                    <a href="#">
-                        <img src="assets/image/slider-img/brand logo4.svg" alt="Brand logo">
-                    </a>
-                </div>
-
-                <div class="swiper-slide slider__slide">
-                    <a href="#">
-                        <img src="assets/image/slider-img/brand logo5.svg" alt="Brand logo">
-                    </a>
-                </div>
-
-                <div class="swiper-slide slider__slide">
-                    <a href="#">
-                        <img src="assets/image/slider-img/brand logo6.svg" alt="Brand logo">
-                    </a>
-                </div>
-
-                <div class="swiper-slide slider__slide">
-                    <a href="#">
-                        <img src="assets/image/slider-img/brand logo7.svg" alt="Brand logo">
-                    </a>
-                </div>
-
-                <div class="swiper-slide slider__slide">
-                    <a href="#" class="fs-xss fw-600 color-black">ВСЕ НАШИ БРЕНДЫ</a>
-                </div>
+        <div class="only-mobile">
+            <div class="main__block-title block-title">
+                <h3 class="fs-s fw-800">Бренды</h3>
             </div>
 
-            <div class="slider__pagination slider__pagination--bottom-center"></div>
+            <div class="main__slider main__logo-slider swiper slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__slide">
+                        <a href="#">
+                            <img src="assets/image/slider-img/brand logo1.svg" alt="Brand logo">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide slider__slide">
+                        <a href="#">
+                            <img src="assets/image/slider-img/brand logo2.svg" alt="Brand logo">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide slider__slide">
+                        <a href="#">
+                            <img src="assets/image/slider-img/brand logo3.svg" alt="Brand logo">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide slider__slide">
+                        <a href="#">
+                            <img src="assets/image/slider-img/brand logo4.svg" alt="Brand logo">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide slider__slide">
+                        <a href="#">
+                            <img src="assets/image/slider-img/brand logo5.svg" alt="Brand logo">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide slider__slide">
+                        <a href="#">
+                            <img src="assets/image/slider-img/brand logo6.svg" alt="Brand logo">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide slider__slide">
+                        <a href="#">
+                            <img src="assets/image/slider-img/brand logo7.svg" alt="Brand logo">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide slider__slide">
+                        <a href="#" class="fs-xss fw-600 color-black">ВСЕ НАШИ БРЕНДЫ</a>
+                    </div>
+                </div>
+
+                <div class="slider__pagination slider__pagination--bottom-center"></div>
+            </div>
         </div>
 
         <div class="main__block-title main__block-title-with-filter-buttons">
@@ -688,7 +690,7 @@
             </section>
         </div>
 
-        <div class="main__block-title block-title mt-xl">
+        <div class="main__block-title block-title mt-xl only-mobile">
             <h3 class="fs-s fw-800">Блог</h3>
             <a href="#" class="block-title__more-link">все</a>
         </div>
@@ -956,6 +958,7 @@
         @@include('./partials/feedbackSections.html', {
         "includeFaq": true,
         "infoText": false,
+        "helpBlockVariant": "first",
         })
     </main>
 

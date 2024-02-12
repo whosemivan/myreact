@@ -273,6 +273,7 @@
         @@include('./partials/feedbackSections.html', {
         "includeFaq": false,
         "infoText": false,
+        "helpBlockVariant": "first",
         })
     </main>
 
@@ -291,8 +292,7 @@
                     <label for="by-price" class="filter-buttons__btn fw-600">Цене</label>
                     <input hidden type="radio" name="sort" value="byPrice" id="by-price">
 
-                    <label for="by-default"
-                        class="filter-buttons__btn fw-600 filter-buttons__btn--active">Умолчанию</label>
+                    <label for="by-default" class="filter-buttons__btn fw-600 filter-buttons__btn--active">Умолчанию</label>
                     <input hidden type="radio" name="sort" value="byDefault" id="by-default" checked>
 
                     <label for="by-date" class="filter-buttons__btn fw-600">Дате</label>

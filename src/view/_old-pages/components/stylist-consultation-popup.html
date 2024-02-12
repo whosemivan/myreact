@@ -1,0 +1,36 @@
+<div class="popup--hidden" id="stylist-consultation-popup">
+    <div class="popup__content-wrapper stylist-consultation-form">
+        <h3 class="stylist-consultation-form__title fs-l fw-700">Получи консультацию стилиста</h3>
+
+        <button class="popup__close-btn" onclick="closePopup(this)"></button>
+
+        <div class="popup__content">
+            <p class="stylist-consultation-form__text">Оставьте свои контактные данные и вопросы, чтобы получить
+                персональную консультацию от нашего
+                стилиста</p>
+
+            <form action="#" method="post">
+                <div class="popup__inputs-wrapper stylist-consultation-form__inputs-wrapper">
+                    <div class="custom-input">
+                        <label for="firstName-input" class="custom-input__label">Имя</label>
+                        <input name="firstName" type="text" id="firstName-input" class="custom-input__input" required />
+                    </div>
+                    <div class="custom-input">
+                        <label for="email-input" class="custom-input__label">Электронная почта</label>
+                        <input name="email" type="email" id="email-input" class="custom-input__input" required />
+                    </div>
+                    <div class="custom-input">
+                        <label for="tel-input" class="custom-input__label">Телефон</label>
+                        <input name="tel" type="tel" id="tel-input" class="custom-input__input" required />
+                    </div>
+                    <div class="custom-input">
+                        <label for="text-input" class="custom-input__label">Вопросы/пожелания к стилисту</label>
+                        <textarea id="text-input" name="text" rows="5" class="custom-input__input"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="popup__btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>

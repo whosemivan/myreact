@@ -22,30 +22,23 @@ const descriptionSlider = new Swiper(".description-slider", {
     },
 });
 
-const sliderWithPagination = new Swiper(".slider--with-pagination", {
+const sliderLogoSlider = new Swiper(".main__logo-slider", {
+    direction: "horizontal",
+    slidesPerView: "auto",
+    spaceBetween: 43,
+
+    breakpoints: {
+        1200: {
+            spaceBetween: 100,
+        },
+    },
+
     pagination: {
         el: ".slider__pagination",
         bulletClass: "slider__pagination-bullet",
         bulletActiveClass: "slider__pagination-bullet-active",
         modifierClass: "slider__pagination-",
         clickable: true,
-    },
-});
-
-const sliderWithArrows = new Swiper(".slider--with-arrows", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-
-const freeModeSlider = new Swiper(".slider--free-mode", {
-    direction: "horizontal",
-    slidesPerView: "auto",
-
-    freeMode: {
-        enabled: true,
-        sticky: false,
     },
 });
 
